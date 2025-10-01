@@ -19,7 +19,14 @@ const send: I['send'] = async function () {
     try {
         await AxiosInst.post('/UploadBloggerContestVideo', this.formData);
 
-        this.close();
+        const innerNode = this.parent.current!.querySelector('.popup__inner') as HTMLElement;
+        const innerHeight = innerNode.offsetHeight;
+
+        innerNode.style.height = `${innerHeight}px`;
+
+        setTimeout(() => {
+            setAsyncState.call(this, { isSuccess: true });
+        }, 10);
     } catch (e) {
         const error = e as ResponseErrorT;
 

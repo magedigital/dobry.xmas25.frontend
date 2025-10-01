@@ -16,7 +16,7 @@ interface PopupI<P = {}, S = {}> extends EditBlockI<StateT & S> {
 
     renderPopup(
         this: PopupI,
-        data: { children: React.ReactNode; onClick?: () => void },
+        data: { children: React.ReactNode; onClick?: () => void; className?: string },
     ): React.ReactNode;
     renderClose(this: PopupI): React.ReactNode;
     renderContent(): React.ReactNode;

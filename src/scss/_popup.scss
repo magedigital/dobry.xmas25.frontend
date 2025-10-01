@@ -17,6 +17,7 @@
         margin: auto;
         padding: 2rem;
         border-radius: 48rem;
+        transition: $trans;
 
         @include mob {
             width: calc(100% - 32rem);
@@ -30,29 +31,37 @@
             width: 100%;
             height: 100%;
             padding: 24rem 62rem;
+            overflow: hidden;
             border-radius: inherit;
 
             @include mob {
                 padding: 22rem 14rem;
             }
+        }
+    }
 
-            &::before {
-                position: absolute;
-                top: 0;
-                left: 0;
-                z-index: -1;
-                width: 100%;
-                height: 100%;
-                content: "";
-                pointer-events: none;
+    &__innerBox,
+    &__success {
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            content: "";
+            pointer-events: none;
 
-                @include bg("/media/zagl/back-banner-1-snow.svg", 100% auto, center top);
+            @include bg("/media/zagl/back-banner-1-snow.svg", 100% auto, center top);
 
-                @include mob {
-                    @include bg("/media/zagl/back-banner-1-snow-mob.svg", 100% auto, center top);
-                }
+            @include mob {
+                @include bg("/media/zagl/back-banner-1-snow-mob.svg", 100% auto, center top);
             }
         }
+    }
+
+    &._success &__inner {
+        height: 380rem !important;
     }
 
     &._losvillPopup &__inner {
@@ -68,6 +77,10 @@
         }
     }
 
+    &._losvillPopup &__success {
+        background: linear-gradient(to bottom, #f22830, #be135a);
+    }
+
     &._manPopup &__inner {
         background: linear-gradient(to top, #c8c7fd, #9192df);
 
@@ -79,6 +92,10 @@
                 padding-bottom: 34rem;
             }
         }
+    }
+
+    &._manPopup &__success {
+        background: linear-gradient(to top, #5a46aa, #b3c1ff 150%);
     }
 
     &__close {
@@ -109,6 +126,68 @@
             @include mob {
                 width: 16rem;
                 height: 16rem;
+            }
+        }
+    }
+
+    &__success {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        padding: 40rem;
+        border-radius: inherit;
+
+        @include mob {
+            padding: 36rem;
+        }
+
+        &Inner {
+            width: 342rem;
+
+            @include mob {
+                width: 100%;
+            }
+
+            &::before {
+                display: block;
+                content: "";
+            }
+        }
+
+        &Head {
+            margin: auto 0;
+
+            @include mob {
+                padding-bottom: 20rem;
+            }
+        }
+
+        &Title {
+            margin-bottom: 22rem;
+            color: #fff;
+            font-weight: 600;
+            font-size: 20rem;
+            line-height: 1.45;
+            text-align: center;
+            text-transform: uppercase;
+
+            @include mob {
+                font-size: 19rem;
+            }
+        }
+
+        &Text {
+            color: #fff;
+            font-weight: 500;
+            font-size: 16rem;
+            line-height: 1.2;
+            text-align: center;
+
+            @include mob {
+                font-weight: 400;
+                font-size: 17rem;
+                line-height: 1.4;
             }
         }
     }

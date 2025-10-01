@@ -10,6 +10,7 @@ const renderContent: I['renderContent'] = function (this: I) {
 
     return (
         <>
+            {this.renderSuccess()}
             <h2 className="popup__title">
                 СТАНЬ УЧАСТНИКОМ СПЕЦИАЛЬНОГО <br className="_DESKTOP" />
                 ВЫПУСКА <br className="_MOBILE" />

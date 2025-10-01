@@ -7,6 +7,7 @@ type PropsT = {};
 type StateT = {
     form?: Partial<Record<keyof typeof manPopupFields, string>>;
     isShowAlert?: boolean;
+    isSuccess?: boolean;
 };
 
 interface ManPopupI extends PopupI<PropsT, StateT> {
@@ -17,6 +18,7 @@ interface ManPopupI extends PopupI<PropsT, StateT> {
     send(this: ManPopupI): Promise<void>;
 
     renderFields(this: ManPopupI): React.ReactNode;
+    renderSuccess(this: ManPopupI): React.ReactNode;
 }
 
 export default ManPopupI;

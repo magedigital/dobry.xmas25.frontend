@@ -6,6 +6,7 @@ type PropsT = {};
 
 type StateT = {
     form?: Partial<Record<keyof typeof losvillPopupFields, string>>;
+    isSuccess?: boolean;
 };
 
 interface LosvillPopupI extends PopupI<PropsT, StateT> {
@@ -14,6 +15,7 @@ interface LosvillPopupI extends PopupI<PropsT, StateT> {
     send(this: LosvillPopupI): Promise<void>;
 
     renderFields(this: LosvillPopupI): React.ReactNode;
+    renderSuccess(this: LosvillPopupI): React.ReactNode;
 }
 
 export default LosvillPopupI;

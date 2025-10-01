@@ -10,6 +10,7 @@ const renderContent: I['renderContent'] = function (this: I) {
 
     return (
         <>
+            {this.renderSuccess()}
             <h2 className="popup__title">
                 придумай имена для жителей лосьвилля и выиграй специальный приз*
             </h2>

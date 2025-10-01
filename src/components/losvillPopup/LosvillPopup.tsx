@@ -8,6 +8,7 @@ import LosvillPopupI from './types.ts';
 
 import renderContent from './renders/renderContent.tsx';
 import renderFields from './renders/renderFields.tsx';
+import renderSuccess from './renders/renderSuccess.tsx';
 
 class LosvillPopup
     extends Popup<LosvillPopupI['props'], LosvillPopupI['state']>
@@ -30,6 +31,7 @@ class LosvillPopup
 
     renderContent = renderContent;
     renderFields = renderFields;
+    renderSuccess = renderSuccess;
 
     componentDidMount(): void {
         super.componentDidMount();
@@ -38,8 +40,11 @@ class LosvillPopup
     }
 
     render() {
+        const { isSuccess } = this.state;
+
         return this.renderPopup({
             children: this.renderContent(),
+            className: isSuccess ? '_success' : '',
         });
     }
 }

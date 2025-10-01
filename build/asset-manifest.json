@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.137bda97.css",
-    "main.js": "/static/js/main.91a65d23.js",
+    "main.css": "/static/css/main.dd8e1965.css",
+    "main.js": "/static/js/main.8e4c7dd3.js",
     "static/js/446.a13c8123.chunk.js": "/static/js/446.a13c8123.chunk.js",
     "static/js/497.3b614799.chunk.js": "/static/js/497.3b614799.chunk.js",
     "static/js/509.63d9286d.chunk.js": "/static/js/509.63d9286d.chunk.js",
@@ -48,8 +48,8 @@
     "static/media/banner-anons-03.jpg": "/static/media/banner-anons-03.dd76a557324c4fd72419.jpg",
     "static/media/dobry-logo.svg": "/static/media/dobry-logo.df105e430bb264097c14.svg",
     "index.html": "/index.html",
-    "main.137bda97.css.map": "/static/css/main.137bda97.css.map",
-    "main.91a65d23.js.map": "/static/js/main.91a65d23.js.map",
+    "main.dd8e1965.css.map": "/static/css/main.dd8e1965.css.map",
+    "main.8e4c7dd3.js.map": "/static/js/main.8e4c7dd3.js.map",
     "446.a13c8123.chunk.js.map": "/static/js/446.a13c8123.chunk.js.map",
     "497.3b614799.chunk.js.map": "/static/js/497.3b614799.chunk.js.map",
     "509.63d9286d.chunk.js.map": "/static/js/509.63d9286d.chunk.js.map",
@@ -71,7 +71,7 @@
     "700.f818cbdd.chunk.js.map": "/static/js/700.f818cbdd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.137bda97.css",
-    "static/js/main.91a65d23.js"
+    "static/css/main.dd8e1965.css",
+    "static/js/main.8e4c7dd3.js"
   ]
 }
