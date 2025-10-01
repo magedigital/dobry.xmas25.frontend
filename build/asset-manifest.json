@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.137bda97.css",
-    "main.js": "/static/js/main.435db617.js",
+    "main.js": "/static/js/main.91a65d23.js",
     "static/js/446.a13c8123.chunk.js": "/static/js/446.a13c8123.chunk.js",
     "static/js/497.3b614799.chunk.js": "/static/js/497.3b614799.chunk.js",
     "static/js/509.63d9286d.chunk.js": "/static/js/509.63d9286d.chunk.js",
@@ -49,7 +49,7 @@
     "static/media/dobry-logo.svg": "/static/media/dobry-logo.df105e430bb264097c14.svg",
     "index.html": "/index.html",
     "main.137bda97.css.map": "/static/css/main.137bda97.css.map",
-    "main.435db617.js.map": "/static/js/main.435db617.js.map",
+    "main.91a65d23.js.map": "/static/js/main.91a65d23.js.map",
     "446.a13c8123.chunk.js.map": "/static/js/446.a13c8123.chunk.js.map",
     "497.3b614799.chunk.js.map": "/static/js/497.3b614799.chunk.js.map",
     "509.63d9286d.chunk.js.map": "/static/js/509.63d9286d.chunk.js.map",
@@ -72,6 +72,6 @@
   },
   "entrypoints": [
     "static/css/main.137bda97.css",
-    "static/js/main.435db617.js"
+    "static/js/main.91a65d23.js"
   ]
 }

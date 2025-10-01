@@ -10,7 +10,7 @@ const send: I['send'] = async function () {
 
     if (form) {
         (Object.keys(form) as (keyof typeof form)[]).forEach((key) => {
-            if (form[key]) {
+            if (form[key] && key !== 'video') {
                 this.formData.set(key, form[key]);
             }
         });

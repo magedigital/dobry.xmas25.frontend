@@ -19,7 +19,7 @@ export const manPopupFields = {
                     политикой конфиденциальности
                 </a>{' '}
                 и{' '}
-                <a href="/upload/docs/contest.pdf" target="_blank">
+                <a href="/upload/docs/requirements.pdf" target="_blank">
                     условиями обработки персональных данных
                 </a>
             </>
@@ -33,13 +33,10 @@ export const manPopupFields = {
             return (
                 <>
                     Я соглашаюсь с{' '}
-                    <a href="/upload/docs/rules.pdf" target="_blank">
+                    <a href="/upload/docs/contest.pdf" target="_blank">
                         Правилами конкурса
                     </a>{' '}
-                    и{' '}
-                    <a href="/upload/docs/requirements.pdf" target="_blank">
-                        Требованиями <br className="_DESKTOP" />к участникам
-                    </a>{' '}
+                    и Требованиями <br className="_DESKTOP" />к участникам
                     <i className={`popup__bannerFieldIcon ${isShowAlert ? '_hover' : ''}`}>
                         <div
                             className="popup__bannerFieldIconBtn"

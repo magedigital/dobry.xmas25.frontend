@@ -23,14 +23,12 @@ const renderContent: I['renderContent'] = function (this: I) {
                 <div className="popup__bannerMan">
                     <div className="popup__bannerManInfo">
                         <p className="popup__bannerManTitle">
-                            ДИМа
-                            <br className="_MOBILE" />
+                            ДИМа <br className="_MOBILE" />
                             МАСЛЕННИКОВ
                         </p>
                         <p className="popup__bannerManText">
                             Топ-блогер, <br />
-                            ведущий
-                            <br className="_MOBILE" />
+                            ведущий <br className="_MOBILE" />
                             Экстремальных пряток
                         </p>
                     </div>

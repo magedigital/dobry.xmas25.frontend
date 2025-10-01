@@ -25,7 +25,7 @@ export const losvillPopupFields = {
                     политикой конфиденциальности
                 </a>{' '}
                 и{' '}
-                <a href="/upload/docs/contest.pdf" target="_blank">
+                <a href="/upload/docs/requirements.pdf" target="_blank">
                     условиями обработки персональных данных
                 </a>
             </>
@@ -36,7 +36,7 @@ export const losvillPopupFields = {
         support: () => (
             <>
                 Я соглашаюсь с{' '}
-                <a href="/upload/docs/rules.pdf" target="_blank">
+                <a href="/upload/docs/contest.pdf" target="_blank">
                     Правилами конкурса
                 </a>
             </>
