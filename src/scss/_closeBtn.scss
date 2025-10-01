@@ -1,0 +1,20 @@
+.closeBtn {
+    z-index: 2;
+    width: 40rem;
+    height: 40rem;
+    background: #ff49b8;
+    border-radius: 12rem;
+
+    @include mob {
+        width: 35rem;
+        height: 35rem;
+        border-radius: 10rem;
+    }
+
+    @include button;
+
+    &__icon {
+        width: 18rem;
+        height: 18rem;
+    }
+}

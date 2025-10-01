@@ -1,0 +1,23 @@
+const icons = [
+    'logo',
+    'index-wave',
+    'arrow-prev',
+    'arrow-next',
+    'close',
+    'check',
+    'card-next',
+    'faq-drop',
+    'search',
+    'copy',
+    'arrow-prev-short',
+    'arrow-next-short',
+    'scan',
+    'arrow-next-long',
+    'arrow-prev-long',
+    'raffle-back-star',
+    'arrow-back',
+    'rules-arrow',
+    'upload',
+] as const;
+
+export default icons;

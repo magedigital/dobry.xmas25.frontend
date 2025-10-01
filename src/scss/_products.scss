@@ -1,0 +1,114 @@
+.products {
+    &__slider {
+        position: relative;
+        margin-bottom: 28rem;
+        padding: 0 120rem;
+
+        @include mob {
+            margin-bottom: 32rem;
+            padding: 0 20rem;
+        }
+
+        &Button {
+            position: absolute;
+            top: 50%;
+            z-index: 3;
+            width: 64rem;
+            height: 64rem;
+            background: #e11f26;
+            border-radius: 50%;
+            transform: translate(0, -50%);
+
+            &._prev {
+                left: 30rem;
+            }
+
+            &._next {
+                right: 30rem;
+            }
+
+            &Icon {
+                width: 24rem;
+                height: 24rem;
+
+                @include icon(#fcdbc6);
+            }
+        }
+
+        &Inner {
+            position: relative;
+        }
+
+        &Items,
+        &ReactItems {
+            position: relative;
+            z-index: 2;
+            display: inline-flex;
+        }
+
+        &Items {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        &ReactItems {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            // pointer-events: none;
+            // opacity: 0;
+        }
+
+        &Item {
+            width: 280rem;
+            height: 396rem;
+            margin-right: 31rem;
+            transition: $trans;
+
+            @include mob {
+                width: 332rem;
+                height: 460rem;
+                margin-right: 12rem;
+            }
+
+            @include desk {
+                &:not(._current) {
+                    opacity: 0;
+                }
+            }
+        }
+
+        &MobButtons {
+            margin-top: 20rem;
+        }
+
+        &MobItems {
+            margin: 0 17rem;
+            color: #5d279e;
+            font-weight: 700;
+            font-size: 16rem;
+        }
+
+        &MobButton {
+            width: 22rem;
+            height: 18rem;
+        }
+    }
+
+    &._5ka &__slider {
+        &MobItems {
+            color: #fff;
+        }
+
+        &MobButton {
+            @include icon(#fff);
+        }
+
+        &Button {
+            background: #fff;
+
+            @include icon(#ff1c24);
+        }
+    }
+}

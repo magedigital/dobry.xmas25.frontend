@@ -1,0 +1,354 @@
+.mainPrizeBanner {
+    position: relative;
+    z-index: 3;
+
+    &._inner &__inner {
+        padding-right: 12rem;
+        background: #ff49b8;
+        border-radius: 32rem;
+
+        @include mob {
+            padding-right: 20rem;
+            border-radius: 36rem;
+        }
+    }
+
+    &__inner {
+        position: relative;
+        z-index: 3;
+        padding: 60rem;
+        overflow: hidden;
+        background: #ff252e;
+        border-radius: 44rem;
+
+        @include mob {
+            padding: 270rem 20rem 50rem;
+            border-radius: 34rem;
+        }
+
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            content: "";
+            pointer-events: none;
+        }
+
+        &::after {
+            position: absolute;
+            top: -52rem;
+            right: -190rem;
+            z-index: -1;
+            width: 739rem;
+            height: 620rem;
+            animation: 2s infinite mainPrizeBack ease-in-out;
+            content: "";
+
+            @include mob {
+                width: 420rem;
+                height: 420rem;
+                background-position: left bottom;
+                inset: auto auto -90rem -60rem;
+            }
+
+            @keyframes mainPrizeBack {
+                0% {
+                    transform: scale(1);
+                }
+
+                50% {
+                    transform: scale(1.17);
+                }
+
+                100% {
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+
+    &__content {
+        width: 244rem;
+        margin: auto 0 auto auto;
+        padding-bottom: 38rem;
+
+        @include mob {
+            margin: 0 auto;
+            padding-bottom: 0;
+        }
+    }
+
+    &._inner &__content {
+        width: 280rem;
+        padding-bottom: 0;
+
+        @include mob {
+            margin-top: auto;
+        }
+    }
+
+    &__title {
+        margin-bottom: 12rem;
+        color: #ffd100;
+        font-weight: 600;
+        font-size: 36rem;
+        line-height: 1.3;
+        text-align: center;
+        text-transform: uppercase;
+
+        @include mob {
+            margin-bottom: 8rem;
+            font-size: 26rem;
+        }
+    }
+
+    &__description {
+        color: #fff;
+        font-weight: 600;
+        font-size: 24rem;
+        line-height: 1.3;
+        text-align: center;
+        text-transform: uppercase;
+
+        @include mob {
+            font-size: 18rem;
+            line-height: 1.35;
+        }
+    }
+
+    &._inner &__description {
+        font-size: 20rem;
+    }
+
+    &__decor {
+        position: absolute;
+        z-index: 4;
+    }
+
+    &__decor._1 {
+        top: 31rem;
+        right: 327rem;
+        width: 31rem;
+        height: 33rem;
+        animation: 2s mainPrizeDecor1 infinite ease-in-out;
+
+        @include mob {
+            inset: auto auto 150rem 26rem;
+            width: 28rem;
+            height: 28rem;
+        }
+
+        @keyframes mainPrizeDecor1 {
+            0% {
+                transform: translate(0, 0);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            80% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translate(-40rem, -40rem);
+                opacity: 0;
+            }
+        }
+    }
+
+    &__decor._2 {
+        top: 125rem;
+        right: 296rem;
+        width: 42rem;
+        height: 54rem;
+        animation: 2s mainPrizeDecor2 infinite ease-in-out;
+
+        @include mob {
+            inset: auto auto 24rem 28rem;
+            width: 24rem;
+            height: 24rem;
+        }
+
+        @keyframes mainPrizeDecor2 {
+            0% {
+                transform: translate(0, 0);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            80% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translate(-30rem, -15rem);
+                opacity: 0;
+            }
+        }
+    }
+
+    &__decor._3 {
+        top: 129rem;
+        right: 27rem;
+        width: 26rem;
+        height: 21rem;
+        animation: 2s mainPrizeDecor3 infinite ease-in-out;
+
+        @include mob {
+            top: auto;
+            right: 14rem;
+            bottom: 120rem;
+            width: 23rem;
+            height: 20rem;
+        }
+
+        @keyframes mainPrizeDecor3 {
+            0% {
+                transform: translate(0, 0);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            80% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translate(20rem, -45rem);
+                opacity: 0;
+            }
+        }
+    }
+
+    &__decor._4 {
+        top: 172rem;
+        right: 38rem;
+        width: 32rem;
+        height: 32rem;
+        animation: 2s mainPrizeDecor4 infinite linear;
+
+        @include mob {
+            top: auto;
+            right: 42rem;
+            bottom: 154rem;
+            width: 24rem;
+            height: 24rem;
+        }
+
+        @keyframes mainPrizeDecor4 {
+            0% {
+                transform: translate(0, 0) rotate(0deg);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            80% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translate(30rem, -20rem) rotate(360deg);
+                opacity: 0;
+            }
+        }
+    }
+
+    @include desk {
+        &._inner &__decor._4 {
+            top: 82rem;
+            right: 88rem;
+        }
+    }
+
+    &__decor._5 {
+        right: 61rem;
+        bottom: 92rem;
+        width: 35rem;
+        height: 47rem;
+        animation: 2s mainPrizeDecor5 infinite ease-in-out;
+
+        @include mob {
+            right: 43rem;
+            bottom: 18rem;
+            width: 26rem;
+            height: 32rem;
+        }
+
+        @keyframes mainPrizeDecor5 {
+            0% {
+                transform: translate(0, 0);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            80% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translate(20rem, 45rem);
+                opacity: 0;
+            }
+        }
+    }
+
+    @include desk {
+        &._inner &__decor._5 {
+            right: 58rem;
+            bottom: 72rem;
+        }
+    }
+
+    &__decor._6 {
+        right: 148rem;
+        bottom: 82rem;
+        width: 28rem;
+        height: 25rem;
+        animation: 2s mainPrizeDecor6 infinite ease-in-out;
+
+        @include mob {
+            right: 164rem;
+            bottom: 10rem;
+            width: 20rem;
+            height: 20rem;
+        }
+
+        @keyframes mainPrizeDecor6 {
+            0% {
+                transform: translate(0, 0);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            80% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translate(-20rem, 45rem);
+                opacity: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,53 @@
+type PropsT = {};
+
+type StateT = {
+    content?: MainContentT;
+};
+
+type MainContentT = {
+    components: {
+        header: HeaderContentT;
+        footer: FooterContentT;
+        prizesCommon: {
+            items: {
+                title: string;
+                description: string;
+                thumb: string;
+                subtitle: string;
+            }[];
+        };
+        prizes: {
+            instant: {
+                items: PrizeT[];
+            };
+            merch: {
+                items: PrizeT[];
+            };
+            weekly: {
+                items: PrizeT[];
+            };
+            main: {
+                items: PrizeT[];
+            };
+        };
+    };
+};
+
+type PrizeT = {
+    title: string;
+    description: string;
+    thumb: string;
+    price?: string;
+};
+
+interface IndexI extends React.Component<PropsT, StateT> {
+    props: PropsT;
+    state: StateT;
+
+    parent: React.RefObject<HTMLDivElement | null>;
+
+    getContent(this: IndexI): Promise<void>;
+}
+
+export default IndexI;
+export type { MainContentT, PrizeT as MainPrizeT };

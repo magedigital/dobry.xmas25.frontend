@@ -1,0 +1,70 @@
+.addressPoint {
+    position: relative;
+    padding: 16rem;
+    border: 2rem solid #f3f3f3;
+    border-radius: 12rem;
+
+    &__block {
+        & + & {
+            margin-top: 24rem;
+        }
+    }
+
+    &__title {
+        position: relative;
+        margin-bottom: 12rem;
+        padding-left: 32rem;
+        color: $colorDark;
+        font-weight: 500;
+        font-size: 16rem;
+    }
+
+    &__point {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        display: flex;
+        width: 24rem;
+        height: 24rem;
+        background: #ff49b8;
+        border-radius: 50%;
+        transform: translate(0, -50%);
+
+        &::before {
+            display: block;
+            width: 12rem;
+            height: 12rem;
+            margin: auto;
+            background: #fff;
+            border-radius: 50%;
+            opacity: 0;
+            transition: $trans;
+            content: "";
+        }
+    }
+
+    &__block._active &__point::before {
+        opacity: 1;
+    }
+
+    &__left {
+        padding-left: 32rem;
+    }
+
+    &__address {
+        margin-bottom: 12rem;
+        color: #5d279e;
+        font-weight: 600;
+        font-size: 16rem;
+        line-height: 1.3;
+    }
+
+    &__button {
+        height: 50rem;
+    }
+
+    &__field {
+        position: relative;
+        height: 60rem;
+    }
+}

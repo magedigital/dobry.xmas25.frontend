@@ -1,0 +1,548 @@
+.popup {
+    position: relative;
+    z-index: 1;
+    padding: 40rem 0;
+    overflow: hidden;
+    overflow-y: auto;
+    background: rgba(#000, 0.6);
+
+    @include mob {
+        padding: 64rem 0 40rem;
+    }
+
+    &__inner {
+        position: relative;
+        z-index: 2;
+        width: 640rem;
+        margin: auto;
+        padding: 2rem;
+        border-radius: 48rem;
+
+        @include mob {
+            width: calc(100% - 32rem);
+            margin: 0 auto;
+            border-radius: 32rem;
+        }
+
+        &Box {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            padding: 24rem 62rem;
+            border-radius: inherit;
+
+            @include mob {
+                padding: 22rem 14rem;
+            }
+
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                width: 100%;
+                height: 100%;
+                content: "";
+                pointer-events: none;
+
+                @include bg("/media/zagl/back-banner-1-snow.svg", 100% auto, center top);
+
+                @include mob {
+                    @include bg("/media/zagl/back-banner-1-snow-mob.svg", 100% auto, center top);
+                }
+            }
+        }
+    }
+
+    &._losvillPopup &__inner {
+        background: linear-gradient(to top, #fff7ae, #ff2828);
+
+        &Box {
+            padding-bottom: 48rem;
+            background: linear-gradient(to bottom, #f22830, #be135a);
+
+            @include mob {
+                padding-bottom: 34rem;
+            }
+        }
+    }
+
+    &._manPopup &__inner {
+        background: linear-gradient(to top, #c8c7fd, #9192df);
+
+        &Box {
+            padding-bottom: 48rem;
+            background: linear-gradient(to top, #5a46aa, #b3c1ff 150%);
+
+            @include mob {
+                padding-bottom: 34rem;
+            }
+        }
+    }
+
+    &__close {
+        position: absolute;
+        top: 0;
+        left: 100%;
+        z-index: 2;
+        width: 52rem;
+        height: 52rem;
+        margin-left: 12rem;
+        background: #fff;
+        border-radius: 24rem;
+
+        @include mob {
+            width: 38rem;
+            height: 38rem;
+            margin-bottom: 8rem;
+            border-radius: 17rem;
+            inset: auto 0 100% auto;
+        }
+
+        &Icon {
+            width: 22rem;
+            height: 22rem;
+
+            @include icon(#5d279e);
+
+            @include mob {
+                width: 16rem;
+                height: 16rem;
+            }
+        }
+    }
+
+    &__title {
+        color: #fff;
+        font-weight: 600;
+        font-size: 20rem;
+        line-height: 1.45;
+        text-align: center;
+        text-transform: uppercase;
+
+        @include mob {
+            font-size: 17.5rem;
+            line-height: 1.3;
+        }
+    }
+
+    &__text {
+        margin-top: 6rem;
+        color: #fff;
+        font-size: 16rem;
+        line-height: 1.25;
+        text-align: center;
+    }
+
+    &__banner {
+        padding: 16rem 0 0;
+
+        @include mob {
+            padding: 18rem 0 0;
+        }
+
+        &Banner {
+            position: relative;
+            width: 100%;
+            height: 116rem;
+            margin-bottom: 16rem;
+
+            @include mob {
+                height: 150rem;
+                margin-bottom: 26rem;
+            }
+
+            &Nums {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 2;
+                display: flex;
+                width: 105%;
+                height: 100%;
+                padding: 10rem;
+
+                @include mob {
+                    top: 13rem;
+                    width: 100%;
+                    padding: 0;
+                }
+            }
+
+            &Num {
+                display: flex;
+                width: calc(100% / 3);
+                height: 100%;
+
+                &Item {
+                    width: 20rem;
+                    height: 20rem;
+                    margin: auto 0 0;
+                    color: #c50018;
+                    font-weight: 600;
+                    font-size: 12rem;
+                    line-height: 1.3;
+                    background: #fff;
+                    border-radius: 8rem;
+
+                    @include mob {
+                        width: 26rem;
+                        height: 26rem;
+                        margin: auto auto 0;
+                        font-size: 16rem;
+                        border-radius: 10rem;
+                    }
+                }
+            }
+
+            &Inner {
+                border-radius: 24rem;
+
+                @include bg("/media/zagl/losi-names.jpg", cover, center top);
+
+                @include mob {
+                    border-radius: 20rem;
+
+                    @include bg("/media/zagl/losi-names-mob.jpg", cover, center top);
+                }
+            }
+        }
+
+        &Man {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            margin-bottom: 16rem;
+            padding: 19rem;
+            overflow: hidden;
+            border-radius: 24rem;
+
+            @include bg("/media/zagl/image-star.jpg", cover, left center);
+
+            @include mob {
+                padding: 13rem;
+
+                @include bg("/media/zagl/image-star-mob.jpg", cover, left center);
+            }
+
+            &Info {
+                width: 258rem;
+                margin-left: auto;
+                padding: 14rem 16rem;
+                background: linear-gradient(to top, #be135a, #f22830);
+                border-radius: 12rem;
+
+                @include mob {
+                    width: 186rem;
+                    padding: 8rem 10rem;
+                    border-radius: 14rem;
+                }
+            }
+
+            &Title {
+                margin-bottom: 2rem;
+                color: #ffe09e;
+                font-weight: 600;
+                font-size: 16rem;
+                line-height: 1.4;
+                text-transform: uppercase;
+
+                @include mob {
+                    margin-bottom: 4rem;
+                }
+            }
+
+            &Text {
+                color: #fff;
+                font-weight: 400;
+                font-size: 12rem;
+                line-height: 1.3;
+            }
+        }
+
+        &Fields {
+            display: flex;
+            flex-wrap: wrap;
+            width: calc(100% + 16rem);
+            margin-bottom: 16rem;
+
+            @include mob {
+                width: 100%;
+            }
+        }
+
+        &Field {
+            width: 100%;
+            margin-bottom: 10rem;
+            padding: 0 8rem;
+
+            @include mob {
+                padding: 0;
+            }
+
+            &._elkName1,
+            &._elkName2,
+            &._elkName3 {
+                width: calc(100% / 3);
+
+                @include mob {
+                    width: 100%;
+                }
+            }
+
+            &._type-input + &._type-checkbox,
+            &._type-upload + &._type-checkbox {
+                margin-top: 8rem;
+            }
+
+            &._type-input + &._type-upload {
+                margin-top: 8rem;
+            }
+
+            &._type-checkbox {
+                padding-top: 8rem;
+            }
+
+            &Icon {
+                position: relative;
+                display: inline-block;
+
+                &Btn {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 18rem;
+                    height: 18rem;
+                    margin-left: 2rem;
+                    color: #fff;
+                    font-weight: 500;
+                    font-size: 12rem;
+                    background: rgb(255 92 42 / 100%);
+                    border-radius: 50%;
+                    cursor: pointer;
+                }
+            }
+
+            &Icon:hover &Alert {
+                opacity: 1;
+                pointer-events: visible;
+            }
+
+            &Icon._hover &Alert {
+                @include mob {
+                    opacity: 1;
+                    pointer-events: visible;
+                }
+            }
+
+            &Alert {
+                position: absolute;
+                bottom: 100%;
+                left: 0;
+                z-index: 2;
+                width: 384rem;
+                margin-bottom: 6rem;
+                padding: 14rem;
+                background: rgba(#fff, 0.7);
+                border-radius: 20rem;
+                cursor: default;
+                opacity: 0;
+                transition: $trans;
+                pointer-events: none;
+
+                @include blur(16rem);
+
+                @include mob {
+                    right: -44rem;
+                    left: auto;
+                    width: 318rem;
+                    padding: 18rem;
+                }
+
+                &Title {
+                    margin-bottom: 10rem;
+                    color: rgb(93 39 158 / 100%);
+                    font-weight: 600;
+                    font-size: 12rem;
+                    text-transform: uppercase;
+
+                    @include mob {
+                        font-size: 14rem;
+                        line-height: 1.3;
+                    }
+                }
+
+                &List {
+                    counter-reset: listCount;
+
+                    &Item {
+                        position: relative;
+                        min-height: 20rem;
+                        padding: 4rem 0 0 28rem;
+                        color: rgb(93 39 158 / 100%);
+                        font-weight: 500;
+                        font-size: 12rem;
+                        counter-increment: listCount;
+
+                        @include mob {
+                            padding: 3rem 0 0 34rem;
+                            font-weight: 400;
+                            font-size: 15rem;
+                            line-height: 1.2;
+                        }
+
+                        &::before {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 20rem;
+                            height: 20rem;
+                            color: rgb(197 0 24 / 100%);
+                            font-size: 12rem;
+                            background: #fff;
+                            border-radius: 50%;
+                            content: counter(listCount);
+
+                            @include mob {
+                                width: 24rem;
+                                height: 24rem;
+                                font-weight: 600;
+                                font-size: 14rem;
+                            }
+                        }
+
+                        & + & {
+                            margin-top: 8rem;
+
+                            @include mob {
+                                margin-top: 10rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &Error {
+            &:not(._empty) {
+                margin-bottom: 20rem;
+            }
+        }
+
+        &Button {
+            width: 162rem;
+
+            @include mob {
+                width: 180rem;
+            }
+        }
+
+        &Prize {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            height: 112rem;
+            margin-top: 24rem;
+            padding: 16rem 28rem;
+
+            @include mob {
+                height: 224rem;
+                padding: 22rem 36rem;
+            }
+
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                width: 100%;
+                height: 100%;
+                border-radius: 24rem;
+                content: "";
+
+                @include bg("/media/zagl/prize-spec-back.jpg", cover, center);
+
+                @include mob {
+                    @include bg("/media/zagl/prize-spec-back-mob.jpg", cover, center);
+                }
+            }
+
+            &::after {
+                position: absolute;
+                top: 0;
+                right: 23rem;
+                z-index: 2;
+                width: 218rem;
+                height: 128rem;
+                content: "";
+                pointer-events: none;
+
+                @include bg("/media/zagl/prize-spec.png", contain, right top);
+
+                @include mob {
+                    width: 280rem;
+                    height: 180rem;
+                    inset: auto auto -38rem 50%;
+                    transform: translate(-50%, 0);
+                }
+            }
+
+            &Inner {
+                width: 200rem;
+
+                @include mob {
+                    width: 100%;
+                }
+            }
+
+            &Title {
+                position: relative;
+                margin-bottom: 5rem;
+                color: #c50018;
+                font-weight: 600;
+                font-size: 20rem;
+                line-height: 1.2;
+                text-transform: uppercase;
+
+                @include mob {
+                    margin-bottom: 3rem;
+                    font-size: 20.5rem;
+                }
+
+                &::before {
+                    position: absolute;
+                    top: -5rem;
+                    right: 100%;
+                    margin-right: 2rem;
+                    color: #c50018;
+                    font-weight: 600;
+                    font-size: 20rem;
+                    line-height: 1.2;
+                    content: "*";
+
+                    @include mob {
+                        margin-right: 5rem;
+                    }
+                }
+            }
+
+            &Text {
+                max-width: 70%;
+                color: #6c1100;
+                font-weight: 600;
+                font-size: 12rem;
+                line-height: 1.3;
+                text-transform: uppercase;
+
+                @include mob {
+                    max-width: 100%;
+                    font-size: 14rem;
+                }
+            }
+        }
+    }
+}

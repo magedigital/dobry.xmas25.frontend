@@ -1,0 +1,16 @@
+.dashedBorder {
+    width: calc(100% + 2rem);
+    height: calc(100% + 2rem);
+    margin: -1rem;
+
+    &__rect {
+        x: 1rem;
+        y: 1rem;
+        width: calc(100% - 2rem);
+        height: calc(100% - 2rem);
+        transition: $trans;
+        stroke: #fff;
+        stroke-width: 2rem;
+        stroke-dasharray: 8 5;
+    }
+}

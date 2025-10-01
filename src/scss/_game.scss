@@ -1,0 +1,18 @@
+.game {
+    position: relative;
+    z-index: 1;
+    height: 550rem;
+
+    @include mob {
+        height: 660rem;
+    }
+
+    & .page {
+        border-radius: 32rem;
+    }
+}
+
+.primary-button,
+.secondary-button {
+    font-size: 16px;
+}
