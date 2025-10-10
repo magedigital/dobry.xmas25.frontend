@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.fad38418.css",
-    "main.js": "/static/js/main.bd288343.js",
+    "main.js": "/static/js/main.65249df6.js",
     "static/js/977.11b184c9.chunk.js": "/static/js/977.11b184c9.chunk.js",
     "static/js/16.5a5e5c22.chunk.js": "/static/js/16.5a5e5c22.chunk.js",
     "static/js/402.8cf5cbfc.chunk.js": "/static/js/402.8cf5cbfc.chunk.js",
@@ -80,8 +80,8 @@
     "static/media/banner-anons-02-mob.jpg": "/static/media/banner-anons-02-mob.534b333c0a7374d8ebb2.jpg",
     "static/media/losi-names-mob.jpg": "/static/media/losi-names-mob.d21df2bc6d6381b47589.jpg",
     "static/media/banner-anons-01.jpg": "/static/media/banner-anons-01.c38efd963c5444ada323.jpg",
+    "static/media/app-toy.png": "/static/media/app-toy.3ee74702b65df8552127.png",
     "static/media/banner-anons-02.jpg": "/static/media/banner-anons-02.9bff1a9460154fb804b6.jpg",
-    "static/media/app-toy.png": "/static/media/app-toy.b70c335ff6d1e87e7daf.png",
     "static/media/app-screen.jpg": "/static/media/app-screen.05ec47b8ea6fd78f9860.jpg",
     "static/media/toy-6.png": "/static/media/toy-6.29168201940803f37a2f.png",
     "static/media/toy-7.png": "/static/media/toy-7.5469985fe9b3f2d89c7a.png",
@@ -125,6 +125,6 @@
   },
   "entrypoints": [
     "static/css/main.fad38418.css",
-    "static/js/main.bd288343.js"
+    "static/js/main.65249df6.js"
   ]
 }
