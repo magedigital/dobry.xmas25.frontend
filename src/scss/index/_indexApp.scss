@@ -1,0 +1,252 @@
+.indexApp {
+    position: relative;
+    padding: 100rem 0 64rem;
+
+    @include bg("/media/app-back.jpg", 100% auto, center);
+
+    @include mob {
+        padding: 46rem 0 20rem;
+        background: none;
+    }
+
+    &__inner {
+        @include mob {
+            width: 100%;
+        }
+    }
+
+    &__head {
+        margin-bottom: 74rem;
+
+        @include mob {
+            margin-bottom: 62rem;
+        }
+
+        &Title {
+            margin-bottom: 10rem;
+            color: #fff;
+            font-weight: 600;
+            font-size: 28rem;
+            text-transform: uppercase;
+
+            @include mob {
+                margin-bottom: 13rem;
+                font-size: 26rem;
+                line-height: 1.35;
+                text-align: center;
+            }
+        }
+
+        &Description {
+            color: #fff;
+            font-weight: 500;
+            font-size: 16rem;
+
+            @include mob {
+                font-size: 19rem;
+                white-space: nowrap;
+            }
+        }
+    }
+
+    &__innerContent {
+        position: relative;
+        z-index: 1;
+        width: 828rem;
+        margin: 0 auto;
+        padding: 2rem;
+        background: linear-gradient(to top, #fff7ae, #ff2828);
+        border-radius: 64rem;
+        box-shadow: 0 24rem 0 0 #760509;
+
+        @include mob {
+            width: 100%;
+            padding: 1rem;
+        }
+
+        &Box {
+            position: relative;
+            z-index: 1;
+            padding: 44rem 82rem 74rem;
+            overflow: hidden;
+            background: linear-gradient(to top, #be135a, #f22830);
+            border-radius: inherit;
+
+            @include mob {
+                padding: 40rem 17rem 90rem;
+                border-radius: inherit;
+
+                &::after {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: -1;
+                    width: 100%;
+                    height: 100%;
+                    content: "";
+
+                    @include bg("/media/app-back-mob.jpg", 100% auto, center);
+                }
+            }
+        }
+    }
+
+    &__content {
+        position: relative;
+        height: 316rem;
+
+        @include mob {
+            height: 410rem;
+        }
+    }
+
+    &__screen {
+        position: absolute;
+        bottom: -6rem;
+        left: 6rem;
+        z-index: 1;
+        width: 188rem;
+        padding: 8rem;
+        background: linear-gradient(to top, #f41b1e, #ff6193);
+        border-radius: 22rem;
+
+        @include mob {
+            right: 30rem;
+            bottom: 72rem;
+            left: auto;
+            width: 186rem;
+            padding: 4rem;
+            border-radius: 26rem;
+        }
+
+        &Image {
+            display: block;
+            width: 100%;
+            border-radius: 16rem;
+
+            @include mob {
+                border-radius: 20rem;
+            }
+        }
+    }
+
+    &__block {
+        position: relative;
+        z-index: 1;
+        align-items: center;
+        width: 368rem;
+        margin: auto 0 0 auto;
+        padding: 50rem 34rem 40rem 42rem;
+
+        &::after {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: -1;
+            width: 125%;
+            height: 125%;
+            transform: translate(-50%, -50%);
+            content: "";
+
+            @include bg("/media/app-puff.png", contain, center);
+
+            @include mob {
+                width: 145%;
+                height: 145%;
+            }
+        }
+
+        @include mob {
+            width: 100%;
+            margin: auto 0 0;
+            padding: 34rem 56rem;
+            border-radius: 30rem;
+        }
+
+        &::before {
+            position: absolute;
+            top: 100%;
+            left: 100%;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+            width: 48rem;
+            height: 48rem;
+            margin: 24rem 0 0 6rem;
+            padding-left: 3rem;
+            color: #fff7ae;
+            font-weight: 600;
+            font-size: 20rem;
+            background: #760509;
+            border-radius: 50%;
+            transform: translate(0, -50%);
+            content: "18+";
+
+            @include mob {
+                right: auto;
+                left: 44rem;
+                width: 58rem;
+                height: 58rem;
+            }
+        }
+
+        &Thumb {
+            position: absolute;
+            right: 50rem;
+            bottom: 100%;
+            z-index: 3;
+            width: 150rem;
+            height: 210rem;
+            margin-bottom: -20rem;
+            object-fit: contain;
+
+            @include mob {
+                right: auto;
+                left: 20rem;
+                width: 134rem;
+                height: 194rem;
+                margin-bottom: 10rem;
+            }
+        }
+
+        &Code {
+            position: absolute;
+            bottom: 100%;
+            left: -40rem;
+            z-index: 2;
+            width: 194rem;
+            height: 194rem;
+            margin-bottom: -20rem;
+            padding: 0;
+            overflow: hidden;
+            background: #fff;
+            border-radius: 36rem;
+        }
+
+        &Content {
+            position: relative;
+            width: calc(100% - 70rem);
+            padding-right: 14rem;
+            color: #fff;
+            font-weight: 500;
+            font-size: 20rem;
+            line-height: 1.3;
+
+            @include mob {
+                font-size: 20rem;
+            }
+
+            &Link {
+                color: #fff;
+            }
+        }
+
+        &Logo {
+            width: 74rem;
+            height: 74rem;
+            object-fit: contain;
+        }
+    }
+}

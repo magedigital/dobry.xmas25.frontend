@@ -1,25 +1,25 @@
-﻿* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+﻿// * {
+//     box-sizing: border-box;
+//     margin: 0;
+//     padding: 0;
 
-    // color: $colorDark;
-    font-weight: 400;
-    font-family: Geologica;
-    font-style: normal;
-    line-height: 1;
-    letter-spacing: unset;
-    text-align: left;
-    text-decoration: none;
-    list-style-type: none;
-    background: none;
-    border: 0;
-    border-radius: 0;
-    outline: none;
-    box-shadow: none;
-    appearance: none;
-    -webkit-font-smoothing: antialiased;
-}
+//     // color: $colorDark;
+//     font-weight: 400;
+//     font-family: Geologica;
+//     font-style: normal;
+//     line-height: 1;
+//     letter-spacing: unset;
+//     text-align: left;
+//     text-decoration: none;
+//     list-style-type: none;
+//     background: none;
+//     border: 0;
+//     border-radius: 0;
+//     outline: none;
+//     box-shadow: none;
+//     appearance: none;
+//     -webkit-font-smoothing: antialiased;
+// }
 
 @mixin bg($url, $size, $pos, $rep: no-repeat) {
     background: url($url) $rep;
@@ -157,7 +157,7 @@ html {
     margin: 0 auto;
 
     @include mob {
-        width: 384rem;
+        width: 374rem;
     }
 }
 

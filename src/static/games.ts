@@ -1,5 +1,38 @@
 const games = {
+    1: {
+        menuThumb: 'game-img-1.jpg',
+        image: 'game/Game1.svg',
+        title: 'Снежки',
+        description: 'Успей собрать как можно больше фестивальных предметов',
+        goal: 'vibeBtn',
+        metaTitle: 'Лови вайб',
+    },
+    2: {
+        menuThumb: 'game-img-2.jpg',
+        image: 'game/Game2.svg',
+        title: 'Вайб Лосьвилля',
+        description: 'Поймай звезду в луч прожектора',
+        goal: 'spotlightsBtn',
+        metaTitle: 'В свете софитов',
+    },
+    3: {
+        menuThumb: 'game-img-3.jpg',
+        image: 'game/Game4.svg',
+        title: 'Новогодняя ёлка',
+        description: 'Собери музыкально-фестивальные пары этого лета',
+        goal: 'matchBtn',
+        metaTitle: 'Найди мэтч',
+    },
+    4: {
+        menuThumb: 'game-img-4.jpg',
+        image: 'game/Game3.svg',
+        title: 'Тайный Лосянта',
+        description: 'Доберись до Главной сцены Добрый Fest',
+        goal: 'stageBtn',
+        metaTitle: 'Вперёд к сцене',
+    },
     VIBE: {
+        menuThumb: 'game-img-4.jpg',
         image: 'game/Game1.svg',
         title: 'Лови вайб',
         description: 'Успей собрать как можно больше фестивальных предметов',
@@ -7,6 +40,7 @@ const games = {
         metaTitle: 'Лови вайб',
     },
     SPOTLIGHTS: {
+        menuThumb: 'game-img-4.jpg',
         image: 'game/Game2.svg',
         title: 'В свете софитов',
         description: 'Поймай звезду в луч прожектора',
@@ -14,6 +48,7 @@ const games = {
         metaTitle: 'В свете софитов',
     },
     MATCH: {
+        menuThumb: 'game-img-4.jpg',
         image: 'game/Game4.svg',
         title: 'Найди мэтч',
         description: 'Собери музыкально-фестивальные пары этого лета',
@@ -21,6 +56,7 @@ const games = {
         metaTitle: 'Найди мэтч',
     },
     STAGE: {
+        menuThumb: 'game-img-4.jpg',
         image: 'game/Game3.svg',
         title: 'Вперед к сцене',
         description: 'Доберись до Главной сцены Добрый Fest',
@@ -28,6 +64,7 @@ const games = {
         metaTitle: 'Вперёд к сцене',
     },
     FIVE: {
+        menuThumb: 'game-img-4.jpg',
         image: 'location-game-01.svg',
         title: 'Играть',
         description: 'Успей собрать как можно больше фестивальных предметов',

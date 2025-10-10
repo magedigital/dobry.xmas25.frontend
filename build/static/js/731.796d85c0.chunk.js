@@ -1,2 +1,0 @@
-"use strict";(globalThis.webpackChunktest=globalThis.webpackChunktest||[]).push([[731],{731:(l,s,L)=>{L.r(s),L.d(s,{default:()=>a});L(5043);var e=L(579);const a=(0,e.jsx)("svg",{viewBox:"0 0 23 23",fill:"none",children:(0,e.jsx)("path",{d:"M22.1211 2.12109L13.1816 11.0605L22.1211 20L20 22.1211L11.0605 13.1816L2.12109 22.1211L0 20L8.93945 11.0605L0 2.12109L2.12109 0L11.0605 8.93945L20 0L22.1211 2.12109Z",fill:"#5D279E",className:"icon__fill"})})}}]);
-//# sourceMappingURL=731.796d85c0.chunk.js.map

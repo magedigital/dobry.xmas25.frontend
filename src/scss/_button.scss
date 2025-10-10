@@ -9,6 +9,10 @@
 
     @include button;
 
+    &._mediumSize {
+        padding: 1rem;
+    }
+
     &__loader {
         z-index: 10;
         background: inherit;
@@ -31,12 +35,23 @@
         border-radius: inherit;
 
         @include mob {
-            font-size: 18rem;
+            padding: 23rem 24rem 22rem;
+            font-size: 15.5rem;
+        }
+    }
+
+    &._largeSize &__inner {
+        padding: 18rem 30rem;
+        font-size: 20rem;
+        line-height: 1.3;
+
+        @include mob {
+            padding: 14rem 16rem;
         }
     }
 
     &._mediumSize &__inner {
-        padding: 18rem 24rem;
+        padding: 15rem 18rem 14rem;
         font-size: 14rem;
         line-height: 1.3;
 
@@ -62,6 +77,34 @@
         background: linear-gradient(to top, #b690eb, #55367f);
     }
 
+    &._topBarReg {
+        background: linear-gradient(to top, #fff, #fbdbff);
+    }
+
+    &._topBarProfile {
+        background: linear-gradient(to top, #ffe8b1, #ff5029);
+    }
+
+    &._topBarBot {
+        background: linear-gradient(to top, #b690eb, #55367f);
+    }
+
+    &._topBarCollection {
+        background: linear-gradient(to top, #ff6750, #d10000);
+    }
+
+    &._menuReg {
+        background: linear-gradient(to top, #fff, #fbdbff);
+    }
+
+    &._menuProfile {
+        background: linear-gradient(to top, #ff94b7, #ff49b8);
+    }
+
+    &._menuCollection {
+        background: linear-gradient(to top, #ff8550, #d10000);
+    }
+
     &._banner1 &__inner,
     &._banner2 &__inner,
     &._rules &__inner {
@@ -83,5 +126,48 @@
 
     &._rules &__inner {
         color: #c50018;
+    }
+
+    &._indexHeader &__inner {
+        background: #5d279e;
+        box-shadow: 0 2rem 0 0 rgba(#fef7de, 1);
+    }
+
+    &._topBarReg &__inner {
+        color: #592f8f;
+        background: #fbdbff;
+    }
+
+    &._topBarProfile &__inner {
+        background: #fe431e;
+    }
+
+    &._topBarBot &__inner {
+        background: #5d279e;
+    }
+
+    &._topBarCollection &__inner {
+        background: #c50018;
+    }
+
+    &._menuReg &__inner {
+        color: #c50018;
+        background: #fbdbff;
+    }
+
+    &._menuProfile &__inner {
+        background: #ff49b8;
+    }
+
+    &._menuCollection &__inner {
+        background: #fb0a00;
+    }
+
+    & i {
+        &._tg {
+            width: 20rem;
+            height: 20rem;
+            margin-right: 10rem;
+        }
     }
 }

@@ -3,17 +3,17 @@ import { connect } from 'react-redux';
 
 import Footer from '@components/footer/Footer.tsx';
 import { getLocalContent } from '@functions/localContent.ts';
-import { scrollPage } from '@functions/savePageScroll.ts';
 
-import About from './components/about/About.tsx';
+import PublicPage from '../../components/publicPage/PublicaPage.tsx';
 import App from './components/app/App.tsx';
 import Header from './components/header/Header.tsx';
+import Map from './components/map/Map.tsx';
 
 import IndexI from './types.ts';
 
 import getContent from './requests/getContent.ts';
 
-class Index extends React.Component<IndexI['props'], IndexI['state']> implements IndexI {
+class Index extends PublicPage<IndexI['props'], IndexI['state']> implements IndexI {
     parent: IndexI['parent'];
 
     constructor(props: IndexI['props']) {
@@ -25,12 +25,12 @@ class Index extends React.Component<IndexI['props'], IndexI['state']> implements
         this.parent = React.createRef();
     }
 
+    name = 'index';
+
     getContent = getContent;
 
     componentDidMount(): void {
-        const page = this.parent.current!.closest('.body__page') as HTMLElement;
-
-        scrollPage(page, 'index');
+        super.componentDidMount();
 
         this.getContent();
     }
@@ -38,22 +38,25 @@ class Index extends React.Component<IndexI['props'], IndexI['state']> implements
     render() {
         const { content } = this.state;
 
-        return (
-            <div ref={this.parent} className="index _FULL_W">
-                <div className="index__section _FULL_W">
-                    <Header />
+        return this.renderPage({
+            name: 'index',
+            render: () => (
+                <div className="index _FULL_W">
+                    <div className="index__section _FULL_W">
+                        <Header />
+                    </div>
+                    <div className="index__section _FULL_W">
+                        <Map getScrollNode={() => this.scrollNode.current} />
+                    </div>
+                    <div className="index__section _FULL_W">
+                        <App />
+                    </div>
+                    <div className="index__section _FULL_W">
+                        <Footer content={content?.components.footer} />
+                    </div>
                 </div>
-                <div className="index__section _FULL_W _about">
-                    <About content={content} />
-                </div>
-                <div className="index__section _FULL_W">
-                    <App />
-                </div>
-                <div className="index__section _FULL_W">
-                    <Footer content={content?.components.footer} />
-                </div>
-            </div>
-        );
+            ),
+        });
     }
 }
 

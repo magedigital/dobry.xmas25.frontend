@@ -50,7 +50,7 @@ class Root extends React.Component<RootI['props'], RootI['state']> implements Ro
                 <div className={`body__content ${checkChatbot() ? '_chatbot' : ''}`}>
                     {rootInit && (
                         <>
-                            {true ? (
+                            {false ? (
                                 <>
                                     <div className="body__page" data-show>
                                         <WaitIndex />

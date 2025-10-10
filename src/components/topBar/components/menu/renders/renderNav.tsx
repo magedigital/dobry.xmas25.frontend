@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Icon from '@components/icon/Icon.tsx';
 import Link from '@components/link/Link.tsx';
 import sendGoal from '@functions/sendGoal.ts';
 
@@ -32,6 +33,9 @@ const renderNav: I['renderNav'] = function () {
 
                 return (
                     <div className={`menu__navItem _${item.name}`} key={item.name}>
+                        <div className="menu__navItemIcon">
+                            <Icon name="menu-star" />
+                        </div>
                         <ItemTag className="menu__navItemLink" {...itemProps}>
                             {item.content}
                         </ItemTag>

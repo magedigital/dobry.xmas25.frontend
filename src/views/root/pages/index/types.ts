@@ -1,3 +1,5 @@
+import PublicPageI from '../../components/publicPage/types';
+
 type PropsT = {};
 
 type StateT = {
@@ -40,10 +42,7 @@ type PrizeT = {
     price?: string;
 };
 
-interface IndexI extends React.Component<PropsT, StateT> {
-    props: PropsT;
-    state: StateT;
-
+interface IndexI extends PublicPageI<PropsT, StateT> {
     parent: React.RefObject<HTMLDivElement | null>;
 
     getContent(this: IndexI): Promise<void>;

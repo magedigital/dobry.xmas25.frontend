@@ -5,7 +5,7 @@ import I, { NavItemT } from '../types.ts';
 const getNav: I['getNav'] = function () {
     const nav: NavItemT[] = [];
 
-    (['index', 'rules', 'prizes', 'winners', 'faq', 'products', 'cheque'] as const).forEach(
+    (['index', 'rules', 'prizes', 'winners', 'faq', 'products', 'actions'] as const).forEach(
         (name) => {
             nav.push({
                 name,
@@ -17,7 +17,7 @@ const getNav: I['getNav'] = function () {
 
     nav.push({
         name: 'tg',
-        content: 'Телеграм-бот',
+        content: 'Чат-бот',
         href: 'https://t.me/dobrycola_promo_bot',
     });
 

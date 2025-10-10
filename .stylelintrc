@@ -18,6 +18,9 @@
         "scss/at-extend-no-missing-placeholder": null,
         "keyframes-name-pattern": null,
         "import-notation": null,
-        "property-no-vendor-prefix": null
+        "property-no-vendor-prefix": null,
+        "custom-property-pattern": null,
+        "font-family-no-missing-generic-family-keyword": null,
+        "value-no-vendor-prefix": null
     }
 }

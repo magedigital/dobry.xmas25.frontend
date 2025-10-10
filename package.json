@@ -30,8 +30,8 @@
     },
     "scripts": {
         "start": "PORT=2010 dotenv -e .env.local craco start",
-        "build:local": "dotenv -e .env.local craco build",
-        "build:prod": "dotenv -e .env.prod craco build",
+        "build:local": "GENERATE_SOURCEMAP=false dotenv -e .env.local craco build",
+        "build:prod": "GENERATE_SOURCEMAP=false dotenv -e .env.prod craco build",
         "format": "prettier --write \"{,!(node_modules)/**/}*.{ts,tsx}\"",
         "generate": "ts-node -r tsconfig-paths/register ./cli/index.ts"
     },

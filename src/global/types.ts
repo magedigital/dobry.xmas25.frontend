@@ -13,7 +13,7 @@ declare global {
         closeGamePopup: () => void;
         registerBill: () => void;
         signUp: () => void;
-        gameId: 'VIBE' | 'SPOTLIGHTS' | 'MATCH' | 'STAGE' | 'FIVE';
+        gameId: 'VIBE' | 'SPOTLIGHTS' | 'MATCH' | 'STAGE' | 'FIVE' | string | number;
         saveJWT: (JWT: string) => void;
         getJWT: () => string | undefined;
         userAuthorized: boolean;

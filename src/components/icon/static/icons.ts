@@ -18,6 +18,9 @@ const icons = [
     'arrow-back',
     'rules-arrow',
     'upload',
+    'index-arrow',
+    'tg',
+    'menu-star',
 ] as const;
 
 export default icons;

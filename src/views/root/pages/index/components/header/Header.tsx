@@ -1,12 +1,23 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+import Icon from '@components/icon/Icon.tsx';
+
+import advanceRotate from './methods/advanceRotate.ts';
+import setSliderTimer from './methods/setSliderTimer.ts';
+import sliderInit from './methods/sliderInit.ts';
+import startRotate from './methods/startRotate.ts';
+
 import HeaderI from './types.ts';
 
-import renderBack from './renders/renderBack.tsx';
+import renderCarusel from './renders/renderCarusel.tsx';
+import renderContent from './renders/renderContent.tsx';
+import renderSlider from './renders/renderSlider.tsx';
 
 class Header extends React.Component<HeaderI['props'], HeaderI['state']> implements HeaderI {
     parent: HeaderI['parent'];
+    animationId: HeaderI['animationId'];
+    sliderTimerId: HeaderI['sliderTimerId'];
 
     constructor(props: HeaderI['props']) {
         super(props);
@@ -15,18 +26,45 @@ class Header extends React.Component<HeaderI['props'], HeaderI['state']> impleme
         this.parent = React.createRef();
     }
 
-    renderBack = renderBack;
+    rotateSpeed = 1;
+    rotateDeg = 0;
+
+    startRotate = startRotate;
+    advanceRotate = advanceRotate;
+
+    sliderInit = sliderInit;
+    setSliderTimer = setSliderTimer;
+
+    renderContent = renderContent;
+    renderCarusel = renderCarusel;
+    renderSlider = renderSlider;
+
+    componentDidMount(): void {
+        this.startRotate();
+        this.sliderInit();
+    }
+
+    componentWillUnmount(): void {
+        if (this.animationId) {
+            cancelAnimationFrame(this.animationId);
+        }
+
+        if (this.sliderTimerId) {
+            clearTimeout(this.sliderTimerId);
+        }
+    }
 
     render() {
         return (
-            <div ref={this.parent} className={`indexHeader _SECTION`}>
+            <div ref={this.parent} className="indexHeader _SECTION">
                 <div className="indexHeader__inner _INNER">
-                    {/* <img
-                        alt=""
-                        className="indexHeader__slogan"
-                    /> */}
+                    {this.renderContent()}
+                    {this.renderCarusel()}
+                    {this.renderSlider()}
+                    <div className="indexHeader__arrow">
+                        <Icon name="index-arrow" />
+                    </div>
                 </div>
-                {this.renderBack()}
             </div>
         );
     }

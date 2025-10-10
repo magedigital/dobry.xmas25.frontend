@@ -1,0 +1,233 @@
+.indexHeader {
+    position: relative;
+    width: 100%;
+
+    @include bg("/media/main-img.jpg", 100% auto, center top);
+
+    @include mob {
+        @include bg("/media/main-img-mob.jpg", 100% auto, center top);
+    }
+
+    &__inner {
+        position: relative;
+        align-items: center;
+        padding: 118rem 0 84rem;
+
+        @include mob {
+            padding: 90rem 0 70rem;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 600rem;
+        margin-bottom: 24rem;
+
+        @include mob {
+            width: 100%;
+        }
+
+        &Support {
+            margin-bottom: 10rem;
+            color: #6c1100;
+            font-weight: 600;
+            font-size: 30rem;
+            line-height: 1.2;
+            text-align: center;
+            text-transform: uppercase;
+
+            @include mob {
+                margin-bottom: 7rem;
+                font-size: 18rem;
+            }
+        }
+
+        &Title {
+            width: 100%;
+            height: 64rem;
+            margin-bottom: 22rem;
+
+            @include bg("/media/zagl/losvill-logo.svg", contain, center top);
+
+            @include mob {
+                height: 39rem;
+                margin-bottom: 20rem;
+            }
+        }
+
+        &Text {
+            max-width: 90%;
+            margin-bottom: 20rem;
+            color: #6c1100;
+            font-size: 16rem;
+            line-height: 1.25;
+            text-align: center;
+
+            @include mob {
+                max-width: 90%;
+                font-weight: 500;
+                font-size: 15.5rem;
+                line-height: 1.4;
+            }
+        }
+
+        &Button {
+            white-space: nowrap;
+        }
+    }
+
+    &__carusel {
+        position: absolute;
+        top: 254rem;
+        right: -36rem;
+        z-index: 10;
+        width: 366rem;
+        height: 366rem;
+
+        @include mob {
+            top: 424rem;
+            right: -78rem;
+            width: 220rem;
+            height: 220rem;
+        }
+
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            z-index: 1;
+            width: 113%;
+            height: 113%;
+            transform: translate(-50%, 0);
+            content: "";
+
+            @include bg("/media/karusel-shadow.png", contain, center);
+        }
+
+        &Back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+
+            @keyframes rotate {
+                from {
+                    transform: rotate(0deg);
+                }
+
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+
+            &Image {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+
+                // animation: 4s infinite rotate linear;
+            }
+        }
+
+        &Top {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 3;
+            width: 190rem;
+            height: 190rem;
+            transform: translate(-50%, -50%);
+
+            @include mob {
+                width: 116rem;
+                height: 116rem;
+            }
+
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+                width: 100%;
+                height: 100%;
+                content: "";
+
+                @include bg("/media/karusel-0-1.svg", contain, center);
+            }
+
+            &::after {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 2;
+                width: 100%;
+                height: 100%;
+                content: "";
+
+                @include bg("/media/karusel-0-2.png", contain, center);
+            }
+        }
+    }
+
+    &__slider {
+        width: 424rem;
+        margin: -10rem 0 8rem;
+
+        @include mob {
+            width: 314rem;
+            margin: 264rem 0 0;
+        }
+
+        &Inner {
+            width: 100%;
+        }
+
+        &Items {
+            display: inline-flex;
+        }
+
+        &Item {
+            width: 130rem;
+            height: 187rem;
+            margin-right: 14rem;
+            transition: $trans;
+
+            @include mob {
+                width: 100rem;
+                height: 157rem;
+                margin-right: 10rem;
+            }
+
+            &:not([data-vis], [data-cur]) {
+                opacity: 0;
+            }
+
+            &Image {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                transform-origin: center top;
+                transition: $trans;
+                will-change: transform;
+            }
+
+            &[data-cur] &Image {
+                transform: scale(1.32);
+            }
+        }
+    }
+
+    &__arrow {
+        position: absolute;
+        bottom: 14rem;
+        left: 50%;
+        z-index: 3;
+        width: 23rem;
+        height: 15rem;
+        transform: translate(-50%, 0);
+    }
+}

@@ -13,15 +13,29 @@ const renderContent: I['renderContent'] = function () {
                 sendGoal('mobileBtn');
             }}
         >
-            <div className="indexApp__screen"></div>
+            <div className="indexApp__screen">
+                <img
+                    src={require('@media/app-screen.jpg')}
+                    alt=""
+                    className="indexApp__screenImage"
+                />
+            </div>
             <div className="indexApp__block _ROW">
+                <img src={require('@media/app-toy.png')} alt="" className="indexApp__blockThumb" />
+
                 <Media current="desktop">
                     <a
                         className="indexApp__blockCode"
                         href="https://dobry-winbox.onelink.me/FAl8/summerteens"
                         target="_blank"
                         rel="noreferrer"
-                    ></a>
+                    >
+                        <img
+                            src={require('@media/app-code.png')}
+                            alt=""
+                            className="indexApp__blockCodeImage _FULL"
+                        />
+                    </a>
                 </Media>
                 <div className="indexApp__blockContent">
                     <Media current="desktop">Отсканируй QR-код для загрузки приложения</Media>
@@ -32,10 +46,13 @@ const renderContent: I['renderContent'] = function () {
                             rel="noreferrer"
                             className="indexApp__blockContentLink"
                         >
-                            Скачай приложение
+                            Скачай
+                            <br />
+                            приложение
                         </a>
                     </Media>
                 </div>
+                <img className="indexApp__blockLogo" src={require('@media/app-icon.png')} alt="" />
             </div>
         </div>
     );

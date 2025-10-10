@@ -78,6 +78,11 @@ const pages = [
         content: 'Продукты-участники',
     },
     {
+        links: ['actions'],
+        name: 'actions',
+        content: 'Акции партнеров',
+    },
+    {
         links: ['anket'],
         name: 'anket',
         getCond: ({ user }: StoreT) => ({

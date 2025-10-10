@@ -1,10 +1,12 @@
 import React from 'react';
 
+import Button from '@components/button/Button.tsx';
 import CloseBtn from '@components/closeBtn/CloseBtn.tsx';
 import Fade from '@components/fade/Fade.tsx';
 import Icon from '@components/icon/Icon.tsx';
 import Link from '@components/link/Link.tsx';
 import Media from '@components/media/Media.tsx';
+import changePage from '@functions/changePage.ts';
 import sendGoal from '@functions/sendGoal.ts';
 
 import I from '../types.ts';
@@ -37,36 +39,51 @@ const renderHead: I['renderHead'] = function () {
                 </Link>
                 <Media current="desktop">
                     <div className="topBar__buttons _ROW">
-                        <Link
-                            className="topBar__button _ROW _ROW_CENTER _CLICK _purple"
-                            pageName="regCode"
-                            callback={() => {
-                                sendGoal('regCodeBtn,headerRegCodeBtn');
-                            }}
-                        >
-                            <div className="topBar__buttonContent">Регистрация кода</div>
-                            <div className="topBar__buttonContent _hide">Регистрация кода</div>
-                        </Link>
-                        <Link
-                            className="topBar__button _ROW _ROW_CENTER _CLICK _pink"
-                            pageName="auth-login"
-                            callback={() => {
-                                sendGoal('profileBtn,headerProfileBtn');
-                            }}
-                        >
-                            <div className="topBar__buttonContent">Личный кабинет</div>
-                            <div className="topBar__buttonContent _hide">Личный кабинет</div>
-                        </Link>
-                        <Link
-                            className="topBar__button _ROW _ROW_CENTER _CLICK _red _logo"
-                            pageName="5ka"
-                            callback={() => {
-                                sendGoal('5kaBtn');
-                            }}
-                        >
-                            <div className="topBar__buttonContent">акция в пятерочке</div>
-                            <div className="topBar__buttonContent _hide">акция в пятерочке</div>
-                        </Link>
+                        <div className="topBar__button">
+                            <Button
+                                className="_topBarReg _mediumSize"
+                                onClick={() => {
+                                    changePage({ pageName: 'regCode' });
+                                    sendGoal('regCodeBtn,headerRegCodeBtn');
+                                }}
+                            >
+                                Регистрация кода
+                            </Button>
+                        </div>
+                        <div className="topBar__button">
+                            <Button
+                                className="_topBarProfile _mediumSize"
+                                onClick={() => {
+                                    changePage({ pageName: 'auth-login' });
+                                    sendGoal('profileBtn,headerProfileBtn');
+                                }}
+                            >
+                                Личный кабинет
+                            </Button>
+                        </div>
+                        <div className="topBar__button">
+                            <Button
+                                className="_topBarBot _mediumSize"
+                                onClick={() => {
+                                    // changePage({ pageName: 'auth-login' });
+                                }}
+                            >
+                                <i className="_tg">
+                                    <Icon name="tg" />
+                                </i>
+                                чат-бот
+                            </Button>
+                        </div>
+                        <div className="topBar__button">
+                            <Button
+                                className="_topBarCollection _mediumSize"
+                                onClick={() => {
+                                    // changePage({ pageName: 'auth-login' });
+                                }}
+                            >
+                                собери коллекцию лосей
+                            </Button>
+                        </div>
                     </div>
                 </Media>
                 <Media current="mobile">

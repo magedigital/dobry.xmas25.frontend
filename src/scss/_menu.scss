@@ -1,24 +1,24 @@
 .menu {
-    padding: 20rem 0;
+    padding: 16rem 0;
     overflow: hidden;
     overflow-y: auto;
 
     @include mob {
-        padding: 30rem 0;
+        padding: 18rem 0 24rem;
     }
 
     &__head {
         height: 250rem;
-        margin-bottom: 78rem;
+        margin-bottom: 28rem;
 
         @include mob {
             flex-direction: column-reverse;
             height: auto;
-            margin-bottom: 90rem;
+            margin-bottom: 18rem;
         }
 
         &Nav {
-            width: calc(100% - 418rem);
+            width: calc(100% - 440rem);
             height: 100%;
             padding-right: 32rem;
 
@@ -30,13 +30,13 @@
         }
 
         &Actions {
-            width: 418rem;
+            width: 440rem;
             height: 100%;
 
             @include mob {
                 width: 100%;
                 height: auto;
-                margin-bottom: 24rem;
+                margin-bottom: 26rem;
             }
         }
     }
@@ -52,16 +52,17 @@
         }
 
         &Item {
+            position: relative;
             margin-right: 10rem;
-            margin-bottom: 9rem;
+            margin-bottom: 13rem;
             padding: 14rem 0;
-            border-bottom: 2rem solid #f72d25;
+            padding-left: 32rem;
 
             @include mob {
                 width: 100%;
                 margin-right: 0;
-                margin-bottom: 12rem;
-                padding: 18rem 0;
+                margin-bottom: 6rem;
+                padding: 18rem 0 18rem 40rem;
             }
 
             @include desk {
@@ -69,7 +70,7 @@
                 &:nth-child(2),
                 &:nth-child(3),
                 &:nth-child(4) {
-                    width: 43%;
+                    width: 27%;
                 }
 
                 &:nth-child(4),
@@ -78,15 +79,29 @@
                 }
             }
 
+            &Icon {
+                position: absolute;
+                top: 14rem;
+                left: 0;
+                width: 20rem;
+                height: 20rem;
+
+                @include mob {
+                    top: 18rem;
+                    left: 4rem;
+                }
+            }
+
             &Link {
                 color: #fff;
-                font-weight: 600;
-                font-size: 24rem;
+                font-weight: 500;
+                font-size: 20rem;
                 white-space: nowrap;
+                text-transform: uppercase;
                 transition: $trans;
 
                 @include mob {
-                    font-size: 25rem;
+                    font-size: 21rem;
                 }
 
                 &:hover {
@@ -96,240 +111,87 @@
         }
     }
 
-    &__actions {
-        margin-top: -6rem;
-    }
-
     &__action {
-        position: relative;
-        z-index: 1;
+        width: 100%;
 
         & + & {
-            margin-top: 10rem;
+            margin-top: 16rem;
 
             @include mob {
-                margin-top: 32rem;
-            }
-        }
-
-        &::after {
-            position: absolute;
-            top: 50%;
-            left: 48rem;
-            z-index: -1;
-            width: 50vw;
-            height: 56rem;
-            transform: translate(0, -50%);
-            content: "";
-
-            @include mob {
-                left: -32rem;
-                width: 364rem;
-                height: 52rem;
-            }
-        }
-
-        &._code::after,
-        &._code &Back {
-            background: #5d279e;
-        }
-
-        &._pyt::after,
-        &._pyt &Back {
-            background: #ff3427;
-        }
-
-        &._lk::after,
-        &._lk &Back {
-            background: #ff49b8;
-        }
-
-        &::before {
-            position: absolute;
-            z-index: 3;
-            content: "";
-        }
-
-        &._code::before {
-            top: 3rem;
-            left: 56rem;
-            width: 50rem;
-            height: 50rem;
-
-            @include mob {
-                top: -7rem;
-                right: 64rem;
-                left: auto;
-                width: 46rem;
-                height: 46rem;
-            }
-        }
-
-        &._pyt::before {
-            top: 4rem;
-            left: 55rem;
-            width: 52rem;
-            height: 52rem;
-
-            @include mob {
-                top: -8rem;
-                right: 63rem;
-                left: auto;
-                width: 48rem;
-                height: 48rem;
-            }
-        }
-
-        &._lk::before {
-            top: 5rem;
-            left: 55rem;
-            width: 50rem;
-            height: 50rem;
-
-            @include mob {
-                top: -6rem;
-                right: 63rem;
-                left: auto;
-                width: 48rem;
-                height: 48rem;
-            }
-        }
-
-        &Back {
-            position: absolute;
-            top: 50%;
-            left: 0;
-            z-index: 2;
-            display: flex;
-            width: 49rem;
-            height: 76rem;
-            border-radius: 14rem;
-            transform: translate(0, -50%);
-
-            @include mob {
-                right: 0;
-                left: auto;
-                width: 45rem;
-                height: 70rem;
-                border-radius: 12rem;
-            }
-
-            &::before {
-                display: block;
-                box-sizing: border-box;
-                width: 58%;
-                height: 70%;
-                margin: auto;
-                background: #e11f26;
-                border-radius: 10rem;
-                content: "";
-
-                @include mob {
-                    border-radius: 9rem;
-                }
-            }
-        }
-
-        &Inner {
-            position: relative;
-            z-index: 1;
-            height: 56rem;
-            overflow: hidden;
-
-            @include mob {
-                height: 52rem;
-            }
-        }
-
-        &Content {
-            display: flex;
-            align-items: center;
-            width: 100%;
-            height: 100%;
-            padding-left: 126rem;
-            color: #fff;
-            font-weight: 600;
-            font-size: 24rem;
-
-            @include mob {
-                padding-left: 0;
-                font-size: 24rem;
-            }
-
-            &._hide {
-                position: absolute;
-                top: 0;
-                left: 0;
-                transform: translate(0, 100%);
-            }
-        }
-
-        @keyframes menuContent {
-            0% {
-                transform: translate(0, 0);
-            }
-
-            100% {
-                transform: translate(0, -56rem);
-            }
-        }
-
-        @keyframes menuHideContent {
-            0% {
-                transform: translate(0, 100%);
-            }
-
-            100% {
-                transform: translate(0, 0);
-            }
-        }
-
-        @include desk {
-            &:hover &Content:not(._hide) {
-                animation: 0.3s 1 menuContent ease-in-out;
-            }
-
-            &:hover &Content._hide {
-                animation: 0.3s 1 menuHideContent ease-in-out;
+                margin-top: 24rem;
             }
         }
     }
 
     &__prizes {
         position: relative;
-        padding: 52rem 28rem 48rem;
-        background: rgba(#f72d25, 0.5);
-        border-radius: 32rem;
+        padding: 2rem;
+        background: linear-gradient(to top, #fff7ae, #ff2828);
+        border-radius: 48rem;
 
         @include mob {
-            padding: 92rem 8rem 20rem;
+            padding: 1rem;
+            border-radius: 38rem;
+        }
+
+        &Inner {
+            position: relative;
+            z-index: 1;
+            align-items: center;
+            padding: 36rem 40rem 34rem;
+            overflow: hidden;
+            background: linear-gradient(to top, #be135a, #f22830);
+            border-radius: inherit;
+
+            &::after {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                width: 100%;
+                height: 100%;
+                content: "";
+
+                @include bg("/media/menu/games-back-menu.svg", cover, center);
+
+                @include mob {
+                    @include bg("/media/menu/games-back-menu-mob.svg", 100% auto, center bottom);
+                }
+            }
+
+            @include mob {
+                padding: 14rem;
+            }
         }
 
         &Title {
-            position: absolute;
-            top: 0;
-            left: 50%;
             z-index: 2;
             max-width: calc(100% - 32rem);
-            padding: 13rem 24rem 12rem;
-            color: $colorMain;
-            font-weight: 600;
-            font-size: 20rem;
+            margin-bottom: 26rem;
+            padding: 19rem 24rem 18rem;
+            color: #fff;
+            font-weight: 500;
+            font-size: 16rem;
             line-height: 1.3;
             text-align: center;
-            background: #fff;
-            border-radius: 12rem;
-            transform: translate(-50%, -50%);
+            text-transform: uppercase;
+            border-radius: 19rem;
+
+            @include bg("/media/menu/name-back-menu.jpg", cover, center);
 
             @include desk {
                 white-space: nowrap;
             }
 
             @include mob {
-                width: calc(100% - 40rem);
+                width: 100%;
                 max-width: none;
+                padding: 24rem 20rem;
+                font-size: 18rem;
                 line-height: 1.3;
-                border-radius: 15rem;
+                border-radius: 24rem;
+
+                @include bg("/media/menu/name-back-menu-mob.jpg", cover, center);
             }
         }
 
@@ -337,7 +199,7 @@
             flex-wrap: wrap;
 
             @include mob {
-                margin-bottom: -32rem;
+                width: calc(100% + 22rem);
             }
         }
 
@@ -346,41 +208,49 @@
 
             @include mob {
                 width: 50%;
-                margin-bottom: 32rem;
+                margin-bottom: 22rem;
             }
         }
     }
 
     &__prize {
         &Head {
-            width: 204rem;
-            height: 204rem;
-            margin-bottom: 14rem;
+            position: relative;
+            z-index: 1;
+            width: 190rem;
+            aspect-ratio: 1;
+            margin-bottom: 18rem;
+            overflow: hidden;
+            border-radius: 50%;
+            transition: $trans;
+            will-change: transform;
 
             @include mob {
-                width: 140rem;
-                height: 140rem;
+                width: 156rem;
                 margin-bottom: 18rem;
             }
         }
 
         &Image {
-            width: 130%;
-            height: 130%;
+            width: 100%;
+            height: 100%;
             object-fit: contain;
-            transition: $trans;
-            will-change: transform;
         }
 
-        &:hover &Image {
+        &:hover &Head {
             transform: scale(1.05);
         }
 
         &Content {
             color: #fff;
-            font-weight: 600;
-            font-size: 20rem;
+            font-weight: 500;
+            font-size: 17rem;
             text-align: center;
+            text-transform: uppercase;
+
+            @include mob {
+                font-size: 16rem;
+            }
         }
     }
 }
