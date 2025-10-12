@@ -92,6 +92,14 @@
                 }
             }
 
+            &:hover &Icon {
+                @include icon(#ffe09e);
+            }
+
+            &:hover &Link {
+                color: #ffe09e;
+            }
+
             &Link {
                 color: #fff;
                 font-weight: 500;
@@ -102,10 +110,6 @@
 
                 @include mob {
                     font-size: 21rem;
-                }
-
-                &:hover {
-                    color: #ffd100;
                 }
             }
         }
@@ -238,7 +242,7 @@
         }
 
         &:hover &Head {
-            transform: scale(1.05);
+            transform: scale(1.03);
         }
 
         &Content {
@@ -247,10 +251,15 @@
             font-size: 17rem;
             text-align: center;
             text-transform: uppercase;
+            transition: $trans;
 
             @include mob {
                 font-size: 16rem;
             }
+        }
+
+        &:hover &Content {
+            color: #ffe09e;
         }
     }
 }

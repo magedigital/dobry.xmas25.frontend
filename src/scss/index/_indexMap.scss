@@ -101,6 +101,116 @@
         }
     }
 
+    &__decor {
+        position: absolute;
+        left: 50%;
+        z-index: 2;
+        transform: translate(-50%, 0);
+        pointer-events: none;
+    }
+
+    &__decor._1 {
+        top: 242rem;
+        width: 48rem;
+        height: 38rem;
+        margin-left: 42rem;
+
+        @include bg("/media/arrows-red-2.png", contain, center);
+
+        @include mob {
+            top: 184rem;
+            width: 40rem;
+            height: 24rem;
+            margin-left: 19rem;
+        }
+    }
+
+    &__decor._2 {
+        top: 878rem;
+        display: flex;
+        justify-content: center;
+        width: 270rem;
+        height: 140rem;
+        margin-left: -74rem;
+        padding: 33rem 0 0 21rem;
+        color: #ffecae;
+        font-weight: 600;
+        font-size: 15rem;
+        white-space: nowrap;
+        text-transform: uppercase;
+        text-shadow: 0 0 4.7rem #ffe7b4;
+
+        @include bg("/media/sign-lights-1.png", contain, center);
+
+        @include mob {
+            top: 577rem;
+            width: 180rem;
+            height: 84rem;
+            margin-left: -52rem;
+            padding: 18.5rem 0 0 12rem;
+            font-size: 9rem;
+        }
+    }
+
+    &__decor._3 {
+        top: 1010rem;
+        width: 48rem;
+        height: 38rem;
+        margin-left: -22rem;
+
+        @include bg("/media/arrows-red-1.png", contain, center);
+
+        @include mob {
+            top: 653rem;
+            width: 30rem;
+            height: 30rem;
+            margin-left: -22rem;
+        }
+    }
+
+    &__decor._4 {
+        top: 1608rem;
+        display: flex;
+        justify-content: center;
+        width: 334rem;
+        height: 190rem;
+        margin-left: 64rem;
+        padding: 54rem 0 0 22rem;
+        color: #ffecae;
+        font-weight: 600;
+        font-size: 14.5rem;
+        white-space: nowrap;
+        text-transform: uppercase;
+        text-shadow: 0 0 4.7rem #ffe7b4;
+
+        @include bg("/media/sign-lights-2.png", contain, center);
+
+        @include mob {
+            top: 1028rem;
+            width: 208rem;
+            height: 100rem;
+            margin-left: 44rem;
+            padding: 24rem 0 0 13rem;
+            font-size: 9rem;
+        }
+    }
+
+    &__decor._5 {
+        top: 1730rem;
+        width: 48rem;
+        height: 38rem;
+        margin-left: 42rem;
+
+        @include bg("/media/arrows-red-2.png", contain, center);
+
+        @include mob {
+            top: 1100rem;
+            width: 28rem;
+            height: 28rem;
+            margin-left: 20rem;
+        }
+    }
+
     &__navItem {
         position: absolute;
         left: 50%;
@@ -130,6 +240,7 @@
             background: #fff;
             border-radius: 360rem;
             box-shadow: -2rem 5rem 4rem 0 rgba(#313eac, 0.15);
+            transition: $trans;
             pointer-events: visible;
 
             @include mob {
@@ -149,9 +260,18 @@
                 line-height: 1.2;
                 text-align: center;
                 text-transform: uppercase;
+                transition: $trans;
 
                 @include mob {
                     font-size: 10.5rem;
+                }
+            }
+
+            &._withSupport:hover {
+                background: #e11f26;
+
+                & span {
+                    color: #fff;
                 }
             }
         }

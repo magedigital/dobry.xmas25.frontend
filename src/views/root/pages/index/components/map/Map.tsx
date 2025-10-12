@@ -8,6 +8,7 @@ import scrollToSection from './methods/scrollToSection.ts';
 import MapI from './types.ts';
 
 import renderBack from './renders/renderBack.tsx';
+import renderDecors from './renders/renderDecors.tsx';
 import renderNav from './renders/renderNav.tsx';
 import renderTop from './renders/renderTop.tsx';
 import { mapNav } from './static/nav.ts';
@@ -39,6 +40,7 @@ class Map extends React.Component<MapI['props'], MapI['state']> implements MapI 
     renderTop = renderTop;
     renderNav = renderNav;
     renderBack = renderBack;
+    renderDecors = renderDecors;
 
     componentDidMount(): void {
         setTimeout(() => {
@@ -65,6 +67,7 @@ class Map extends React.Component<MapI['props'], MapI['state']> implements MapI 
                 <div className="indexMap__inner">
                     <div className="indexMap__content _COL _COL_H_CENTER">
                         {this.renderTop()}
+                        {this.renderDecors()}
                         {this.renderBack()}
                         {this.renderNav()}
                     </div>

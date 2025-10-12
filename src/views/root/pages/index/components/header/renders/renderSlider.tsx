@@ -12,11 +12,13 @@ const renderSlider: I['renderSlider'] = function () {
                         .map((k, i) => i + 1)
                         .map((item) => (
                             <div className="indexHeader__sliderItem" key={item}>
-                                <img
-                                    src={require(`@media/toy-${item}.png`)}
-                                    alt=""
-                                    className="indexHeader__sliderItemImage"
-                                />
+                                <div className="indexHeader__sliderItemInner _FULL">
+                                    <img
+                                        src={require(`@media/toy-${item}.png`)}
+                                        alt=""
+                                        className="indexHeader__sliderItemImage _FULL"
+                                    />
+                                </div>
                             </div>
                         ))}
                 </div>

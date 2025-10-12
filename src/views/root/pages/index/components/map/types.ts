@@ -27,6 +27,7 @@ interface MapI extends React.Component<PropsT, StateT> {
     renderTop(this: MapI): React.ReactNode;
     renderNav(this: MapI): React.ReactNode;
     renderBack(this: MapI): React.ReactNode;
+    renderDecors(this: MapI): React.ReactNode;
 }
 
 export default MapI;

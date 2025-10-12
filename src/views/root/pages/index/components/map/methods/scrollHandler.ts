@@ -14,7 +14,7 @@ const scrollHandler: I['scrollHandler'] = async function () {
 
     (Object.keys(this.sections) as (keyof typeof this.sections)[]).forEach((section) => {
         const sectionItem = this.parent.current!.querySelector<HTMLElement>(
-            `.indexMap__navItem[data-section="${section}"]`,
+            `[data-section="${section}"]`,
         );
 
         if (sectionItem) {

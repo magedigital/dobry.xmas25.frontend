@@ -12,11 +12,7 @@ const renderNav: I['renderNav'] = function () {
                 const titles = typeof item.title === 'string' ? [item.title] : item.title;
 
                 return (
-                    <div
-                        className={`indexMap__navItem _${key + 1}`}
-                        key={key}
-                        data-section={item.section}
-                    >
+                    <div className={`indexMap__navItem _${key + 1}`} key={key}>
                         {thumbs.map((thumb, tKey) => (
                             <div className={`indexMap__navItemThumb _${tKey + 1}`} key={thumb}>
                                 <img
@@ -31,13 +27,13 @@ const renderNav: I['renderNav'] = function () {
                                 className={`indexMap__navItemTitle _${tKey + 1} ${item.support ? '_withSupport' : ''}`}
                                 key={tKey}
                             >
-                                <span
-                                    dangerouslySetInnerHTML={{ __html: title }}
-                                ></span>
+                                <span dangerouslySetInnerHTML={{ __html: title }}></span>
                                 {item.support && (
                                     <div
                                         className="indexMap__navItemSupport"
-                                        dangerouslySetInnerHTML={{ __html: setSpacesInText(item.support) }}
+                                        dangerouslySetInnerHTML={{
+                                            __html: setSpacesInText(item.support),
+                                        }}
                                     ></div>
                                 )}
                             </div>

@@ -25,6 +25,11 @@
             font-weight: 600;
             font-size: 14rem;
             text-transform: uppercase;
+            transition: $trans;
+
+            &:hover {
+                color: #ffe09e;
+            }
 
             @include mob {
                 font-size: 16rem;

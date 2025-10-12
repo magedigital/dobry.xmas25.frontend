@@ -33,6 +33,7 @@
         text-align: center;
         text-transform: uppercase;
         border-radius: inherit;
+        transition: $trans;
 
         @include mob {
             padding: 23rem 24rem 22rem;
@@ -58,6 +59,14 @@
         @include mob {
             padding: 19rem 24rem;
             font-size: 16rem;
+        }
+    }
+
+    &._bigSize &__inner {
+        padding: 22rem 32rem;
+
+        @include mob {
+            padding: 24rem 28rem;
         }
     }
 
@@ -133,21 +142,42 @@
         box-shadow: 0 2rem 0 0 rgba(#fef7de, 1);
     }
 
+    &._indexHeader:hover &__inner {
+        background: #854acc;
+    }
+
     &._topBarReg &__inner {
         color: #592f8f;
         background: #fbdbff;
+    }
+
+    &._topBarReg:hover &__inner {
+        color: #854acc;
+        background: #fff;
     }
 
     &._topBarProfile &__inner {
         background: #fe431e;
     }
 
+    &._topBarProfile:hover &__inner {
+        background: #ff8d1a;
+    }
+
     &._topBarBot &__inner {
         background: #5d279e;
     }
 
+    &._topBarBot:hover &__inner {
+        background: #854acc;
+    }
+
     &._topBarCollection &__inner {
         background: #c50018;
+    }
+
+    &._topBarCollection:hover &__inner {
+        background: #fb0a00;
     }
 
     &._menuReg &__inner {
@@ -155,12 +185,25 @@
         background: #fbdbff;
     }
 
+    &._menuReg:hover &__inner {
+        color: #fb0a00;
+        background: #fff;
+    }
+
     &._menuProfile &__inner {
         background: #ff49b8;
     }
 
+    &._menuProfile:hover &__inner {
+        background: #ff7ce3;
+    }
+
     &._menuCollection &__inner {
         background: #fb0a00;
+    }
+
+    &._menuCollection:hover &__inner {
+        background: #ff5353;
     }
 
     & i {

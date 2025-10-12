@@ -12,7 +12,7 @@ const scrollToSection: I['scrollToSection'] = function (section) {
 
     let currentNode = this.parent.current as HTMLElement;
     const sectionItem = this.parent.current!.querySelector<HTMLElement>(
-        `.indexMap__navItem[data-section="${section}"]`,
+        `[data-section="${section}"]`,
     );
 
     if (sectionItem) {
