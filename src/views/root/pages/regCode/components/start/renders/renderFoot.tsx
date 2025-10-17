@@ -15,7 +15,7 @@ const renderFoot: I['renderFoot'] = function () {
             <div className="popup__buttons _FULL_W _ROW _ROW_H_CENTER">
                 <div className="popup__button _fix">
                     <Button
-                        className="_purple"
+                        className="_white"
                         onClick={this.sendForm.bind(this)}
                         loading={loadingKey === 'send'}
                     >

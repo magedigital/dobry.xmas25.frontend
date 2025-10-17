@@ -24,7 +24,7 @@
         z-index: 1;
         width: 100%;
         height: 100%;
-        padding: 18rem 24rem;
+        padding: 18rem 28rem;
         overflow: hidden;
         color: #fff;
         font-weight: 600;
@@ -37,7 +37,7 @@
 
         @include mob {
             padding: 23rem 24rem 22rem;
-            font-size: 15.5rem;
+            font-size: 18rem;
         }
     }
 
@@ -112,6 +112,26 @@
 
     &._menuCollection {
         background: linear-gradient(to top, #ff8550, #d10000);
+    }
+
+    &._white {
+        background: linear-gradient(to top, #fad98c, #fff);
+
+        & .loader__itemInner {
+            background: #5d279e;
+        }
+    }
+
+    &._purpleEmpty {
+        background: linear-gradient(to top, #ff4ec7, #fff);
+    }
+
+    &._pink {
+        background: linear-gradient(to top, #ffa4db, #ff49b8);
+    }
+
+    &._red {
+        background: linear-gradient(to top, #ff8550, #e11f26);
     }
 
     &._banner1 &__inner,
@@ -206,11 +226,57 @@
         background: #ff5353;
     }
 
+    &._white &__inner {
+        color: #c50018;
+        background: #fff;
+    }
+
+    &._purple:hover &__inner {
+        background: #854acc;
+    }
+
+    &._white:hover &__inner {
+        background: #ffecae;
+    }
+
+    &._purpleEmpty &__inner {
+        color: #fff;
+        background: #bf145a;
+    }
+
+    &._pink &__inner {
+        color: #fff;
+        background: #ff49b8;
+    }
+
+    &._pink:hover &__inner {
+        background: #ff7ce3;
+    }
+
+    &._red &__inner {
+        color: #fff;
+        background: #e11f26;
+    }
+
+    &._red:hover &__inner {
+        background: #fb0a00;
+    }
+
     & i {
         &._tg {
             width: 20rem;
             height: 20rem;
             margin-right: 10rem;
+        }
+    }
+
+    & img {
+        &._5ka {
+            width: 36rem;
+            height: 36rem;
+            margin: 0 10rem 0 -18rem;
+            object-fit: contain;
+            transform: translate(0, -1rem);
         }
     }
 }

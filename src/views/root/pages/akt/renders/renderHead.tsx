@@ -12,11 +12,12 @@ const renderHead: I['renderHead'] = function () {
             <h3 className="page__title">Запрос акта</h3>
             <p className="page__description">
                 Вам необходимо скачать акт, подписать его,
+                <br className="_DESKTOP" />
                 отсканировать и&nbsp;загрузить в форме ниже:
             </p>
             <div className="page__headButton">
                 <Button
-                    className="_pink"
+                    className="_white"
                     onClick={this.downloadAct.bind(this)}
                     loading={loadingKey === 'download'}
                 >

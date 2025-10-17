@@ -14,10 +14,12 @@ const renderContent: I['renderContent'] = function () {
     return (
         <div className="popup__code _COL _COL_H_CENTER">
             <div className="popup__codeText _COL _COL_H_CENTER">
-                Вам отправлено сообщение на&nbsp;адрес:
+                Мы отправили сообщение на&nbsp;твой адрес:
                 <div className="popup__codeEmail">{login}</div>
-                <LinkTag {...linkProps}>проверьте почтовый ящик</LinkTag> и введите код{' '}
-                {isConfirm ? ':' : 'для сброса пароля ниже:'}
+                <span>
+                    Пожалуйста, <LinkTag {...linkProps}>проверь почтовый ящик</LinkTag>
+                    <br />и введи код {isConfirm ? ':' : 'для сброса пароля ниже:'}
+                </span>
             </div>
             <div className="popup__codeInputs">
                 <CodeInputs

@@ -20,6 +20,7 @@ class RegCode extends InnerPage<RegCodeI['props'], RegCodeI['state']> implements
         super(props);
         this.state = {
             currentStep: 'start',
+            // currentStep: 'result',
         };
 
         this.parent = React.createRef();

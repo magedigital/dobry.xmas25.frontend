@@ -33,14 +33,14 @@ class TopBar extends React.Component<TopBarI['props'], TopBarI['state']> impleme
 
     render() {
         const { isShowMenu } = this.state;
-        const { storePages, isFix } = this.props;
+        const { storePages, isFix, className = '' } = this.props;
 
         const is5ka = storePages['5ka'].isShow;
 
         return (
             <div
                 ref={this.parent}
-                className={`topBar _FULL ${isShowMenu ? '_showMenu' : ''} ${isFix ? '_fix' : ''} ${is5ka ? '_5ka' : ''}`}
+                className={`topBar _FULL ${isShowMenu ? '_showMenu' : ''} ${isFix ? '_fix' : ''} ${is5ka ? '_5ka' : ''} ${className}`}
             >
                 {this.renderHead()}
                 {this.render5kaHead()}

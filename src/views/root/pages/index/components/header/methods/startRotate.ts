@@ -10,7 +10,7 @@ const startRotate: I['startRotate'] = async function () {
     }
 
     const animate = () => {
-        this.rotateDeg += 0.9 * this.rotateSpeed;
+        this.rotateDeg += 0.5 * this.rotateSpeed;
 
         this.animationId = requestAnimationFrame(animate);
 

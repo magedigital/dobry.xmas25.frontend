@@ -19,59 +19,63 @@ const renderContent: I['renderContent'] = function () {
                 document.dispatchEvent(new CustomEvent('scrollInnerPage'));
             }}
         >
-            <div className="popup__inner">
-                {this.renderHead()}
-                <div className="popup__content _COL _COL_H_CENTER">
-                    <div className="popup__invite _COL _COL_H_CENTER">
-                        <p className="popup__inviteText _main">
-                            Пригласи друга для участия в&nbsp;акции!
-                        </p>
-                        <p className="popup__inviteText">
-                            Вы оба получите дополнительные баллы, после того, как друг
-                            зарегистрирует первый код. Количество друзей не ограничено.
-                        </p>
-                        <div className="popup__inviteInfo _COL _COL_H_CENTER">
-                            <p className="popup__inviteText">
-                                Ссылка для приглашения:
-                                <br />
-                                <a href={link} target="_blank" rel="noreferrer">
-                                    {link}
-                                </a>
-                            </p>
-                            <p className="popup__inviteText _code">
-                                Промокод для друга: <b>{user?.userId}</b>
-                            </p>
-                        </div>
-                        <Error
-                            className="popup__error _info"
-                            error={isCopy ? 'Скопировано в буфер обмена' : undefined}
-                        />
-                    </div>
-                    <List
-                        renderKey={`${!!isCopy}`}
-                        items={!isCopy ? [{ _id: 'copy' }] : [{ _id: 'close' }]}
-                        parentClass="popup__dynamicButtons"
-                        itemStyleProps={[]}
-                        parentStyleProps={['width']}
-                        parentRealStyleProps={['width']}
-                        renderItem={({ item }) => (
-                            <div className="popup__button _auto">
-                                <Button
-                                    onClick={() => {
-                                        if (item._id === 'close') {
-                                            changePage({ pageName: 'profile' });
-                                        } else {
-                                            this.copyHandler();
-                                        }
-                                    }}
-                                    className={item._id === 'close' ? '_purple' : '_pink'}
-                                >
-                                    {item._id === 'close' ? 'закрыть' : 'КОПИРОВАТЬ ссылку'}
-                                </Button>
+            <div className="popup__wrapper">
+                <div className="popup__inner">
+                    <div className="popup__innerBox">
+                        {this.renderHead()}
+                        <div className="popup__content _COL _COL_H_CENTER">
+                            <div className="popup__invite _COL _COL_H_CENTER">
+                                <p className="popup__inviteText _main">
+                                    Пригласи друга для участия в&nbsp;акции!
+                                </p>
+                                <p className="popup__inviteText">
+                                    Вы оба получите дополнительные баллы, после того, как друг
+                                    зарегистрирует первый код. Количество друзей не ограничено.
+                                </p>
+                                <div className="popup__inviteInfo _COL _COL_H_CENTER">
+                                    <p className="popup__inviteText">
+                                        Ссылка для приглашения:
+                                        <br />
+                                        <a href={link} target="_blank" rel="noreferrer">
+                                            {link}
+                                        </a>
+                                    </p>
+                                    <p className="popup__inviteText _code">
+                                        Промокод для друга: <b>{user?.userId}</b>
+                                    </p>
+                                </div>
+                                <Error
+                                    className="popup__error _info"
+                                    error={isCopy ? 'Скопировано в буфер обмена' : undefined}
+                                />
                             </div>
-                        )}
-                        resizeWidth={true}
-                    />
+                            <List
+                                renderKey={`${!!isCopy}`}
+                                items={!isCopy ? [{ _id: 'copy' }] : [{ _id: 'close' }]}
+                                parentClass="popup__dynamicButtons"
+                                itemStyleProps={[]}
+                                parentStyleProps={['width']}
+                                parentRealStyleProps={['width']}
+                                renderItem={({ item }) => (
+                                    <div className="popup__button _auto">
+                                        <Button
+                                            onClick={() => {
+                                                if (item._id === 'close') {
+                                                    changePage({ pageName: 'profile' });
+                                                } else {
+                                                    this.copyHandler();
+                                                }
+                                            }}
+                                            className="_purple"
+                                        >
+                                            {item._id === 'close' ? 'закрыть' : 'КОПИРОВАТЬ ссылку'}
+                                        </Button>
+                                    </div>
+                                )}
+                                resizeWidth={true}
+                            />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

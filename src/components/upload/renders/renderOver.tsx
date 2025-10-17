@@ -9,7 +9,7 @@ const renderOver: I['renderOver'] = function () {
 
     return (
         <Fade className="upload__over _FULL _COL _COL_CENTER" isShow={!!isOver}>
-            <p className="upload__overText">Отпусти кнопку мышки</p>
+            <p className="upload__overText">Отпустите курсор мыши...</p>
         </Fade>
     );
 };

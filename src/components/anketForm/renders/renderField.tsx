@@ -88,7 +88,6 @@ const renderField: I['renderField'] = function ({ field }) {
                         dangerouslySetInnerHTML={{ __html: setSpacesInText(support) }}
                     ></p>
                     <Upload
-                        accept=""
                         fileName={this.getValue({ key: `${field.name}.name` })?.value || undefined}
                         onChange={async (e) => {
                             if (upload) {

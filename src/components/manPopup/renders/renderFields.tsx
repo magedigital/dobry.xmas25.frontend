@@ -2,7 +2,7 @@ import React from 'react';
 
 import Checkbox from '@components/checkbox/Checkbox.tsx';
 import Field from '@components/field/Field.tsx';
-import Upload from '@components/upload/Upload.tsx';
+import Upload from '@components/v2upload/Upload.tsx';
 
 import I from '../types.ts';
 

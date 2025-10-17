@@ -15,9 +15,9 @@ const renderFoot: I['renderFoot'] = function () {
             <Error className="popup__error" error={error} callback={setRenderKey} />
             <div className="popup__buttons _FULL_W _ROW _ROW_H_CENTER">
                 {!isConfirm && (
-                    <div className="popup__button _fix">
+                    <div className="popup__button">
                         <Button
-                            className="_pink"
+                            className="_purple"
                             onClick={() => {
                                 changePage({ pageName: 'auth-login' });
                             }}
@@ -27,9 +27,9 @@ const renderFoot: I['renderFoot'] = function () {
                     </div>
                 )}
 
-                <div className="popup__button _fix">
+                <div className="popup__button">
                     <Button
-                        className="_purple"
+                        className="_white"
                         onClick={this.sendForm.bind(this)}
                         loading={loadingKey === 'send'}
                     >

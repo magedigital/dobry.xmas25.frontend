@@ -21,7 +21,7 @@ const pages = {
                         title="Выиграй сразу"
                         metaTitle="Призы - Моментальный розыгрыш"
                         description="Участие в розыгрыше - <span>1</span> балл"
-                        buttonText="ИГРАТЬ"
+                        buttonText="Участвовать"
                         buttonOnClick={() => {
                             changePage({ pageName: 'raffle' });
                         }}
@@ -48,28 +48,6 @@ const pages = {
                             changePage({ pageName: 'regCode' });
                         }}
                         items={content!.components.prizes.merch.items}
-                        // items={[
-                        //     {
-                        //         title: '100 баллов Яндекс Плюс',
-                        //         balls: '5 баллов',
-                        //         image: 'prize-2-43.png',
-                        //     },
-                        //     {
-                        //         title: 'ЯРКИЕ НОСКИ с\xa0Fest фразами',
-                        //         balls: '7 баллов',
-                        //         image: 'prize-2-11.png',
-                        //     },
-                        //     {
-                        //         title: 'КАСТОМНЫЕ ФУТБОЛКИ с\xa0твоим Fest-именем',
-                        //         balls: '15 баллов',
-                        //         image: 'prize-2-31.png',
-                        //     },
-                        //     {
-                        //         title: 'СТИЛЬНЫЕ ЗИПКИ с\xa0Fest фразами',
-                        //         balls: '20 баллов',
-                        //         image: 'prize-2-21.png',
-                        //     },
-                        // ]}
                     />
                 </>
             );
@@ -85,34 +63,13 @@ const pages = {
                     <PrizesPage
                         name="weekly"
                         title="Еженедельный розыгрыш"
+                        description="Для участия в розыгрыше на твоём счету должно быть более <span>10</span> баллов"
                         metaTitle="Призы - Еженедельно"
                         buttonText="Зарегистрировать код"
                         buttonOnClick={() => {
                             changePage({ pageName: 'regCode' });
                         }}
                         items={content!.components.prizes.weekly.items}
-                        // items={[
-                        //     {
-                        //         title: 'Мощный powerbank с\xa0подсветкой',
-                        //         info: 'Участие в розыгрыше – <span>10</span> баллов',
-                        //         image: 'prize-3-01.png',
-                        //     },
-                        //     {
-                        //         title: 'iPhone 16 c\xa0кастом шнурком',
-                        //         info: 'Участие в розыгрыше – <span>10</span> баллов',
-                        //         image: 'prize-3-02.png',
-                        //     },
-                        //     {
-                        //         title: 'Специальный приз от FEDUK',
-                        //         info: 'Розыгрыш среди чеков с\xa0новинками',
-                        //         image: 'prize-3-03.png',
-                        //     },
-                        //     {
-                        //         title: 'Сертификат на\xa0музыкальный фестиваль',
-                        //         info: 'Розыгрыш в\xa0игровых шатрах',
-                        //         image: 'prize-3-04.png',
-                        //     },
-                        // ]}
                     />
                 </>
             );

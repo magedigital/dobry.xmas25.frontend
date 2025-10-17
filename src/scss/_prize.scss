@@ -38,8 +38,8 @@
         font-size: 14rem;
         line-height: 1.2;
         text-transform: uppercase;
-        background: #10cfc9;
-        border-radius: 5rem;
+        background: #ff49b8;
+        border-radius: 360rem;
 
         @include mob {
             font-weight: 600;
@@ -47,9 +47,14 @@
         }
     }
 
+    &._ERROR &__status,
+    &._ERROR &__countInner {
+        background: #fb0a00;
+    }
+
     &._SENDING &__status,
     &._SENDING &__countInner {
-        background: #b8b8b8;
+        background: #b690eb;
     }
 
     &._SENT &__status,
@@ -59,11 +64,11 @@
 
     &._COMPLETED &__status,
     &._COMPLETED &__countInner {
-        background: #71c200;
+        background: #ff49b8;
     }
 
     &._SENDING &__countSupport {
-        color: #b8b8b8;
+        color: #b690eb;
     }
 
     &._SENT &__countSupport {
@@ -71,7 +76,11 @@
     }
 
     &._COMPLETED &__countSupport {
-        color: #71c200;
+        color: #ff49b8;
+    }
+
+    &._ERROR &__countSupport {
+        color: #fb0a00;
     }
 
     &__count {
@@ -111,8 +120,9 @@
             position: relative;
             width: 180rem;
             height: 180rem;
-            background: #ffd100;
             border-radius: 50%;
+
+            @include bg("/media/inners/prize-back.jpg", cover, center);
         }
 
         &Image {
@@ -128,29 +138,30 @@
             left: 50%;
             z-index: 2;
             padding: 13rem 16rem 12rem;
+            color: #e11f26;
             font-weight: 600;
             font-size: 14rem;
             white-space: nowrap;
-            background: #fff;
-            border: 2rem solid #10cfc9;
-            border-radius: 8rem;
+            background: #fbdbff;
+            border: 2rem solid #e11f26;
+            border-radius: 360rem;
             transform: translate(-50%, 0);
 
             &._main {
                 color: #fff;
                 text-transform: uppercase;
-                background: #ff49b8;
+                background: #fe431e;
                 border-color: transparent;
             }
 
             & span {
                 display: inline-block;
-                color: #10cfc9;
+                color: #e11f26;
                 font-weight: 600;
                 font-size: 14rem;
                 line-height: 0.8;
                 text-transform: uppercase;
-                border-bottom: 1px solid #10cfc9;
+                border-bottom: 1px solid #e11f26;
 
                 @include mob {
                     font-size: 16rem;
@@ -161,6 +172,7 @@
 
     &__name {
         max-width: 90%;
+        color: #760509;
         font-weight: 600;
         font-size: 16rem;
         line-height: 1.3;

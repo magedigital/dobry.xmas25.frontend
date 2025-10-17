@@ -18,7 +18,8 @@ const renderForm: I['renderForm'] = function () {
                 renderHead={() => (
                     <>
                         <div className="faq__formTitle _FULL_W">
-                            Если не нашел ответа на свой вопрос, напиши нам:
+                            Если не нашел ответа на свой <br className="_DESKTOP" />
+                            вопрос, напиши нам:
                         </div>
                     </>
                 )}

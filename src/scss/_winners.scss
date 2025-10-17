@@ -1,5 +1,5 @@
 .winners {
-    padding: 4rem 24rem 0;
+    padding: 0 24rem;
 
     @include mob {
         padding: 0;
@@ -9,7 +9,7 @@
         position: relative;
         z-index: 2;
         display: flex;
-        margin-bottom: 16rem;
+        margin-bottom: 32rem;
 
         @include mob {
             flex-direction: column;
@@ -47,10 +47,11 @@
             }
 
             &Field {
-                height: 60rem;
+                height: 52rem;
 
                 @include mob {
                     width: 100%;
+                    height: 56rem;
                 }
             }
 
@@ -75,11 +76,13 @@
                 &Icon {
                     position: absolute;
                     top: 50%;
-                    left: 20rem;
+                    left: 17rem;
                     z-index: 2;
-                    width: 20rem;
-                    height: 20rem;
+                    width: 19rem;
+                    height: 19rem;
                     transform: translate(0, -50%);
+
+                    @include icon(#fe431e);
 
                     @include mob {
                         left: 18rem;
@@ -90,7 +93,9 @@
 
                 & .input__support,
                 & .input__field {
-                    padding-left: 54rem;
+                    padding-left: 44rem;
+                    color: #6c1100;
+                    font-size: 16rem;
 
                     @include mob {
                         padding-left: 48rem;
@@ -106,7 +111,7 @@
 
             &Support {
                 padding-left: 16rem;
-                color: $colorDark;
+                color: #5d279e;
                 font-weight: 500;
                 font-size: 16rem;
                 line-height: 1.2;

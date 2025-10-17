@@ -1,102 +1,82 @@
 .upload {
     position: relative;
-    z-index: 1;
     width: 100%;
     height: 100%;
-    background: rgba(#fff, 0.18);
-    border-radius: 14rem;
+    background: #f3f3f3;
+    border-radius: 16rem;
+    transition: $trans;
 
     @include button;
 
-    &._upload &__main {
-        opacity: 0;
-    }
-
-    & input {
-        display: none;
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        border: 2rem solid transparent;
+        border-radius: inherit;
+        transition: $trans;
+        content: "";
+        pointer-events: none;
     }
 
     &__border {
         position: absolute;
         top: 0;
         left: 0;
-        z-index: 10;
+        z-index: 2;
         width: 100%;
         height: 100%;
+        transition: $trans;
         pointer-events: none;
 
         & .dashedBorder__rect {
-            rx: 18rem !important;
-            ry: 18rem !important;
+            stroke: #fb0a00;
         }
     }
 
-    &._over &__border .dashedBorder__rect {
-        stroke: #fad98c;
+    &._upload::before {
+        border-color: #5d279e;
     }
 
-    &._over &__main {
+    &._upload &__border {
+        opacity: 0;
+
+        // border: 3rem solid #10cfc9;
+    }
+
+    &._upload &__main {
         opacity: 0;
     }
 
+    &._over::before {
+        border-color: #fff;
+    }
+
+    & input {
+        display: none;
+    }
+
     &__main {
-        padding: 18rem 20rem;
+        padding: 40rem 20rem;
         transition: $trans;
-
-        @include mob {
-            padding: 26rem 20rem;
-        }
-
-        &Head {
-            display: flex;
-            align-items: center;
-            margin-bottom: 8rem;
-
-            @include mob {
-                flex-direction: column;
-            }
-
-            & span {
-                margin-left: 16rem;
-                color: #fff;
-                font-weight: 500;
-                font-size: 16rem;
-
-                @include mob {
-                    margin-top: 13rem;
-                    margin-left: 0;
-                    font-size: 17rem;
-                }
-            }
-        }
 
         &Icon {
             width: 22rem;
             height: 22rem;
+            margin-bottom: 14rem;
 
-            @include icon(#fff);
-
-            @include mob {
-                width: 26rem;
-                height: 26rem;
-            }
+            @include icon(#fb0a00);
         }
 
         &Description {
-            color: #fff;
-            font-weight: 500;
-            font-size: 15rem;
+            color: #760509;
+            font-weight: 400;
+            font-size: 16rem;
             line-height: 1.4;
             text-align: center;
-        }
-    }
-
-    &._mediumTextSize &__mainDescription {
-        font-size: 11rem;
-        line-height: 1.3;
-
-        @include mob {
-            font-size: 13rem;
         }
     }
 
@@ -110,7 +90,7 @@
         &Name {
             max-width: 100%;
             margin-bottom: 16rem;
-            padding: 3rem 10rem;
+            padding: 4rem 12rem;
             overflow: hidden;
             color: #5d279e;
             font-weight: 500;
@@ -119,18 +99,25 @@
             white-space: nowrap;
             text-align: center;
             text-overflow: ellipsis;
-            background: #ffe09e;
-            border-radius: 8rem;
+            background: #ffe7a5;
+            border-radius: 360rem;
         }
 
         &Button {
             display: flex;
             align-items: center;
-            color: #fff;
-            font-weight: 500;
+            color: #760509;
+            font-weight: 400;
             font-size: 16rem;
-            line-height: 1;
-            border-bottom: 1px solid rgba(#fff, 0.4);
+            line-height: 1.4;
+
+            &Icon {
+                width: 22rem;
+                height: 22rem;
+                margin-right: 8rem;
+
+                @include icon(#fb0a00);
+            }
         }
     }
 
@@ -140,11 +127,11 @@
         left: 0;
         z-index: 4;
         padding: 20rem;
-        background: rgba(#d1b3ff, 0.5);
+        background: #fed5ff;
         border-radius: inherit;
 
         &Text {
-            color: #ffe09e;
+            color: #5d279e;
             font-weight: 500;
             font-size: 16rem;
             line-height: 1.4;

@@ -1,12 +1,10 @@
 import React from 'react';
 
 export default (
-    <svg viewBox="0 0 23 20" fill="none">
+    <svg viewBox="0 0 14 23" fill="none">
         <path
-            fillRule="evenodd"
-            clipRule="evenodd"
-            d="M13.5698 0.598572L22.8033 9.99999L13.5698 19.4014L10.716 16.5986L15.2324 12H0V7.99999H15.2324L10.716 3.4014L13.5698 0.598572Z"
-            fill="#5D279E"
+            d="M13.7549 11.5L3.45215 22.376L0.547852 19.624L8.24414 11.5L0.547852 3.37598L3.45215 0.624023L13.7549 11.5Z"
+            fill="white"
             className="icon__fill"
         />
     </svg>

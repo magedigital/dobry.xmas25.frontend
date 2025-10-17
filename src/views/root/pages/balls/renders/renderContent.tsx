@@ -22,21 +22,25 @@ const renderContent: I['renderContent'] = function () {
                 document.dispatchEvent(new CustomEvent('scrollInnerPage'));
             }}
         >
-            <div className="popup__inner">
-                {this.renderHead()}
-                <div className="popup__content _COL _COL_H_CENTER">
-                    <div className="popup__table _FULL_W">
-                        <Table name="balls" items={items} />
-                    </div>
-                    <div className="popup__button _auto">
-                        <Button
-                            onClick={() => {
-                                changePage({ pageName: 'profile' });
-                            }}
-                            className="_purple"
-                        >
-                            OK
-                        </Button>
+            <div className="popup__wrapper">
+                <div className="popup__inner">
+                    <div className="popup__innerBox">
+                        {this.renderHead()}
+                        <div className="popup__content _COL _COL_H_CENTER">
+                            <div className="popup__table _FULL_W">
+                                <Table name="balls" items={items} />
+                            </div>
+                            <div className="popup__button">
+                                <Button
+                                    onClick={() => {
+                                        changePage({ pageName: 'profile' });
+                                    }}
+                                    className="_white"
+                                >
+                                    OK
+                                </Button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

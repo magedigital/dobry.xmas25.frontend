@@ -5,6 +5,7 @@ type PropsT = {};
 type StateT = {
     showClose?: boolean;
     isReady?: boolean;
+    isTopBarFix?: boolean;
 };
 
 interface InnerPageI<P = {}, S = {}> extends EditBlockI<StateT & S> {
@@ -12,8 +13,14 @@ interface InnerPageI<P = {}, S = {}> extends EditBlockI<StateT & S> {
 
     parent: React.RefObject<HTMLDivElement | null>;
     innerClassName?: string;
+    isTopBarFix?: boolean;
 
-    renderPage(this: InnerPageI, children: React.ReactNode, withClose?: boolean): React.ReactNode;
+    renderPage(
+        this: InnerPageI,
+        children: React.ReactNode,
+        withClose?: boolean,
+        isPopup?: boolean,
+    ): React.ReactNode;
     renderDecors(this: InnerPageI, isInner?: boolean): React.ReactNode;
 
     setClosePosition(this: InnerPageI): void;

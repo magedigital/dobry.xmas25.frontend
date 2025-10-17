@@ -36,7 +36,14 @@ class Checkbox
                             <Icon name="check" />
                         </i>
                     </div>
-                    <div className="checkbox__viewInner">{children}</div>
+                    {typeof children === 'string' ? (
+                        <div
+                            className="checkbox__viewInner"
+                            dangerouslySetInnerHTML={{ __html: children }}
+                        ></div>
+                    ) : (
+                        <div className="checkbox__viewInner">{children}</div>
+                    )}
                 </div>
             </label>
         );

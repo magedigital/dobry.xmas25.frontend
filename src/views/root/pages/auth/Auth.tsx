@@ -41,6 +41,8 @@ class Auth extends InnerPage<AuthI['props'], AuthI['state']> implements AuthI {
                 />
                 {this.renderDecors()}
             </>,
+            undefined,
+            true,
         );
     }
 }

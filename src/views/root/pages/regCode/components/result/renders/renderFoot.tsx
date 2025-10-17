@@ -11,9 +11,9 @@ const renderFoot: I['renderFoot'] = function () {
     return (
         <div className="popup__foot _FULL_W _COL _COL_H_CENTER">
             <div className="popup__buttons _FULL_W _ROW _ROW_H_CENTER">
-                <div className="popup__button _fix">
+                <div className="popup__button">
                     <Button
-                        className="_pink"
+                        className="_purple"
                         onClick={() => {
                             setStep('start');
                         }}
@@ -21,9 +21,9 @@ const renderFoot: I['renderFoot'] = function () {
                         Ещё код
                     </Button>
                 </div>
-                <div className="popup__button _fix">
+                <div className="popup__button">
                     <Button
-                        className="_purple"
+                        className="_white"
                         onClick={() => {
                             changePage({ pageName: 'profile' });
                         }}

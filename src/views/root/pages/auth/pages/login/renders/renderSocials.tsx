@@ -10,7 +10,7 @@ const renderSocials: I['renderSocials'] = function () {
             <p className="popup__socialsTitle">Авторизоваться через</p>
             <div className="popup__socialsItems _ROW">
                 {(Object.keys(this.socials) as (keyof typeof this.socials)[]).map((name) => {
-                    // const social = this.socials[name];
+                    const social = this.socials[name];
                     let href: string | undefined;
 
                     if (name === 'vk') {
@@ -44,7 +44,13 @@ const renderSocials: I['renderSocials'] = function () {
                                     }
                                 }, 500);
                             }}
-                        ></span>
+                        >
+                            <img
+                                src={require(`@media/socials/${social.logo}`)}
+                                alt=""
+                                className="popup__socialsItemIcon"
+                            />
+                        </span>
                     );
                 })}
             </div>

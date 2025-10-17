@@ -3,6 +3,7 @@ import { StoreT } from '@global/types';
 type PropsT = {
     storePages: StoreT['pages'];
     isFix?: boolean;
+    className?: string;
 };
 
 type StateT = {

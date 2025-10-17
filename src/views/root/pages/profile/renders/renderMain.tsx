@@ -5,6 +5,7 @@ import Fade from '@components/fade/Fade.tsx';
 import Icon from '@components/icon/Icon.tsx';
 import Link from '@components/link/Link.tsx';
 import LoaderBlock from '@components/loaderBlock/LoaderBlock.tsx';
+import Media from '@components/media/Media.tsx';
 import changePage from '@functions/changePage.ts';
 import sendGoal from '@functions/sendGoal.ts';
 
@@ -20,23 +21,42 @@ const renderMain: I['renderMain'] = function () {
                 <div className="profile__mainBlock _info _COL">
                     <div className="profile__mainName">
                         {user?.personal.firstName} {user?.personal.lastName}
-                        <div className="profile__mainCopy">
-                            <Fade
-                                className="profile__mainCopySuccess _FULL _ROW _ROW_CENTER"
-                                isShow={!!isCopy}
-                            >
-                                Скопировано
-                            </Fade>
-                            ID {user?.userId}
-                            <i
-                                className="profile__mainCopyIcon _CLICK"
-                                onClick={this.copyHandler.bind(this)}
-                            >
-                                <Icon name="copy" />
-                            </i>
-                        </div>
+                        <Media current="mobile">
+                            <div className="profile__mainCopy">
+                                <Fade
+                                    className="profile__mainCopySuccess _FULL _ROW _ROW_CENTER"
+                                    isShow={!!isCopy}
+                                >
+                                    Скопировано
+                                </Fade>
+                                ID {user?.userId}
+                                <i
+                                    className="profile__mainCopyIcon _CLICK"
+                                    onClick={this.copyHandler.bind(this)}
+                                >
+                                    <Icon name="copy" />
+                                </i>
+                            </div>
+                        </Media>
                     </div>
                     <div className="profile__mainLinks _ROW">
+                        <Media current="desktop">
+                            <div className="profile__mainCopy">
+                                <Fade
+                                    className="profile__mainCopySuccess _FULL _ROW _ROW_CENTER"
+                                    isShow={!!isCopy}
+                                >
+                                    Скопировано
+                                </Fade>
+                                ID {user?.userId}
+                                <i
+                                    className="profile__mainCopyIcon _CLICK"
+                                    onClick={this.copyHandler.bind(this)}
+                                >
+                                    <Icon name="copy" />
+                                </i>
+                            </div>
+                        </Media>
                         <Link
                             className="profile__mainLink _pink"
                             pageName={
@@ -83,21 +103,26 @@ const renderMain: I['renderMain'] = function () {
                     </div>
                     <div className="profile__mainButton">
                         <Button
-                            className="_pink"
+                            className="_red"
                             onClick={() => {
                                 changePage({ pageName: 'cheque' });
 
                                 sendGoal('regCheckBtn,profileRegCheckBtn');
                             }}
                         >
+                            <img
+                                src={require('@media/5ka-logo.svg').default}
+                                alt=""
+                                className="_5ka"
+                            />
                             ЗАРЕГИСТРИРОВАТЬ ЧЕК
                         </Button>
                     </div>
                 </div>
                 <div className="profile__mainButtonsInner _invite">
-                    <div className="profile__mainButton ">
+                    <div className="profile__mainButton">
                         <Button
-                            className="_blue"
+                            className="_pink"
                             onClick={() => {
                                 changePage({ pageName: 'invite' });
 

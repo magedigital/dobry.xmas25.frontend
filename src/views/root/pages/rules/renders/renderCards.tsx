@@ -11,7 +11,7 @@ const renderCards: I['renderCards'] = function () {
         <div className="rules _COL _COL_H_CENTER _FULL_W">
             <div className="rules__cards">
                 {this.cards.map((card, key) => {
-                    const { title, content } = card;
+                    const { title, content, image } = card;
 
                     return (
                         <div className="rules__card" key={key}>
@@ -21,10 +21,11 @@ const renderCards: I['renderCards'] = function () {
                                 </i>
                             )}
                             <div className="rules__cardHead _FULL_W">
-                                {/* <img
+                                <img
+                                    src={require(`@media/inners/${image}`)}
                                     alt=""
                                     className="rules__cardImage"
-                                /> */}
+                                />
                                 <div className="rules__cardNumber _COL _COL_CENTER">{key + 1}</div>
                             </div>
                             <div className="rules__cardContent _FULL_W _COL">
@@ -43,7 +44,7 @@ const renderCards: I['renderCards'] = function () {
                     onClick={() => {
                         changePage({ pageName: 'regCode' });
                     }}
-                    className="_purple"
+                    className="_white"
                 >
                     Участвовать
                 </Button>

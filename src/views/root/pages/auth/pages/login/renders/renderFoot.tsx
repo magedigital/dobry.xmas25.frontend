@@ -13,9 +13,9 @@ const renderFoot: I['renderFoot'] = function () {
         <div className="popup__foot _FULL_W _COL _COL_H_CENTER">
             <Error className="popup__error" error={error} />
             <div className="popup__buttons _FULL_W _ROW _ROW_H_CENTER">
-                <div className="popup__button _fix">
+                <div className="popup__button">
                     <Button
-                        className="_pink"
+                        className="_purple"
                         onClick={() => {
                             changePage({ pageName: 'auth-reg' });
                         }}
@@ -23,9 +23,9 @@ const renderFoot: I['renderFoot'] = function () {
                         Регистрация
                     </Button>
                 </div>
-                <div className="popup__button _fix">
+                <div className="popup__button">
                     <Button
-                        className="_purple"
+                        className="_white"
                         onClick={this.requestLogin.bind(this)}
                         loading={loadingKey === 'send'}
                     >

@@ -21,7 +21,7 @@ const scrollHandler: I['scrollHandler'] = async function () {
             const itemTop = sectionItem.getBoundingClientRect().y;
             const itemHeight = sectionItem.offsetHeight;
 
-            if (itemTop + itemHeight / 2 <= document.documentElement.clientHeight / 2) {
+            if (itemTop + itemHeight / 2 <= document.documentElement.clientHeight / 2 + 5) {
                 currentSection = section;
             }
         }

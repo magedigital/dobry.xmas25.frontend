@@ -8,6 +8,7 @@ const initPage: I['initPage'] = async function (name) {
     await setAsyncTimer(100);
 
     scrollPage(this.parent.current!.querySelector('.page')!, name);
+    
     await setAsyncState.call(this, { isReady: true });
 };
 

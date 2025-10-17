@@ -3,14 +3,14 @@
     height: 100%;
 
     &__support {
-        margin-bottom: 5rem;
+        margin-bottom: 3rem;
         color: #fff;
         font-weight: 400;
-        font-size: 14rem;
+        font-size: 16rem;
         line-height: 1.3;
 
         @include mob {
-            font-size: 16rem;
+            font-size: 18rem;
         }
     }
 

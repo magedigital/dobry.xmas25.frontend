@@ -51,9 +51,13 @@ class Reg extends EditBlock<RegI['props'], RegI['state']> implements RegI {
             >
                 <CustomHead title="Получение пароля" />
 
-                <div className="popup__inner">
-                    {this.renderHead()}
-                    {this.renderContent()}
+                <div className="popup__wrapper">
+                    <div className="popup__inner">
+                        <div className="popup__innerBox">
+                            {this.renderHead()}
+                            {this.renderContent()}
+                        </div>
+                    </div>
                 </div>
             </div>
         );

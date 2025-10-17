@@ -27,14 +27,14 @@
 
         &Description {
             margin-top: 5rem;
-            padding: 4rem 8rem;
-            color: $colorDark;
+            padding: 4rem 14rem;
+            color: #6c1100;
             font-weight: 500;
             font-size: 16rem;
             line-height: 1.3;
             text-align: center;
-            background: #ffd100;
-            border-radius: 6rem;
+            background: #ffe7a5;
+            border-radius: 360rem;
 
             @include mob {
                 font-size: 17rem;
@@ -46,7 +46,7 @@
                 z-index: 1;
                 display: inline-block;
                 padding: 0 9rem;
-                color: #fff;
+                color: #fed5ff;
                 font-weight: 600;
                 font-size: 14rem;
 
@@ -94,6 +94,7 @@
 
             &._prev {
                 left: 10rem;
+                padding-right: 3rem;
 
                 @include mob {
                     left: 7rem;
@@ -102,6 +103,7 @@
 
             &._next {
                 right: 10rem;
+                padding-left: 3rem;
 
                 @include mob {
                     right: 7rem;
@@ -112,7 +114,7 @@
                 width: 20rem;
                 height: 20rem;
 
-                @include icon(#fff);
+                @include icon(#fff7ae);
 
                 @include mob {
                     width: 16rem;
@@ -146,8 +148,9 @@
                 width: 180rem;
                 height: 180rem;
                 margin-bottom: 12rem;
-                background: #ffd100;
                 border-radius: 50%;
+
+                @include bg("/media/inners/prize-back.jpg", cover, center);
 
                 @include mob {
                     width: 230rem;
@@ -166,7 +169,7 @@
             }
 
             &._withInfo &Head {
-                margin-bottom: 32rem;
+                // margin-bottom: 32rem;
             }
 
             &Balls {
@@ -175,13 +178,13 @@
                 left: 50%;
                 z-index: 2;
                 padding: 4rem 8rem;
-                color: #fff;
+                color: #5d279e;
                 font-weight: 600;
                 font-size: 12rem;
                 white-space: nowrap;
                 text-transform: uppercase;
-                background: #5d279e;
-                border-radius: 6rem;
+                background: #fed5ff;
+                border-radius: 360rem;
                 transform: translate(-50%, 0);
 
                 @include mob {
@@ -244,7 +247,7 @@
             }
 
             &Description {
-                color: $colorDark;
+                color: #6c1100;
                 font-weight: 600;
                 font-size: 16rem;
                 line-height: 1.3;

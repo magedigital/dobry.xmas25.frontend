@@ -13,25 +13,27 @@
             position: absolute;
             top: 50%;
             z-index: 3;
-            width: 64rem;
-            height: 64rem;
-            background: #e11f26;
+            width: 62rem;
+            height: 62rem;
+            background: #ffe7a5;
             border-radius: 50%;
             transform: translate(0, -50%);
 
             &._prev {
                 left: 30rem;
+                padding-right: 4rem;
             }
 
             &._next {
                 right: 30rem;
+                padding-left: 4rem;
             }
 
             &Icon {
-                width: 24rem;
-                height: 24rem;
+                width: 26rem;
+                height: 26rem;
 
-                @include icon(#fcdbc6);
+                @include icon(#c50018);
             }
         }
 
@@ -63,7 +65,7 @@
         &Item {
             width: 280rem;
             height: 396rem;
-            margin-right: 31rem;
+            margin-right: 30rem;
             transition: $trans;
 
             @include mob {
@@ -80,19 +82,21 @@
         }
 
         &MobButtons {
-            margin-top: 20rem;
+            margin-top: 26rem;
         }
 
         &MobItems {
             margin: 0 17rem;
-            color: #5d279e;
+            color: #fff;
             font-weight: 700;
-            font-size: 16rem;
+            font-size: 18rem;
         }
 
         &MobButton {
             width: 22rem;
             height: 18rem;
+
+            @include icon(#fff);
         }
     }
 

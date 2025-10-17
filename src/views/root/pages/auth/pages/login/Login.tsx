@@ -50,16 +50,19 @@ class Login extends EditBlock<LoginI['props'], LoginI['state']> implements Login
         return (
             <div
                 ref={this.parent}
-                className="popup _FULL _COL _NOSCROLL"
+                className="popup _FULL _NOSCROLL"
                 onScroll={() => {
                     document.dispatchEvent(new CustomEvent('scrollInnerPage'));
                 }}
             >
                 <CustomHead title="Авторизация" />
-
-                <div className="popup__inner">
-                    {this.renderHead()}
-                    {this.renderContent()}
+                <div className="popup__wrapper">
+                    <div className="popup__inner">
+                        <div className="popup__innerBox">
+                            {this.renderHead()}
+                            {this.renderContent()}
+                        </div>
+                    </div>
                 </div>
             </div>
         );

@@ -62,14 +62,14 @@
 
     &__field,
     &__support {
-        padding: 16rem;
-        font-size: 16rem;
+        padding: 16rem 20rem;
+        font-size: 20rem;
         line-height: 1.3;
         cursor: text;
         transition: $trans;
 
         @include mob {
-            padding: 18rem 20rem;
+            padding: 18rem 16rem;
             font-size: 20rem;
         }
     }

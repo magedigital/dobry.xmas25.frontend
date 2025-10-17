@@ -1,10 +1,6 @@
 import { ChangeEvent } from 'react';
 
 type PropsT = {
-    accept: string;
-    className?: string;
-    title?: string;
-    text?: string;
     fileName?: string;
     onChange: (e: {
         target: { files: ChangeEvent<HTMLInputElement>['target']['files'] };

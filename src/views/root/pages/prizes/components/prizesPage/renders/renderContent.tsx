@@ -2,7 +2,6 @@ import React from 'react';
 
 import Button from '@components/button/Button.tsx';
 import Icon from '@components/icon/Icon.tsx';
-import setSpacesInText from '@functions/setSpacesInText.ts';
 
 import I from '../types.ts';
 
@@ -18,7 +17,7 @@ const renderContent: I['renderContent'] = function () {
                         key={key}
                     >
                         <i className="prizesPage__sliderButtonIcon">
-                            <Icon name={key === 'prev' ? 'arrow-prev' : 'arrow-next'} />
+                            <Icon name={key === 'prev' ? 'arrow-prev-short' : 'arrow-next-short'} />
                         </i>
                     </div>
                 ))}
@@ -40,7 +39,7 @@ const renderContent: I['renderContent'] = function () {
                                             {item.price}
                                         </div>
                                     )}
-                                    {name === 'weekly' && (
+                                    {/* {name === 'weekly' && (
                                         <div className="prizesPage__sliderItemInfo _COL _COL_CENTER">
                                             <div
                                                 className="prizesPage__sliderItemInfoInner"
@@ -49,7 +48,7 @@ const renderContent: I['renderContent'] = function () {
                                                 }}
                                             ></div>
                                         </div>
-                                    )}
+                                    )} */}
                                 </div>
                                 <p className="prizesPage__sliderItemDescription">{item.title}</p>
                             </div>

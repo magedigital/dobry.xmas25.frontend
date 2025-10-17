@@ -63,7 +63,7 @@ class Products
                                 key={key}
                             >
                                 <i className="products__sliderButtonIcon">
-                                    <Icon name={key === 'prev' ? 'arrow-prev' : 'arrow-next'} />
+                                    <Icon name={key === 'prev' ? 'arrow-prev-short' : 'arrow-next-short'} />
                                 </i>
                             </div>
                         ))}
@@ -130,7 +130,7 @@ class Products
                 {!is5ka && (
                     <div className="products__button">
                         <Button
-                            className="_purple"
+                            className="_white"
                             onClick={() => {
                                 changePage({ pageName: 'regCode' });
                             }}

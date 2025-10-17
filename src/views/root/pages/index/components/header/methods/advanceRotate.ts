@@ -4,7 +4,7 @@ import I from '../types.ts';
 
 const advanceRotate: I['advanceRotate'] = async function (isSet) {
     const startSpeed = this.rotateSpeed;
-    const diff = (isSet ? 2 : 1) - startSpeed;
+    const diff = (isSet ? 3 : 1) - startSpeed;
 
     if (this.advanceAnimationId) {
         cancelAnimationFrame(this.advanceAnimationId);

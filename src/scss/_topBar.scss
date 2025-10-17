@@ -112,6 +112,10 @@
         transform: translate(0, 0);
     }
 
+    &._back &__head {
+        background: #c50018;
+    }
+
     &._5ka &__head {
         opacity: 0;
         pointer-events: none;
@@ -326,9 +330,14 @@
         pointer-events: none;
     }
 
-    &._fix &__button {
-        &._red {
-            background: #ff3427;
+    &._fix &__button,
+    &._inner &__button {
+        & .button._topBarCollection {
+            // background: #e11f26;
+        }
+
+        & .button._topBarCollection .button__inner {
+            background: #e11f26;
         }
     }
 

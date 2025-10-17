@@ -70,13 +70,15 @@ class Winners extends InnerPage<WinnersI['props'], WinnersI['state']> implements
                     }}
                 >
                     <div className="page__inner _FULL_W _COL _COL_H_CENTER">
-                        <div className="page__innerBox _INNER _empty">
-                            <Media current="desktop">
-                                <div className="page__close">
-                                    <CloseBtn />
-                                </div>
-                            </Media>
-                            {this.renderContent()}
+                        <div className="page__innerWrapper _INNER">
+                            <div className="page__innerBox _empty">
+                                <Media current="desktop">
+                                    <div className="page__close">
+                                        <CloseBtn />
+                                    </div>
+                                </Media>
+                                {this.renderContent()}
+                            </div>
                         </div>
                     </div>
                 </div>

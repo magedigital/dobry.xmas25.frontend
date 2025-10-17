@@ -11,9 +11,9 @@ const renderRaffles: I['renderRaffles'] = function () {
     const { content } = this.props;
 
     return (
-        <div className="profile__block _COL _COL_H_CENTER">
+        <div className="profile__block _ruffles _COL _COL_H_CENTER">
             <div className="profile__blockHead _COL _COL_H_CENTER">
-                <h3 className="profile__blockTitle _PROFILE-TITLE">Обменивай баллы на призы</h3>
+                <h3 className="profile__blockTitle _PROFILE-TITLE">ПОТРАТЬ БАЛЛЫ</h3>
             </div>
             <div className="profile__blockRaffles _FULL_W">
                 {content && (

@@ -39,7 +39,7 @@ class Cheques extends React.Component<ChequesI['props'], ChequesI['state']> impl
         return (
             <div className="profile__block _codes _FULL_W _COL _COL_H_CENTER">
                 <div className="profile__blockHead _COL _COL_H_CENTER">
-                    <h3 className="profile__blockTitle _PROFILE-TITLE">МОИ чеки</h3>
+                    <h3 className="profile__blockTitle _PROFILE-TITLE">МОИ Чеки из «Пятёрочки»</h3>
                 </div>
                 <div className="profile__blockTable _FULL_W">
                     <Table name="cheques" items={checks} callback={setRenderKey} />

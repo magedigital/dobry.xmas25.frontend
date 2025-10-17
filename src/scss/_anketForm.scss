@@ -3,7 +3,7 @@
     z-index: 1;
     padding: 40rem 48rem;
     overflow: hidden;
-    background: #fff;
+    background: linear-gradient(to top, #cdbce2, #fdbdc0);
     border-radius: 32rem;
     transition: $trans;
 
@@ -16,8 +16,8 @@
     }
 
     @include mob {
-        padding: 18rem 12rem;
-        border-radius: 20rem;
+        padding: 10rem;
+        border-radius: 22rem;
     }
 
     &__success {
@@ -26,7 +26,6 @@
         left: 0;
         z-index: 2;
         padding: 40rem 48rem;
-        background: #fff;
 
         @include mob {
             padding: 20rem;
@@ -34,8 +33,8 @@
 
         &Inner {
             padding: 20rem 60rem;
-            background: #ffd100;
-            border-radius: 12rem;
+            background: #ffd7d8;
+            border-radius: 20rem;
 
             @include mob {
                 padding: 14rem 24rem;
@@ -46,9 +45,10 @@
         &Title {
             color: #5d279e;
             font-weight: 600;
-            font-size: 24rem;
+            font-size: 20rem;
             line-height: 1.2;
             text-align: center;
+            text-transform: uppercase;
 
             @include mob {
                 font-size: 22rem;
@@ -57,11 +57,20 @@
 
         &Description {
             margin-top: 12rem;
-            color: #2f2922;
-            font-size: 20rem;
+            color: #760509;
+            font-size: 16rem;
             line-height: 1.3;
             text-align: center;
         }
+    }
+
+    &__inner {
+        transition: $trans;
+    }
+
+    &._success &__inner {
+        opacity: 0;
+        pointer-events: none;
     }
 
     &__field {
@@ -74,8 +83,8 @@
         &Support {
             margin-bottom: 5rem;
             color: #5d279e;
-            font-weight: 500;
-            font-size: 20rem;
+            font-weight: 400;
+            font-size: 18rem;
             line-height: 1.2;
         }
 
@@ -122,9 +131,12 @@
 
         &Link {
             margin: 12rem 0 0 auto;
-            color: #ff49b8;
-            font-weight: 500;
-            font-size: 16rem;
+            padding: 5rem 10rem;
+            color: #4c1361;
+            font-weight: 400;
+            font-size: 15rem;
+            background: #fed5ff;
+            border-radius: 360rem;
 
             @include button;
         }

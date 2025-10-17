@@ -9,7 +9,7 @@ const renderHead: I['renderHead'] = function () {
         <div className="page__head _COL _COL_H_CENTER">
             <h3 className="page__title">Победители розыгрышей</h3>
             <p className="page__description">
-                Подробную информацию смотри в{' '}
+                Подробную информацию <br className="_MOBILE" />смотри в{' '}
                 <Link className="page__descriptionLink" pageName="auth-login">
                     Личном кабинете
                 </Link>
