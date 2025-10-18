@@ -22,7 +22,7 @@ const pages = {
         },
     },
     'profile-cheques': {
-        title: 'Чеки',
+        title: 'Акция в «Пятёрочке»',
         render(this: RootI) {
             const { data } = this.state;
 

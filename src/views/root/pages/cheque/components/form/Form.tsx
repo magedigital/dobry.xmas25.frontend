@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Button from '@components/button/Button.tsx';
+import DashedBorder from '@components/dashedBorder/DashedBorder.tsx';
 import EditBlock from '@components/editBlock/EditBlock.tsx';
 import Error from '@components/error/Error.tsx';
 import Field from '@components/field/Field.tsx';
@@ -57,7 +58,7 @@ class ChequeForm
 
         return (
             <div ref={this.parent} className="popup__block _COL _COL_H_CENTER">
-                <div className="popup__form _FULL_W">
+                <div className="popup__form _cheque _FULL_W">
                     {model &&
                         (Object.keys(this.fields) as (keyof typeof this.fields)[]).map((name) => {
                             const field = this.fields[name] as FieldT;
@@ -84,6 +85,9 @@ class ChequeForm
                         })}
                     {qrType === 'typing' && (
                         <label className="popup__formUpload _FULL_W _COL _COL_CENTER _CLICK">
+                            <div className="popup__formUploadBorder">
+                                <DashedBorder />
+                            </div>
                             <input
                                 type="file"
                                 multiple

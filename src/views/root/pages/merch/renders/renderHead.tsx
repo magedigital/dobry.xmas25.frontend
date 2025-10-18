@@ -14,7 +14,8 @@ const renderHead: I['renderHead'] = function () {
                     Выбери приз и нажми {'"'}Заказать{'"'}:
                 </Media>
                 <Media current="mobile">
-                    Выбери приз (свайпай) и нажми {'"'}Заказать{'"'}
+                    Выбери приз (свайпай) и нажми <br />
+                    {'"'}Заказать{'"'}
                 </Media>
             </p>
             <Media current="desktop">

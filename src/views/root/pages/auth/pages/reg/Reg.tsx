@@ -44,7 +44,7 @@ class Reg extends EditBlock<RegI['props'], RegI['state']> implements RegI {
         return (
             <div
                 ref={this.parent}
-                className="popup _reg _FULL _COL _NOSCROLL"
+                className="popup _reg _FULL _NOSCROLL"
                 onScroll={() => {
                     document.dispatchEvent(new CustomEvent('scrollInnerPage'));
                 }}

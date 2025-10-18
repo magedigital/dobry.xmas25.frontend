@@ -18,10 +18,10 @@ class Checkbox
     }
 
     render() {
-        const { children, value, onChange } = this.props;
+        const { children, value, onChange, className = '' } = this.props;
 
         return (
-            <label className="checkbox">
+            <label className={`checkbox ${className}`}>
                 <input
                     type="checkbox"
                     className="checkbox__input"

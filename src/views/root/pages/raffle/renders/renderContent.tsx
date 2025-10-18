@@ -13,7 +13,7 @@ const renderContent: I['renderContent'] = function () {
 
     return (
         <div
-            className="popup _merch _FULL _COL _NOSCROLL"
+            className="popup _merch _FULL _NOSCROLL"
             onScroll={() => {
                 document.dispatchEvent(new CustomEvent('scrollInnerPage'));
             }}

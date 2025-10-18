@@ -8,6 +8,8 @@ import codeMoreHandler from './methods/codeMoreHandler.ts';
 
 import ChequesI from './types.ts';
 
+import renderOffer from './renders/renderOffer.tsx';
+
 class Cheques extends React.Component<ChequesI['props'], ChequesI['state']> implements ChequesI {
     parent: ChequesI['parent'];
 
@@ -20,6 +22,8 @@ class Cheques extends React.Component<ChequesI['props'], ChequesI['state']> impl
     }
 
     codeMoreHandler = codeMoreHandler;
+
+    renderOffer = renderOffer;
 
     render() {
         const { currentCodesCount } = this.state;
@@ -38,6 +42,7 @@ class Cheques extends React.Component<ChequesI['props'], ChequesI['state']> impl
 
         return (
             <div className="profile__block _codes _FULL_W _COL _COL_H_CENTER">
+                {this.renderOffer()}
                 <div className="profile__blockHead _COL _COL_H_CENTER">
                     <h3 className="profile__blockTitle _PROFILE-TITLE">МОИ Чеки из «Пятёрочки»</h3>
                 </div>

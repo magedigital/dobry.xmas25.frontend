@@ -68,11 +68,27 @@
         }
     }
 
+    &._white &__view {
+        &Inner {
+            color: #fff;
+        }
+    }
+
+    &._white &__box {
+        &Icon {
+            @include icon(#5d3b8b);
+        }
+    }
+
     &__input:checked ~ &__view &__box {
         background: #5d3b8b;
 
         &Icon {
             opacity: 1;
         }
+    }
+
+    &._white &__input:checked ~ &__view &__box {
+        background: #fff;
     }
 }

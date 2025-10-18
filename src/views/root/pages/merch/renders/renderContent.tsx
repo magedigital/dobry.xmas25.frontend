@@ -10,7 +10,7 @@ const renderContent: I['renderContent'] = function () {
 
     return (
         <div
-            className="popup _merch _FULL _COL _NOSCROLL"
+            className="popup _merch _FULL _NOSCROLL"
             onScroll={() => {
                 document.dispatchEvent(new CustomEvent('scrollInnerPage'));
             }}
@@ -18,28 +18,32 @@ const renderContent: I['renderContent'] = function () {
                 this.merchInfoHandler(false);
             }}
         >
-            <div className="popup__inner">
-                <div className={`popup__merchInfo ${merchInfoActive ? '_active' : ''}`}>
-                    Введи свое имя, и увидишь фестивальный нейминг для своей футболки. Если будут
-                    возможны варианты, то внутри рамки появятся стрелки для выбора
-                </div>
-                {this.renderHead()}
-                <div className="popup__content _COL _COL_H_CENTER">
-                    {content && (
-                        <>
-                            {this.renderSlider()}
-                            <Error className="popup__error" error={error} />
-                            <div className="popup__button _auto">
-                                <Button
-                                    onClick={this.send.bind(this)}
-                                    className="_purple"
-                                    loading={loadingKey === 'send'}
-                                >
-                                    ЗАКАЗАТЬ ПРИЗ
-                                </Button>
-                            </div>
-                        </>
-                    )}
+            <div className="popup__wrapper">
+                <div className="popup__inner">
+                    <div className="popup__innerBox">
+                        <div className={`popup__merchInfo ${merchInfoActive ? '_active' : ''}`}>
+                            Введи свое имя, и увидишь фестивальный нейминг для своей футболки. Если
+                            будут возможны варианты, то внутри рамки появятся стрелки для выбора
+                        </div>
+                        {this.renderHead()}
+                        <div className="popup__content _COL _COL_H_CENTER">
+                            {content && (
+                                <>
+                                    {this.renderSlider()}
+                                    <Error className="popup__error" error={error} />
+                                    <div className="popup__button _auto">
+                                        <Button
+                                            onClick={this.send.bind(this)}
+                                            className="_white"
+                                            loading={loadingKey === 'send'}
+                                        >
+                                            ЗАКАЗАТЬ ПРИЗ
+                                        </Button>
+                                    </div>
+                                </>
+                            )}
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

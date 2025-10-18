@@ -16,6 +16,8 @@ interface ChequesI extends React.Component<PropsT, StateT> {
     parent: React.RefObject<HTMLDivElement | null>;
 
     codeMoreHandler(this: ChequesI): Promise<void>;
+
+    renderOffer(this: ChequesI): React.ReactNode;
 }
 
 export default ChequesI;

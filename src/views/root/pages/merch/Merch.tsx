@@ -78,6 +78,8 @@ class Merch extends InnerPage<MerchI['props'], MerchI['state']> implements Merch
                 {this.renderContent()}
                 {this.renderDecors()}
             </>,
+            undefined,
+            true,
         );
     }
 }

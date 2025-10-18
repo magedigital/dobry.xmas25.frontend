@@ -1,11 +1,13 @@
 .merch {
     position: relative;
     z-index: 1;
-    border: 5rem solid #ffd100;
-    border-radius: 20rem;
+    background: #fff;
+    border: 5rem solid #fed5ff;
+    border-radius: 28rem;
 
     @include mob {
-        border-radius: 18rem;
+        border-width: 3rem;
+        border-radius: 24rem;
     }
 
     &__inner {
@@ -146,7 +148,7 @@
 
         &Item {
             position: relative;
-            width: 382rem;
+            width: 350rem;
             height: 218rem;
 
             @include mob {
@@ -190,7 +192,9 @@
     }
 
     &__title {
+        max-width: 90%;
         margin-top: auto;
+        color: #760509;
         font-weight: 700;
         font-size: 16rem;
         line-height: 1.3;
@@ -205,18 +209,17 @@
 
     &__count {
         position: absolute;
-        bottom: 0;
-        left: 50%;
+        top: 16rem;
+        right: 16rem;
         z-index: 2;
-        padding: 4rem 12rem;
+        padding: 5rem 12rem 4rem;
         color: #fff;
         font-weight: 600;
         font-size: 16rem;
         line-height: 1.3;
         white-space: nowrap;
         text-transform: uppercase;
-        background: #5d279e;
-        border-radius: 8rem;
-        transform: translate(-50%, 50%);
+        background: #ff49b8;
+        border-radius: 360rem;
     }
 }

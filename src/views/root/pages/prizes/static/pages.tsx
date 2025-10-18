@@ -7,6 +7,7 @@ import PrizesPage from '../components/prizesPage/PrizesPage.tsx';
 import RootI from '../types.ts';
 
 import MainPrize from '../pages/mainPrize/MainPrize.tsx';
+import SpecPrize from '../pages/specPrize/SpecPrize.tsx';
 
 const pages = {
     'prizes-moment': {
@@ -75,14 +76,16 @@ const pages = {
             );
         },
     },
+    'prizes-spec': {
+        title: 'СПЕЦИАЛЬНЫЙ ПРИЗ',
+        render(this: RootI) {
+            return <SpecPrize />;
+        },
+    },
     'prizes-main': {
         title: 'ГЛАВНЫЙ ПРИЗ',
         render(this: RootI) {
-            return (
-                <>
-                    <MainPrize />
-                </>
-            );
+            return <MainPrize />;
         },
     },
 } as const;

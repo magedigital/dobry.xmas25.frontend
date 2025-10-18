@@ -18,7 +18,7 @@ const renderSlider: I['renderSlider'] = function () {
                 {(['prev', 'next'] as const).map((key) => (
                     <div className={`popup__merchButton _CLICK _COL _COL_CENTER _${key}`} key={key}>
                         <i className="popup__merchButtonIcon">
-                            <Icon name={key === 'prev' ? 'arrow-prev' : 'arrow-next'} />
+                            <Icon name={key === 'prev' ? 'arrow-prev-short' : 'arrow-next-short'} />
                         </i>
                     </div>
                 ))}
@@ -50,6 +50,7 @@ const renderSlider: I['renderSlider'] = function () {
             </div>
             <div className="popup__merchCheckbox">
                 <Checkbox
+                    className="_white"
                     value={!!isConfirm}
                     onChange={async () => {
                         await setAsyncState.call(this, { isConfirm: !isConfirm });

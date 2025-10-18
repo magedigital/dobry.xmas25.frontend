@@ -2,6 +2,7 @@ type PropsT = {
     children: React.ReactNode;
     value: boolean;
     onChange: (data: { value: boolean }) => Promise<void>;
+    className?: string;
 };
 
 type StateT = {};

@@ -41,6 +41,10 @@
                 border-radius: 10rem;
             }
 
+            & b {
+                font-weight: 600;
+            }
+
             & span {
                 position: relative;
                 z-index: 1;
@@ -49,6 +53,10 @@
                 color: #fed5ff;
                 font-weight: 600;
                 font-size: 14rem;
+
+                @include mob {
+                    padding: 0 4rem;
+                }
 
                 &::before {
                     position: absolute;
@@ -61,6 +69,11 @@
                     border-radius: 50%;
                     transform: translate(-50%, -50%);
                     content: "";
+
+                    @include mob {
+                        width: 24rem;
+                        height: 24rem;
+                    }
                 }
             }
         }
@@ -265,14 +278,49 @@
         transform: scale(1.15);
     }
 
-    &__mainPrize {
-        width: 680rem;
-        height: 330rem;
+    &__spec {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        width: 538rem;
+        height: 232rem;
+        margin-bottom: 30rem;
+        padding: 20rem;
+        color: #6c1100;
+        font-weight: 600;
+        font-size: 16rem;
+        text-transform: uppercase;
+        border-radius: 24rem;
+
+        @include bg("/media/inners/prize-special.jpg", cover, center);
 
         @include mob {
             width: 100%;
-            height: 430rem;
-            padding: 0 12rem;
+            height: auto;
+            padding: 16rem 16rem 46rem;
+            font-size: 20rem;
+            aspect-ratio: 1;
+
+            @include bg("/media/inners/prize-special-mob.jpg", cover, center);
+        }
+    }
+
+    &__mainPrize {
+        width: 948rem;
+        height: 286rem;
+        margin-bottom: 32rem;
+        border-radius: 24rem;
+
+        @include bg("/media/inners/prize-big.jpg", cover, center);
+
+        @include mob {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 0.75;
+            margin-bottom: 0;
+
+            @include bg("/media/inners/prize-big-mob.jpg", cover, center);
         }
     }
 }

@@ -16,60 +16,64 @@ const renderContent: I['renderContent'] = function () {
     return (
         <>
             <div
-                className="popup _reg _FULL _COL _NOSCROLL"
+                className="popup _reg _FULL _NOSCROLL"
                 onScroll={() => {
                     document.dispatchEvent(new CustomEvent('scrollInnerPage'));
                 }}
             >
-                <div className="popup__inner">
-                    {this.renderHead()}
-                    <List
-                        renderKey={currentStep ? `${currentStep}${renderKey}` : undefined}
-                        items={currentStep ? [{ _id: currentStep }] : []}
-                        parentClass="popup__blocks"
-                        itemClass="popup__blocksItem"
-                        itemStyleProps={[]}
-                        parentStyleProps={['width']}
-                        parentRealStyleProps={['width']}
-                        renderItem={({ item }) => (
-                            <>
-                                {item._id === 'start' && (
-                                    <Start
-                                        setStep={this.setStep.bind(this)}
-                                        uploadQr={this.uploadQr.bind(this)}
-                                    />
+                <div className="popup__wrapper">
+                    <div className="popup__inner">
+                        <div className="popup__innerBox">
+                            {this.renderHead()}
+                            <List
+                                renderKey={currentStep ? `${currentStep}${renderKey}` : undefined}
+                                items={currentStep ? [{ _id: currentStep }] : []}
+                                parentClass="popup__blocks"
+                                itemClass="popup__blocksItem"
+                                itemStyleProps={[]}
+                                parentStyleProps={['width']}
+                                parentRealStyleProps={['width']}
+                                renderItem={({ item }) => (
+                                    <>
+                                        {item._id === 'start' && (
+                                            <Start
+                                                setStep={this.setStep.bind(this)}
+                                                uploadQr={this.uploadQr.bind(this)}
+                                            />
+                                        )}
+                                        {item._id === 'error' && (
+                                            <ScanError
+                                                setStep={this.setStep.bind(this)}
+                                                uploadQr={this.uploadQr.bind(this)}
+                                                setRenderKey={this.setRenderKey.bind(this)}
+                                            />
+                                        )}
+                                        {item._id === 'scan' && (
+                                            <Scan
+                                                setStep={this.setStep.bind(this)}
+                                                complete={this.scanComplete.bind(this)}
+                                                uploadQr={this.uploadQr.bind(this)}
+                                            />
+                                        )}
+                                        {item._id === 'form' && (
+                                            <Form
+                                                setRenderKey={this.setRenderKey.bind(this)}
+                                                setStep={this.setStep.bind(this)}
+                                                scanResult={scanResult}
+                                                qrType={qrType}
+                                            />
+                                        )}
+                                        {item._id === 'result' && (
+                                            <Result setStep={this.setStep.bind(this)} />
+                                        )}
+                                    </>
                                 )}
-                                {item._id === 'error' && (
-                                    <ScanError
-                                        setStep={this.setStep.bind(this)}
-                                        uploadQr={this.uploadQr.bind(this)}
-                                        setRenderKey={this.setRenderKey.bind(this)}
-                                    />
-                                )}
-                                {item._id === 'scan' && (
-                                    <Scan
-                                        setStep={this.setStep.bind(this)}
-                                        complete={this.scanComplete.bind(this)}
-                                        uploadQr={this.uploadQr.bind(this)}
-                                    />
-                                )}
-                                {item._id === 'form' && (
-                                    <Form
-                                        setRenderKey={this.setRenderKey.bind(this)}
-                                        setStep={this.setStep.bind(this)}
-                                        scanResult={scanResult}
-                                        qrType={qrType}
-                                    />
-                                )}
-                                {item._id === 'result' && (
-                                    <Result setStep={this.setStep.bind(this)} />
-                                )}
-                            </>
-                        )}
-                        allItems={['start', 'scan', 'error', 'form', 'result']}
-                        currentItem={currentStep}
-                        resizeWidth={true}
-                    />
+                                allItems={['start', 'scan', 'error', 'form', 'result']}
+                                currentItem={currentStep}
+                                resizeWidth={true}
+                            />
+                        </div>
+                    </div>
                 </div>
             </div>
         </>

@@ -52,6 +52,12 @@ const pages = [
         parentName: 'prizes',
     },
     {
+        links: ['spec'],
+        name: 'prizes-spec',
+        level: 1,
+        parentName: 'prizes',
+    },
+    {
         links: ['main'],
         name: 'prizes-main',
         level: 1,

@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import Button from '@components/button/Button.tsx';
+import DashedBorder from '@components/dashedBorder/DashedBorder.tsx';
 import Icon from '@components/icon/Icon.tsx';
 
 import StartI from './types.ts';
@@ -31,6 +32,9 @@ class Start extends React.Component<StartI['props'], StartI['state']> implements
                             setStep('scan');
                         }}
                     >
+                        <div className="popup__chequeAreaBorder">
+                            <DashedBorder />
+                        </div>
                         <i className="popup__chequeAreaIcon">
                             <Icon name="scan" />
                         </i>
