@@ -5,6 +5,10 @@
     background: #f3f3f3;
     border-radius: 16rem;
 
+    &._rafflePrize {
+        background: #fff;
+    }
+
     &._white {
         background: #fff;
     }
@@ -50,6 +54,10 @@
         line-height: 1.4;
     }
 
+    &._rafflePrize &__support {
+        color: #b690eb;
+    }
+
     &._area &__support {
         align-items: flex-start;
     }
@@ -89,5 +97,15 @@
     &._error &__support {
         color: red;
         font-weight: 600;
+    }
+
+    &._rafflePrize &__field {
+        color: #5d279e;
+    }
+
+    &._rafflePrize &__field,
+    &._rafflePrize &__support {
+        justify-content: center;
+        text-align: center;
     }
 }

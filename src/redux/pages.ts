@@ -29,6 +29,11 @@ const pages = [
         content: 'Правила Акции',
     },
     {
+        links: ['raffle-prize'],
+        name: 'raffle-prize',
+        content: 'Роызыгрыш',
+    },
+    {
         links: ['prizes'],
         name: 'prizes',
         content: 'Призы',

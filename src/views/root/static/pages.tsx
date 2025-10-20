@@ -20,6 +20,7 @@ import Prizes from '../pages/prizes/Prizes.tsx';
 import Products from '../pages/products/Products.tsx';
 import Profile from '../pages/profile/Profile.tsx';
 import Raffle from '../pages/raffle/Raffle.tsx';
+import RafflePrize from '../pages/rafflePrize/RafflePrize.tsx';
 import RegCode from '../pages/regCode/RegCode.tsx';
 import Rules from '../pages/rules/Rules.tsx';
 import Winners from '../pages/winners/Winners.tsx';
@@ -48,6 +49,11 @@ const pages = {
     'anket-map': {
         render(this: RootI) {
             return <AnketMap />;
+        },
+    },
+    'raffle-prize': {
+        render(this: RootI) {
+            return <RafflePrize />;
         },
     },
     faq: {

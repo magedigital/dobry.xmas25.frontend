@@ -143,6 +143,10 @@
         }
     }
 
+    &._rafflePrize &__innerBox {
+        padding-bottom: 0;
+    }
+
     &._profile &__innerBox {
         padding-bottom: 26rem;
 

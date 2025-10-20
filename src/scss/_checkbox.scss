@@ -71,6 +71,11 @@
     &._white &__view {
         &Inner {
             color: #fff;
+
+            & a {
+                color: #fff7ae;
+                border-bottom-color: rgba(#fff7ae, 0.5);
+            }
         }
     }
 
