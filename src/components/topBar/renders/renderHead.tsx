@@ -78,7 +78,7 @@ const renderHead: I['renderHead'] = function () {
                             <Button
                                 className="_topBarCollection _mediumSize"
                                 onClick={() => {
-                                    // changePage({ pageName: 'auth-login' });
+                                    changePage({ pageName: 'raffle-prize' });
                                 }}
                             >
                                 собери коллекцию лосей

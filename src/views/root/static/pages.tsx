@@ -12,8 +12,8 @@ import Cheque from '../pages/cheque/Cheque.tsx';
 import Faq from '../pages/faq/Faq.tsx';
 // import FedukPrize from '../pages/fedukPrize/FedukPrize.tsx';
 import FullAnket from '../pages/fullAnket/FullAnket.tsx';
+import Game from '../pages/game/Game.tsx';
 import Index from '../pages/index/Index.tsx';
-// import Game from '../pages/game/Game.tsx';
 import Invite from '../pages/invite/Invite.tsx';
 import Merch from '../pages/merch/Merch.tsx';
 import Prizes from '../pages/prizes/Prizes.tsx';
@@ -131,11 +131,11 @@ const pages = {
             return <Auth />;
         },
     },
-    // game: {
-    //     render(this: RootI) {
-    //         return <Game />;
-    //     },
-    // },
+    game: {
+        render(this: RootI) {
+            return <Game />;
+        },
+    },
     // fedukPrize: {
     //     render(this: RootI) {
     //         return <FedukPrize />;

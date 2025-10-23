@@ -7,13 +7,20 @@
 //   <div id="root" class="game" oninit="onAppReadyHandler"></div>
 // </div>
 
+// Установить название игры.
 // Просто переменная - используется внутри этого файла для удобства,
 // передается ниже в конфигурацию, сама на приложение не влияет
-// window.gameId = "STAGE";
+// window.gameId = "LIGHTUP"; //"VIBE"; //"SNOWBALL"; //"LIGHTUP";
 
+// Указать, авторизован пользователь или нет
 // Просто переменная - используется внутри этого файла для удобства,
 // передается ниже в конфигурацию, сама на приложение не влияет
-// window.userAuthorized = false; true; false;
+// window.userAuthorized = true; //true; false;
+
+// Указать, закончилась ли акция или нет
+// Просто переменная - используется внутри этого файла для удобства,
+// передается ниже в конфигурацию, сама на приложение не влияет
+window.activityIsOver = false; //true; false;
 
 // Также функция для использования внутри этого файла, заглушка
 // Имитирует закрытие попапа с игрой
@@ -21,14 +28,14 @@
 //   console.log("closeGamePopup");
 // };
 
-// Также функция для использования внутри этого файла, заглушка
-// Имитирует переход к регистрации чека
+// // Также функция для использования внутри этого файла, заглушка
+// // Имитирует переход к регистрации чека
 // window.registerBill = function () {
 //   console.log("registerBill");
 // };
 
-// Также функция для использования внутри этого файла, заглушка
-// Имитирует переход к регистрации пользователя
+// // Также функция для использования внутри этого файла, заглушка
+// // Имитирует переход к регистрации пользователя
 // window.signUp = function () {
 //   console.log("signUp");
 // };
@@ -36,92 +43,74 @@
 // Функция инициализации приложения. Вызывается из обработчика в Index.html,
 // см. <div id="root" class="game" oninit="onAppReadyHandler">
 function onAppReadyHandler(app) {
-    // Функция обработки ресайза страницы.
-    // Берется элемент-контейнер и передается его размер в приложение.
-    // Это как пример, реализация может быть любой, главное, передать размеры для приложения
-    function updateLayout() {
-        var container = document.getElementById('container');
-        app.resize(container.clientWidth, container.clientHeight);
-    }
+  // Функция обработки ресайза страницы.
+  // Берется элемент-контейнер и передается его размер в приложение.
+  // Это как пример, реализация может быть любой, главное, передать размеры для приложения
+  function updateLayout() {
+    var container = document.getElementById("container");
+    app.resize(container.clientWidth, container.clientHeight);
+  }
+  updateLayout();
+
+  // Инициализация веб-страницы
+  // Обновление размеров приложения при готовности страницы
+  function initHandler() {
     updateLayout();
+  }
 
-    // Инициализация веб-страницы
-    // Обновление размеров приложения при готовности страницы
-    function initHandler() {
-        updateLayout();
-    }
+  // Ресайз веб-страницы
+  // Обновление размеров приложения при ресайзе страницы
+  function resizeHandler() {
+    updateLayout();
+  }
 
-    // Ресайз веб-страницы
-    // Обновление размеров приложения при ресайзе страницы
-    function resizeHandler() {
-        updateLayout();
-    }
+  // Подписываемся на события изменения, чтобы вызывать updateLayout
+  // Обновление размеров приложения можно делать и иначе -
+  // здесь просто пример использования
+  window.addEventListener("load", initHandler);
+  window.addEventListener("resize", resizeHandler);
 
-    // Подписываемся на события изменения, чтобы вызывать updateLayout
-    // Обновление размеров приложения можно делать и иначе -
-    // здесь просто пример использования
-    window.addEventListener('load', initHandler);
-    window.addEventListener('resize', resizeHandler);
+  function removeGame() {
+    window.removeEventListener("load", initHandler);
+    window.removeEventListener("resize", resizeHandler);
 
-    function removeGame() {
-        window.removeEventListener('load', initHandler);
-        window.removeEventListener('resize', resizeHandler);
+    document.removeEventListener("removeGame", removeGame);
+  }
 
-        document.removeEventListener('removeGame', removeGame);
-    }
+  document.addEventListener("removeGame", removeGame);
 
-    document.addEventListener('removeGame', removeGame);
+  // Настройки приложения
+  var data = {
+    games: {
+      1: {
+        id: "VIBE",
+        request1: { url: "/api/TentGame1.json", method: "GET" },
+        request2: { url: "/api/TentGame2.json", method: "GET" },
+      },
+      2: {
+        id: "SNOWBALL",
+        request1: { url: "/api/TentGame1.json", method: "GET" },
+        request2: { url: "/api/TentGame2.json", method: "GET" },
+      },
+      3: {
+        id: "LIGHTUP",
+        request1: { url: "/api/TentGame1.json", method: "GET" },
+        request2: { url: "/api/TentGame2.json", method: "GET" },
+      },
+      index: { VIBE: 1, SNOWBALL: 2, LIGHTUP: 3 },
+    },
+    closeHandler: window.closeGamePopup,
+    registerHandler: window.registerBill,
+    signUpHandler: window.signUp,
+    switchToMobileWidth: 480,
+    userNotAuthorized: !window.userAuthorized,
+    activityIsOver: window.activityIsOver,
+  };
 
-    // Настройки приложения
-    var data = {
-        // Это список настроек для обмена данными игр
-        games: {
-            // id - для передачи кода игры
-            // request1 - запрос до старта
-            // request2 - запрос после старта
-            1: {
-                id: 'VIBE',
-                request1: { url: '/api/TentGame', method: 'POST' },
-                // request1: { url: "/api/TentGame1.json", method: "GET" },
-                request2: { url: '/api/TentGame', method: 'POST' },
-                // request2: { url: "/api/TentGame2.json", method: "GET" },
-            },
-            2: {
-                id: 'SPOTLIGHTS',
-                request1: { url: '/api/TentGame', method: 'POST' },
-                request2: { url: '/api/TentGame', method: 'POST' },
-            },
-            3: {
-                id: 'MATCH',
-                request1: { url: '/api/TentGame', method: 'POST' },
-                request2: { url: '/api/TentGame', method: 'POST' },
-            },
-            4: {
-                id: 'STAGE',
-                request1: { url: '/api/TentGame', method: 'POST' },
-                request2: { url: '/api/TentGame', method: 'POST' },
-            },
-            5: {
-                id: 'FIVE',
-                request1: { url: '/api/PlayVip', method: 'POST' },
-                // request1: { url: "/api/FiveGame1.json", method: "GET" },
-                request2: { url: '/api/PlayVip', method: 'POST' },
-                // request2: { url: "/api/FiveGame2.json", method: "GET" },
-            },
-            // Это индекс игр для быстрой идентификации внутри приложения
-            index: { VIBE: 1, SPOTLIGHTS: 2, MATCH: 3, STAGE: 4, FIVE: 5 },
-        },
-        // Обработчик закрытия попапа
-        closeHandler: window.closeGamePopup,
-        // Обработчик перехода к регистрации чека
-        registerHandler: window.registerBill,
-        signUpHandler: window.signUp,
-        switchToMobileWidth: 480,
-        userNotAuthorized: !window.userAuthorized,
-    };
+  // Передается номер текущей игры (внутри приложения игры идентифицируются по номерам)
+  data.gameIndex = data.games.index[window.gameId];
+  // Передаются данные текущей игры
+  data.gameData = data.games[data.gameIndex];
 
-    data.gameIndex = data.games.index[window.gameId];
-    data.gameData = data.games[data.gameIndex];
-
-    app.setData(data);
+  app.setData(data);
 }

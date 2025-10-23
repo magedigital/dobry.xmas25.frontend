@@ -1,5 +1,7 @@
+import { PageNamesT } from '@global/types';
+
 const games = {
-    1: {
+    SNOWBALL: {
         menuThumb: 'game-img-1.jpg',
         image: 'game/Game1.svg',
         title: 'Снежки',
@@ -7,7 +9,7 @@ const games = {
         goal: 'vibeBtn',
         metaTitle: 'Лови вайб',
     },
-    2: {
+    VIBE: {
         menuThumb: 'game-img-2.jpg',
         image: 'game/Game2.svg',
         title: 'Вайб Лосьвилля',
@@ -15,7 +17,7 @@ const games = {
         goal: 'spotlightsBtn',
         metaTitle: 'В свете софитов',
     },
-    3: {
+    LIGHTUP: {
         menuThumb: 'game-img-3.jpg',
         image: 'game/Game4.svg',
         title: 'Новогодняя ёлка',
@@ -23,54 +25,26 @@ const games = {
         goal: 'matchBtn',
         metaTitle: 'Найди мэтч',
     },
-    4: {
+    LOSYANTA: {
         menuThumb: 'game-img-4.jpg',
         image: 'game/Game3.svg',
         title: 'Тайный Лосянта',
         description: 'Доберись до Главной сцены Добрый Fest',
         goal: 'stageBtn',
         metaTitle: 'Вперёд к сцене',
-    },
-    VIBE: {
-        menuThumb: 'game-img-4.jpg',
-        image: 'game/Game1.svg',
-        title: 'Лови вайб',
-        description: 'Успей собрать как можно больше фестивальных предметов',
-        goal: 'vibeBtn',
-        metaTitle: 'Лови вайб',
-    },
-    SPOTLIGHTS: {
-        menuThumb: 'game-img-4.jpg',
-        image: 'game/Game2.svg',
-        title: 'В свете софитов',
-        description: 'Поймай звезду в луч прожектора',
-        goal: 'spotlightsBtn',
-        metaTitle: 'В свете софитов',
-    },
-    MATCH: {
-        menuThumb: 'game-img-4.jpg',
-        image: 'game/Game4.svg',
-        title: 'Найди мэтч',
-        description: 'Собери музыкально-фестивальные пары этого лета',
-        goal: 'matchBtn',
-        metaTitle: 'Найди мэтч',
-    },
-    STAGE: {
-        menuThumb: 'game-img-4.jpg',
-        image: 'game/Game3.svg',
-        title: 'Вперед к сцене',
-        description: 'Доберись до Главной сцены Добрый Fest',
-        goal: 'stageBtn',
-        metaTitle: 'Вперёд к сцене',
-    },
-    FIVE: {
-        menuThumb: 'game-img-4.jpg',
-        image: 'location-game-01.svg',
-        title: 'Играть',
-        description: 'Успей собрать как можно больше фестивальных предметов',
-        goal: '',
-        metaTitle: 'VIP-шатёр',
+        pageName: 'raffle-prize',
     },
 } as const;
 
+type GameT = {
+    menuThumb: string;
+    image: string;
+    title: string;
+    description: string;
+    goal: string;
+    metaTitle: string;
+    pageName?: PageNamesT;
+};
+
 export default games;
+export type { GameT };

@@ -4,7 +4,7 @@ import Link from '@components/link/Link.tsx';
 
 import I from '../types.ts';
 
-import games from '../../../../../static/games.ts';
+import games, { GameT } from '../../../../../static/games.ts';
 
 const renderPrizes: I['renderPrizes'] = function () {
     const { handler } = this.props;
@@ -16,14 +16,14 @@ const renderPrizes: I['renderPrizes'] = function () {
                     Исследуй Лосьвилль и&nbsp;участвуй в&nbsp;розыгрыше специальных призов
                 </div>
                 <div className="menu__prizesItems _FULL_W _ROW">
-                    {(['1', '2', '3', '4'] as const).map((name, key) => {
-                        const game = games[name];
+                    {(Object.keys(games) as (keyof typeof games)[]).map((name, key) => {
+                        const game = games[name] as GameT;
 
                         return (
                             <Link
                                 className="menu__prizesItem"
                                 key={key}
-                                pageName="game-inner"
+                                pageName={game.pageName || 'game-inner'}
                                 ids={{ 1: name }}
                                 callback={() => {
                                     handler(false);

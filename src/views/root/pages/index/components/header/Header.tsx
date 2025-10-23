@@ -18,6 +18,7 @@ class Header extends React.Component<HeaderI['props'], HeaderI['state']> impleme
     parent: HeaderI['parent'];
     animationId: HeaderI['animationId'];
     sliderTimerId: HeaderI['sliderTimerId'];
+    slider: HeaderI['slider'];
 
     constructor(props: HeaderI['props']) {
         super(props);
@@ -51,6 +52,10 @@ class Header extends React.Component<HeaderI['props'], HeaderI['state']> impleme
 
         if (this.sliderTimerId) {
             clearTimeout(this.sliderTimerId);
+        }
+
+        if (this.slider) {
+            this.slider.destroy();
         }
     }
 

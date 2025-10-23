@@ -44,11 +44,7 @@ class Game extends InnerPage<GameI['props'], GameI['state']> implements GameI {
                 itemStyleProps={[]}
                 parentStyleProps={[]}
                 parentRealStyleProps={[]}
-                renderItem={({ item }) => (
-                    <>
-                        <GamePage id={item._id} />
-                    </>
-                )}
+                renderItem={({ item }) => <GamePage id={item._id} />}
             />
         );
     }

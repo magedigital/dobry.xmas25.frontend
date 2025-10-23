@@ -4,7 +4,7 @@ import Link from '@components/link/Link.tsx';
 
 import I from '../types.ts';
 
-import games from '../../../../../../../static/games.ts';
+import games, { GameT } from '../../../../../../../static/games.ts';
 
 const renderPrizes: I['renderPrizes'] = function () {
     return (
@@ -13,14 +13,14 @@ const renderPrizes: I['renderPrizes'] = function () {
                 <h3 className="profile__blockTitle _PROFILE-TITLE">Играй в Лосьвилле</h3>
             </div>
             <div className="profile__blockPrizes">
-                {([1, 2, 3, 4] as const).map((name, key) => {
-                    const game = games[name];
+                {(Object.keys(games) as (keyof typeof games)[]).map((name, key) => {
+                    const game = games[name] as GameT;
 
                     return (
                         <Link
                             className="profile__blockPrize _COL _COL_H_CENTER"
                             key={key}
-                            pageName="game-inner"
+                            pageName={game.pageName || 'game-inner'}
                             ids={{ 1: name.toString() }}
                         >
                             <div className="profile__blockPrizeHead">
