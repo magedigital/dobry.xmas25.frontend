@@ -11,7 +11,7 @@ const sliderInit: I['sliderInit'] = function () {
         moveArea: this.parent.current!.querySelector('.rafflePrize__sliderItems')!,
         itemClass: 'rafflePrize__sliderItem',
         showEach: true,
-        infinity: true,
+        infinity: false,
         withDrag: false,
         callback: ({ current }) => {
             if (typeof current === 'number') {

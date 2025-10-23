@@ -2,7 +2,7 @@
     "name": "test",
     "version": "1.0.1",
     "private": true,
-    "proxy": "https://stage.dobrycola-promo.srv08.ru",
+    "proxy": "https://dev.2025-summer.dobrycola-promo.srv08.ru",
     "dependencies": {
         "@types/crypto-js": "^4.2.2",
         "@types/react-redux": "^7.1.34",

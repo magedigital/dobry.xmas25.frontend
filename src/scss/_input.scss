@@ -107,5 +107,9 @@
     &._rafflePrize &__support {
         justify-content: center;
         text-align: center;
+
+        @include mob {
+            font-size: 18rem;
+        }
     }
 }

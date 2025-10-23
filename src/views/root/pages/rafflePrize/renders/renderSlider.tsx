@@ -24,17 +24,25 @@ const renderSlider: I['renderSlider'] = function () {
                 <div className="rafflePrize__sliderLight _1"></div>
                 <div className="rafflePrize__sliderLight _2"></div>
                 <div className="rafflePrize__sliderLight _3"></div>
-                <div className="rafflePrize__sliderLight _result"></div>
             </div>
             <div className="rafflePrize__sliderLights _right">
                 <div className="rafflePrize__sliderLight _3"></div>
                 <div className="rafflePrize__sliderLight _2"></div>
                 <div className="rafflePrize__sliderLight _1"></div>
-                <div className="rafflePrize__sliderLight _result"></div>
+            </div>
+            <div className="rafflePrize__sliderLights _left _result">
+                <div className="rafflePrize__sliderLight _1"></div>
+                <div className="rafflePrize__sliderLight _2"></div>
+                <div className="rafflePrize__sliderLight _3"></div>
+            </div>
+            <div className="rafflePrize__sliderLights _right _result">
+                <div className="rafflePrize__sliderLight _3"></div>
+                <div className="rafflePrize__sliderLight _2"></div>
+                <div className="rafflePrize__sliderLight _1"></div>
             </div>
             <div className="rafflePrize__sliderInner">
                 <div className="rafflePrize__sliderItems">
-                    {new Array(3).fill({}).map((t, i) => {
+                    {new Array(40).fill({}).map((t, i) => {
                         const index = ((i % 3) + 1) as 1 | 2 | 3;
                         const isOdd = i % 2 === 1;
                         const prize = prizes[index];

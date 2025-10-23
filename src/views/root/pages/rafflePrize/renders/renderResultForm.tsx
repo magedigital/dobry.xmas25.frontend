@@ -10,16 +10,15 @@ const renderResultForm: I['renderResultForm'] = function () {
         <div className="rafflePrize__resultForm _COL">
             <div className="rafflePrize__resultFormInfo">
                 <h4 className="rafflePrize__resultFormInfoTitle">Чтобы получить приз:</h4>
+                <p className="rafflePrize__resultFormInfoText">Зарегистрируйся в Акции сейчас</p>
                 <p className="rafflePrize__resultFormInfoText">
-                    1. Зарегистрируйся в Акции сейчас
-                    <br />
-                    2. Зарегистрируй код под крышкой (можно позже)
+                    Зарегистрируй код под крышкой (можно позже)
                 </p>
             </div>
             <div className="rafflePrize__resultFormField">
                 <Input
                     className="_rafflePrize"
-                    support="Введи свой Email для регистрации"
+                    support="Введи Email для регистрации"
                     value=""
                     name="email"
                     onChange={async () => undefined}

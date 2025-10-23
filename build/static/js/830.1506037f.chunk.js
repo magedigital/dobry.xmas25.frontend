@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunktest=globalThis.webpackChunktest||[]).push([[830],{7830:(l,s,e)=>{e.r(s),e.d(s,{default:()=>i});e(9950);var a=e(4414);const i=(0,a.jsx)("svg",{viewBox:"0 0 17 12",fill:"none",children:(0,a.jsx)("path",{d:"M17 3L8.87891 11.1211L0.757812 3L2.87891 0.878906L8.87891 6.87891L14.8789 0.878906L17 3Z",fill:"#FE431E",className:"icon__fill"})})}}]);
