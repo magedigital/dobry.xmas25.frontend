@@ -4,9 +4,11 @@ import { connect } from 'react-redux';
 import Fade from '@components/fade/Fade.tsx';
 import Pages from '@components/pages/Pages.tsx';
 import checkChatbot from '@functions/checkChatbot.ts';
+import checkRaffle from '@functions/checkRaffle.ts';
 import { StoreT } from '@global/types.ts';
 
 import Cookies from './components/cookies/Cookies.tsx';
+import Errors from './components/errors/Errors.tsx';
 
 import RootI from './types.ts';
 
@@ -32,12 +34,17 @@ class Root extends React.Component<RootI['props'], RootI['state']> implements Ro
     renderPopups = renderPopups;
     renderTopBar = renderTopBar;
 
+    componentDidMount(): void {
+        checkRaffle();
+    }
+
     render() {
         const { rootInit, acceptCookies } = this.props;
 
         return (
             <>
                 {Styles && <Styles />}
+                <Errors />
                 {this.renderPopups()}
                 <div className="body__font">
                     <span>123afs</span>

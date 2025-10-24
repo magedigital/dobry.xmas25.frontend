@@ -7,7 +7,7 @@ import setAsyncState from '@functions/setAsyncState.ts';
 import I from '../types.ts';
 
 const renderStartForm: I['renderStartForm'] = function () {
-    const { isConfirm } = this.state;
+    const { isConfirm, loadingKey } = this.state;
 
     return (
         <div className="rafflePrize__startForm _COL">
@@ -24,7 +24,11 @@ const renderStartForm: I['renderStartForm'] = function () {
                 </Checkbox>
             </div>
             <div className="rafflePrize__startFormButton">
-                <Button onClick={this.start.bind(this)} className="_white">
+                <Button
+                    onClick={this.start.bind(this)}
+                    className="_white"
+                    loading={loadingKey === 'start'}
+                >
                     ВРащать
                 </Button>
             </div>

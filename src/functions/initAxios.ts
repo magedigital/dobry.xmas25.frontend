@@ -2,6 +2,8 @@ import axios from 'axios';
 
 import { enums } from '@global/enums';
 
+import { setError } from '../views/root/components/errors/utils/errorHandler';
+
 import { getCookie, setCookie } from './cookies';
 
 const AxiosInst = axios.create({
@@ -45,6 +47,8 @@ AxiosInst.interceptors.response.use(
             }
 
             // setError({ text: error.errorText });
+
+            setError({ text: error.errorText, type: 'error' });
         }
 
         return Promise.reject(error || {});

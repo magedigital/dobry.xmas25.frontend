@@ -232,6 +232,10 @@
         }
     }
 
+    &._result &__sliderLights:not(._result) {
+        opacity: 0;
+    }
+
     &._complete &__sliderLights:not(._result) &__sliderLight {
         opacity: 0;
     }
@@ -510,18 +514,25 @@
 
             &Text {
                 position: relative;
-                padding-left: 16rem;
                 color: #fff;
                 font-weight: 500;
                 font-size: 16rem;
                 line-height: 1.35;
                 counter-increment: testCount;
 
-                @include mob {
-                    padding-left: 17rem;
+                &._center {
+                    text-align: center;
                 }
 
-                &::before {
+                &._list {
+                    padding-left: 16rem;
+
+                    @include mob {
+                        padding-left: 17rem;
+                    }
+                }
+
+                &._list::before {
                     position: absolute;
                     top: 0;
                     left: 0;

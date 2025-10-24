@@ -26,7 +26,8 @@
         "runtypes": "^6.7.0",
         "sass": "^1.57.1",
         "socket.io-client": "^4.0.1",
-        "throttle-debounce": "^5.0.2"
+        "throttle-debounce": "^5.0.2",
+        "uuid": "^13.0.0"
     },
     "scripts": {
         "start": "PORT=2010 dotenv -e .env.local craco start",

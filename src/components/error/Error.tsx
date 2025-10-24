@@ -14,6 +14,10 @@ class Error extends React.Component<ErrorI['props'], ErrorI['state']> implements
     }
 
     render() {
+        if (1) {
+            return <></>;
+        }
+
         const { className, error, callback } = this.props;
 
         return (

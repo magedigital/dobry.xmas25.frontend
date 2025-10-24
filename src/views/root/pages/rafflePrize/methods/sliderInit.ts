@@ -36,6 +36,10 @@ const sliderInit: I['sliderInit'] = function () {
             }
         },
     });
+
+    if (this.state.curIndex) {
+        this.slider.moveToCurrentItem({ current: this.state.curIndex - 2, force: true });
+    }
 };
 
 export default sliderInit;

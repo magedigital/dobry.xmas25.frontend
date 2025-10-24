@@ -21,17 +21,15 @@ const startCarusel: I['startCarusel'] = function () {
 
     this.animationId = requestAnimationFrame(animate);
 
-    (() => {
-        setAnimate({
-            duration: 1_000,
-            draw: (p) => {
-                this.rotateSpeed = p;
-            },
-            // getId: (id) => {
-            //     this.advanceAnimationId = id;
-            // },
-        });
-    })();
+    setAnimate({
+        duration: 1_000,
+        draw: (p) => {
+            this.rotateSpeed = p;
+        },
+        // getId: (id) => {
+        //     this.advanceAnimationId = id;
+        // },
+    });
 
     setTimeout(() => {
         (() => {
@@ -42,7 +40,7 @@ const startCarusel: I['startCarusel'] = function () {
             const diff = count * 360 - this.rotateDeg + 360 * 2;
 
             setAnimate({
-                duration: 2_000,
+                duration: 1_800,
                 timing: makeEaseOut,
                 draw: (p) => {
                     const thisDeg = lastRotate + p * diff;
@@ -58,11 +56,9 @@ const startCarusel: I['startCarusel'] = function () {
                 setTimeout(() => {
                     this.setState({ isResult: true });
                 }, 1_500);
-            }, 1_700);
-
-            console.log(diff);
+            }, this.resultDur);
         })();
-    }, 3_000);
+    }, this.startDur);
 };
 
 export default startCarusel;

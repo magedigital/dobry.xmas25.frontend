@@ -1,13 +1,18 @@
 import React from 'react';
 
+import changePage from '@functions/changePage.ts';
+
 import I from '../types.ts';
 
 const renderCarusel: I['renderCarusel'] = function () {
     return (
         <div
-            className="indexHeader__carusel"
+            className="indexHeader__carusel _CLICK"
             onMouseEnter={this.advanceRotate.bind(this, true)}
             onMouseLeave={this.advanceRotate.bind(this, false)}
+            onClick={() => {
+                changePage({ pageName: 'raffle-prize' });
+            }}
         >
             <div className="indexHeader__caruselBack">
                 <img

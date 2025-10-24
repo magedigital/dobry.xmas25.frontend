@@ -1,3 +1,5 @@
+import { v4 } from 'uuid';
+
 import React from 'react';
 import { connect } from 'react-redux';
 
@@ -6,6 +8,8 @@ import InnerPage from '@components/innerPage/InnerPage.tsx';
 import Media from '@components/media/Media.tsx';
 import { StoreT } from '@global/types.ts';
 
+import gameRequest from './methods/gameRequest.ts';
+import regRequest from './methods/regRequest.ts';
 import sliderInit from './methods/sliderInit.ts';
 import start from './methods/start.ts';
 import startCarusel from './methods/startCarusel.ts';
@@ -18,18 +22,38 @@ import renderResultForm from './renders/renderResultForm.tsx';
 import renderSlider from './renders/renderSlider.tsx';
 import renderSpinner from './renders/renderSpinner.tsx';
 import renderStartForm from './renders/renderStartForm.tsx';
+import getSavedRaffle from './utils/getSavedRaffle.ts';
 
 class RafflePrize
     extends InnerPage<RafflePrizeI['props'], RafflePrizeI['state']>
     implements RafflePrizeI
 {
     parent: RafflePrizeI['parent'];
+    gameId: RafflePrizeI['gameId'];
+    isStart: RafflePrizeI['isStart'];
 
     constructor(props: RafflePrizeI['props']) {
         super(props);
-        this.state = {};
+
+        const savedPrize = getSavedRaffle().prize;
+
+        this.state = {
+            prize: savedPrize,
+            curIndex: savedPrize ? savedPrize.index : undefined,
+            isStart: !!savedPrize,
+            isComplete: !!savedPrize,
+            isResult: !!savedPrize,
+        };
+
+        this.isStart = !!savedPrize;
+
         this.parent = React.createRef();
+
+        this.gameId = savedPrize?.id || v4();
     }
+
+    startDur = 1_000;
+    resultDur = 1_500;
 
     innerClassName = 'page__innerBox';
     rotateDeg = 0;
@@ -39,6 +63,9 @@ class RafflePrize
 
     start = start;
     startCarusel = startCarusel;
+
+    gameRequest = gameRequest;
+    regRequest = regRequest;
 
     renderContent = renderContent;
     renderHead = renderHead;
@@ -82,6 +109,7 @@ class RafflePrize
 function mapStateToProps(state: StoreT) {
     return {
         storePages: state.pages,
+        user: state.user,
     };
 }
 
