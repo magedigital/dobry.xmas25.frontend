@@ -42,6 +42,13 @@
         }
     }
 
+    &._wide &__inner {
+        @include mob {
+            padding-right: 36rem;
+            padding-left: 36rem;
+        }
+    }
+
     &._largeSize &__inner {
         padding: 18rem 30rem;
         font-size: 20rem;
@@ -134,6 +141,10 @@
 
     &._red {
         background: linear-gradient(to top, #ff8550, #e11f26);
+    }
+
+    &._topBar5kaProfile {
+        background: linear-gradient(to top, #ff6d65, #eb2316);
     }
 
     &._banner1 &__inner,
@@ -264,10 +275,20 @@
         background: #fb0a00;
     }
 
+    &._topBar5kaProfile &__inner {
+        background: #eb2316;
+    }
+
     & i {
         &._tg {
             width: 20rem;
             height: 20rem;
+            margin-right: 10rem;
+        }
+
+        &._link {
+            width: 18rem;
+            height: 18rem;
             margin-right: 10rem;
         }
     }

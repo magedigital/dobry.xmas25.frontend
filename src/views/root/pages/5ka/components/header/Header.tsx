@@ -3,8 +3,6 @@ import { connect } from 'react-redux';
 
 import HeaderI from './types.ts';
 
-import renderBack from './renders/renderBack.tsx';
-
 class Header extends React.Component<HeaderI['props'], HeaderI['state']> implements HeaderI {
     parent: HeaderI['parent'];
 
@@ -15,15 +13,31 @@ class Header extends React.Component<HeaderI['props'], HeaderI['state']> impleme
         this.parent = React.createRef();
     }
 
-    renderBack = renderBack;
-
     render() {
         return (
-            <div ref={this.parent} className={`indexHeader _SECTION _5ka`}>
-                <div className="indexHeader__inner _INNER">
-                    <div className="indexHeader__5ka">Акция только в «Пятёрочке»</div>
+            <div ref={this.parent} className={`p5kaHeader _SECTION`}>
+                <div className="p5kaHeader__inner _INNER">
+                    <div className="p5kaHeader__content _COL">
+                        <p className="p5kaHeader__support">Акция только в «ПятёрочкЕ»</p>
+                        <h1 className="p5kaHeader__title">
+                            Выиграйте
+                            <img
+                                src={require('@media/5ka/slogan-5ka.svg').default}
+                                alt=""
+                                className="p5kaHeader__titleIcon"
+                            />
+                            Рублей
+                        </h1>
+                        <div className="p5kaHeader__prize _COL">
+                            <p className="p5kaHeader__prizeSupport">Главный приз</p>
+                            <img
+                                src={require('@media/5ka/prize-big-1-5ka.png')}
+                                alt=""
+                                className="p5kaHeader__prizeImage"
+                            />
+                        </div>
+                    </div>
                 </div>
-                {this.renderBack()}
             </div>
         );
     }

@@ -44,7 +44,7 @@ const sliderInit: I['sliderInit'] = function () {
             prev: slider.querySelector('.products__sliderButton._prev') as HTMLElement,
             next: slider.querySelector('.products__sliderButton._next') as HTMLElement,
         },
-        notDragItems: ['.product__button'],
+        notDragItems: ['.product__sliderButton'],
     });
 };
 

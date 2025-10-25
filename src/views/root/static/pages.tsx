@@ -2,7 +2,7 @@ import React from 'react';
 
 import RootI from '../types.ts';
 
-// import Pyterka from '../pages/5ka/Pyterka.tsx';
+import Pyterka from '../pages/5ka/Pyterka.tsx';
 import Akt from '../pages/akt/Akt.tsx';
 import Anket from '../pages/anket/Anket.tsx';
 import AnketMap from '../pages/anketMap/AnketMap.tsx';
@@ -121,11 +121,11 @@ const pages = {
             return <Raffle />;
         },
     },
-    // '5ka': {
-    //     render(this: RootI) {
-    //         return <Pyterka />;
-    //     },
-    // },
+    '5ka': {
+        render(this: RootI) {
+            return <Pyterka />;
+        },
+    },
     auth: {
         render(this: RootI) {
             return <Auth />;

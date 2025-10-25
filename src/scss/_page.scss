@@ -14,6 +14,10 @@
         padding: 70rem 0 0;
     }
 
+    &._inPage {
+        padding: 0;
+    }
+
     [data-id="game"] &__innerBox {
         padding: 32rem 84rem;
 
@@ -143,6 +147,18 @@
         }
     }
 
+    &._inPage &__inner {
+        padding: 0;
+
+        &Wrapper {
+            box-shadow: none;
+
+            @include mob {
+                width: 100%;
+            }
+        }
+    }
+
     &._rafflePrize &__innerBox {
         padding-bottom: 0;
     }
@@ -217,6 +233,10 @@
         @include mob {
             font-size: 26rem;
         }
+    }
+
+    &._inPage &__title {
+        color: #c50018;
     }
 
     &__description {

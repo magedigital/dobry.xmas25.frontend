@@ -7,8 +7,6 @@ interface HeaderI extends React.Component<PropsT, StateT> {
     state: StateT;
 
     parent: React.RefObject<HTMLDivElement | null>;
-
-    renderBack(this: HeaderI): React.ReactNode;
 }
 
 export default HeaderI;

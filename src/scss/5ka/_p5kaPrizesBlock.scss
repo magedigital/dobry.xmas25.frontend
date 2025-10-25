@@ -1,0 +1,197 @@
+.p5kaPrizesBlock {
+    position: relative;
+    z-index: 1;
+    align-items: center;
+    width: 100%;
+    padding: 2rem;
+    background: linear-gradient(to top, #fff7ae, #ff2828);
+    border-radius: 48rem;
+
+    @include mob {
+        padding: 1rem;
+        border-radius: 36rem;
+    }
+
+    &::after {
+        position: absolute;
+        top: -32rem;
+        left: 50%;
+        z-index: 2;
+        width: 96%;
+        height: 150rem;
+        margin-left: 10rem;
+        transform: translate(-50%, 0);
+        content: "";
+        pointer-events: none;
+
+        @include bg("/media/5ka/snow-2.png", 100% auto, center top);
+
+        @include mob {
+            top: -23rem;
+            width: 91%;
+            margin-left: -2rem;
+
+            @include bg("/media/5ka/snow-2-mob.png", 100% auto, center top);
+        }
+    }
+
+    &._week::after {
+        @include bg("/media/5ka/snow-3.png", 100% auto, center top);
+
+        top: -33rem;
+        width: 90%;
+        margin-left: -32rem;
+
+        @include mob {
+            top: -18rem;
+            width: 75%;
+            margin-left: -32rem;
+
+            @include bg("/media/5ka/snow-3-mob.png", 100% auto, center top);
+        }
+    }
+
+    &__inner {
+        position: relative;
+        z-index: 1;
+        align-items: center;
+        width: 100%;
+        padding: 44rem 20rem 56rem;
+        overflow: hidden;
+        border-radius: inherit;
+
+        @include bg("/media/5ka/products-back.jpg", 100% auto, center top);
+
+        @include mob {
+            padding: 36rem 20rem 34rem;
+
+            @include bg("/media/5ka/products-back-mob.jpg", 100% auto, center top);
+        }
+    }
+
+    &._week &__inner {
+        @include bg("/media/5ka/products-back-2.jpg", 100% auto, center top);
+
+        @include mob {
+            @include bg("/media/5ka/products-back-mob.jpg", 100% auto, center top);
+        }
+    }
+
+    &__title {
+        margin-bottom: 38rem;
+        color: #c50018;
+        font-weight: 600;
+        font-size: 32rem;
+        text-align: center;
+        text-transform: uppercase;
+
+        @include mob {
+            margin-bottom: 54rem;
+            font-size: 25rem;
+        }
+    }
+
+    &._needSlider &__sliderItem:not(._current) {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    &__slider {
+        position: relative;
+        width: calc(100% - 190rem);
+
+        @include mob {
+            width: 100%;
+        }
+
+        &Arrow {
+            position: absolute;
+            top: 125rem;
+            z-index: 10;
+            width: 48rem;
+            height: 48rem;
+            padding: 12rem;
+            background: #ffe7a5;
+            border-radius: 50%;
+            transform: translate(0, -50%);
+
+            @include icon(#c50018);
+
+            @include mob {
+                top: 115rem;
+                width: 42rem;
+                height: 42rem;
+            }
+
+            &._prev {
+                left: -80rem;
+                padding-right: 15rem;
+
+                @include mob {
+                    left: -6rem;
+                }
+            }
+
+            &._next {
+                right: -80rem;
+                padding-left: 15rem;
+
+                @include mob {
+                    right: -6rem;
+                }
+            }
+        }
+
+        &Items {
+            display: inline-flex;
+        }
+
+        &Item {
+            align-items: center;
+            width: 250rem;
+            margin-right: 80rem;
+            transition: $trans;
+
+            @include mob {
+                width: 330rem;
+                margin-right: 0;
+            }
+
+            &Head {
+                position: relative;
+                z-index: 1;
+                width: 250rem;
+                height: 250rem;
+                margin-bottom: 30rem;
+                border-radius: 50%;
+
+                @include bg("/media/5ka/prize-back-5ka.jpg", cover, center);
+
+                @include mob {
+                    width: 230rem;
+                    height: 230rem;
+                    margin-bottom: 20rem;
+                }
+            }
+
+            &Image {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+
+            &Title {
+                color: #fff;
+                font-weight: 600;
+                font-size: 16rem;
+                line-height: 1.4;
+                text-align: center;
+                text-transform: uppercase;
+
+                @include mob {
+                    font-size: 18rem;
+                }
+            }
+        }
+    }
+}

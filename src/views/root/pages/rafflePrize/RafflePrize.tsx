@@ -31,6 +31,7 @@ class RafflePrize
     parent: RafflePrizeI['parent'];
     gameId: RafflePrizeI['gameId'];
     isStart: RafflePrizeI['isStart'];
+    slider: RafflePrizeI['slider'];
 
     constructor(props: RafflePrizeI['props']) {
         super(props);
@@ -79,6 +80,12 @@ class RafflePrize
         super.componentDidMount();
 
         this.sliderInit();
+    }
+
+    componentWillUnmount(): void {
+        if (this.slider) {
+            this.slider.destroy();
+        }
     }
 
     render() {

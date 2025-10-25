@@ -4,12 +4,13 @@ import I from '../types.ts';
 
 const renderContent: I['renderContent'] = function () {
     const { isComplete, isResult, isStart } = this.state;
+    const { user } = this.props;
 
     return (
         <div className="page__content _FULL_W _COL _COL_H_CENTER">
             {this.renderHead()}
             <div
-                className={`rafflePrize _FULL_W ${isStart ? '_start' : ''} ${isComplete ? '_complete' : ''} ${isResult ? '_result' : ''}`}
+                className={`rafflePrize _FULL_W ${isStart ? '_start' : ''} ${isComplete ? '_complete' : ''} ${isResult ? '_result' : ''} ${user ? '_auth' : ''}`}
             >
                 {this.renderSlider()}
                 {this.renderSpinner()}

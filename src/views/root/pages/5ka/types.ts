@@ -1,3 +1,5 @@
+import PublicPageI from '../../components/publicPage/types';
+
 type PropsT = {};
 
 type StateT = {
@@ -34,10 +36,7 @@ type PyterkaContentT = {
     };
 };
 
-interface PyterkaI extends React.Component<PropsT, StateT> {
-    props: PropsT;
-    state: StateT;
-
+interface PyterkaI extends PublicPageI<PropsT, StateT> {
     parent: React.RefObject<HTMLDivElement | null>;
 
     getContent(this: PyterkaI): Promise<void>;

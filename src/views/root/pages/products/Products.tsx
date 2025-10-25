@@ -38,14 +38,34 @@ class Products extends InnerPage<ProductsI['props'], ProductsI['state']> impleme
     renderCards = renderCards;
 
     componentDidMount(): void {
-        this.initPage('products');
+        const { inPage } = this.props;
 
         this.getContent();
+
+        if (inPage) {
+            return;
+        }
+
+        this.initPage('products');
+
         this.setClosePosition();
     }
 
     render() {
         const { isReady } = this.state;
+        const { inPage } = this.props;
+
+        if (inPage) {
+            return (
+                <div className={`page _rules _NOSCROLL _FULL _inPage`}>
+                    <div className="page__inner _FULL_W _COL _COL_H_CENTER">
+                        <div className="page__innerWrapper _INNER">
+                            <div className="page__innerBox _empty">{this.renderContent()}</div>
+                        </div>
+                    </div>
+                </div>
+            );
+        }
 
         return this.renderPage(
             <>

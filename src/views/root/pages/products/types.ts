@@ -1,6 +1,8 @@
 import InnerPageI from '@components/innerPage/types.ts';
 
-type PropsT = {};
+type PropsT = {
+    inPage?: boolean;
+};
 
 type StateT = {
     loadingKey?: string;

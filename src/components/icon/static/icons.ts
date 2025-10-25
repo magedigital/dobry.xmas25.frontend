@@ -21,6 +21,7 @@ const icons = [
     'index-arrow',
     'tg',
     'menu-star',
+    'link',
 ] as const;
 
 export default icons;

@@ -5,7 +5,7 @@ import I from '../types.ts';
 
 const sendForm: I['sendForm'] = async function () {
     const { model } = this.state;
-    const { setStep } = this.props;
+    const { setStep, mode } = this.props;
     await setAsyncState.call(this, { loadingKey: 'send' });
 
     try {
@@ -13,6 +13,7 @@ const sendForm: I['sendForm'] = async function () {
             '/Registration',
             {
                 login: model!.login,
+                mode,
             },
         );
 

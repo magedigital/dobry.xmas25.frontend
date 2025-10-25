@@ -6,7 +6,7 @@ import I from '../types.ts';
 
 const sendForm: I['sendForm'] = async function (again) {
     const { code, loadingKey } = this.state;
-    const { login, isConfirm } = this.props;
+    const { login, isConfirm, mode } = this.props;
 
     if (loadingKey) {
         return;
@@ -19,6 +19,7 @@ const sendForm: I['sendForm'] = async function (again) {
             login,
             ...(again === true ? {} : { password: code, isCode: true }),
             ...(isConfirm ? { confirmEmail: true } : {}),
+            mode,
         });
 
         if (response.result === 'OK') {

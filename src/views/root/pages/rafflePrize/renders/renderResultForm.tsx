@@ -1,13 +1,12 @@
 import React from 'react';
 
 import Button from '@components/button/Button.tsx';
-import Input from '@components/input/Input.tsx';
-import setAsyncState from '@functions/setAsyncState.ts';
+import changePage from '@functions/changePage.ts';
 
 import I from '../types.ts';
 
 const renderResultForm: I['renderResultForm'] = function () {
-    const { login, loadingKey } = this.state;
+    const { loadingKey } = this.state;
     const { user } = this.props;
 
     return (
@@ -32,7 +31,7 @@ const renderResultForm: I['renderResultForm'] = function () {
                             Зарегистрируй код под крышкой (можно позже)
                         </p>
                     </div>
-                    <div className="rafflePrize__resultFormField">
+                    {/* <div className="rafflePrize__resultFormField">
                         <Input
                             className="_rafflePrize"
                             support="Введи Email для регистрации"
@@ -42,11 +41,13 @@ const renderResultForm: I['renderResultForm'] = function () {
                                 await setAsyncState.call(this, { login: value });
                             }}
                         />
-                    </div>
+                    </div> */}
                     <div className="rafflePrize__resultFormButton">
                         <Button
                             className="_purple"
-                            onClick={this.regRequest.bind(this)}
+                            onClick={() => {
+                                changePage({ pageName: 'auth-reg', query: { raffle: 'true' } });
+                            }}
                             loading={loadingKey === 'reg'}
                         >
                             Зарегистрироваться

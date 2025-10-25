@@ -1,20 +1,19 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import CustomHead from '@components/customHead/CustomHead.tsx';
 import Footer from '@components/footer/Footer.tsx';
 import { getLocalContent } from '@functions/localContent.ts';
-import { scrollPage } from '@functions/savePageScroll.ts';
 
+import PublicPage from '../../components/publicPage/PublicaPage.tsx';
 import Header from './components/header/Header.tsx';
 import Prizes from './components/prizes/Prizes.tsx';
-import Products from './components/products/Products.tsx';
+import Steps from './components/steps/Steps.tsx';
 
 import PyterkaI from './types.ts';
 
 import getContent from './requests/getContent.ts';
 
-class Pyterka extends React.Component<PyterkaI['props'], PyterkaI['state']> implements PyterkaI {
+class Pyterka extends PublicPage<PyterkaI['props'], PyterkaI['state']> implements PyterkaI {
     parent: PyterkaI['parent'];
 
     constructor(props: PyterkaI['props']) {
@@ -26,12 +25,12 @@ class Pyterka extends React.Component<PyterkaI['props'], PyterkaI['state']> impl
         this.parent = React.createRef();
     }
 
+    name = '5ka';
+
     getContent = getContent;
 
     componentDidMount(): void {
-        const page = this.parent.current!.closest('.body__page') as HTMLElement;
-
-        scrollPage(page, '5ka');
+        super.componentDidMount();
 
         this.getContent();
     }
@@ -39,24 +38,25 @@ class Pyterka extends React.Component<PyterkaI['props'], PyterkaI['state']> impl
     render() {
         const { content } = this.state;
 
-        return (
-            <div ref={this.parent} className="index _5ka _FULL_W">
-                <CustomHead title="Добрый - 5ка" />
-                
-                <div className="index__section _FULL_W _header">
-                    <Header />
+        return this.renderPage({
+            name: '5ka',
+            render: () => (
+                <div className="index _FULL_W">
+                    <div className="index__section _FULL_W">
+                        <Header />
+                    </div>
+                    <div className="index__section _FULL_W">
+                        <Steps />
+                    </div>
+                    <div className="index__section _FULL_W">
+                        <Prizes />
+                    </div>
+                    <div className="index__section _FULL_W">
+                        <Footer content={content?.components.footer} />
+                    </div>
                 </div>
-                <div className="index__section _FULL_W">
-                    <Prizes content={content} />
-                </div>
-                <div className="index__section _FULL_W">
-                    <Products />
-                </div>
-                <div className="index__section _FULL_W">
-                    <Footer content={content?.components.footer} />
-                </div>
-            </div>
-        );
+            ),
+        });
     }
 }
 

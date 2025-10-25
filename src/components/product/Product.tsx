@@ -53,7 +53,7 @@ class Product extends React.Component<ProductI['props'], ProductI['state']> impl
             clearTimeout(this.timerId);
         }
 
-        const buttons = this.parent.current!.querySelectorAll('.product__button');
+        const buttons = this.parent.current!.querySelectorAll('.product__sliderButton');
 
         buttons.forEach((button) => {
             (button.removeEventListener as ListenerT)('touchstart', this.stopEvents, {

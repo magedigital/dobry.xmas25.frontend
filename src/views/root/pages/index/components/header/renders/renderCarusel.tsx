@@ -4,7 +4,16 @@ import changePage from '@functions/changePage.ts';
 
 import I from '../types.ts';
 
+import getSavedRaffle from '../../../../rafflePrize/utils/getSavedRaffle.ts';
+
 const renderCarusel: I['renderCarusel'] = function () {
+    const { user } = this.props;
+    const { prize } = getSavedRaffle();
+
+    if (user || prize) {
+        return;
+    }
+
     return (
         <div
             className="indexHeader__carusel _CLICK"

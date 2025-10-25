@@ -1,0 +1,360 @@
+.p5kaPrizes {
+    position: relative;
+    width: 100%;
+    padding: 0 0 40rem;
+
+    @include bg("/media/5ka/back-5ka-03.jpg", 100% auto, center top);
+
+    @include mob {
+        padding-bottom: 110rem;
+
+        @include bg("/media/5ka/back-5ka-03-mob.jpg", 100% auto, center top);
+    }
+
+    &._2 {
+        padding-top: 100rem;
+        padding-bottom: 66rem;
+
+        @include bg("/media/5ka/back-5ka-04.jpg", 100% auto, center top);
+
+        @include mob {
+            padding-top: 20rem;
+            padding-bottom: 160rem;
+
+            @include bg("/media/5ka/back-5ka-04-mob.jpg", 100% auto, center top);
+        }
+    }
+
+    &._3 {
+        padding-top: 50rem;
+        padding-bottom: 50rem;
+
+        @include bg("/media/5ka/back-5ka-05.jpg", 100% auto, center top);
+
+        @include mob {
+            margin-top: -80rem;
+            padding-top: 0;
+            padding-bottom: 320rem;
+
+            @include bg("/media/5ka/back-5ka-05-mob.jpg", 100% auto, center 30rem);
+        }
+    }
+
+    &__banner {
+        width: 100%;
+        margin-bottom: 120rem;
+        padding: 2rem;
+        background: linear-gradient(to top, #ffb08b, #ffefbf);
+        border-radius: 48rem;
+
+        @include mob {
+            width: calc(100% + 14rem);
+            margin-bottom: 140rem;
+            margin-left: -7rem;
+        }
+
+        &Inner {
+            position: relative;
+            z-index: 1;
+            height: 100%;
+            padding: 52rem 48rem 42rem;
+            border-radius: inherit;
+
+            @include bg("/media/5ka/banner-2-back.jpg", 100% auto, center top);
+
+            @include mob {
+                padding: 24rem 24rem 230rem;
+
+                @include bg("/media/5ka/banner-2-back-mob.jpg", 100% auto, center top);
+            }
+
+            &::after {
+                position: absolute;
+                right: -4rem;
+                bottom: -46rem;
+                z-index: 2;
+                width: 532rem;
+                height: 350rem;
+                content: "";
+
+                @include bg("/media/5ka/prize-losi-5ka.png", contain, center bottom);
+
+                @include mob {
+                    right: auto;
+                    bottom: -20rem;
+                    left: 50%;
+                    width: 350rem;
+                    height: 250rem;
+                    transform: translate(-50%, 0);
+                }
+            }
+        }
+
+        &Content {
+            width: 550rem;
+
+            @include mob {
+                align-items: center;
+                width: 100%;
+            }
+        }
+
+        &Title {
+            margin-bottom: 17rem;
+            color: #c50018;
+            font-weight: 600;
+            font-size: 32rem;
+            text-transform: uppercase;
+
+            @include mob {
+                margin-bottom: 10rem;
+                font-size: 26rem;
+                line-height: 1.2;
+                text-align: center;
+            }
+        }
+
+        &Text {
+            margin-bottom: 24rem;
+            color: #760509;
+            font-weight: 600;
+            font-size: 16rem;
+            line-height: 1.4;
+            text-transform: uppercase;
+
+            @include mob {
+                font-size: 17rem;
+                text-align: center;
+            }
+        }
+    }
+
+    &__prizes {
+        width: 100%;
+    }
+
+    &__decor {
+        position: absolute;
+        z-index: 2;
+        object-fit: contain;
+        pointer-events: none;
+    }
+
+    &__decor._1 {
+        right: -266rem;
+        bottom: 48rem;
+        width: 487rem;
+        height: 430rem;
+
+        @include mob {
+            right: -155rem;
+            bottom: 60rem;
+            width: 280rem;
+            height: 220rem;
+        }
+    }
+
+    &__decor._2 {
+        top: -70rem;
+        left: -80rem;
+        width: 290rem;
+        height: 290rem;
+
+        @include mob {
+            display: none;
+            width: 200rem;
+            height: 200rem;
+        }
+    }
+
+    &__decor._3 {
+        top: -32rem;
+        right: 60rem;
+        width: 240rem;
+        height: 240rem;
+
+        @include mob {
+            top: -64rem;
+            right: 14rem;
+            width: 110rem;
+            height: 110rem;
+        }
+    }
+
+    &__decor._4 {
+        top: 760rem;
+        right: -250rem;
+        width: 470rem;
+        height: 470rem;
+
+        @include mob {
+            top: 410rem;
+            right: -120rem;
+            width: 230rem;
+            height: 230rem;
+        }
+    }
+
+    &__decor._5 {
+        top: 180rem;
+        left: -50rem;
+        width: 262rem;
+        height: 262rem;
+
+        @include mob {
+            top: -136rem;
+            left: -50rem;
+            z-index: 6;
+            width: 150rem;
+            height: 150rem;
+        }
+    }
+
+
+
+    &__offer {
+        width: 100%;
+        margin-top: 105rem;
+        padding: 2rem;
+        background: linear-gradient(to top, #ffb08b, #ffefbf);
+        border-radius: 48rem;
+
+        @include mob {
+            position: relative;
+            z-index: 5;
+            margin-top: 130rem;
+        }
+
+        &Inner {
+            position: relative;
+            z-index: 1;
+            align-items: center;
+            width: 100%;
+            padding: 32rem 98rem;
+            overflow: hidden;
+            border-radius: inherit;
+
+            @include bg("/media/5ka/offer-back.jpg", 100% auto, center top);
+
+            @include mob {
+                padding: 19rem 14rem 264rem;
+
+                @include bg("/media/5ka/offer-back-mob.jpg", 100% auto, center top);
+            }
+
+            &::before {
+                position: absolute;
+                bottom: 0;
+                left: 46rem;
+                z-index: 2;
+                width: 490rem;
+                height: 410rem;
+                content: "";
+                pointer-events: none;
+
+                @include bg("/media/5ka/prize-big-3-5ka.png", contain, left bottom);
+
+                @include mob {
+                    left: 10rem;
+                    width: 350rem;
+                    height: 290rem;
+                }
+            }
+        }
+
+        &Head {
+            align-items: center;
+            margin-bottom: 42rem;
+
+            @include mob {
+                margin-bottom: 16rem;
+            }
+
+            &Title {
+                margin-bottom: 6rem;
+                color: #c50018;
+                font-weight: 600;
+                font-size: 32rem;
+                line-height: 1.2;
+                text-align: center;
+                text-transform: uppercase;
+
+                @include mob {
+                    max-width: 85%;
+                    margin-bottom: 16rem;
+                    font-size: 26rem;
+                }
+            }
+
+            &Description {
+                color: #760509;
+                font-weight: 600;
+                font-size: 16rem;
+                text-align: center;
+                text-transform: uppercase;
+            }
+        }
+
+        &Content {
+            align-items: center;
+            width: 474rem;
+            margin-left: auto;
+
+            @include mob {
+                width: 100%;
+                margin-left: 0;
+            }
+        }
+
+        &Text {
+            width: 100%;
+            margin-bottom: 32rem;
+            padding: 24rem 20rem;
+            color: #6c1100;
+            font-size: 16rem;
+            line-height: 1.3;
+            text-align: center;
+            background: #fff;
+            border-radius: 32rem;
+
+            @include mob {
+                padding: 18rem;
+                font-size: 17rem;
+            }
+
+            & b {
+                font-weight: 600;
+            }
+        }
+    }
+
+    &__products {
+        position: relative;
+        z-index: 1;
+        margin-top: 40rem;
+
+        &::after {
+            position: absolute;
+            top: -36rem;
+            left: 50%;
+            z-index: 2;
+            width: 95%;
+            height: 150rem;
+            margin-left: -8rem;
+            transform: translate(-50%, 0);
+            content: "";
+            pointer-events: none;
+
+            @include bg("/media/5ka/snow-3.png", 100% auto, center top);
+
+            @include mob {
+                @include bg("/media/5ka/snow-3-mob.png", 100% auto, center top);
+
+                top: -20rem;
+                width: 93%;
+                margin-left: 0;
+                transform: translate(-50%, 0) rotateY(180deg);
+            }
+        }
+    }
+}

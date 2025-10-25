@@ -97,6 +97,7 @@ type PropsT = {
     };
     forceChangePage?: string;
     ids?: Record<string, string>;
+    query?: Record<string, string>;
 };
 
 type ReturnT = {
@@ -117,6 +118,7 @@ export default async function changePage({
     pageData,
     forceChangePage,
     ids,
+    query,
 }: PropsT): Promise<ReturnT> {
     if (pageName) {
         href = getPageLink({ name: pageName, storePages, ids });
@@ -326,6 +328,14 @@ export default async function changePage({
 
         if (window.location.search && 0) {
             historyHref += window.location.search;
+        }
+
+        if (query) {
+            historyHref +=
+                '?' +
+                Object.keys(query)
+                    .map((k) => [k, query[k]].join('='))
+                    .join('&');
         }
 
         window.history.pushState(null, '', historyHref);

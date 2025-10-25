@@ -1,6 +1,9 @@
 import Slider from '@classes/slider/Slider';
+import { StoreT } from '@global/types';
 
-type PropsT = {};
+type PropsT = {
+    user: StoreT['user'];
+};
 
 type StateT = {};
 

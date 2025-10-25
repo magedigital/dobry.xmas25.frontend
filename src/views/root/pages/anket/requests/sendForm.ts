@@ -5,10 +5,12 @@ import setAsyncState from '@functions/setAsyncState.ts';
 
 import I from '../types.ts';
 
+import getSavedRaffle from '../../rafflePrize/utils/getSavedRaffle.ts';
+
 const sendForm: I['sendForm'] = async function (data) {
     await setAsyncState.call(this, { loadingKey: 'send' });
 
-    const body = {
+    const body: ObjT = {
         firstName: data.firstName,
         lastName: data.secondName,
         phone: data.phone,
@@ -19,6 +21,12 @@ const sendForm: I['sendForm'] = async function (data) {
         referral: data.inv,
     };
 
+    const { prize: rafflePrize, name } = getSavedRaffle();
+
+    if (rafflePrize) {
+        body.welcomeGameId = rafflePrize.id;
+    }
+
     try {
         const response = await AxiosInst.post<{}, ResponseT<{ isFirstAnket?: boolean }>>(
             '/SendParticipantInfo',
@@ -26,6 +34,7 @@ const sendForm: I['sendForm'] = async function (data) {
         );
 
         if (response.result === 'OK') {
+            localStorage.removeItem(name);
             await getAuth(true);
 
             localStorage.removeItem('inv');

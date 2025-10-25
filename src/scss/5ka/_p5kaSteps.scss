@@ -1,0 +1,348 @@
+.p5kaSteps {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: 12rem 0 104rem;
+
+    @include bg("/media/5ka/back-5ka-02.jpg", 100% auto, center top);
+
+    @include mob {
+        padding: 40rem 0 90rem;
+
+        @include bg("/media/5ka/back-5ka-02-mob.jpg", 100% auto, center top);
+    }
+
+    &__decor {
+        position: absolute;
+        z-index: 2;
+        object-fit: contain;
+        pointer-events: none;
+    }
+
+    &__decor._1 {
+        bottom: -40rem;
+        left: -124rem;
+        width: 290rem;
+        height: 290rem;
+
+        @include mob {
+            bottom: -42rem;
+            left: -72rem;
+            width: 160rem;
+            height: 160rem;
+        }
+    }
+
+    &__decor._2 {
+        right: -124rem;
+        bottom: 140rem;
+        width: 370rem;
+        height: 370rem;
+
+        @include mob {
+            top: 904rem;
+            right: -64rem;
+            bottom: auto;
+            width: 170rem;
+            height: 170rem;
+        }
+    }
+
+    &__items {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 60rem;
+        padding-bottom: 50rem;
+        counter-reset: p5kCount;
+
+        @include mob {
+            flex-direction: column;
+            justify-content: flex-start;
+            margin-bottom: 100rem;
+            padding: 0 12rem;
+        }
+    }
+
+    &__item {
+        position: relative;
+        width: calc(calc(100% / 3) - 44rem);
+        padding: 2rem;
+        background: linear-gradient(to top, #fff7ae, #ff2828);
+        border-radius: 48rem;
+        counter-increment: p5kCount;
+
+        @include mob {
+            width: 100%;
+            padding: 1rem;
+            border-radius: 40rem;
+
+            & + & {
+                margin-top: 96rem;
+            }
+        }
+
+        &::before {
+            position: absolute;
+            top: -28rem;
+            left: 50%;
+            z-index: 2;
+            width: 106%;
+            height: 74rem;
+            transform: translate(-50%, 0);
+            content: "";
+            pointer-events: none;
+
+            @include bg("/media/5ka/snow.png", 100% auto, center top);
+        }
+
+        &:nth-child(3)::after {
+            position: absolute;
+            right: -14rem;
+            bottom: -32rem;
+            z-index: 2;
+            width: 116rem;
+            height: 116rem;
+            content: "";
+
+            @include bg("/media/5ka/prize-50-5ka.png", cover, center);
+        }
+
+        &Arrow {
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            z-index: 2;
+            width: 35rem;
+            height: 35rem;
+            margin-left: 18rem;
+            transform: translate(0, -50%);
+
+            @include icon(#ffe09e);
+
+            @include mob {
+                top: 100%;
+                left: 50%;
+                width: 30rem;
+                height: 30rem;
+                margin-top: 20rem;
+                margin-left: 0;
+                transform: translate(-50%, 0) rotate(90deg);
+            }
+        }
+
+        &Inner {
+            position: relative;
+            z-index: 1;
+            height: 100%;
+            padding: 32rem 33rem 26rem;
+            overflow: hidden;
+            background: linear-gradient(to top, #be135a, #ff3e3e);
+            border-radius: inherit;
+
+            @include mob {
+                padding: 32rem 36rem 28rem;
+            }
+
+            &::before {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                z-index: -1;
+                width: 100%;
+                height: 100%;
+                content: "";
+
+                @include bg("/media/5ka/step-back.svg", 100% auto, center bottom);
+            }
+        }
+
+        &Head {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-bottom: 21rem;
+
+            &::before {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                z-index: 2;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 80rem;
+                height: 80rem;
+                color: #eb2316;
+                font-weight: 600;
+                font-size: 32rem;
+                background: #fff;
+                border-radius: 50%;
+                content: counter(p5kCount);
+            }
+
+            &Inner {
+                position: relative;
+                z-index: 1;
+                width: 200rem;
+                height: 200rem;
+                overflow: hidden;
+                border-radius: 50%;
+
+                @include mob {
+                    width: 210rem;
+                    height: 210rem;
+                }
+            }
+
+            &Image {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &Title {
+            margin-bottom: 9rem;
+            color: #ffe09e;
+            font-weight: 600;
+            font-size: 28rem;
+            text-transform: uppercase;
+
+            @include mob {
+                font-size: 26rem;
+            }
+        }
+
+        &Text {
+            color: #fff;
+            font-size: 16rem;
+            line-height: 1.35;
+
+            @include mob {
+                height: 72rem;
+                font-size: 16.5rem;
+                line-height: 1.4;
+            }
+        }
+
+        &:nth-child(3) &Text {
+            max-width: 80%;
+        }
+
+        &Info {
+            position: absolute;
+            top: 100%;
+            z-index: 2;
+            width: 100%;
+            padding: 16rem 33rem 0;
+            color: #fff;
+            font-size: 12rem;
+            line-height: 1.4;
+
+            @include mob {
+                font-size: 13rem;
+            }
+        }
+    }
+
+    &__banner {
+        width: 100%;
+        height: 279rem;
+        padding: 2rem;
+        background: linear-gradient(to top, #dbd5ef, #fac1c1);
+        border-radius: 48rem;
+
+        @include mob {
+            width: calc(100% + 14rem);
+            height: auto;
+            margin-left: -7rem;
+        }
+
+        &Inner {
+            position: relative;
+            z-index: 1;
+            height: 100%;
+            padding: 48rem 32rem;
+            border-radius: inherit;
+
+            @include bg("/media/5ka/steps-banner-back.jpg", cover, center);
+
+            @include mob {
+                height: auto;
+                padding: 210rem 16rem 32rem;
+
+                @include bg("/media/5ka/steps-banner-back-mob.jpg", cover, center);
+            }
+
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 12rem;
+                z-index: 2;
+                width: 550rem;
+                height: 300rem;
+                content: "";
+
+                @include bg("/media/5ka/prize-big-2-5ka.png", contain, left top);
+
+                @include mob {
+                    left: 50%;
+                    width: 100%;
+                    height: 170rem;
+                    background-position: center top;
+                    transform: translate(-50%, 0);
+                }
+            }
+        }
+
+        &Content {
+            width: 540rem;
+            margin-left: auto;
+            padding-top: 4rem;
+
+            @include mob {
+                align-items: center;
+                width: 100%;
+                padding-top: 0;
+            }
+        }
+
+        &Title {
+            margin-bottom: 14rem;
+            color: #c50018;
+            font-weight: 600;
+            font-size: 32rem;
+            text-transform: uppercase;
+
+            @include mob {
+                margin-bottom: 24rem;
+                font-size: 26rem;
+                text-align: center;
+            }
+        }
+
+        &Text {
+            margin-bottom: 24rem;
+            color: #760509;
+            font-weight: 600;
+            font-size: 16rem;
+            line-height: 1.4;
+            text-transform: uppercase;
+
+            @include mob {
+                margin-bottom: 40rem;
+                font-size: 16.5rem;
+                text-align: center;
+            }
+        }
+
+        &Button {
+            @include mob {
+                width: 220rem;
+            }
+        }
+    }
+}

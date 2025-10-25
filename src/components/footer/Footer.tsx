@@ -30,7 +30,7 @@ class Footer extends React.Component<FooterI['props'], FooterI['state']> impleme
         const text = content?.[is5ka ? 'disclaimer_5ka' : 'disclaimer']?.description;
 
         return (
-            <div ref={this.parent} className="footer _SECTION">
+            <div ref={this.parent} className={`footer _SECTION ${is5ka ? '_5ka' : ''}`}>
                 <div className="footer__inner _INNER">
                     <div className="footer__nav _ROW">
                         <Link pageName="faq" className="footer__navItem _CLICK">

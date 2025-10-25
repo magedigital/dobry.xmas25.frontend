@@ -3,6 +3,7 @@ type PropsT = {
     login: string;
     isConfirm?: boolean;
     mailService?: string;
+    mode?: string;
 };
 
 type StateT = {

@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import Icon from '@components/icon/Icon.tsx';
+import { StoreT } from '@global/types.ts';
 
 import advanceRotate from './methods/advanceRotate.ts';
 import setSliderTimer from './methods/setSliderTimer.ts';
@@ -75,8 +76,10 @@ class Header extends React.Component<HeaderI['props'], HeaderI['state']> impleme
     }
 }
 
-function mapStateToProps() {
-    return {};
+function mapStateToProps(state: StoreT) {
+    return {
+        user: state.user,
+    };
 }
 
 export default connect(mapStateToProps)(Header);

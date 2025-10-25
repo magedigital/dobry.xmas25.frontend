@@ -4,7 +4,7 @@ import I from '../types.ts';
 
 const checkSlider: I['checkSlider'] = function () {
     const { canSlider } = this.props;
-    const buttons = this.parent.current!.querySelectorAll('.product__button');
+    const buttons = this.parent.current!.querySelectorAll('.product__sliderButton');
 
     if (canSlider !== this.canSlider) {
         this.canSlider = canSlider;

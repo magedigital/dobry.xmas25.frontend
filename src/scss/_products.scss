@@ -1,4 +1,12 @@
 .products {
+    &._5ka {
+        padding-top: 20rem;
+
+        @include mob {
+            padding-top: 4rem;
+        }
+    }
+
     &__slider {
         position: relative;
         margin-bottom: 28rem;
@@ -69,7 +77,7 @@
             transition: $trans;
 
             @include mob {
-                width: 332rem;
+                width: 330rem;
                 height: 460rem;
                 margin-right: 12rem;
             }
@@ -100,19 +108,19 @@
         }
     }
 
-    &._5ka &__slider {
-        &MobItems {
-            color: #fff;
-        }
+    // &._5ka &__slider {
+    //     &MobItems {
+    //         color: #fff;
+    //     }
 
-        &MobButton {
-            @include icon(#fff);
-        }
+    //     &MobButton {
+    //         @include icon(#fff);
+    //     }
 
-        &Button {
-            background: #fff;
+    //     &Button {
+    //         background: #fff;
 
-            @include icon(#ff1c24);
-        }
-    }
+    //         @include icon(#ff1c24);
+    //     }
+    // }
 }

@@ -93,6 +93,14 @@ const renderHead: I['renderHead'] = function () {
                     >
                         <CloseBtn />
                     </Fade>
+                    <div
+                        className="topBar__auth"
+                        onClick={() => {
+                            changePage({ pageName: 'profile' });
+                        }}
+                    >
+                        <div className="topBar__authInner"></div>
+                    </div>
                 </Media>
             </div>
         </div>

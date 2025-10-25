@@ -8,6 +8,7 @@ type PropsT = {
     device: StoreT['device'];
     setRenderKey: () => void;
     isConfirm?: boolean;
+    mode?: string;
 };
 
 type StateT = {
