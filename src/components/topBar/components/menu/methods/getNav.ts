@@ -37,8 +37,6 @@ const getNav: I['getNav'] = function () {
                     .current!.closest('.publicPage')
                     ?.querySelector('.publicPage__inner') as HTMLElement;
 
-                console.log(sectionItem, scrollNode);
-
                 if (sectionItem && scrollNode) {
                     scrollToBlock({
                         blockNode: sectionItem,

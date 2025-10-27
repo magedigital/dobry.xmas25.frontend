@@ -36,7 +36,7 @@ const gameInit: I['gameInit'] = async function () {
             removeTransition({ item: '.container' });
         };
 
-        script.src = '/_game/static/js/main.c8132890.js';
+        script.src = '/_game/static/js/main.21a1fb98.js';
 
         document.querySelector('head')!.appendChild(script);
     };
@@ -49,7 +49,7 @@ const gameInit: I['gameInit'] = async function () {
 
     link.setAttribute('data-game', '');
     link.setAttribute('rel', 'stylesheet');
-    link.setAttribute('href', '/_game/static/css/main.7845820e.css');
+    link.setAttribute('href', '/_game/static/css/main.c23c2df7.css');
 
     document.querySelector('head')!.appendChild(link);
 
