@@ -2,10 +2,13 @@ import React from 'react';
 
 import Button from '@components/button/Button.tsx';
 import changePage from '@functions/changePage.ts';
+import handlerPopup from '@functions/handlerPopup.ts';
 
 import I from '../types.ts';
 
 const renderActions: I['renderActions'] = function () {
+    const { handler } = this.props;
+
     return (
         <div className="menu__actions _FULL _COL">
             <div className="menu__action">
@@ -32,7 +35,9 @@ const renderActions: I['renderActions'] = function () {
                 <Button
                     className="_menuCollection _largeSize"
                     onClick={() => {
-                        changePage({ pageName: 'raffle-prize' });
+                        handlerPopup('collectionPopup', { isShow: true });
+
+                        handler(false);
                     }}
                 >
                     Cобери коллекцию лосей

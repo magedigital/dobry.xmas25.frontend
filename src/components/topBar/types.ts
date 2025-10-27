@@ -8,6 +8,7 @@ type PropsT = {
 
 type StateT = {
     isShowMenu?: boolean;
+    isShowIndex?: boolean;
 };
 
 interface TopBarI extends React.Component<PropsT, StateT> {

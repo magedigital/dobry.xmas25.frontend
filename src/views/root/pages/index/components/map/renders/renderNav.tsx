@@ -1,5 +1,6 @@
 import React from 'react';
 
+import changePage from '@functions/changePage.ts';
 import setSpacesInText from '@functions/setSpacesInText.ts';
 
 import I from '../types.ts';
@@ -8,11 +9,21 @@ const renderNav: I['renderNav'] = function () {
     return (
         <div className="indexMap__nav">
             {this.nav.map((item, key) => {
-                const { thumbs } = item;
+                const { thumbs, pageName, game } = item;
                 const titles = typeof item.title === 'string' ? [item.title] : item.title;
 
                 return (
-                    <div className={`indexMap__navItem _${key + 1}`} key={key}>
+                    <div
+                        className={`indexMap__navItem _${key + 1} _CLICK`}
+                        key={key}
+                        onClick={() => {
+                            if (pageName) {
+                                changePage({ pageName });
+                            } else if (game) {
+                                changePage({ pageName: 'game-inner', ids: { 1: game } });
+                            }
+                        }}
+                    >
                         {thumbs.map((thumb, tKey) => (
                             <div className={`indexMap__navItemThumb _${tKey + 1}`} key={thumb}>
                                 <img

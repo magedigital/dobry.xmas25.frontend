@@ -8,6 +8,7 @@ type PropsT = {
     user: StoreT['user'];
     losvillPopup: StoreT['losvillPopup'];
     manPopup: StoreT['manPopup'];
+    collectionPopup: StoreT['collectionPopup'];
 };
 
 type StateT = {};

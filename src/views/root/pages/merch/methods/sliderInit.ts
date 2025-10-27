@@ -30,7 +30,7 @@ const sliderInit: I['sliderInit'] = async function () {
             prev: slider.querySelector('.popup__merchButton._prev') as HTMLElement,
             next: slider.querySelector('.popup__merchButton._next') as HTMLElement,
         },
-        notDragItems: ['.merch__search'],
+        notDragItems: ['.merch__dobroInput'],
     });
 };
 

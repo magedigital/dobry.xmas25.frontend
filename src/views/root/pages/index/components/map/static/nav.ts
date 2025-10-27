@@ -1,8 +1,13 @@
+import { PageNamesT } from '@global/types';
+
+import games from '../../../../../../../static/games';
 import { mapSections } from './sections';
 
 type MavNavItemT = {
     thumbs: string[];
     title: string | string[];
+    pageName?: PageNamesT;
+    game?: keyof typeof games;
     support?: string;
     section?: keyof typeof mapSections;
 };
@@ -11,22 +16,27 @@ export const mapNav: MavNavItemT[] = [
     {
         thumbs: ['location-1.png'],
         title: 'Регистрация<br/>Кода',
+        pageName: 'regCode',
     },
     {
         thumbs: ['location-2.png'],
         title: 'Как<br/>участвовать',
+        pageName: 'rules',
     },
     {
         thumbs: ['location-3.png'],
         title: 'ПРИЗЫ',
+        pageName: 'prizes',
     },
     {
         thumbs: ['location-4.png'],
         title: 'Личный<br/>кабинет',
+        pageName: 'auth',
     },
     {
         thumbs: ['location-5.png'],
         title: 'Продукты-<br/>участники',
+        pageName: 'products',
     },
     {
         thumbs: ['location-6.png'],
@@ -37,21 +47,25 @@ export const mapNav: MavNavItemT[] = [
         title: 'Снежки',
         support: 'Играй в снежки с жителями Лосьвилля',
         section: 'games',
+        game: 'SNOWBALL',
     },
     {
         thumbs: ['location-8.png'],
         title: 'Тайный<br/>Лосянта',
         support: 'Угадай Тайного Лосянту',
+        game: 'LOSYANTA',
     },
     {
         thumbs: ['location-9.png'],
         title: 'Вайб<br/>Лосьвилля',
         support: 'Успей собрать как можно больше предметов с вайбом Лосьвилля',
+        game: 'VIBE',
     },
     {
         thumbs: ['location-10.png'],
         title: 'Новогодняя<br/>ёлка',
         support: 'Помоги лосикам зажечь Новогоднюю елку',
+        game: 'LIGHTUP',
     },
     {
         thumbs: ['location-11-1.png', 'location-11-2.png'],

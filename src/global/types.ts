@@ -149,6 +149,7 @@ type PopupT<T extends {} = {}> = { isShow: boolean } & Omit<T, 'isShow'>;
 type PopupsT = {
     losvillPopup: PopupT;
     manPopup: PopupT;
+    collectionPopup: PopupT;
 };
 
 type PopupsNamesT = keyof PopupsT;

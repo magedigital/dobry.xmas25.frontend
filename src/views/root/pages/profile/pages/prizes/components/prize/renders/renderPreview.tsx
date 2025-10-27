@@ -1,5 +1,7 @@
 import React from 'react';
 
+import changePage from '@functions/changePage.ts';
+
 import I from '../types.ts';
 
 const renderPreview: I['renderPreview'] = function () {
@@ -18,6 +20,16 @@ const renderPreview: I['renderPreview'] = function () {
                     }}
                 >
                     Открыть промокод
+                </div>
+            )}
+            {prize.status === 'NEED_CODE' && (
+                <div
+                    className="prize__previewButton _CLICK _code"
+                    onClick={() => {
+                        changePage({ pageName: 'regCode' });
+                    }}
+                >
+                    Зерегистрируй код{prize.expired ? ` до ${prize.expired}` : ''}
                 </div>
             )}
         </div>

@@ -7,7 +7,7 @@ import I from '../types.ts';
 const renderHead: I['renderHead'] = function () {
     const { merch, disabled, infoHandler } = this.props;
 
-    if (merch.custom !== '1') {
+    if (merch.custom !== '1' || 1) {
         return;
     }
 

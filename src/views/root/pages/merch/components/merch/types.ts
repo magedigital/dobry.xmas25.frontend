@@ -10,12 +10,13 @@ type PropsT = {
     festNaming: ProfileContentT['components']['buy']['merch']['festNaming'];
     disabled: boolean;
     infoHandler: (b: boolean) => void;
-    customCallback: (fullName: string | undefined) => void;
+    customCallback: (n: string | undefined) => void;
     setLoading: (l: boolean, error?: string) => Promise<void>;
 };
 
 type StateT = {
     items: string[];
+    count?: string;
 };
 
 interface MerchI extends EditBlockI<StateT> {

@@ -4,6 +4,8 @@ import { deletePageScroll } from '@functions/savePageScroll.ts';
 import sendGoal from '@functions/sendGoal.ts';
 import setAsyncState from '@functions/setAsyncState.ts';
 
+import { setError } from '../../../components/errors/utils/errorHandler.ts';
+
 import I from '../types.ts';
 
 const send: I['send'] = async function () {
@@ -14,12 +16,10 @@ const send: I['send'] = async function () {
     }
 
     if (!isConfirm) {
-        await setAsyncState.call(this, { error: 'Необходимо подтвердить заказ' });
+        setError({ text: 'Необходимо подтвердить заказ', type: 'error' });
 
         return;
     }
-
-    await setAsyncState.call(this, { error: undefined });
 
     const currentMerch = content.components.buy.merch.prizes[currentMerchIndex!];
 
@@ -29,14 +29,10 @@ const send: I['send'] = async function () {
 
     await setAsyncState.call(this, { loadingKey: 'send' });
 
-    const festTitle = currentCustomValue
-        ? currentCustomValue.replace('<span>', '*').replace('</span>', '*')
-        : undefined;
-
     try {
         const response = await AxiosInst.post<{}, ResponseT>('/AddUserPrize', {
             prize: currentMerch.code,
-            festTitle,
+            ...(currentMerch.code === 'DOBRO' ? { code: currentCustomValue } : {}),
         });
 
         if (response.result === 'OK') {
@@ -54,11 +50,7 @@ const send: I['send'] = async function () {
 
             return;
         }
-    } catch (e) {
-        const error = e as ResponseErrorT;
-
-        await setAsyncState.call(this, { error: error?.errorText });
-    }
+    } catch (e) {}
 
     await setAsyncState.call(this, { loadingKey: undefined });
 };

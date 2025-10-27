@@ -7,13 +7,13 @@ import Icon from '@components/icon/Icon.tsx';
 import Link from '@components/link/Link.tsx';
 import Media from '@components/media/Media.tsx';
 import changePage from '@functions/changePage.ts';
+import handlerPopup from '@functions/handlerPopup.ts';
 import sendGoal from '@functions/sendGoal.ts';
 
 import I from '../types.ts';
 
 const renderHead: I['renderHead'] = function () {
-    const { isShowMenu } = this.state;
-    const { storePages } = this.props;
+    const { isShowMenu, isShowIndex } = this.state;
 
     return (
         <div className="topBar__head _SECTION">
@@ -61,24 +61,24 @@ const renderHead: I['renderHead'] = function () {
                                 Личный кабинет
                             </Button>
                         </div>
-                        <div className="topBar__button">
-                            <Button
-                                className="_topBarBot _mediumSize"
-                                onClick={() => {
-                                    // changePage({ pageName: 'auth-login' });
-                                }}
-                            >
+                        <a
+                            href="https://t.me/dobrycola_promo_bot"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="topBar__button"
+                        >
+                            <Button className="_topBarBot _mediumSize" onClick={() => undefined}>
                                 <i className="_tg">
                                     <Icon name="tg" />
                                 </i>
                                 чат-бот
                             </Button>
-                        </div>
+                        </a>
                         <div className="topBar__button">
                             <Button
                                 className="_topBarCollection _mediumSize"
                                 onClick={() => {
-                                    changePage({ pageName: 'raffle-prize' });
+                                    handlerPopup('collectionPopup', { isShow: true });
                                 }}
                             >
                                 собери коллекцию лосей
@@ -87,20 +87,19 @@ const renderHead: I['renderHead'] = function () {
                     </div>
                 </Media>
                 <Media current="mobile">
-                    <Fade
-                        className="topBar__close _CLICK"
-                        isShow={!storePages.index.isShow && !isShowMenu}
-                    >
+                    <Fade className="topBar__close _CLICK" isShow={!isShowIndex && !isShowMenu}>
                         <CloseBtn />
                     </Fade>
-                    <div
-                        className="topBar__auth"
-                        onClick={() => {
-                            changePage({ pageName: 'profile' });
-                        }}
-                    >
-                        <div className="topBar__authInner"></div>
-                    </div>
+                    {isShowIndex && (
+                        <div
+                            className="topBar__auth"
+                            onClick={() => {
+                                changePage({ pageName: 'profile' });
+                            }}
+                        >
+                            <div className="topBar__authInner"></div>
+                        </div>
+                    )}
                 </Media>
             </div>
         </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Icon from '@components/icon/Icon.tsx';
 import setSpacesInText from '@functions/setSpacesInText.ts';
 
 import I from '../types.ts';
@@ -9,10 +10,21 @@ const renderFoot: I['renderFoot'] = function () {
 
     return (
         <div className="prize__foot _COL _COL_H_CENTER">
-            <p
+            <div
                 className="prize__name"
-                dangerouslySetInnerHTML={{ __html: setSpacesInText(prize.title) }}
-            ></p>
+                onClick={() => {
+                    if (prize.status === 'DOWNLOAD') {
+                        window.open(prize.url, '_blank');
+                    }
+                }}
+            >
+                {prize.status === 'DOWNLOAD' && (
+                    <i className="prize__nameIcon">
+                        <Icon name="download" />
+                    </i>
+                )}
+                <span dangerouslySetInnerHTML={{ __html: setSpacesInText(prize.title) }}></span>
+            </div>
         </div>
     );
 };

@@ -90,6 +90,7 @@ function mapStateToProps(state: StoreT) {
         user: state.user,
         losvillPopup: state.losvillPopup,
         manPopup: state.manPopup,
+        collectionPopup: state.collectionPopup,
     };
 }
 

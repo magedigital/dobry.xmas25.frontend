@@ -18,59 +18,63 @@ const renderContent: I['renderContent'] = function () {
                 document.dispatchEvent(new CustomEvent('scrollInnerPage'));
             }}
         >
-            <div className="popup__inner">
-                {this.renderHead()}
-                <div className="popup__content _COL _COL_H_CENTER">
-                    <div className="popup__subTitle">
-                        Участие в розыгрыше - <span>1</span> балл
-                    </div>
-                    {this.renderRaffle()}
-                    <Error className="popup__error" error={error} />
-                    <List
-                        renderKey={`${!!isComplete}${!!inProcess}${!!isError}`}
-                        items={
-                            !inProcess
-                                ? [{ _id: 'start' }]
-                                : isComplete
-                                  ? isError
-                                      ? [{ _id: 'error' }]
-                                      : [{ _id: 'complete' }]
-                                  : []
-                        }
-                        parentClass="popup__dynamicButtons"
-                        itemStyleProps={[]}
-                        parentStyleProps={['width']}
-                        parentRealStyleProps={['width']}
-                        renderItem={({ item }) => (
-                            <div className="popup__button _auto">
-                                <Button
-                                    onClick={async () => {
-                                        if (item._id === 'error') {
-                                            await setAsyncState.call(this, {
-                                                inProcess: false,
-                                                isError: false,
-                                                isComplete: false,
-                                            });
-                                        } else {
-                                            changePage({ pageName: 'profile' });
-
-                                            if (window.Telegram) {
-                                                window.Telegram.WebApp?.close();
-                                            }
-                                        }
-                                    }}
-                                    className={item._id === 'start' ? '_pink' : '_purple'}
-                                >
-                                    {item._id === 'start'
-                                        ? 'Сыграть позже'
-                                        : item._id === 'error'
-                                          ? 'Попробуй ещё'
-                                          : 'Спасибо!'}
-                                </Button>
+            <div className="popup__wrapper">
+                <div className="popup__inner">
+                    <div className="popup__innerBox">
+                        {this.renderHead()}
+                        <div className="popup__content _COL _COL_H_CENTER">
+                            <div className="popup__subTitle">
+                                Участие в розыгрыше - <span>1</span> балл
                             </div>
-                        )}
-                        resizeWidth={true}
-                    />
+                            {this.renderRaffle()}
+                            <Error className="popup__error" error={error} />
+                            <List
+                                renderKey={`${!!isComplete}${!!inProcess}${!!isError}`}
+                                items={
+                                    !inProcess
+                                        ? [{ _id: 'start' }]
+                                        : isComplete
+                                          ? isError
+                                              ? [{ _id: 'error' }]
+                                              : [{ _id: 'complete' }]
+                                          : []
+                                }
+                                parentClass="popup__dynamicButtons"
+                                itemStyleProps={[]}
+                                parentStyleProps={['width']}
+                                parentRealStyleProps={['width']}
+                                renderItem={({ item }) => (
+                                    <div className="popup__button _auto">
+                                        <Button
+                                            onClick={async () => {
+                                                if (item._id === 'error') {
+                                                    await setAsyncState.call(this, {
+                                                        inProcess: false,
+                                                        isError: false,
+                                                        isComplete: false,
+                                                    });
+                                                } else {
+                                                    changePage({ pageName: 'profile' });
+
+                                                    if (window.Telegram) {
+                                                        window.Telegram.WebApp?.close();
+                                                    }
+                                                }
+                                            }}
+                                            className={item._id === 'start' ? '_pink' : '_purple'}
+                                        >
+                                            {item._id === 'start'
+                                                ? 'Сыграть позже'
+                                                : item._id === 'error'
+                                                  ? 'Попробуй ещё'
+                                                  : 'Спасибо!'}
+                                        </Button>
+                                    </div>
+                                )}
+                                resizeWidth={true}
+                            />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

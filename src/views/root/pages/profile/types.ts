@@ -38,11 +38,12 @@ type ProfilePrizeT = {
     url: string;
     thumb: string;
     code: string;
-    status: 'DOWNLOAD' | 'SENDING' | 'SENT' | 'DATA_NEEDED';
+    status: 'DOWNLOAD' | 'SENDING' | 'SENT' | 'DATA_NEEDED' | 'NEED_CODE';
     statusTitle: string;
     extraTitle: null | string;
     count: number;
     promoCode?: string;
+    expired?: string;
 };
 
 type ProfileDataT = {

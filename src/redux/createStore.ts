@@ -67,6 +67,7 @@ export default function createStore(
             manPopup: { isShow: false },
             acceptCookies: !!localStorage.getItem('acceptCookies'),
             canLoadImages: {},
+            collectionPopup: { isShow: false },
             ...props,
         },
         settings: any,

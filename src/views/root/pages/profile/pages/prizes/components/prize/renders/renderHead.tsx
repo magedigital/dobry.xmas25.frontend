@@ -7,12 +7,14 @@ import I from '../types.ts';
 const renderHead: I['renderHead'] = function () {
     const { prize, user } = this.props;
 
+    //  <a href={prize.url} target="_blank" className="prize__status" rel="noreferrer">
+    //                 {prize.statusTitle}
+    //             </a>
+
     return (
         <div className="prize__head _COL _FULL_W">
             {prize.status === 'DOWNLOAD' ? (
-                <a href={prize.url} target="_blank" className="prize__status" rel="noreferrer">
-                    {prize.statusTitle}
-                </a>
+                <div className="prize__status">Получить</div>
             ) : prize.status === 'DATA_NEEDED' ? (
                 <div
                     className="prize__status _CLICK"

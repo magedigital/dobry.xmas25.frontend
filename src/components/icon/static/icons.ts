@@ -22,6 +22,7 @@ const icons = [
     'tg',
     'menu-star',
     'link',
+    'download',
 ] as const;
 
 export default icons;

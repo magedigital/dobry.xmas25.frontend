@@ -46,8 +46,10 @@ class Merch extends EditBlock<MerchI['props'], MerchI['state']> implements Merch
     }
 
     render() {
+        const { merch } = this.props;
+
         return (
-            <div ref={this.parent} className="merch _FULL">
+            <div ref={this.parent} className={`merch _FULL _${merch.code}`}>
                 <div className="merch__inner _FULL">
                     {this.renderHead()}
                     {this.renderContent()}

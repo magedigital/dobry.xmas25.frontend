@@ -19,6 +19,7 @@ class TopBar extends React.Component<TopBarI['props'], TopBarI['state']> impleme
         super(props);
         this.state = {
             isShowMenu: false,
+            isShowIndex: this.props.storePages.index.isShow,
         };
 
         this.parent = React.createRef();
