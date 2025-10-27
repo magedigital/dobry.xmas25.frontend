@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.6bbaa5e6.css",
-    "main.js": "/static/js/main.799bebb7.js",
+    "main.css": "/static/css/main.4353a273.css",
+    "main.js": "/static/js/main.2ec9da0b.js",
     "static/js/977.11b184c9.chunk.js": "/static/js/977.11b184c9.chunk.js",
     "static/js/16.9d69e595.chunk.js": "/static/js/16.9d69e595.chunk.js",
     "static/js/402.1bf2f098.chunk.js": "/static/js/402.1bf2f098.chunk.js",
@@ -50,6 +50,7 @@
     "static/media/back-5ka-03.jpg": "/static/media/back-5ka-03.71f94b268b5fd29f4fda.jpg",
     "static/media/back-inner-0.jpg": "/static/media/back-inner-0.0aa952dc34ab09310b12.jpg",
     "static/media/prize-big-mob.jpg": "/static/media/prize-big-mob.4e3279ede4b63c92b3ce.jpg",
+    "static/media/popup-back-mob.jpg": "/static/media/popup-back-mob.2957ecbeb8aa7dbabb71.jpg",
     "static/media/back-inner-2.jpg": "/static/media/back-inner-2.0fc7827f25bfbd4b0ac5.jpg",
     "static/media/element-8-5ka.png": "/static/media/element-8-5ka.f6cac356735d17f042bb.png",
     "static/media/karusel-prize-back-2.png": "/static/media/karusel-prize-back-2.273ab28c63f11f081acd.png",
@@ -218,7 +219,7 @@
     "static/media/arrow-down.svg": "/static/media/arrow-down.559aeb386a24d46ce43d.svg"
   },
   "entrypoints": [
-    "static/css/main.6bbaa5e6.css",
-    "static/js/main.799bebb7.js"
+    "static/css/main.4353a273.css",
+    "static/js/main.2ec9da0b.js"
   ]
 }

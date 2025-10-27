@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Button from '@components/button/Button.tsx';
+import scrollToBlock from '@functions/scrollToBlock.ts';
 
 import I from '../types.ts';
 
@@ -14,7 +15,18 @@ const renderContent: I['renderContent'] = function () {
                 продукцией Добрый, выиграй миллион на&nbsp;волшебный Новый год и другие призы!
             </p>
             <div className="indexHeader__contentButton">
-                <Button className="_indexHeader _bigSize" onClick={() => undefined}>
+                <Button
+                    className="_indexHeader _bigSize"
+                    onClick={() => {
+                        scrollToBlock({
+                            blockNode: document.querySelector('.indexMap') as HTMLElement,
+                            scrollNode: this.parent.current!.closest(
+                                '.publicPage__inner',
+                            ) as HTMLElement,
+                            offset: -50,
+                        });
+                    }}
+                >
                     Отправиться в Добрый Лосьвилль
                 </Button>
             </div>

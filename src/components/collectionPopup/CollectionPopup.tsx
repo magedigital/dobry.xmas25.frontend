@@ -80,7 +80,7 @@ class CollectionPopup
                             <div className="collectionPopup__head">
                                 <h3 className="collectionPopup__title">собери всю коллекцию!</h3>
                                 <p className="collectionPopup__text">
-                                    Участвуй в акциях партнеров и собери всю&nbsp;коллекцию жителей
+                                    Участвуй в акциях партнеров и&nbsp;собери всю&nbsp;коллекцию жителей
                                     Лосьвилля! <br />
                                     Нажимай на персонажей, чтобы узнать больше:
                                 </p>
