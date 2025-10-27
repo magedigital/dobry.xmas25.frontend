@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import Button from '@components/button/Button.tsx';
 import CustomHead from '@components/customHead/CustomHead.tsx';
 import Media from '@components/media/Media.tsx';
+import changePage from '@functions/changePage.ts';
 
 import SpecPrizeI from './types.ts';
 
@@ -39,7 +40,12 @@ class SpecPrize
                         <div className="prizesPage__specBanner">Сертификат на 2000₽</div>
                     </div>
                     <div className="prizesPage__button">
-                        <Button className="_purple" onClick={() => undefined}>
+                        <Button
+                            className="_purple"
+                            onClick={() => {
+                                changePage({ pageName: 'index', query: { ancor: 'games' } });
+                            }}
+                        >
                             <Media current="desktop">Перейти К игровым локациям</Media>
                             <Media current="mobile">К игровым локациям</Media>
                         </Button>

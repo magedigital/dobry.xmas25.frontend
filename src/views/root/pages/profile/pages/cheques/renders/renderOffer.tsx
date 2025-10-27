@@ -6,6 +6,8 @@ import changePage from '@functions/changePage.ts';
 import I from '../types.ts';
 
 const renderOffer: I['renderOffer'] = function () {
+    const { data } = this.props;
+
     return (
         <div className="profile__5kaOffer _COL">
             <h3 className="profile__5kaOfferTitle _PROFILE-TITLE">Акция в «Пятёрочке»</h3>
@@ -18,7 +20,7 @@ const renderOffer: I['renderOffer'] = function () {
                     загружено
                     <br />
                     чеков:
-                    <span>7</span>
+                    <span>{data?.checks?.length || 0}</span>
                 </div>
                 <div className="profile__5kaOfferButton">
                     <Button

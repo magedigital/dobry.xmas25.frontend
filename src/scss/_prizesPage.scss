@@ -274,7 +274,7 @@
         }
     }
 
-    &._merch &__sliderItem:hover &__sliderItemImage {
+    &__sliderItem:hover &__sliderItemImage {
         transform: scale(1.15);
     }
 

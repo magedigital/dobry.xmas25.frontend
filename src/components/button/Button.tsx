@@ -16,11 +16,11 @@ class Button extends React.Component<ButtonI['props'], ButtonI['state']> impleme
 
         return (
             <ButtonTag
-                className={`button _CLICK ${className}`}
+                className={`v2button _CLICK ${className}`}
                 onClick={disabled || loading ? undefined : onClick}
             >
-                <LoaderBlock className="button__loader" isShow={!!loading} />
-                <div className="button__inner _ROW _ROW_H_CENTER _ROW_V_CENTER">{children}</div>
+                <LoaderBlock className="v2button__loader" isShow={!!loading} />
+                <div className="v2button__inner _ROW _ROW_H_CENTER _ROW_V_CENTER">{children}</div>
             </ButtonTag>
         );
     }

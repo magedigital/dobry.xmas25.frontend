@@ -13,6 +13,7 @@ type NavItemT = {
     pageName?: PageNamesT;
     content?: string;
     href?: string;
+    onClick?: () => void;
 };
 
 interface MenuI extends React.Component<PropsT, StateT> {

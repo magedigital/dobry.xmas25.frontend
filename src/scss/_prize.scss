@@ -41,6 +41,10 @@
         background: #ff49b8;
         border-radius: 360rem;
 
+        &._dobro {
+            background: rgb(197 0 24 / 100%) !important;
+        }
+
         @include mob {
             font-weight: 600;
             font-size: 16rem;
@@ -160,6 +164,13 @@
             border: 2rem solid #e11f26;
             border-radius: 360rem;
             transform: translate(-50%, 0);
+
+            &._dobro {
+                padding: 5rem 12rem;
+                color: #fff;
+                font-size: 15rem;
+                background: #e11f26;
+            }
 
             &._main {
                 color: #fff;

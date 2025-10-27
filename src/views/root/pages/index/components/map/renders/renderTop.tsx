@@ -14,7 +14,7 @@ const renderTop: I['renderTop'] = function () {
                     <div
                         className={`indexMap__topSection _CLICK ${currentSection === name ? '_current' : ''}`}
                         key={name}
-                        onClick={this.scrollToSection.bind(this, name)}
+                        onClick={this.scrollToSection.bind(this, name, undefined)}
                         dangerouslySetInnerHTML={{ __html: section.title }}
                     ></div>
                 );

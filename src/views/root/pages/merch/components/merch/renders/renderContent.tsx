@@ -13,11 +13,7 @@ const renderContent: I['renderContent'] = function () {
             {merch.code === 'DOBRO' ? (
                 <>
                     <div className="merch__dobro">
-                        <img
-                            src={require('@media/merch-dobro.png')}
-                            alt=""
-                            className="merch__dobroImage"
-                        />
+                        <img src={merch.thumb} alt="" className="merch__dobroImage" />
                         <p className="merch__dobroSupport">
                             Введи количество баллов для пожертвования:
                         </p>

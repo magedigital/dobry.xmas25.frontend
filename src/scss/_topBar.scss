@@ -332,11 +332,11 @@
 
     &._fix &__button,
     &._inner &__button {
-        & .button._topBarCollection {
+        & .v2button._topBarCollection {
             // background: #e11f26;
         }
 
-        & .button._topBarCollection .button__inner {
+        & .v2button._topBarCollection .v2button__inner {
             background: #e11f26;
         }
     }
@@ -356,7 +356,7 @@
     }
 
     &__head._5ka &__button {
-        & .button__inner {
+        & .v2button__inner {
             @include mob {
                 padding: 11rem 10rem;
                 font-size: 13rem;

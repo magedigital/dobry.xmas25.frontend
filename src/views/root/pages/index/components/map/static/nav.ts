@@ -71,6 +71,7 @@ export const mapNav: MavNavItemT[] = [
         thumbs: ['location-11-1.png', 'location-11-2.png'],
         title: 'Пятёрочка',
         section: 'actions',
+        pageName: '5ka',
     },
     {
         thumbs: ['location-12-1.png', 'location-12-2.png'],

@@ -2,7 +2,7 @@ import scrollToBlock from '@functions/scrollToBlock.ts';
 
 import I from '../types.ts';
 
-const scrollToSection: I['scrollToSection'] = function (section) {
+const scrollToSection: I['scrollToSection'] = function (section, dur = 300) {
     const { getScrollNode } = this.props;
     const scrollNode = getScrollNode();
 
@@ -23,7 +23,7 @@ const scrollToSection: I['scrollToSection'] = function (section) {
         scrollToBlock({
             blockNode: currentNode,
             scrollNode,
-            duration: 300,
+            duration: dur,
         });
     }
 };

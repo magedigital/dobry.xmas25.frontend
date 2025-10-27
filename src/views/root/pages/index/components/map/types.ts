@@ -22,7 +22,7 @@ interface MapI extends React.Component<PropsT, StateT> {
     scrollThrottle: () => void;
 
     scrollHandler(this: MapI): Promise<void>;
-    scrollToSection(this: MapI, section: keyof typeof mapSections): void;
+    scrollToSection(this: MapI, section: keyof typeof mapSections, dur?: number): void;
 
     renderTop(this: MapI): React.ReactNode;
     renderNav(this: MapI): React.ReactNode;

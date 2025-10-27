@@ -194,6 +194,7 @@ export default class Slider {
         this.handlerCurrentItems();
         this.handlerPagination();
         this.setInfinity();
+        this.handlerCurrentItems();
 
         if (this.buttons) {
             (['prev', 'next'] as const).forEach((dir) => {
@@ -428,7 +429,6 @@ export default class Slider {
     }
 
     handlerCurrentItems(offset?: number): void {
-        // console.log(offset);
         if (this.showEach) {
             const currentItem = this.getItem(this.current) as HTMLElement;
 

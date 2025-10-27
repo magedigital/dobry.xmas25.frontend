@@ -25,7 +25,7 @@ const renderContent: I['renderContent'] = function () {
                     <div className="prizesPage__sliderItems">
                         {items.map((item, key) => (
                             <div
-                                className={`prizesPage__sliderItem _COL _COL_H_CENTER ${item.price ? '_withInfo' : ''} ${name === 'weekly' && key === 2 ? '_feduk _CLICK' : ''}`}
+                                className={`prizesPage__sliderItem _COL _COL_H_CENTER ${item.price ? '_withInfo' : ''}`}
                                 key={key}
                             >
                                 <div className="prizesPage__sliderItemHead">

@@ -1,10 +1,8 @@
 import Slider from '@classes/slider/Slider.ts';
-import changePage from '@functions/changePage.ts';
 
 import I from '../types.ts';
 
 const sliderInit: I['sliderInit'] = function () {
-    const { name } = this.props;
     const slider = this.parent.current!.querySelector('.prizesPage__slider') as HTMLElement;
 
     this.slider = new Slider({
@@ -19,17 +17,16 @@ const sliderInit: I['sliderInit'] = function () {
             next: slider.querySelector('.prizesPage__sliderButton._next') as HTMLElement,
         },
         callback: () => {
-            const fedukPrizeNodes = this.parent.current!.querySelectorAll<HTMLElement>(
-                '.prizesPage__sliderItem._feduk',
-            );
-
-            if (name === 'weekly') {
-                fedukPrizeNodes.forEach((n) => {
-                    n.onclick = () => {
-                        changePage({ pageName: 'fedukPrize' });
-                    };
-                });
-            }
+            // const fedukPrizeNodes = this.parent.current!.querySelectorAll<HTMLElement>(
+            //     '.prizesPage__sliderItem._feduk',
+            // );
+            // if (name === 'weekly') {
+            //     fedukPrizeNodes.forEach((n) => {
+            //         n.onclick = () => {
+            //             changePage({ pageName: 'fedukPrize' });
+            //         };
+            //     });
+            // }
         },
     });
 };

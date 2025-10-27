@@ -50,6 +50,19 @@ class Map extends React.Component<MapI['props'], MapI['state']> implements MapI 
                 scrollNode.addEventListener('scroll', this.scrollThrottle);
                 scrollNode.dispatchEvent(new Event('scroll'));
             }
+
+            const query = window.location.search.slice(1);
+
+            if (query.includes('ancor')) {
+                const ancor = query
+                    .split('&')
+                    .find((item) => item.split('=')[0] === 'ancor')
+                    ?.split('=')[1] as keyof typeof this.sections;
+
+                if (ancor) {
+                    this.scrollToSection(ancor, 0);
+                }
+            }
         }, 100);
     }
 

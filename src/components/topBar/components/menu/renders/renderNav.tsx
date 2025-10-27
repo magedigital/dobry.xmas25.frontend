@@ -21,15 +21,19 @@ const renderNav: I['renderNav'] = function () {
                               handler(false);
                           },
                       }
-                    : {
-                          href: item.href,
-                          target: '_blank',
-                          onClick: () => {
-                              if (item.name === 'tg') {
-                                  sendGoal('tgBtn');
-                              }
-                          },
-                      };
+                    : item.href
+                      ? {
+                            href: item.href,
+                            target: '_blank',
+                            onClick: () => {
+                                if (item.name === 'tg') {
+                                    sendGoal('tgBtn');
+                                }
+                            },
+                        }
+                      : {
+                            onClick: item.onClick,
+                        };
 
                 return (
                     <div className={`menu__navItem _${item.name}`} key={item.name}>

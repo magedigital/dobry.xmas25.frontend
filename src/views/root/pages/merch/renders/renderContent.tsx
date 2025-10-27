@@ -6,7 +6,7 @@ import Error from '@components/error/Error.tsx';
 import I from '../types.ts';
 
 const renderContent: I['renderContent'] = function () {
-    const { content, merchInfoActive, loadingKey, error } = this.state;
+    const { content, loadingKey, error } = this.state;
 
     return (
         <div
@@ -14,17 +14,10 @@ const renderContent: I['renderContent'] = function () {
             onScroll={() => {
                 document.dispatchEvent(new CustomEvent('scrollInnerPage'));
             }}
-            onTouchStart={() => {
-                this.merchInfoHandler(false);
-            }}
         >
             <div className="popup__wrapper">
                 <div className="popup__inner">
                     <div className="popup__innerBox">
-                        <div className={`popup__merchInfo ${merchInfoActive ? '_active' : ''}`}>
-                            Введи свое имя, и увидишь фестивальный нейминг для своей футболки. Если
-                            будут возможны варианты, то внутри рамки появятся стрелки для выбора
-                        </div>
                         {this.renderHead()}
                         <div className="popup__content _COL _COL_H_CENTER">
                             {content && (
