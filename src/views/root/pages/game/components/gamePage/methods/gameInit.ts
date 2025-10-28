@@ -5,6 +5,8 @@ import removeTransition from '@functions/removeTransition.ts';
 import I from '../types.ts';
 
 const gameInit: I['gameInit'] = async function () {
+    console.log('gameInit');
+
     this.gameRemove();
 
     const gameNode = this.parent.current!.querySelector('.game');
@@ -28,6 +30,7 @@ const gameInit: I['gameInit'] = async function () {
     script2.setAttribute('data-game', '');
 
     script2.onload = () => {
+        console.log('onload game script');
         const script = document.createElement('script');
 
         script.setAttribute('data-game', '');
@@ -36,9 +39,17 @@ const gameInit: I['gameInit'] = async function () {
             removeTransition({ item: '.container' });
         };
 
+        script.onerror = (e) => {
+            console.log('error game script', e);
+        };
+
         script.src = '/_game/static/js/main.21a1fb98.js';
 
         document.querySelector('head')!.appendChild(script);
+    };
+
+    script2.onerror = (e) => {
+        console.log('error game script 2', e);
     };
 
     script2.src = '/_game/interface.js';
