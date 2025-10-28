@@ -30,12 +30,14 @@ const gameInit: I['gameInit'] = async function () {
     script2.setAttribute('data-game', '');
 
     script2.onload = () => {
-        console.log('onload game script');
+        console.log('onload game script2');
         const script = document.createElement('script');
 
         script.setAttribute('data-game', '');
 
         script.onload = () => {
+            console.log('onload game script');
+
             removeTransition({ item: '.container' });
         };
 

@@ -1,8 +1,10 @@
 {
   "files": {
-    "main.css": "/_game/static/css/main.c23c2df7.css",
-    "main.js": "/_game/static/js/main.21a1fb98.js",
+    "main.css": "/_game/static/css/main.7021b6c5.css",
+    "main.js": "/_game/static/js/main.5933be44.js",
     "static/js/453.5565870f.chunk.js": "/_game/static/js/453.5565870f.chunk.js",
+    "static/media/bg-head-mob.png": "/_game/static/media/bg-head-mob.9b193b30e6eac60bc175.png",
+    "static/media/prize-sun.png": "/_game/static/media/prize-sun.25fa7755ff2a5e5e0605.png",
     "static/media/bg-head.png": "/_game/static/media/bg-head.7a9c9a6406b0f91288b1.png",
     "static/media/bg-game.jpg": "/_game/static/media/bg-game.0698ef1d69b1362abb39.jpg",
     "static/media/finish-plate.png": "/_game/static/media/finish-plate.e82d4556c11ccd0b6bce.png",
@@ -14,11 +16,8 @@
     "static/media/o1.png": "/_game/static/media/o1.808e43e171d1eba65c75.png",
     "static/media/bg-common.jpg": "/_game/static/media/bg-common.4b56141b72fa97464fa5.jpg",
     "static/media/bg.jpg": "/_game/static/media/bg.b1490609abd66180d05e.jpg",
-    "static/media/hero-1.jpg": "/_game/static/media/hero-1.3dab258d6783d2ad8e7e.jpg",
     "static/media/t5.png": "/_game/static/media/t5.ba943b3c1e736c6ce341.png",
     "static/media/t3.png": "/_game/static/media/t3.2fb1ba16a245132450c7.png",
-    "static/media/hero-3.jpg": "/_game/static/media/hero-3.8c53270ba76f07cf3b6f.jpg",
-    "static/media/hero-2.jpg": "/_game/static/media/hero-2.47de994ae070214344a9.jpg",
     "static/media/t2.png": "/_game/static/media/t2.5194d7574363a8fb95b5.png",
     "static/media/bg-game-mob.jpg": "/_game/static/media/bg-game-mob.b056957991b64a7655c9.jpg",
     "static/media/score-pie.png": "/_game/static/media/score-pie.3bcfb9013739dc337743.png",
@@ -45,6 +44,7 @@
     "static/media/o8.png": "/_game/static/media/o8.8f08c31b04a79cf65e53.png",
     "static/media/instruction.png": "/_game/static/media/instruction.b5d29502f5e54e469d5d.png",
     "static/media/o9.png": "/_game/static/media/o9.04f757ae97d342cfd67b.png",
+    "static/media/hero-no.jpg": "/_game/static/media/hero-no.670c8ed8825288cd358c.jpg",
     "static/media/moose1.png": "/_game/static/media/moose1.3b47ce79d0553a7c40cc.png",
     "static/media/bonus-display.svg": "/_game/static/media/bonus-display.97e2cec46b39a3e6613a391c1d46807e.svg",
     "static/media/bonus.svg": "/_game/static/media/bonus.83a8558b296483e8bd9c2d99e0f77cda.svg",
@@ -91,12 +91,12 @@
     "static/media/finish-decor2.svg": "/_game/static/media/finish-decor2.9e95d1fd07e6b412cc855084b890dad5.svg",
     "static/media/x.svg": "/_game/static/media/x.31e05e88b20de1b5cbda45e3fb30173b.svg",
     "static/media/play.svg": "/_game/static/media/play.ad110f835af17bb6c5e0.svg",
-    "main.c23c2df7.css.map": "/_game/static/css/main.c23c2df7.css.map",
-    "main.21a1fb98.js.map": "/_game/static/js/main.21a1fb98.js.map",
+    "main.7021b6c5.css.map": "/_game/static/css/main.7021b6c5.css.map",
+    "main.5933be44.js.map": "/_game/static/js/main.5933be44.js.map",
     "453.5565870f.chunk.js.map": "/_game/static/js/453.5565870f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c23c2df7.css",
-    "static/js/main.21a1fb98.js"
+    "static/css/main.7021b6c5.css",
+    "static/js/main.5933be44.js"
   ]
 }
