@@ -83,24 +83,24 @@ function onAppReadyHandler(app) {
         games: {
             1: {
                 id: 'VIBE',
-                request1: { url: '/api/TentGame1.json', method: 'GET' },
-                request2: { url: '/api/TentGame2.json', method: 'GET' },
+                request1: { url: '/api/TentGame', method: 'POST' },
+                request2: { url: '/api/TentGame', method: 'POST' },
             },
             2: {
                 id: 'SNOWBALL',
-                request1: { url: '/api/TentGame1.json', method: 'GET' },
-                request2: { url: '/api/TentGame2.json', method: 'GET' },
+                request1: { url: '/api/TentGame', method: 'POST' },
+                request2: { url: '/api/TentGame', method: 'POST' },
             },
             3: {
                 id: 'LIGHTUP',
-                request1: { url: '/api/TentGame1.json', method: 'GET' },
-                request2: { url: '/api/TentGame2.json', method: 'GET' },
+                request1: { url: '/api/TentGame', method: 'POST' },
+                request2: { url: '/api/TentGame', method: 'POST' },
             },
             4: {
                 id: 'LOSYANTA',
-                request0: { url: '/api/SecretGame0.json', method: 'GET' },
-                request1: { url: '/api/SecretGame1.json', method: 'GET' },
-                request2: { url: '/api/SecretGame2.json', method: 'GET' },
+                request0: { url: '/api/PlayGame', method: 'POST' },
+                request1: { url: '/api/PlayGame', method: 'POST' },
+                request2: { url: '/api/PlayGame', method: 'POST' },
             },
             index: { VIBE: 1, SNOWBALL: 2, LIGHTUP: 3, LOSYANTA: 4 },
         },
