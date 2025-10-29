@@ -3,6 +3,7 @@ import React from 'react';
 import CloseBtn from '@components/closeBtn/CloseBtn.tsx';
 import InnerPage from '@components/innerPage/InnerPage.tsx';
 import Media from '@components/media/Media.tsx';
+import { getLocalContent } from '@functions/localContent.ts';
 
 import getScrollPage from './methods/getScrollPage.ts';
 
@@ -11,6 +12,7 @@ import RulesI from './types.ts';
 import renderCards from './renders/renderCards.tsx';
 import renderContent from './renders/renderContent.tsx';
 import renderHead from './renders/renderHead.tsx';
+import getContent from './requests/getContent.ts';
 import cards from './static/cards.ts';
 
 class Rules extends InnerPage<RulesI['props'], RulesI['state']> implements RulesI {
@@ -18,7 +20,9 @@ class Rules extends InnerPage<RulesI['props'], RulesI['state']> implements Rules
 
     constructor(props: RulesI['props']) {
         super(props);
-        this.state = {};
+        this.state = {
+            content: getLocalContent('indexContent'),
+        };
         this.parent = React.createRef();
     }
 
@@ -27,11 +31,14 @@ class Rules extends InnerPage<RulesI['props'], RulesI['state']> implements Rules
 
     getScrollPage = getScrollPage;
 
+    getContent = getContent;
+
     renderContent = renderContent;
     renderHead = renderHead;
     renderCards = renderCards;
 
     componentDidMount(): void {
+        this.getContent();
         this.setClosePosition();
     }
 

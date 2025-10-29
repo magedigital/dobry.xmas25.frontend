@@ -10,6 +10,27 @@ type MainContentT = {
     components: {
         header: HeaderContentT;
         footer: FooterContentT;
+        anounce: {
+            slogan: {
+                title: string;
+                description: string;
+            };
+            button: {
+                title: string;
+            };
+            carousel: {
+                title: string;
+                thumbs: string[];
+                thumbsExtra: string[];
+            };
+        };
+        howto: {
+            steps: {
+                description: string;
+                thumb: string;
+                title: string;
+            }[];
+        };
         prizesCommon: {
             items: {
                 title: string;

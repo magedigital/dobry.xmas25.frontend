@@ -43,7 +43,7 @@ class Index extends PublicPage<IndexI['props'], IndexI['state']> implements Inde
             render: () => (
                 <div className="index _FULL_W">
                     <div className="index__section _FULL_W">
-                        <Header />
+                        <Header content={content} />
                     </div>
                     <div className="index__section _FULL_W">
                         <Map getScrollNode={() => this.scrollNode.current} />

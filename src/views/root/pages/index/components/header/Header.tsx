@@ -20,6 +20,7 @@ class Header extends React.Component<HeaderI['props'], HeaderI['state']> impleme
     animationId: HeaderI['animationId'];
     sliderTimerId: HeaderI['sliderTimerId'];
     slider: HeaderI['slider'];
+    isInit: HeaderI['isInit'];
 
     constructor(props: HeaderI['props']) {
         super(props);
@@ -43,7 +44,14 @@ class Header extends React.Component<HeaderI['props'], HeaderI['state']> impleme
 
     componentDidMount(): void {
         this.startRotate();
-        this.sliderInit();
+    }
+
+    componentDidUpdate() {
+        if (!this.isInit) {
+            this.isInit = true;
+
+            this.sliderInit();
+        }
     }
 
     componentWillUnmount(): void {

@@ -1,8 +1,11 @@
 import Slider from '@classes/slider/Slider';
 import { StoreT } from '@global/types';
 
+import { MainContentT } from '../../types';
+
 type PropsT = {
     user: StoreT['user'];
+    content: MainContentT | undefined;
 };
 
 type StateT = {};
@@ -10,6 +13,8 @@ type StateT = {};
 interface HeaderI extends React.Component<PropsT, StateT> {
     props: PropsT;
     state: StateT;
+
+    isInit?: boolean;
 
     parent: React.RefObject<HTMLDivElement | null>;
 
