@@ -24,9 +24,7 @@ const renderRaffles: I['renderRaffles'] = function () {
                                 description={content.components.buy.raffle.info.header.description}
                                 buttonText={content.components.buy.raffle.info.button.title}
                                 buttonOnClick={() => {
-                                    changePage({ pageName: 'raffle' });
-
-                                    sendGoal('profileRaffleBtn');
+                                    changePage({ pageName: 'game-inner', ids: { 1: 'LOSYANTA' } });
                                 }}
                                 items={content.components.buy.raffle.prizes.map((item) => ({
                                     title: item.title,

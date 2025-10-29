@@ -19,7 +19,6 @@ import Merch from '../pages/merch/Merch.tsx';
 import Prizes from '../pages/prizes/Prizes.tsx';
 import Products from '../pages/products/Products.tsx';
 import Profile from '../pages/profile/Profile.tsx';
-import Raffle from '../pages/raffle/Raffle.tsx';
 import RafflePrize from '../pages/rafflePrize/RafflePrize.tsx';
 import RegCode from '../pages/regCode/RegCode.tsx';
 import Rules from '../pages/rules/Rules.tsx';
@@ -114,11 +113,6 @@ const pages = {
     merch: {
         render(this: RootI) {
             return <Merch />;
-        },
-    },
-    raffle: {
-        render(this: RootI) {
-            return <Raffle />;
         },
     },
     '5ka': {

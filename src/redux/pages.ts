@@ -198,14 +198,6 @@ const pages = [
         getRedirect: () => ({ name: 'auth' }),
     },
     {
-        links: ['raffle'],
-        name: 'raffle',
-        getCond: ({ user }: StoreT) => ({
-            condition: !!user,
-        }),
-        getRedirect: () => ({ name: 'auth' }),
-    },
-    {
         links: ['auth'],
         name: 'auth',
         getCond: ({ user, loginProcess }: StoreT) => ({

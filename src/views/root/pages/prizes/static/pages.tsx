@@ -24,7 +24,7 @@ const pages = {
                         description="Участие в розыгрыше - <span>1</span> балл"
                         buttonText="Участвовать"
                         buttonOnClick={() => {
-                            changePage({ pageName: 'raffle' });
+                            changePage({ pageName: 'game-inner', ids: { 1: 'LOSYANTA' } });
                         }}
                         items={content!.components.prizes.instant.items}
                     />

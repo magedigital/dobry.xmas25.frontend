@@ -32,7 +32,6 @@ const games = {
         description: 'Доберись до Главной сцены Добрый Fest',
         goal: 'stageBtn',
         metaTitle: 'Вперёд к сцене',
-        pageName: 'raffle-prize',
     },
 } as const;
 
