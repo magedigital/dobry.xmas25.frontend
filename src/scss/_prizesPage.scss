@@ -152,17 +152,24 @@
 
             &Head {
                 position: relative;
+                z-index: 1;
                 width: 180rem;
                 height: 180rem;
                 margin-bottom: 12rem;
-                border-radius: 50%;
-
-                @include bg("/media/inners/prize-back.jpg", cover, center);
 
                 @include mob {
                     width: 230rem;
                     height: 230rem;
                     margin-bottom: 16rem;
+                }
+
+                &Inner {
+                    @include bg("/media/inners/prize-back.jpg", cover, center);
+
+                    position: relative;
+                    z-index: 1;
+                    overflow: hidden;
+                    border-radius: 50%;
                 }
             }
 

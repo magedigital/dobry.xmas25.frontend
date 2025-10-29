@@ -38,26 +38,19 @@ const renderContent: I['renderContent'] = function () {
                                 key={key}
                             >
                                 <div className="prizesPage__sliderItemHead">
-                                    <img
-                                        src={item.thumb}
-                                        alt=""
-                                        className="prizesPage__sliderItemImage"
-                                    />
+                                    <div className="prizesPage__sliderItemHeadInner">
+                                        <img
+                                            src={item.thumb}
+                                            alt=""
+                                            className="prizesPage__sliderItemImage"
+                                        />
+                                    </div>
+
                                     {name === 'merch' && (
                                         <div className="prizesPage__sliderItemBalls">
                                             {item.price}
                                         </div>
                                     )}
-                                    {/* {name === 'weekly' && (
-                                        <div className="prizesPage__sliderItemInfo _COL _COL_CENTER">
-                                            <div
-                                                className="prizesPage__sliderItemInfoInner"
-                                                dangerouslySetInnerHTML={{
-                                                    __html: setSpacesInText(item.price),
-                                                }}
-                                            ></div>
-                                        </div>
-                                    )} */}
                                 </div>
                                 <p className="prizesPage__sliderItemDescription">{item.title}</p>
                             </div>
