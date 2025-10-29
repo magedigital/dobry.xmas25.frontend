@@ -163,6 +163,37 @@
         padding-bottom: 0;
     }
 
+    &._game &__inner {
+        @include bg("/media/back-game-all.jpg", 100% auto, center top);
+
+        @include mob {
+            background: none;
+        }
+
+        &Box {
+            overflow: visible;
+            background: none;
+            box-shadow: none;
+
+            &::before {
+                @include mob {
+                    display: none;
+                }
+            }
+        }
+
+        &Wrapper {
+            background: none;
+            border-radius: 0;
+            box-shadow: none;
+
+            @include mob {
+                width: 100%;
+                padding: 0;
+            }
+        }
+    }
+
     &._profile &__innerBox {
         padding-bottom: 26rem;
 
@@ -208,6 +239,11 @@
         top: 22rem;
         right: 22rem;
         z-index: 2;
+    }
+
+    &._game &__close {
+        top: 50rem;
+        right: -20rem;
     }
 
     &__head {

@@ -37,7 +37,7 @@ class SpecPrize
                 </div>
                 <div className="prizesPage__content _FULL_W _COL _COL_H_CENTER">
                     <div className="prizesPage__spec">
-                        <div className="prizesPage__specBanner">Сертификат на 2000₽</div>
+                        <div className="prizesPage__specBanner">Сертификат на 4000₽</div>
                     </div>
                     <div className="prizesPage__button">
                         <Button

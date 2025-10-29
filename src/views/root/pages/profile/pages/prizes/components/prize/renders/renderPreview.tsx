@@ -35,7 +35,7 @@ const renderPreview: I['renderPreview'] = function () {
                         changePage({ pageName: 'regCode' });
                     }}
                 >
-                    Зерегистрируй код{prize.expired ? ` до ${prize.expired}` : ''}
+                    Зарегистрируй код{prize.expired ? ` до ${prize.expired}` : ''}
                 </div>
             )}
         </div>

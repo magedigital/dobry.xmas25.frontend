@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import CustomHead from '@components/customHead/CustomHead.tsx';
+import { store } from '@redux/redux.ts';
 
 import sliderInit from './methods/sliderInit.ts';
 
@@ -19,7 +20,9 @@ class PrizesPage
 
     constructor(props: PrizesPageI['props']) {
         super(props);
-        this.state = {};
+        this.state = {
+            needSlider: this.props.items.length > 4 || store.getState().device === 'mobile',
+        };
 
         this.parent = React.createRef();
     }
@@ -40,10 +43,14 @@ class PrizesPage
     }
 
     render() {
+        const { needSlider } = this.state;
         const { metaTitle, name } = this.props;
 
         return (
-            <div ref={this.parent} className={`prizesPage _FULL_W _COL _COL_H_CENTER _${name}`}>
+            <div
+                ref={this.parent}
+                className={`prizesPage _FULL_W _COL _COL_H_CENTER _${name} ${needSlider ? '_slider' : ''}`}
+            >
                 <CustomHead title={metaTitle} />
 
                 {this.renderHead()}

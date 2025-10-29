@@ -23,9 +23,7 @@ class Start extends React.Component<StartI['props'], StartI['state']> implements
         return (
             <div ref={this.parent} className="popup__block _COL _COL_H_CENTER">
                 <div className="popup__cheque _COL _COL_H_CENTER">
-                    <p className="popup__chequeDescription">
-                        Регистрируй чеки из сети Пятерочка и&nbsp;чеки с новинками
-                    </p>
+                    <p className="popup__chequeDescription">Регистрируй чеки из сети Пятерочка</p>
                     <div
                         className="popup__chequeArea _FULL_W _COL _COL_H_CENTER _CLICK"
                         onClick={() => {

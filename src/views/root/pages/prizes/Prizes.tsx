@@ -51,25 +51,23 @@ class Prizes extends InnerPage<PrizesI['props'], PrizesI['state']> implements Pr
 
     render() {
         return this.renderPage(
-            <>
-                <div
-                    className="page _profile _NOSCROLL _FULL"
-                    onScroll={this.setClosePosition.bind(this)}
-                >
-                    <div className="page__inner _FULL_W _COL _COL_H_CENTER">
-                        <div className="page__innerWrapper _INNER">
-                            <div className="page__innerBox _empty">
-                                <Media current="desktop">
-                                    <div className="page__close">
-                                        <CloseBtn />
-                                    </div>
-                                </Media>
-                                {this.renderContent()}
-                            </div>
+            <div
+                className="page _profile _NOSCROLL _FULL"
+                onScroll={this.setClosePosition.bind(this)}
+            >
+                <div className="page__inner _FULL_W _COL _COL_H_CENTER">
+                    <div className="page__innerWrapper _INNER">
+                        <div className="page__innerBox _empty">
+                            <Media current="desktop">
+                                <div className="page__close">
+                                    <CloseBtn />
+                                </div>
+                            </Media>
+                            {this.renderContent()}
                         </div>
                     </div>
                 </div>
-            </>,
+            </div>,
         );
     }
 }

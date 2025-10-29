@@ -14,18 +14,18 @@ const sliderInit: I['sliderInit'] = function () {
         infinity: true,
         withDrag: false,
         callback: ({ current }) => {
-            if (typeof current === 'number') {
-                const itemNode = this.parent.current!.querySelector(
+            if (this.parent.current && typeof current === 'number') {
+                const itemNode = this.parent.current.querySelector(
                     `.indexHeader__sliderItem[data-id="${current}"]`,
                 ) as HTMLElement;
 
-                this.parent
-                    .current!.querySelectorAll('.indexHeader__sliderItem[data-vis]')
+                this.parent.current
+                    .querySelectorAll('.indexHeader__sliderItem[data-vis]')
                     .forEach((n) => {
                         n.removeAttribute('data-vis');
                     });
-                this.parent
-                    .current!.querySelectorAll('.indexHeader__sliderItem[data-cur]')
+                this.parent.current
+                    .querySelectorAll('.indexHeader__sliderItem[data-cur]')
                     .forEach((n) => {
                         n.removeAttribute('data-cur');
                     });

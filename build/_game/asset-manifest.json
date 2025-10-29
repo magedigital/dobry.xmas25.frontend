@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/_game/static/css/main.7021b6c5.css",
-    "main.js": "/_game/static/js/main.5933be44.js",
+    "main.css": "/_game/static/css/main.f55739ed.css",
+    "main.js": "/_game/static/js/main.e85879c1.js",
     "static/js/453.5565870f.chunk.js": "/_game/static/js/453.5565870f.chunk.js",
     "static/media/bg-head-mob.png": "/_game/static/media/bg-head-mob.9b193b30e6eac60bc175.png",
     "static/media/prize-sun.png": "/_game/static/media/prize-sun.25fa7755ff2a5e5e0605.png",
@@ -51,7 +51,7 @@
     "static/media/score-decor4.svg": "/_game/static/media/score-decor4.d81199fff89cf2510350cc63db5f6954.svg",
     "static/media/fireworks11.svg": "/_game/static/media/fireworks11.cf376f53897e35a8b0cbf2e1d20e0790.svg",
     "static/media/head-bg.svg": "/_game/static/media/head-bg.9b0c237fccd6c58d3e1c7a9eafb828bc.svg",
-    "static/media/logo-bg.svg": "/_game/static/media/logo-bg.7f879090f264cb77ae5a.svg",
+    "static/media/logo-bg.svg": "/_game/static/media/logo-bg.7f879090f264cb77ae5a450812a950fe.svg",
     "static/media/fireworks7.svg": "/_game/static/media/fireworks7.b92785e997b1ffb16b5f9428628fea1f.svg",
     "static/media/fireworks6.svg": "/_game/static/media/fireworks6.a67dc05f959bb8d1b0589bbeb5a3f28d.svg",
     "static/media/score-decor5.svg": "/_game/static/media/score-decor5.267f453638fc887a3cf2185aade22e50.svg",
@@ -91,12 +91,12 @@
     "static/media/finish-decor2.svg": "/_game/static/media/finish-decor2.9e95d1fd07e6b412cc855084b890dad5.svg",
     "static/media/x.svg": "/_game/static/media/x.31e05e88b20de1b5cbda45e3fb30173b.svg",
     "static/media/play.svg": "/_game/static/media/play.ad110f835af17bb6c5e0.svg",
-    "main.7021b6c5.css.map": "/_game/static/css/main.7021b6c5.css.map",
-    "main.5933be44.js.map": "/_game/static/js/main.5933be44.js.map",
+    "main.f55739ed.css.map": "/_game/static/css/main.f55739ed.css.map",
+    "main.e85879c1.js.map": "/_game/static/js/main.e85879c1.js.map",
     "453.5565870f.chunk.js.map": "/_game/static/js/453.5565870f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7021b6c5.css",
-    "static/js/main.5933be44.js"
+    "static/css/main.f55739ed.css",
+    "static/js/main.e85879c1.js"
   ]
 }

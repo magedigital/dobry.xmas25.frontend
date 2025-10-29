@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.6bf1ebb4.css",
-    "main.js": "/static/js/main.bd2526ad.js",
+    "main.css": "/static/css/main.df1381a2.css",
+    "main.js": "/static/js/main.dbb84cd8.js",
     "static/js/977.11b184c9.chunk.js": "/static/js/977.11b184c9.chunk.js",
     "static/js/16.9d69e595.chunk.js": "/static/js/16.9d69e595.chunk.js",
     "static/js/402.1bf2f098.chunk.js": "/static/js/402.1bf2f098.chunk.js",
@@ -28,6 +28,7 @@
     "static/js/419.62f2b442.chunk.js": "/static/js/419.62f2b442.chunk.js",
     "static/media/main-img.jpg": "/static/media/main-img.2f39e19e9e0edcb3ac57.jpg",
     "static/media/back-5ka-01.jpg": "/static/media/back-5ka-01.aef616df826368b0448c.jpg",
+    "static/media/back-game-all.jpg": "/static/media/back-game-all.2e517acb71b1fdb05abf.jpg",
     "static/media/main-image-zagl-01.jpg": "/static/media/main-image-zagl-01.83529f2c4eb107392a99.jpg",
     "static/media/steps-banner-back.jpg": "/static/media/steps-banner-back.265fae8e65d44494553e.jpg",
     "static/media/popup-back.jpg": "/static/media/popup-back.96a130b2dcb14978fb31.jpg",
@@ -99,6 +100,7 @@
     "static/media/location-15-1.png": "/static/media/location-15-1.8aa5aef506090cae01d9.png",
     "static/media/back-inner-2-mob.jpg": "/static/media/back-inner-2-mob.afd357be54b5632199a4.jpg",
     "static/media/location-4.png": "/static/media/location-4.a2fe919fa77f16541552.png",
+    "static/media/prize-special-mob.jpg": "/static/media/prize-special-mob.7ff33d9c441df6b19e35.jpg",
     "static/media/element-4-5ka.png": "/static/media/element-4-5ka.d24c58572c898345adfb.png",
     "static/media/element-1-5ka.png": "/static/media/element-1-5ka.acac2c651f6672710619.png",
     "static/media/location-3.png": "/static/media/location-3.2f5be1a0154b1daaa8bd.png",
@@ -106,16 +108,15 @@
     "static/media/steps-banner-back-mob.jpg": "/static/media/steps-banner-back-mob.417876cc977905275614.jpg",
     "static/media/location-12-1.png": "/static/media/location-12-1.3c61359280111ae06823.png",
     "static/media/light-track.svg": "/static/media/light-track.9fa218a9dab249c69eec.svg",
-    "static/media/prize-special-mob.jpg": "/static/media/prize-special-mob.d4666be41b957a0d0184.jpg",
     "static/media/merch-dobro.png": "/static/media/merch-dobro.60743745f13e6e3cee52.png",
     "static/media/location-13-1.png": "/static/media/location-13-1.90ad9073790be4c440df.png",
     "static/media/banner-anons-01-mob.jpg": "/static/media/banner-anons-01-mob.9e1640381a7e67404434.jpg",
     "static/media/map-back-4-mob.jpg": "/static/media/map-back-4-mob.9259e97462d43f59a605.jpg",
     "static/media/map-back-3-mob.jpg": "/static/media/map-back-3-mob.57f165b9210d2b76fa4b.jpg",
     "static/media/element-2-5ka.png": "/static/media/element-2-5ka.248f020085c114b1307a.png",
+    "static/media/prize-special.jpg": "/static/media/prize-special.90d429d5f69a9e874518.jpg",
     "static/media/image-star.jpg": "/static/media/image-star.3e5812be5cb8f71642b3.jpg",
     "static/media/prize-2-4-5ka.png": "/static/media/prize-2-4-5ka.3bf29d3503663074d27e.png",
-    "static/media/prize-special.jpg": "/static/media/prize-special.393eadc3c9e8b9e602dd.jpg",
     "static/media/step-back-5ka.png": "/static/media/step-back-5ka.9962e086bd87d0829c33.png",
     "static/media/title-back.jpg": "/static/media/title-back.26f7c486c8b1afa3befe.jpg",
     "static/media/banner-anons-02-mob.jpg": "/static/media/banner-anons-02-mob.534b333c0a7374d8ebb2.jpg",
@@ -219,7 +220,7 @@
     "static/media/arrow-down.svg": "/static/media/arrow-down.559aeb386a24d46ce43d.svg"
   },
   "entrypoints": [
-    "static/css/main.6bf1ebb4.css",
-    "static/js/main.bd2526ad.js"
+    "static/css/main.df1381a2.css",
+    "static/js/main.dbb84cd8.js"
   ]
 }

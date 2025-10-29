@@ -30,28 +30,17 @@ const gameInit: I['gameInit'] = async function () {
     script2.setAttribute('data-game', '');
 
     script2.onload = () => {
-        console.log('onload game script2');
         const script = document.createElement('script');
 
         script.setAttribute('data-game', '');
 
         script.onload = () => {
-            console.log('onload game script');
-
             removeTransition({ item: '.container' });
         };
 
-        script.onerror = (e) => {
-            console.log('error game script', e);
-        };
-
-        script.src = '/_game/static/js/main.21a1fb98.js';
+        script.src = '/_game/static/js/main.e85879c1.js';
 
         document.querySelector('head')!.appendChild(script);
-    };
-
-    script2.onerror = (e) => {
-        console.log('error game script 2', e);
     };
 
     script2.src = '/_game/interface.js';
@@ -62,7 +51,7 @@ const gameInit: I['gameInit'] = async function () {
 
     link.setAttribute('data-game', '');
     link.setAttribute('rel', 'stylesheet');
-    link.setAttribute('href', '/_game/static/css/main.c23c2df7.css');
+    link.setAttribute('href', '/_game/static/css/main.f55739ed.css');
 
     document.querySelector('head')!.appendChild(link);
 

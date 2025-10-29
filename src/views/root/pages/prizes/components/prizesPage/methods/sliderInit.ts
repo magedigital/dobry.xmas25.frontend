@@ -3,6 +3,12 @@ import Slider from '@classes/slider/Slider.ts';
 import I from '../types.ts';
 
 const sliderInit: I['sliderInit'] = function () {
+    const { needSlider } = this.state;
+
+    if (!needSlider) {
+        return;
+    }
+
     const slider = this.parent.current!.querySelector('.prizesPage__slider') as HTMLElement;
 
     this.slider = new Slider({

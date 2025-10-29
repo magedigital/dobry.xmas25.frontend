@@ -12,7 +12,9 @@ type PropsT = {
     name: string;
 };
 
-type StateT = {};
+type StateT = {
+    needSlider: boolean;
+};
 
 interface PrizesPageI extends React.Component<PropsT, StateT> {
     props: PropsT;

@@ -150,12 +150,6 @@
                 margin-right: 94rem;
             }
 
-            @include desk {
-                &:not(._current) {
-                    opacity: 0;
-                }
-            }
-
             &Head {
                 position: relative;
                 width: 180rem;
@@ -274,8 +268,33 @@
         }
     }
 
+    &:not(._slider) &__sliderItems {
+        @include desk {
+            justify-content: center;
+            width: 100%;
+        }
+    }
+
+    &:not(._slider) &__sliderItem {
+        margin-right: 0;
+    }
+
+    &:not(._slider) &__sliderItem + &__sliderItem {
+        margin-left: 48rem;
+    }
+
+    &._slider &__slider {
+        &Item {
+            @include desk {
+                &:not(._current) {
+                    opacity: 0;
+                }
+            }
+        }
+    }
+
     &__sliderItem:hover &__sliderItemImage {
-        transform: scale(1.15);
+        transform: scale(1.08);
     }
 
     &__spec {

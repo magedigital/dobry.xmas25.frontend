@@ -60,19 +60,17 @@ const pages = {
             const { content } = this.state;
 
             return (
-                <>
-                    <PrizesPage
-                        name="weekly"
-                        title="Еженедельный розыгрыш"
-                        description="Для участия в розыгрыше на твоём счету должно быть более <span>10</span> баллов"
-                        metaTitle="Призы - Еженедельно"
-                        buttonText="Зарегистрировать код"
-                        buttonOnClick={() => {
-                            changePage({ pageName: 'regCode' });
-                        }}
-                        items={content!.components.prizes.weekly.items}
-                    />
-                </>
+                <PrizesPage
+                    name="weekly"
+                    title="Еженедельный розыгрыш"
+                    description="Для участия в розыгрыше на твоём счету должно быть более <span>10</span> баллов"
+                    metaTitle="Призы - Еженедельно"
+                    buttonText="Зарегистрировать код"
+                    buttonOnClick={() => {
+                        changePage({ pageName: 'regCode' });
+                    }}
+                    items={content!.components.prizes.weekly.items}
+                />
             );
         },
     },
