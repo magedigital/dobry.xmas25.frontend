@@ -1,5 +1,7 @@
 import React from 'react';
 
+import setSpacesInText from '@functions/setSpacesInText.ts';
+
 import I from '../types.ts';
 
 const renderContent: I['renderContent'] = function () {
@@ -14,9 +16,10 @@ const renderContent: I['renderContent'] = function () {
                 <>
                     <div className="merch__dobro">
                         <img src={merch.thumb} alt="" className="merch__dobroImage" />
-                        <p className="merch__dobroSupport">
-                            Введи количество баллов для пожертвования:
-                        </p>
+                        <p
+                            className="merch__dobroSupport"
+                            dangerouslySetInnerHTML={{ __html: setSpacesInText(merch.subtitle) }}
+                        ></p>
                         <div className="merch__dobroField">
                             <input
                                 className="merch__dobroInput"
@@ -34,7 +37,10 @@ const renderContent: I['renderContent'] = function () {
                         </div>
                     </div>
 
-                    <div className="merch__title">{merch.title}</div>
+                    <div
+                        className="merch__dobroText"
+                        dangerouslySetInnerHTML={{ __html: setSpacesInText(merch.description) }}
+                    ></div>
                 </>
             ) : (
                 <>

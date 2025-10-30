@@ -60,11 +60,11 @@ const pages = {
             return <Faq />;
         },
     },
-    // 'faq-5ka': {
-    //     render(this: RootI) {
-    //         return <Faq is5ka={true} />;
-    //     },
-    // },
+    'faq-5ka': {
+        render(this: RootI) {
+            return <Faq is5ka={true} />;
+        },
+    },
     winners: {
         render(this: RootI) {
             return <Winners />;

@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/_game/static/css/main.aef432f1.css",
-    "main.js": "/_game/static/js/main.0d868f0c.js",
+    "main.css": "/_game/static/css/main.3ff959a2.css",
+    "main.js": "/_game/static/js/main.038b9ebf.js",
     "static/js/453.5565870f.chunk.js": "/_game/static/js/453.5565870f.chunk.js",
     "static/media/bg-head-mob.png": "/_game/static/media/bg-head-mob.9b193b30e6eac60bc175.png",
     "static/media/prize-sun.png": "/_game/static/media/prize-sun.25fa7755ff2a5e5e0605.png",
@@ -91,12 +91,12 @@
     "static/media/finish-decor2.svg": "/_game/static/media/finish-decor2.9e95d1fd07e6b412cc855084b890dad5.svg",
     "static/media/x.svg": "/_game/static/media/x.31e05e88b20de1b5cbda45e3fb30173b.svg",
     "static/media/play.svg": "/_game/static/media/play.ad110f835af17bb6c5e0.svg",
-    "main.aef432f1.css.map": "/_game/static/css/main.aef432f1.css.map",
-    "main.0d868f0c.js.map": "/_game/static/js/main.0d868f0c.js.map",
+    "main.3ff959a2.css.map": "/_game/static/css/main.3ff959a2.css.map",
+    "main.038b9ebf.js.map": "/_game/static/js/main.038b9ebf.js.map",
     "453.5565870f.chunk.js.map": "/_game/static/js/453.5565870f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.aef432f1.css",
-    "static/js/main.0d868f0c.js"
+    "static/css/main.3ff959a2.css",
+    "static/js/main.038b9ebf.js"
   ]
 }

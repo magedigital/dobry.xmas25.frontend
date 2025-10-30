@@ -121,6 +121,8 @@ type ProfileMerchT = {
     thumb: string;
     code: string;
     price: string;
+    subtitle: string;
+    description: string;
     custom?: '1';
 };
 
