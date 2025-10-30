@@ -9,6 +9,7 @@ import MapI from './types.ts';
 
 import renderBack from './renders/renderBack.tsx';
 import renderDecors from './renders/renderDecors.tsx';
+import renderMarkets from './renders/renderMarkets.tsx';
 import renderNav from './renders/renderNav.tsx';
 import renderTop from './renders/renderTop.tsx';
 import { mapNav } from './static/nav.ts';
@@ -41,6 +42,7 @@ class Map extends React.Component<MapI['props'], MapI['state']> implements MapI 
     renderNav = renderNav;
     renderBack = renderBack;
     renderDecors = renderDecors;
+    renderMarkets = renderMarkets;
 
     componentDidMount(): void {
         setTimeout(() => {
@@ -84,6 +86,7 @@ class Map extends React.Component<MapI['props'], MapI['state']> implements MapI 
                         {this.renderBack()}
                         {this.renderNav()}
                     </div>
+                    {this.renderMarkets()}
                 </div>
             </div>
         );

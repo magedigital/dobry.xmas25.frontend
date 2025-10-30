@@ -93,22 +93,6 @@ export const mapNav: MavNavItemT[] = [
         title: 'Красное и белое',
     },
     {
-        thumbs: ['location-16-1.png'],
-        title: 'Глобус',
-    },
-    {
-        thumbs: ['location-17-1.png'],
-        title: 'Разгуляйка',
-    },
-    {
-        thumbs: ['location-18-1.png'],
-        title: 'Магнолия',
-    },
-    {
-        thumbs: ['location-19-1.png'],
-        title: 'Мария-РА',
-    },
-    {
         thumbs: ['location-20-1.png'],
         title: 'Яндекс',
         support:
@@ -120,21 +104,16 @@ export const mapNav: MavNavItemT[] = [
         support: 'Старт акции с 01.12',
     },
     {
-        thumbs: ['location-22-1.png'],
-        title: 'Озон',
-        support: 'Старт акции с 01.12',
-    },
-    {
-        thumbs: ['location-23-1.png'],
-        title: 'ЛУкойл',
-        support: 'Старт акции с 01.12',
-    },
-    {
         thumbs: ['location-24-1.png'],
         title: 'Додо пицца',
     },
     {
         thumbs: ['location-25-1.png'],
         title: 'Каро',
+    },
+    {
+        thumbs: ['location-23-1.png'],
+        title: 'Teboil',
+        support: 'Старт акции с 01.12',
     },
 ];

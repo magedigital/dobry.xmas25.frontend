@@ -24,8 +24,17 @@ const renderCarusel: I['renderCarusel'] = function () {
             }}
         >
             <div className="indexHeader__caruselBack">
+                {[1, 2, 3, 4].map((k) => (
+                    <div className={`indexHeader__caruselBackLight _${k}`} key={k}>
+                        <img
+                            src={require(`@media/reel/reel-${k}.png`)}
+                            alt=""
+                            className="indexHeader__caruselBackLightImage"
+                        />
+                    </div>
+                ))}
                 <img
-                    src={require('@media/karusel-1.png')}
+                    src={require('@media/reel/reel.png')}
                     alt=""
                     className="indexHeader__caruselBackImage"
                 />

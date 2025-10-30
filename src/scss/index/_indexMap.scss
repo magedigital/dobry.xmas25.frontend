@@ -14,10 +14,10 @@
         position: relative;
         z-index: 1;
         width: 100%;
-        height: 3996rem;
+        height: 3249rem;
 
         @include mob {
-            height: 2490rem;
+            height: 2000rem;
             padding: 0 12rem;
         }
     }
@@ -104,9 +104,49 @@
     &__decor {
         position: absolute;
         left: 50%;
-        z-index: 2;
+        z-index: 20;
         transform: translate(-50%, 0);
         pointer-events: none;
+
+        &._2 .indexMap__decor_poster {
+            background-image: url("/media/road/poster1.png");
+        }
+
+        &._4 .indexMap__decor_poster {
+            background-image: url("/media/road/poster2.png");
+        }
+
+        &._2 .indexMap__decor_title {
+            padding: 30rem 0 0 13rem;
+        }
+
+        &._4 .indexMap__decor_title {
+            padding: 33rem 0 0 12rem;
+        }
+
+        &._2 .indexMap__decor_lights:nth-child(2) {
+            background-image: url("/media/road/poster1-light-1.png");
+        }
+
+        &._2 .indexMap__decor_lights:nth-child(3) {
+            background-image: url("/media/road/poster1-light-2.png");
+        }
+
+        &._2 .indexMap__decor_lights:nth-child(4) {
+            background-image: url("/media/road/poster1-light-3.png");
+        }
+
+        &._4 .indexMap__decor_lights:nth-child(2) {
+            background-image: url("/media/road/poster2-light-1.png");
+        }
+
+        &._4 .indexMap__decor_lights:nth-child(3) {
+            background-image: url("/media/road/poster2-light-2.png");
+        }
+
+        &._4 .indexMap__decor_lights:nth-child(4) {
+            background-image: url("/media/road/poster2-light-3.png");
+        }
     }
 
     &__decor._1 {
@@ -115,7 +155,7 @@
         height: 38rem;
         margin-left: 42rem;
 
-        @include bg("/media/arrows-red-2.png", contain, center);
+        // @include bg("/media/arrows-red-2.png", contain, center);
 
         @include mob {
             top: 184rem;
@@ -140,7 +180,7 @@
         text-transform: uppercase;
         text-shadow: 0 0 4.7rem #ffe7b4;
 
-        @include bg("/media/sign-lights-1.png", contain, center);
+        // @include bg("/media/sign-lights-1.png", contain, center);
 
         @include mob {
             top: 577rem;
@@ -150,6 +190,14 @@
             padding: 18.5rem 0 0 12rem;
             font-size: 9rem;
         }
+
+        & .indexMap__decor_title {
+            @include mob {
+                margin-top: -11rem;
+                margin-left: -10rem;
+                font-size: 9rem;
+            }
+        }
     }
 
     &__decor._3 {
@@ -158,7 +206,7 @@
         height: 38rem;
         margin-left: -22rem;
 
-        @include bg("/media/arrows-red-1.png", contain, center);
+        // @include bg("/media/arrows-red-1.png", contain, center);
 
         @include mob {
             top: 653rem;
@@ -183,7 +231,7 @@
         text-transform: uppercase;
         text-shadow: 0 0 4.7rem #ffe7b4;
 
-        @include bg("/media/sign-lights-2.png", contain, center);
+        // @include bg("/media/sign-lights-2.png", contain, center);
 
         @include mob {
             top: 1028rem;
@@ -193,6 +241,14 @@
             padding: 24rem 0 0 13rem;
             font-size: 9rem;
         }
+
+        & .indexMap__decor_title {
+            @include mob {
+                margin-top: -12rem;
+                margin-left: 2rem;
+                font-size: 9rem;
+            }
+        }
     }
 
     &__decor._5 {
@@ -201,12 +257,12 @@
         height: 38rem;
         margin-left: 42rem;
 
-        @include bg("/media/arrows-red-2.png", contain, center);
+        // @include bg("/media/arrows-red-2.png", contain, center);
 
         @include mob {
             top: 1100rem;
-            width: 28rem;
-            height: 28rem;
+            width: 40rem;
+            height: 24rem;
             margin-left: 20rem;
         }
     }
@@ -667,10 +723,10 @@
     }
 
     &__navItem._14 {
-        top: 1946rem;
+        top: 1956rem;
         width: 310rem;
         height: 310rem;
-        margin-left: 162rem;
+        margin-left: 178rem;
 
         @include mob {
             top: 1220rem;
@@ -704,10 +760,10 @@
     }
 
     &__navItem._15 {
-        top: 2106rem;
+        top: 2136rem;
         width: 290rem;
         height: 290rem;
-        margin-left: -262rem;
+        margin-left: -276rem;
 
         @include mob {
             top: 1334rem;
@@ -720,7 +776,7 @@
     &__navItem._15 &__navItemThumb._2 {
         width: 200rem;
         height: 200rem;
-        inset: auto -139rem 20rem auto;
+        inset: auto -139rem 40rem auto;
 
         @include mob {
             right: -86rem;
@@ -744,7 +800,7 @@
         top: 2282rem;
         width: 310rem;
         height: 310rem;
-        margin-left: 252rem;
+        margin-left: 282rem;
 
         @include mob {
             top: 1430rem;
@@ -764,10 +820,10 @@
     }
 
     &__navItem._17 {
-        top: 2418rem;
+        top: 2428rem;
         width: 316rem;
         height: 316rem;
-        margin-left: -232rem;
+        margin-left: -212rem;
 
         @include mob {
             top: 1516rem;
@@ -788,16 +844,16 @@
     }
 
     &__navItem._18 {
-        top: 2518rem;
-        width: 340rem;
-        height: 340rem;
-        margin-left: 296rem;
+        top: 2558rem;
+        width: 320rem;
+        height: 320rem;
+        margin-left: 346rem;
 
         @include mob {
-            top: 1584rem;
-            width: 210rem;
-            height: 210rem;
-            margin-left: 116rem;
+            top: 1604rem;
+            width: 200rem;
+            height: 200rem;
+            margin-left: 136rem;
         }
     }
 
@@ -812,40 +868,40 @@
     }
 
     &__navItem._19 {
-        top: 2704rem;
+        top: 2710rem;
         width: 320rem;
         height: 320rem;
         margin-left: -280rem;
 
         @include mob {
-            top: 1694rem;
-            width: 200rem;
-            height: 200rem;
-            margin-left: -140rem;
+            top: 1690rem;
+            width: 208rem;
+            height: 208rem;
+            margin-left: -124rem;
         }
     }
 
     &__navItem._19 &__navItemTitle {
-        right: 96rem;
-        bottom: 9rem;
+        right: 130rem;
+        bottom: -6rem;
 
         @include mob {
-            right: 54rem;
-            bottom: 7rem;
+            right: 86rem;
+            bottom: -2rem;
         }
     }
 
     &__navItem._20 {
-        top: 2828rem;
+        top: 2858rem;
         width: 320rem;
         height: 320rem;
         margin-left: 254rem;
 
         @include mob {
-            top: 1768rem;
+            top: 1778rem;
             width: 200rem;
             height: 200rem;
-            margin-left: 122rem;
+            margin-left: 116rem;
         }
     }
 
@@ -863,136 +919,551 @@
         width: 246rem;
     }
 
-    &__navItem._21 {
-        top: 3006rem;
-        width: 312rem;
-        height: 312rem;
-        margin-left: -190rem;
+    &__navDecor {
+        position: absolute;
+        z-index: 10;
+        pointer-events: none;
 
-        @include mob {
-            top: 1880rem;
-            width: 190rem;
-            height: 190rem;
-            margin-left: -108rem;
+        &Image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
     }
 
-    &__navItem._21 &__navItemTitle {
-        right: 106rem;
-        bottom: 6rem;
+    &__navDecor._1 {
+        top: 312rem;
+        left: 538rem;
+        width: 100rem;
+        height: 100rem;
 
         @include mob {
-            right: 54rem;
-            bottom: 4rem;
+            top: 232rem;
+            left: 136rem;
+            width: 60rem;
+            height: 60rem;
         }
     }
 
-    &__navItem._21 &__navItemSupport {
-        width: 174rem;
-    }
-
-    &__navItem._22 {
-        top: 3126rem;
-        width: 312rem;
-        height: 312rem;
-        margin-left: 316rem;
+    &__navDecor._2 {
+        top: 780rem;
+        left: 666rem;
+        width: 72rem;
+        height: 72rem;
 
         @include mob {
-            top: 1956rem;
-            width: 200rem;
-            height: 200rem;
-            margin-left: 130rem;
+            top: 520rem;
+            left: 208rem;
+            width: 44rem;
+            height: 44rem;
         }
     }
 
-    &__navItem._22 &__navItemTitle {
-        right: 142rem;
-        bottom: 12rem;
+    &__navDecor._3 {
+        top: 1164rem;
+        left: 590rem;
+        width: 84rem;
+        height: 84rem;
 
         @include mob {
-            right: 86rem;
-            bottom: 8rem;
+            top: 750rem;
+            left: 160rem;
+            width: 52rem;
+            height: 52rem;
         }
     }
 
-    &__navItem._22 &__navItemSupport {
-        width: 174rem;
-    }
-
-    &__navItem._23 {
-        top: 3276rem;
-        width: 332rem;
-        height: 332rem;
-        margin-left: -266rem;
+    &__navDecor._4 {
+        top: 1524rem;
+        left: 536rem;
+        width: 72rem;
+        height: 72rem;
 
         @include mob {
-            top: 2052rem;
-            width: 200rem;
-            height: 200rem;
-            margin-left: -116rem;
+            top: 972rem;
+            left: 126rem;
+            width: 46rem;
+            height: 46rem;
         }
     }
 
-    &__navItem._23 &__navItemTitle {
-        right: 108rem;
-        bottom: 16rem;
+    &__navDecor._5 {
+        top: 1954rem;
+        left: 656rem;
+        width: 96rem;
+        height: 96rem;
 
         @include mob {
-            right: 70rem;
-            bottom: 6rem;
+            top: 1176rem;
+            left: 140rem;
+            width: 58rem;
+            height: 58rem;
         }
     }
 
-    &__navItem._23 &__navItemSupport {
-        width: 174rem;
-    }
-
-    &__navItem._24 {
-        top: 3426rem;
-        width: 320rem;
-        height: 320rem;
-        margin-left: 236rem;
+    &__navDecor._6 {
+        top: 2384rem;
+        left: 556rem;
+        width: 76rem;
+        height: 76rem;
 
         @include mob {
-            top: 2150rem;
-            width: 200rem;
-            height: 200rem;
-            margin-left: 130rem;
+            top: 1676rem;
+            left: 156rem;
+            width: 48rem;
+            height: 48rem;
         }
     }
 
-    &__navItem._24 &__navItemTitle {
-        right: 108rem;
-        bottom: 16rem;
+    &__navDecor._7 {
+        top: 2714rem;
+        left: 546rem;
+        width: 76rem;
+        height: 76rem;
 
         @include mob {
-            right: 52rem;
-            bottom: 12rem;
-            white-space: nowrap;
+            top: 1884rem;
+            left: 146rem;
+            width: 48rem;
+            height: 48rem;
         }
     }
 
-    &__navItem._25 {
-        top: 3586rem;
-        width: 340rem;
-        height: 340rem;
-        margin-left: -186rem;
+    &__navDecor._8 {
+        top: 3054rem;
+        left: 556rem;
+        width: 76rem;
+        height: 76rem;
 
         @include mob {
-            top: 2238rem;
-            width: 206rem;
-            height: 206rem;
-            margin-left: -104rem;
+            display: none;
         }
     }
 
-    &__navItem._25 &__navItemTitle {
-        right: 138rem;
-        bottom: 0;
+    &__markets {
+        width: 100%;
+        margin-top: 80rem;
+        padding: 2rem;
+        background: linear-gradient(to top, rgb(255 247 174 / 100%), rgb(255 40 40 / 100%));
+        border-radius: 64rem;
 
         @include mob {
-            right: 86rem;
-            bottom: -2rem;
+            width: calc(100% - 20rem);
+            margin: 48rem auto 0;
         }
+
+        &Inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            padding: 40rem 48rem 20rem;
+            background: rgb(197 0 24 / 100%);
+            border-radius: inherit;
+
+            @include mob {
+                padding: 36rem 20rem;
+            }
+        }
+
+        &Title {
+            margin-bottom: 48rem;
+            color: #fff;
+            font-weight: 600;
+            font-size: 28rem;
+            line-height: 1.3;
+            text-align: center;
+            text-transform: uppercase;
+
+            @include mob {
+                font-size: 26rem;
+            }
+        }
+
+        &Items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: calc(100% + 20rem);
+        }
+
+        &Item {
+            width: calc(100% / 6);
+            margin-bottom: 20rem;
+            padding: 0 10rem;
+
+            @include mob {
+                width: 50%;
+            }
+        }
+
+        &Market {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            height: 116rem;
+            overflow: hidden;
+            background: #fff;
+            border-radius: 16rem;
+
+            @include mob {
+                height: 108rem;
+            }
+
+            &Image {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+}
+
+.indexMap__decor_title {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin-left: 5rem;
+    color: #ffecae;
+    font-weight: 600;
+    font-size: 15rem;
+    white-space: nowrap;
+    text-transform: uppercase;
+    text-shadow: 0 0 4.7rem #ffe7b4;
+}
+
+.indexMap__decor_lights {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: contain;
+    animation: poster_decor_lights 1000ms infinite;
+}
+
+.indexMap__decor_lights:nth-child(2) {
+    animation-delay: -0ms;
+}
+
+.indexMap__decor_lights:nth-child(3) {
+    animation-delay: -250ms;
+}
+
+.indexMap__decor_lights:nth-child(4) {
+    animation-delay: -500ms;
+}
+
+@keyframes poster_decor_lights {
+    0%,
+    100% {
+        opacity: 0.3;
+        filter: brightness(1);
+    }
+
+    19% {
+        opacity: 1;
+        filter: brightness(1);
+    }
+
+    20% {
+        opacity: 1;
+        filter: brightness(1);
+    }
+
+    30% {
+        opacity: 1;
+        filter: brightness(4);
+    }
+
+    60% {
+        opacity: 1;
+        filter: brightness(1);
+    }
+
+    61% {
+        opacity: 1;
+        filter: brightness(1);
+    }
+}
+
+.indexMap__navItem::before {
+    position: absolute;
+    top: 50rem;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-image: url("/media/road/location-glow.png");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 100% 100%;
+    transition: all 700ms ease-out;
+    content: "";
+}
+
+.indexMap__navItem:hover::before {
+    background-position: 50% 50%;
+    background-size: 100% 100%;
+    transform: scale(1.5, 1.1);
+}
+
+.indexMap__navItem-shine::after,
+.indexMap__navItem-shine::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 80% 50%;
+    transform-origin: bottom;
+    opacity: 0.5;
+    transition: all 700ms ease-out;
+    animation: navItem-shine-shifting 3000ms ease-in-out infinite;
+    content: "";
+}
+
+.indexMap__navItem-shine::after {
+    background-image: url("/media/road/location-shine-1.png");
+}
+
+.indexMap__navItem-shine::before {
+    background-image: url("/media/road/location-shine-2.png");
+}
+
+.indexMap__navItem:nth-child(3n + 1) .indexMap__navItem-shine::after {
+    animation-delay: 0ms;
+}
+
+.indexMap__navItem:nth-child(3n + 2) .indexMap__navItem-shine::after {
+    animation-delay: -1000ms;
+}
+
+.indexMap__navItem:nth-child(3n + 3) .indexMap__navItem-shine::after {
+    animation-delay: -2000ms;
+}
+
+.indexMap__navItem:nth-child(3n + 1) .indexMap__navItem-shine::before {
+    animation-delay: -1000ms;
+}
+
+.indexMap__navItem:nth-child(3n + 2) .indexMap__navItem-shine::before {
+    animation-delay: -2000ms;
+}
+
+.indexMap__navItem:nth-child(3n + 3) .indexMap__navItem-shine::before {
+    animation-delay: -3000ms;
+}
+
+.indexMap__navItem:hover .indexMap__navItem-shine::after,
+.indexMap__navItem:hover .indexMap__navItem-shine::before {
+    top: -5%;
+    background-position: 50% 0%;
+    background-size: 80% 100%;
+    opacity: 1;
+}
+
+@keyframes navItem-shine-shifting {
+    0% {
+        transform: translateY(-20%);
+        filter: hue-rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(0%);
+    }
+
+    100% {
+        transform: translateY(-20%);
+        filter: hue-rotate(360deg);
+    }
+}
+
+.indexMap__decor_arrow {
+    position: absolute;
+    width: 22rem;
+    height: 20rem;
+    white-space: nowrap;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: contain;
+}
+
+.left_direction .indexMap__decor_arrow {
+    background-image: url("/media/road/arrow-left.png");
+}
+
+.right_direction .indexMap__decor_arrow {
+    background-image: url("/media/road/arrow-right.png");
+}
+
+.left_direction .indexMap__decor_arrow:nth-child(1) {
+    top: -1rem;
+    right: 0;
+}
+
+.left_direction .indexMap__decor_arrow:nth-child(2) {
+    top: 10.5rem;
+    left: 11.7rem;
+
+    @include mob {
+        top: 8rem;
+        left: 9rem;
+    }
+}
+
+.left_direction .indexMap__decor_arrow:nth-child(3) {
+    bottom: -4rem;
+    left: -2rem;
+
+    @include mob {
+        bottom: -14rem;
+        left: 0;
+    }
+}
+
+.right_direction .indexMap__decor_arrow:nth-child(1) {
+    top: -1rem;
+    left: -2rem;
+}
+
+.right_direction .indexMap__decor_arrow:nth-child(2) {
+    top: 11.5rem;
+    left: 11.5rem;
+
+    @include mob {
+        top: 8rem;
+        left: 9rem;
+    }
+}
+
+.right_direction .indexMap__decor_arrow:nth-child(3) {
+    right: 0;
+    bottom: -6rem;
+
+    @include mob {
+        right: -13rem;
+        bottom: -6rem;
+    }
+}
+
+.indexMap__decor_arrow {
+    animation: decor_arrow 1000ms infinite;
+}
+
+.indexMap__decor_arrow:nth-child(1) {
+    animation-delay: 0ms;
+}
+
+.indexMap__decor_arrow:nth-child(2) {
+    animation-delay: 333ms;
+}
+
+.indexMap__decor_arrow:nth-child(3) {
+    animation-delay: 666ms;
+}
+
+@keyframes decor_arrow {
+    0%,
+    100%,
+    10%,
+    90% {
+        filter: hue-rotate(0deg) contrast(1) saturate(1) brightness(1);
+    }
+
+    50% {
+        filter: hue-rotate(15deg) contrast(0.3) saturate(4) brightness(2);
+    }
+}
+
+.indexMap__decor_poster {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    white-space: nowrap;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: contain;
+}
+
+.indexMap__road_lights {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: repeat-y;
+    background-position: center 1%;
+    background-size: 22.47%;
+    animation: road_lights 2000ms ease-in-out infinite;
+}
+
+.indexMap__road_lights:nth-child(1) {
+    background-image: url("/media/road/road-lights-1.png");
+}
+
+.indexMap__road_lights:nth-child(2) {
+    background-image: url("/media/road/road-lights-2.png");
+}
+
+.indexMap__road_lights:nth-child(3) {
+    background-image: url("/media/road/road-lights-3.png");
+}
+
+.indexMap__road_lights:nth-child(4) {
+    background-image: url("/media/road/road-lights-4.png");
+}
+
+.indexMap__road_lights:nth-child(5) {
+    background-image: url("/media/road/road-lights-5.png");
+}
+
+.indexMap__road_lights:nth-child(1) {
+    animation-delay: 0ms;
+}
+
+.indexMap__road_lights:nth-child(2) {
+    animation-delay: 400ms;
+}
+
+.indexMap__road_lights:nth-child(3) {
+    animation-delay: 800ms;
+}
+
+.indexMap__road_lights:nth-child(4) {
+    animation-delay: 1200ms;
+}
+
+.indexMap__road_lights:nth-child(5) {
+    animation-delay: 1600ms;
+}
+
+@keyframes road_lights {
+    0%,
+    100% {
+        opacity: 0.3;
+        filter: brightness(1);
+    }
+
+    10% {
+        opacity: 1;
+        filter: brightness(1);
+    }
+
+    15% {
+        opacity: 1;
+        filter: brightness(1.2);
+    }
+
+    70% {
+        opacity: 0.5;
+        filter: brightness(1);
     }
 }

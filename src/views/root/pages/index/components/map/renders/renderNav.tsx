@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Lazy from '@components/lazy/Lazy.tsx';
 import changePage from '@functions/changePage.ts';
 import handlerPopup from '@functions/handlerPopup.ts';
 import setSpacesInText from '@functions/setSpacesInText.ts';
@@ -27,15 +28,19 @@ const renderNav: I['renderNav'] = function () {
                             }
                         }}
                     >
-                        {thumbs.map((thumb, tKey) => (
-                            <div className={`indexMap__navItemThumb _${tKey + 1}`} key={thumb}>
-                                <img
-                                    src={require(`@media/${thumb}`)}
-                                    alt=""
-                                    className="indexMap__navItemThumbImage"
-                                />
-                            </div>
-                        ))}
+                        <Lazy name="1">
+                            <div className="indexMap__navItem-shine" />
+                            {thumbs.map((thumb, tKey) => (
+                                <div className={`indexMap__navItemThumb _${tKey + 1}`} key={thumb}>
+                                    <img
+                                        src={require(`@media/${thumb}`)}
+                                        alt=""
+                                        className="indexMap__navItemThumbImage"
+                                    />
+                                </div>
+                            ))}
+                        </Lazy>
+
                         {titles.map((title, tKey) => (
                             <div
                                 className={`indexMap__navItemTitle _${tKey + 1} ${item.support ? '_withSupport' : ''}`}
