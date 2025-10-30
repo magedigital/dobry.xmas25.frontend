@@ -1,6 +1,7 @@
 import React from 'react';
 
 import changePage from '@functions/changePage.ts';
+import handlerPopup from '@functions/handlerPopup.ts';
 import setSpacesInText from '@functions/setSpacesInText.ts';
 
 import I from '../types.ts';
@@ -9,7 +10,7 @@ const renderNav: I['renderNav'] = function () {
     return (
         <div className="indexMap__nav">
             {this.nav.map((item, key) => {
-                const { thumbs, pageName, game } = item;
+                const { thumbs, pageName, game, popup } = item;
                 const titles = typeof item.title === 'string' ? [item.title] : item.title;
 
                 return (
@@ -21,6 +22,8 @@ const renderNav: I['renderNav'] = function () {
                                 changePage({ pageName });
                             } else if (game) {
                                 changePage({ pageName: 'game-inner', ids: { 1: game } });
+                            } else if (popup) {
+                                handlerPopup(popup, { isShow: true });
                             }
                         }}
                     >

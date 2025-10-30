@@ -1,4 +1,4 @@
-import { PageNamesT } from '@global/types';
+import { PageNamesT, PopupsNamesT } from '@global/types';
 
 import games from '../../../../../../../static/games';
 import { mapSections } from './sections';
@@ -8,6 +8,7 @@ type MavNavItemT = {
     title: string | string[];
     pageName?: PageNamesT;
     game?: keyof typeof games;
+    popup?: PopupsNamesT;
     support?: string;
     section?: keyof typeof mapSections;
 };
@@ -41,6 +42,7 @@ export const mapNav: MavNavItemT[] = [
     {
         thumbs: ['location-6.png'],
         title: 'Растим<br/>Добро',
+        popup: 'dobroPopup',
     },
     {
         thumbs: ['location-7.png'],
@@ -76,6 +78,7 @@ export const mapNav: MavNavItemT[] = [
     {
         thumbs: ['location-12-1.png', 'location-12-2.png'],
         title: 'Лента',
+        popup: 'lentaPopup',
     },
     {
         thumbs: ['location-13-1.png', 'location-13-2.png'],

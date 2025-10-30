@@ -150,6 +150,8 @@ type PopupsT = {
     losvillPopup: PopupT;
     manPopup: PopupT;
     collectionPopup: PopupT;
+    dobroPopup: PopupT;
+    lentaPopup: PopupT;
 };
 
 type PopupsNamesT = keyof PopupsT;

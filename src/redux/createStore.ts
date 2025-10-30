@@ -68,6 +68,8 @@ export default function createStore(
             acceptCookies: !!localStorage.getItem('acceptCookies'),
             canLoadImages: {},
             collectionPopup: { isShow: false },
+            dobroPopup: { isShow: false },
+            lentaPopup: { isShow: false },
             ...props,
         },
         settings: any,

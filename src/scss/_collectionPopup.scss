@@ -17,6 +17,87 @@
         padding: 64rem 0 32rem;
     }
 
+    &._dobro &__inner {
+        padding: 0;
+        background: none;
+
+        &Box {
+            background: none;
+
+            @include mob {
+                padding-right: 0;
+                padding-left: 0;
+            }
+        }
+    }
+
+    &._dobroMain &__inner {
+        &Wrapper {
+            padding: 7rem 0 10rem;
+
+            @include mob {
+                padding-top: 4rem;
+                background: linear-gradient(to top, #be135a, #f22830);
+            }
+
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -2;
+                width: 100%;
+                height: 100%;
+                content: "";
+
+                @include bg("/media/stores/rastim-img.jpg", 100% auto, center top);
+
+                @include mob {
+                    @include bg("/media/stores/rastim-img-mob.jpg", 100% auto, center top);
+                }
+            }
+
+            &::after {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                z-index: -1;
+                width: 100%;
+                height: 298rem;
+                background: linear-gradient(to top, #be135a -30%, #f22830);
+                border-radius: 32rem 32rem 0 0;
+                content: "";
+
+                @include mob {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &._lenta &__inner {
+        &Wrapper {
+            @include mob {
+                background: linear-gradient(to top, #be135a, #f22830);
+            }
+
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                width: 100%;
+                height: 100%;
+                content: "";
+
+                @include bg("/media/stores/store-1-1.jpg", 100% auto, center top);
+
+                @include mob {
+                    @include bg("/media/stores/store-1-1-mob.jpg", 100% auto, center top);
+                }
+            }
+        }
+    }
+
     &__inner {
         position: relative;
         width: 820rem;
@@ -27,7 +108,14 @@
         @include mob {
             width: calc(100% - 32rem);
             padding: 1rem;
-            border-radius: 36rem;
+            border-radius: 32rem;
+        }
+
+        &Wrapper {
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            border-radius: inherit;
         }
 
         &Box {
@@ -198,6 +286,589 @@
 
             @include mob {
                 font-size: 10rem;
+            }
+        }
+    }
+
+    &._lenta &__dobro {
+        &Head {
+            @include mob {
+                margin-bottom: 380rem;
+            }
+        }
+    }
+
+    &__dobro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+
+        &Head {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 24rem;
+
+            @include mob {
+                margin-bottom: 252rem;
+                padding: 0 20rem;
+            }
+        }
+
+        &Title {
+            color: #760509;
+            font-weight: 600;
+            font-size: 24rem;
+            line-height: 1.2;
+            text-align: center;
+            text-transform: uppercase;
+
+            @include mob {
+                margin-bottom: 12rem;
+                font-size: 23rem;
+            }
+        }
+
+        &Title + &SubTitle {
+            margin-top: 10rem;
+        }
+
+        &SubTitle + &Title {
+            margin-top: 6rem;
+
+            @include mob {
+                margin-top: 7rem;
+            }
+        }
+
+        &SubTitle {
+            color: #c50018;
+            font-weight: 500;
+            font-size: 16rem;
+            line-height: 1.35;
+            text-align: center;
+            text-transform: uppercase;
+
+            @include mob {
+                max-width: 90%;
+                font-size: 16.5rem;
+            }
+        }
+
+        &Content {
+            display: flex;
+            align-items: flex-end;
+            width: 100%;
+
+            @include mob {
+                flex-direction: column-reverse;
+            }
+        }
+
+        &Slider {
+            position: relative;
+            z-index: 1;
+            width: 276rem;
+            margin-right: auto;
+
+            @include mob {
+                width: 100%;
+                margin-right: 0;
+                padding: 0 20rem;
+            }
+
+            &Head {
+                position: absolute;
+                top: 16rem;
+                left: 0;
+                z-index: 3;
+                display: flex;
+                align-items: center;
+                width: 100%;
+                padding: 0 16rem 0 20rem;
+
+                @include mob {
+                    top: 20rem;
+                    padding: 0 44rem 0 48rem;
+                }
+            }
+
+            &Currents {
+                color: #ffe7a5;
+                font-weight: 500;
+                font-size: 14rem;
+                line-height: 1.25;
+
+                @include mob {
+                    font-size: 16rem;
+                }
+
+                & span {
+                    color: #fff;
+                }
+            }
+
+            &Arrows {
+                display: flex;
+                align-items: center;
+                margin-left: auto;
+            }
+
+            &Arrow {
+                width: 30rem;
+                height: 30rem;
+                padding: 9rem;
+                background: #ffe7a5;
+                border-radius: 50%;
+
+                @include button(0.96);
+
+                &._next {
+                    padding-left: 10rem;
+                }
+
+                &._prev {
+                    padding-right: 10rem;
+                }
+
+                @include icon(#c50018);
+
+                & + & {
+                    margin-left: 4rem;
+                }
+            }
+
+            &Inner {
+                width: 100%;
+            }
+
+            &Items {
+                display: inline-flex;
+            }
+
+            &Item {
+                position: relative;
+                z-index: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                width: 276rem;
+                height: 222rem;
+                margin-right: 20rem;
+                padding: 20rem 20rem 32rem;
+                transition: $trans;
+
+                @include mob {
+                    width: 342rem;
+                    height: 272rem;
+                    padding: 24rem 24rem 40rem;
+                }
+
+                &:not(._current) {
+                    opacity: 0;
+                }
+
+                &::before {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: -1;
+                    width: 100%;
+                    height: 100%;
+                    content: "";
+
+                    @include bg("/media/stores/border.svg", contain, left top);
+
+                    @include mob {
+                        @include bg("/media/stores/border-mob.svg", contain, left top);
+                    }
+                }
+
+                &Count {
+                    margin-bottom: 7rem;
+                    color: #fff;
+                    font-weight: 500;
+                    font-size: 64rem;
+
+                    @include mob {
+                        font-size: 60rem;
+                    }
+                }
+
+                &Text {
+                    color: #fff;
+                    font-weight: 500;
+                    font-size: 14rem;
+                    line-height: 1.25;
+
+                    @include mob {
+                        max-width: 80%;
+                        font-size: 16rem;
+                        line-height: 1.3;
+                    }
+                }
+            }
+        }
+
+        &Offer {
+            position: relative;
+            z-index: 2;
+            align-items: center;
+            width: 447rem;
+            margin-bottom: 12rem;
+            padding: 24rem;
+            background: linear-gradient(to top, #ff645e -20%, #ffecae, #fffbf0 105%);
+            border-radius: 36rem;
+            box-shadow: 0 12rem 0 0 rgba(#760509, 0.5);
+
+            @include mob {
+                width: 100%;
+                margin-bottom: 32rem;
+                padding: 22rem;
+            }
+
+            &Text {
+                margin-bottom: 8rem;
+                color: #6c1100;
+                font-weight: 500;
+                font-size: 14rem;
+                line-height: 1.3;
+
+                @include mob {
+                    font-size: 16.5rem;
+                    line-height: 1.35;
+                }
+            }
+
+            &Title {
+                margin: 20rem 0 24rem;
+                color: #c50018;
+                font-weight: 600;
+                font-size: 16rem;
+                line-height: 1.35;
+                text-align: center;
+                text-transform: uppercase;
+
+                @include mob {
+                    font-size: 18rem;
+                }
+            }
+
+            &Button {
+                margin-bottom: 28rem;
+            }
+
+            &Info {
+                width: 100%;
+                padding: 10rem 24rem;
+                color: #fff;
+                font-size: 12rem;
+                line-height: 1.5;
+                text-align: center;
+                background: #5d279e;
+                border-radius: 16rem;
+
+                @include mob {
+                    font-size: 14.5rem;
+                }
+
+                & b {
+                    font-weight: 500;
+
+                    & span {
+                        color: #ffe09e;
+                    }
+                }
+            }
+        }
+    }
+
+    &__market {
+        position: relative;
+        width: 100%;
+
+        &Alert {
+            position: absolute;
+            top: 0;
+            left: 12rem;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 230rem;
+            height: 72rem;
+            padding: 10rem;
+            color: #c50018;
+            font-weight: 500;
+            font-size: 16rem;
+            line-height: 1.25;
+            text-align: center;
+            border-radius: 24rem;
+
+            @include bg("/media/stores/alert-back.jpg", cover, center);
+
+            @include mob {
+                top: -370rem;
+                right: 8rem;
+                left: auto;
+                width: 200rem;
+                height: 92rem;
+                border-radius: 32rem;
+            }
+        }
+
+        &Inner {
+            width: 474rem;
+            margin-left: auto;
+
+            @include mob {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                margin-left: 0;
+            }
+        }
+
+        &Content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 24rem;
+            padding: 20rem 24rem;
+            overflow: hidden;
+            border-radius: 36rem;
+            box-shadow: 0 12rem 0 0 rgba(#760509, 0.5);
+
+            @include mob {
+                margin-bottom: 42rem;
+            }
+
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(to top, #ff645e -5%, #ffecae 80%, #fffbf0 105%);
+                border-radius: inherit;
+                content: "";
+            }
+
+            @include mob {
+                padding: 25rem 10rem 28rem;
+                overflow: visible;
+                border-radius: 28rem;
+            }
+
+            &::after {
+                position: absolute;
+                right: -64rem;
+                bottom: -69rem;
+                z-index: 2;
+                width: 184rem;
+                height: 238rem;
+                content: "";
+                pointer-events: none;
+
+                @include bg("/media/stores/prize-store-1-0.png", contain, left top);
+
+                @include mob {
+                    right: -3rem;
+                    bottom: 100%;
+                    z-index: -2;
+                    margin-bottom: -30rem;
+                    background-position: right bottom;
+                }
+            }
+
+            &Support {
+                width: 100%;
+                margin-bottom: 15rem;
+                color: #c50018;
+                font-weight: 600;
+                font-size: 14rem;
+                text-align: center;
+                text-transform: uppercase;
+
+                @include mob {
+                    margin-bottom: 18rem;
+                    font-size: 15rem;
+                }
+            }
+
+            &Steps {
+                width: 100%;
+                margin-bottom: 16rem;
+                counter-reset: stepCount;
+            }
+
+            &Step {
+                position: relative;
+                width: 100%;
+                padding-left: 60rem;
+                counter-increment: stepCount;
+
+                @include mob {
+                    padding-top: 4rem;
+                    padding-left: 63rem;
+                }
+
+                &::before {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 46rem;
+                    height: 46rem;
+                    color: #fff;
+                    font-weight: 600;
+                    font-size: 20rem;
+                    text-align: center;
+                    background: linear-gradient(to top, #be135a, #f22830);
+                    border-radius: 50%;
+                    content: counter(stepCount);
+
+                    @include mob {
+                        top: 50%;
+                        width: 52rem;
+                        height: 52rem;
+                        transform: translate(0, -50%);
+                    }
+                }
+
+                & + & {
+                    margin-top: 20rem;
+
+                    @include mob {
+                        margin-top: 17rem;
+                    }
+                }
+
+                &Title {
+                    margin-bottom: 4rem;
+                    color: #760509;
+                    font-weight: 600;
+                    font-size: 20rem;
+                    text-transform: uppercase;
+
+                    @include mob {
+                        margin-bottom: 6rem;
+                    }
+                }
+
+                &Text {
+                    color: #5d279e;
+                    font-weight: 500;
+                    font-size: 14rem;
+                    line-height: 1.3;
+
+                    @include mob {
+                        font-size: 16rem;
+                    }
+
+                    & a {
+                        display: inline-block;
+                        line-height: 1;
+                        border-bottom: 1px solid rgba(#5d279e, 0.64);
+                    }
+                }
+            }
+        }
+
+        &Items {
+            display: flex;
+            width: 100%;
+
+            @include mob {
+                flex-wrap: wrap;
+                justify-content: center;
+                width: 85%;
+                margin-left: -8rem;
+            }
+        }
+
+        &Item {
+            position: relative;
+            width: 25%;
+            margin-bottom: 8rem;
+            padding: 0 10rem;
+
+            @include mob {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 50%;
+                margin-bottom: 24rem;
+            }
+
+            &Head {
+                position: relative;
+                z-index: 1;
+                width: 100%;
+                margin-bottom: 12rem;
+                border-radius: 50%;
+                aspect-ratio: 1;
+
+                @include bg("/media/inners/prize-back.jpg", cover, center);
+
+                @include mob {
+                    width: 120rem;
+                    height: 120rem;
+                    margin-bottom: 16rem;
+                }
+            }
+
+            &Image {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                z-index: 2;
+                width: 128%;
+                height: 128%;
+                object-fit: contain;
+                transform: translate(-50%, -50%);
+            }
+
+            &Content {
+                width: 100%;
+            }
+
+            &Name {
+                width: 100%;
+                color: #fff;
+                font-weight: 600;
+                font-size: 10rem;
+                line-height: 1.2;
+                text-align: center;
+                text-transform: uppercase;
+
+                @include mob {
+                    font-size: 13rem;
+                }
+            }
+
+            &Info {
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                z-index: 2;
+                margin-top: 14rem;
+                color: #fff;
+                font-size: 10rem;
+                white-space: nowrap;
+                transform: translate(-50%, 0);
+
+                @include mob {
+                    margin-top: 16rem;
+                    font-size: 12rem;
+                }
             }
         }
     }

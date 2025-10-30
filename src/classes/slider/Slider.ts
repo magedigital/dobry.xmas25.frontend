@@ -247,7 +247,7 @@ export default class Slider {
         }
 
         if (this.callback) {
-            this.callback({ type: 'init', current: this.current });
+            this.callback({ type: 'init', current: this.current, currentKey: this.current });
         }
 
         window.addEventListener('resize', this.resize);

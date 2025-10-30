@@ -91,6 +91,8 @@ function mapStateToProps(state: StoreT) {
         losvillPopup: state.losvillPopup,
         manPopup: state.manPopup,
         collectionPopup: state.collectionPopup,
+        dobroPopup: state.dobroPopup,
+        lentaPopup: state.lentaPopup,
     };
 }
 

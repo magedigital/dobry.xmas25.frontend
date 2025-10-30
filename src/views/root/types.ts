@@ -9,6 +9,8 @@ type PropsT = {
     losvillPopup: StoreT['losvillPopup'];
     manPopup: StoreT['manPopup'];
     collectionPopup: StoreT['collectionPopup'];
+    dobroPopup: StoreT['dobroPopup'];
+    lentaPopup: StoreT['lentaPopup'];
 };
 
 type StateT = {};
