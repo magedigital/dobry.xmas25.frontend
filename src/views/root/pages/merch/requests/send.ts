@@ -32,7 +32,7 @@ const send: I['send'] = async function () {
     try {
         const response = await AxiosInst.post<{}, ResponseT>('/AddUserPrize', {
             prize: currentMerch.code,
-            ...(currentMerch.code === 'DOBRO' ? { code: currentCustomValue } : {}),
+            ...(currentMerch.code === 'DOBRO' ? { count: currentCustomValue } : {}),
         });
 
         if (response.result === 'OK') {
