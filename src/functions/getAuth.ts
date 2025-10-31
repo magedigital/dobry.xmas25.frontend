@@ -5,6 +5,7 @@ import { dispatcher } from '@redux/redux';
 import { logoutActions } from '@requests/logout';
 
 import changePage from './changePage';
+import checkChatbot from './checkChatbot';
 import { getCookie } from './cookies';
 import AxiosInst from './initAxios';
 
@@ -81,7 +82,7 @@ export default async function getAuth(redirect?: boolean): Promise<UserT | undef
         }
     }
 
-    if (pageName) {
+    if (pageName && !checkChatbot()) {
         await changePage({ pageName, ids });
     }
 
