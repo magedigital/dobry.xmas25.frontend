@@ -4,6 +4,7 @@ import RootI from '../types.ts';
 
 import Pyterka from '../pages/5ka/Pyterka.tsx';
 import Akt from '../pages/akt/Akt.tsx';
+import AlphaPrize from '../pages/alphaPrize/AlphaPrize.tsx';
 import Anket from '../pages/anket/Anket.tsx';
 import AnketMap from '../pages/anketMap/AnketMap.tsx';
 import Auth from '../pages/auth/Auth.tsx';
@@ -53,6 +54,11 @@ const pages = {
     'raffle-prize': {
         render(this: RootI) {
             return <RafflePrize />;
+        },
+    },
+    'alpha-prize': {
+        render(this: RootI) {
+            return <AlphaPrize />;
         },
     },
     faq: {

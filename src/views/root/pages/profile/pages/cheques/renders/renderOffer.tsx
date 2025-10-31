@@ -7,9 +7,15 @@ import I from '../types.ts';
 
 const renderOffer: I['renderOffer'] = function () {
     const { data } = this.props;
+    const findPrize = data?.prizes.find((p) => p.code === 'ALPHA_ELK');
+    let status = 'process';
+
+    if (data && data.checks.length >= 10) {
+        status = findPrize ? 'completed' : 'waitPrize';
+    }
 
     return (
-        <div className="profile__5kaOffer _COL">
+        <div className={`profile__5kaOffer _COL _${status}`}>
             <h3 className="profile__5kaOfferTitle _PROFILE-TITLE">Акция в «Пятёрочке»</h3>
             <div className="profile__5kaOfferContent">
                 <p className="profile__5kaOfferText">
@@ -23,14 +29,31 @@ const renderOffer: I['renderOffer'] = function () {
                     <span>{data?.checks?.length || 0}</span>
                 </div>
                 <div className="profile__5kaOfferButton">
-                    <Button
-                        onClick={() => {
-                            changePage({ pageName: 'cheque' });
-                        }}
-                        className="_red"
-                    >
-                        загрузить ЧЕК
-                    </Button>
+                    {status === 'process' && (
+                        <Button
+                            onClick={() => {
+                                changePage({ pageName: 'cheque' });
+                            }}
+                            className="_red"
+                        >
+                            загрузить ЧЕК
+                        </Button>
+                    )}
+                    {status === 'waitPrize' && (
+                        <Button
+                            onClick={() => {
+                                changePage({ pageName: 'alpha-prize' });
+                            }}
+                            className="_topBar5kaProfile"
+                        >
+                            Заказать приз
+                        </Button>
+                    )}
+                    {status === 'completed' && (
+                        <Button onClick={() => undefined} className="_disabled">
+                            приз заказан
+                        </Button>
+                    )}
                 </div>
             </div>
         </div>

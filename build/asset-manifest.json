@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.71845131.css",
-    "main.js": "/static/js/main.8d228b00.js",
+    "main.css": "/static/css/main.edc2f991.css",
+    "main.js": "/static/js/main.cb1ca37a.js",
     "static/js/977.11b184c9.chunk.js": "/static/js/977.11b184c9.chunk.js",
     "static/js/16.9d69e595.chunk.js": "/static/js/16.9d69e595.chunk.js",
     "static/js/402.1bf2f098.chunk.js": "/static/js/402.1bf2f098.chunk.js",
@@ -141,19 +141,20 @@
     "static/media/map-back-3-mob.jpg": "/static/media/map-back-3-mob.8ebde4ac836438737328.jpg",
     "static/media/banner-anons-02-mob.jpg": "/static/media/banner-anons-02-mob.534b333c0a7374d8ebb2.jpg",
     "static/media/losi-names-mob.jpg": "/static/media/losi-names-mob.d21df2bc6d6381b47589.jpg",
+    "static/media/location-shine-2.png": "/static/media/location-shine-2.3e0d38610fe87a3c51eb.png",
     "static/media/banner-anons-01.jpg": "/static/media/banner-anons-01.c38efd963c5444ada323.jpg",
     "static/media/app-toy.png": "/static/media/app-toy.3ee74702b65df8552127.png",
     "static/media/banner-anons-02.jpg": "/static/media/banner-anons-02.9bff1a9460154fb804b6.jpg",
     "static/media/road-lights-2.png": "/static/media/road-lights-2.b4b96d9c33781ab6ba4c.png",
     "static/media/karusel-prize-sign-mob.jpg": "/static/media/karusel-prize-sign-mob.194ccf3a5572825eb643.jpg",
     "static/media/app-screen.jpg": "/static/media/app-screen.05ec47b8ea6fd78f9860.jpg",
-    "static/media/location-shine-2.png": "/static/media/location-shine-2.e1afcf18317959d1cb05.png",
     "static/media/toy-6.png": "/static/media/toy-6.29168201940803f37a2f.png",
     "static/media/back-5ka-04-mob.jpg": "/static/media/back-5ka-04-mob.51b29541775b4b703ad6.jpg",
     "static/media/toy-7.png": "/static/media/toy-7.5469985fe9b3f2d89c7a.png",
     "static/media/toy-5.png": "/static/media/toy-5.a999cc7d7ecf165cae47.png",
     "static/media/toy-8.png": "/static/media/toy-8.9874e7d34812c6ac5cbb.png",
     "static/media/products-back.jpg": "/static/media/products-back.6685f8303f29bc1051fb.jpg",
+    "static/media/location-shine-1.png": "/static/media/location-shine-1.6c33d422dced1889ffd7.png",
     "static/media/prize-1-3-5ka.png": "/static/media/prize-1-3-5ka.dad5be9a27a122d3b914.png",
     "static/media/toy-3.png": "/static/media/toy-3.00bd6d4a3148795f91c2.png",
     "static/media/road-lights-4.png": "/static/media/road-lights-4.a09703ea12dfb73302f9.png",
@@ -192,7 +193,6 @@
     "static/media/Step4.jpg": "/static/media/Step4.b709af3ba09492b32293.jpg",
     "static/media/prize-01-test.png": "/static/media/prize-01-test.eb2c9a15ab946200a8e8.png",
     "static/media/Step2.jpg": "/static/media/Step2.71ca3fb75120271d86aa.jpg",
-    "static/media/location-shine-1.png": "/static/media/location-shine-1.2d901cc9aa4f0f22d1d7.png",
     "static/media/back-5ka-02-mob.jpg": "/static/media/back-5ka-02-mob.18849a919e29d5dc35b0.jpg",
     "static/media/location-15-2.png": "/static/media/location-15-2.d2ae74f67bb0151ab049.png",
     "static/media/hand-uppper-layer.png": "/static/media/hand-uppper-layer.fe09dd0f7d2257b90fb8.png",
@@ -270,7 +270,7 @@
     "static/media/arrow-down.svg": "/static/media/arrow-down.559aeb386a24d46ce43d.svg"
   },
   "entrypoints": [
-    "static/css/main.71845131.css",
-    "static/js/main.8d228b00.js"
+    "static/css/main.edc2f991.css",
+    "static/js/main.cb1ca37a.js"
   ]
 }

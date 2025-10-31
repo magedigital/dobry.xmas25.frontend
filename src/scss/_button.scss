@@ -147,6 +147,10 @@
         background: linear-gradient(to top, #ff6d65, #eb2316);
     }
 
+    &._disabled {
+        background: linear-gradient(to top, #fbdbff, #d6cedd);
+    }
+
     &._banner1 &__inner,
     &._banner2 &__inner,
     &._rules &__inner {
@@ -277,6 +281,11 @@
 
     &._topBar5kaProfile &__inner {
         background: #eb2316;
+    }
+
+    &._disabled &__inner {
+        color: #fff;
+        background: #d6cedd;
     }
 
     & i {

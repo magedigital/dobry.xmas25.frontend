@@ -700,6 +700,12 @@
             }
         }
 
+        &._waitPrize &Stats {
+            color: #5d279e;
+            background: none;
+            border: 3rem solid #fbdbff;
+        }
+
         &Stats {
             display: flex;
             align-items: center;

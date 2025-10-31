@@ -11,7 +11,7 @@ import getScrollPage from './methods/getScrollPage.ts';
 import merchInfoHandler from './methods/merchInfoHandler.ts';
 import sliderInit from './methods/sliderInit.ts';
 
-import MerchI from './types.ts';
+import AlphaPrizeI from './types.ts';
 
 import renderContent from './renders/renderContent.tsx';
 import renderHead from './renders/renderHead.tsx';
@@ -19,11 +19,14 @@ import renderSlider from './renders/renderSlider.tsx';
 import getContent from './requests/getContent.ts';
 import send from './requests/send.ts';
 
-class Merch extends InnerPage<MerchI['props'], MerchI['state']> implements MerchI {
-    parent: MerchI['parent'];
-    slider: MerchI['slider'];
+class AlphaPrize
+    extends InnerPage<AlphaPrizeI['props'], AlphaPrizeI['state']>
+    implements AlphaPrizeI
+{
+    parent: AlphaPrizeI['parent'];
+    slider: AlphaPrizeI['slider'];
 
-    constructor(props: MerchI['props']) {
+    constructor(props: AlphaPrizeI['props']) {
         super(props);
         this.state = {
             content: getLocalContent('profileContent'),
@@ -57,10 +60,6 @@ class Merch extends InnerPage<MerchI['props'], MerchI['state']> implements Merch
             });
         }
 
-        if (getLocalContent('profileContent')) {
-            this.sliderInit();
-        }
-
         this.getContent();
     }
 
@@ -87,4 +86,4 @@ function mapStateToProps() {
     return {};
 }
 
-export default connect(mapStateToProps)(Merch);
+export default connect(mapStateToProps)(AlphaPrize);

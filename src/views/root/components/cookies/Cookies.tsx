@@ -27,7 +27,7 @@ class Cookies extends React.Component<CookiesI['props'], CookiesI['state']> impl
                 <div className="cookies__buttons _ROW">
                     <div className="cookies__button">
                         <Button
-                            className="_pink _mediumSize"
+                            className="_purple _mediumSize"
                             onClick={() => {
                                 dispatcher({ type: 'acceptCookies', data: true });
 

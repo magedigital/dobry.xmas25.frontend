@@ -34,6 +34,11 @@ const pages = [
         content: 'Роызыгрыш',
     },
     {
+        links: ['alpha-prize'],
+        name: 'alpha-prize',
+        content: 'Роызыгрыш',
+    },
+    {
         links: ['prizes'],
         name: 'prizes',
         content: 'Призы',

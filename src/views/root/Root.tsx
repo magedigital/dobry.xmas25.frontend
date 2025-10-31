@@ -51,7 +51,7 @@ class Root extends React.Component<RootI['props'], RootI['state']> implements Ro
                     <p>123afs</p>
                     <b>123afs</b>
                 </div>
-                <Fade className="body__cookies" isShow={!acceptCookies && false}>
+                <Fade className="body__cookies" isShow={!acceptCookies}>
                     <Cookies />
                 </Fade>
                 <div className={`body__content ${checkChatbot() ? '_chatbot' : ''}`}>
