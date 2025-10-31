@@ -21,6 +21,14 @@
         min-height: 100%;
         padding: 100rem 0 60rem;
 
+        ._chatbot & {
+            padding-top: 60rem;
+
+            @include mob {
+                padding-top: 32rem;
+            }
+        }
+
         @include bg("/media/inners/back-inner-popup.jpg", 100% auto, center 34rem);
 
         @include mob {
