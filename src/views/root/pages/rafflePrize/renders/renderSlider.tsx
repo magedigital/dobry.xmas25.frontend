@@ -2,26 +2,16 @@ import React from 'react';
 
 import I from '../types.ts';
 
-const prizes = {
-    1: {
-        image: 'karusel-prize--01.png',
-        name: '+1 балл',
-    },
-    2: {
-        image: 'karusel-prize--02.png',
-        name: '25 рублей <br/>на телефон',
-    },
-    3: {
-        image: 'karusel-prize--03.png',
-        name: 'Промокод <br/>от партнера',
-    },
+const fakePrize = {
+    thumb: '',
+    title: '',
 };
 
 const renderSlider: I['renderSlider'] = function () {
-    const { curIndex, prize } = this.state;
+    const { curIndex, prize, items = [] } = this.state;
 
     return (
-        <div className="rafflePrize__slider">
+        <div className={`rafflePrize__slider ${items.length ? '_ready' : ''}`}>
             <div className="rafflePrize__sliderLights _left">
                 <div className="rafflePrize__sliderLight _1"></div>
                 <div className="rafflePrize__sliderLight _2"></div>
@@ -44,11 +34,13 @@ const renderSlider: I['renderSlider'] = function () {
             </div>
             <div className="rafflePrize__sliderInner">
                 <div className="rafflePrize__sliderItems">
-                    {new Array(30).fill({}).map((t, i) => {
-                        const index = ((i % 3) + 1) as 1 | 2 | 3;
+                    {new Array(30).fill({}).map((item, i) => {
+                        const index = i % items.length;
                         const isOdd = i % 2 === 1;
                         const isResult = i === curIndex && prize;
-                        const thisPrize = isResult ? prize : prizes[index];
+                        const thisPrize =
+                            (isResult ? { thumb: prize.image, title: prize.name } : items[index]) ||
+                            fakePrize;
 
                         return (
                             <div
@@ -57,18 +49,14 @@ const renderSlider: I['renderSlider'] = function () {
                             >
                                 <div className="rafflePrize__sliderItemHead">
                                     <img
-                                        src={
-                                            isResult
-                                                ? thisPrize.image
-                                                : require(`@media/inners/${thisPrize.image}`)
-                                        }
+                                        src={thisPrize.thumb}
                                         alt=""
                                         className="rafflePrize__sliderItemImage"
                                     />
                                 </div>
                                 <p
                                     className="rafflePrize__sliderItemName"
-                                    dangerouslySetInnerHTML={{ __html: thisPrize.name }}
+                                    dangerouslySetInnerHTML={{ __html: thisPrize.title }}
                                 ></p>
                             </div>
                         );

@@ -83,20 +83,22 @@ export const mapNav: MavNavItemT[] = [
     {
         thumbs: ['location-13-1.png', 'location-13-2.png'],
         title: ['Магнит', 'дикси'],
+        support: 'Старт акции с 19.11.25',
     },
     {
         thumbs: ['location-14-1.png', 'location-14-2.png'],
         title: 'Перекрёсток',
+        support: 'Старт акции с 01.12.25',
     },
     {
         thumbs: ['location-15-1.png', 'location-15-2.png'],
         title: 'Красное и белое',
+        support: 'Старт акции с 20.11.25',
     },
     {
         thumbs: ['location-20-1.png'],
         title: 'Яндекс',
-        support:
-            'Скоро с 17.11 выполняйте задания в Яндекс Еде и Яндекс Лавке и выигрывайте призы от лосика Гурмана для создания уютной атмосферы в ожидании праздника!',
+        support: 'Старт акции с 17.11.25',
     },
     {
         thumbs: ['location-21-1.png'],
@@ -106,14 +108,16 @@ export const mapNav: MavNavItemT[] = [
     {
         thumbs: ['location-24-1.png'],
         title: 'Додо пицца',
+        support: 'Старт акции с 18.11.25',
     },
     {
         thumbs: ['location-25-1.png'],
         title: 'Каро',
+        support: 'Старт акции с 15.12.25',
     },
     {
         thumbs: ['location-23-1.png'],
         title: 'Teboil',
-        support: 'Старт акции с 01.12',
+        // support: 'Старт акции с 01.12',
     },
 ];

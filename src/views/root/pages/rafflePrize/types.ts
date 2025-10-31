@@ -18,6 +18,7 @@ type StateT = {
         name: string;
         image: string;
     };
+    items?: RaffleDataT['prizeThumbs'];
     curIndex?: number;
 };
 
@@ -37,6 +38,7 @@ type RaffleDataT = {
     prizeThumbs: {
         title: string;
         thumb: string;
+        code: string;
     }[];
 };
 
@@ -62,7 +64,7 @@ interface RafflePrizeI extends InnerPageI<PropsT, StateT> {
     start(this: RafflePrizeI): Promise<void>;
     startCarusel(this: RafflePrizeI): void;
 
-    gameRequest(this: RafflePrizeI): Promise<void>;
+    gameRequest(this: RafflePrizeI, play: boolean): Promise<void>;
     regRequest(this: RafflePrizeI): Promise<void>;
 
     renderContent(this: RafflePrizeI): React.ReactNode;

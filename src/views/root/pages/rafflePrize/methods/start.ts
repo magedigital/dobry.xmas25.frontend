@@ -21,7 +21,7 @@ const start: I['start'] = async function () {
     await setAsyncState.call(this, { loadingKey: 'start' });
 
     try {
-        await this.gameRequest();
+        await this.gameRequest(true);
         await setAsyncState.call(this, { isStart: true, loadingKey: undefined });
 
         this.startCarusel();

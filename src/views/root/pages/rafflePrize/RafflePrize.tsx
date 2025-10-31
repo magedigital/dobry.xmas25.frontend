@@ -79,7 +79,9 @@ class RafflePrize
     componentDidMount(): void {
         super.componentDidMount();
 
-        this.sliderInit();
+        this.gameRequest(false).then(() => {
+            this.sliderInit();
+        });
     }
 
     componentWillUnmount(): void {

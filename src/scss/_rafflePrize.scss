@@ -28,6 +28,11 @@
         position: relative;
         width: calc(100% + 120rem);
         margin-left: -60rem;
+        transition: $trans;
+
+        &:not(._ready) {
+            opacity: 0;
+        }
 
         @include mob {
             width: calc(100% + 580rem);
