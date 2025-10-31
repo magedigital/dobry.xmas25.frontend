@@ -5,6 +5,7 @@ import setAsyncState from '@functions/setAsyncState.ts';
 
 import Merch from '../components/merch/Merch.tsx';
 
+import { ProfileMerchT } from '../../profile/types.ts';
 import I from '../types.ts';
 
 const renderSlider: I['renderSlider'] = function () {
@@ -12,7 +13,7 @@ const renderSlider: I['renderSlider'] = function () {
 
     console.log(content);
 
-    const merch = content?.components.buy.merch.prizes.find((p) => p.code === 'ALPHA_ELK');
+    const merch = content?.components.extra5ka.alpha as ProfileMerchT;
 
     if (!merch) {
         return;

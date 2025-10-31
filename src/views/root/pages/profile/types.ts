@@ -72,6 +72,12 @@ type ProfileDataT = {
 
 type ProfileContentT = {
     components: {
+        extra5ka: {
+            alpha: {
+                title: string;
+                thumb: string;
+            };
+        };
         buy: {
             raffle: {
                 info: {

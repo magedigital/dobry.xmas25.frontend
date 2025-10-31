@@ -10,7 +10,7 @@ const renderOffer: I['renderOffer'] = function () {
     const findPrize = data?.prizes.find((p) => p.code === 'ALPHA_ELK');
     let status = 'process';
 
-    if (data && data.checks.length >= 10) {
+    if (data && data.checks.filter((c) => c.statusCode === 'ACCEPTED').length >= 10) {
         status = findPrize ? 'completed' : 'waitPrize';
     }
 

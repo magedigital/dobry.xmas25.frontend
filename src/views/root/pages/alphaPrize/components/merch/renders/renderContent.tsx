@@ -58,7 +58,7 @@ const renderContent: I['renderContent'] = function () {
                         </div>
                     </div>
                     <div className="merch__title">{merch.title}</div>
-                    <div className="merch__count">{merch.price}</div>
+                    {merch.price && <div className="merch__count">{merch.price}</div>}
                 </>
             )}
         </div>
