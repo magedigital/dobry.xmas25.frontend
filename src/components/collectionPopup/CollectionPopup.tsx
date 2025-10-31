@@ -22,15 +22,15 @@ class CollectionPopup
 
     mainItems = [
         {
-            thumb: 'toy-2.png',
+            thumb: 'toy-1.png',
             name: 'мечтатель',
         },
         {
-            thumb: 'toy-3.png',
+            thumb: 'toy-2.png',
             name: 'заводила',
         },
         {
-            thumb: 'toy-1.png',
+            thumb: 'toy-3.png',
             name: 'красотка',
         },
     ];
