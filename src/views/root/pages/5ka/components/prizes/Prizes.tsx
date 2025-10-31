@@ -111,6 +111,10 @@ class Prizes extends React.Component<PrizesI['props'], PrizesI['state']> impleme
                                         thumb: 'prize-2-4-5ka.png',
                                         title: 'уникальная игрушка лосик',
                                     },
+                                    {
+                                        thumb: 'prize-2-0-5ka.png',
+                                        title: 'Сертификат на покупки в «Пятёрочке»',
+                                    },
                                 ]}
                             />
                         </div>

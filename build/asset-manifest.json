@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.10fa0d53.css",
-    "main.js": "/static/js/main.2130eb29.js",
+    "main.js": "/static/js/main.1b53afc8.js",
     "static/js/977.11b184c9.chunk.js": "/static/js/977.11b184c9.chunk.js",
     "static/js/16.9d69e595.chunk.js": "/static/js/16.9d69e595.chunk.js",
     "static/js/402.1bf2f098.chunk.js": "/static/js/402.1bf2f098.chunk.js",
@@ -201,6 +201,7 @@
     "static/media/products-back-2.jpg": "/static/media/products-back-2.994ed447771ddab5383f.jpg",
     "static/media/games-back-menu.svg": "/static/media/games-back-menu.374312279ff0929df52d.svg",
     "static/media/back-banner-1-snow.svg": "/static/media/back-banner-1-snow.c7e46d7fa50c2407ecbe.svg",
+    "static/media/prize-2-0-5ka.png": "/static/media/prize-2-0-5ka.f6c7a7290bd71ce28dd1.png",
     "static/media/prize-2-2-5ka.png": "/static/media/prize-2-2-5ka.4b55cb905f509fdbd7a5.png",
     "static/media/step2-5ka.jpg": "/static/media/step2-5ka.90bc9a923c5ff5bdb52e.jpg",
     "static/media/prize-2-3-5ka.png": "/static/media/prize-2-3-5ka.db1a79310ad91ef692fa.png",
@@ -271,6 +272,6 @@
   },
   "entrypoints": [
     "static/css/main.10fa0d53.css",
-    "static/js/main.2130eb29.js"
+    "static/js/main.1b53afc8.js"
   ]
 }

@@ -9,7 +9,7 @@ const renderPage: I['renderPage'] = function ({ name, render }) {
     const { isFixTopBar, isShowMenu } = this.state;
 
     return (
-        <div ref={this.parent} className="publicPage _FULL _index">
+        <div ref={this.parent} className={`publicPage _FULL _${name}`}>
             {name === 'index' && (
                 <div className="body__actionInfo">
                     <div className="body__actionInfoInner">
