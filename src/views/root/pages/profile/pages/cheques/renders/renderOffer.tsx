@@ -56,6 +56,16 @@ const renderOffer: I['renderOffer'] = function () {
                     )}
                 </div>
             </div>
+            <div className="profile__5kaOfferBut">
+                <Button
+                    className="_topBarCollection"
+                    onClick={() => {
+                        changePage({ pageName: '5ka' });
+                    }}
+                >
+                    перейти на страницу акции
+                </Button>
+            </div>
         </div>
     );
 };

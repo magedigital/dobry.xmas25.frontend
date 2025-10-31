@@ -19,7 +19,7 @@ const renderDecors: I['renderDecors'] = function () {
                 <div className="indexMap__decor_lights"></div>
                 <div className="indexMap__decor_title">игры лосьвилля</div>
             </div>
-            <div className="indexMap__decor _4" data-section="games">
+            <div className="indexMap__decor _4" data-section="actions">
                 <div className="indexMap__decor_poster"></div>
                 <div className="indexMap__decor_lights"></div>
                 <div className="indexMap__decor_lights"></div>
