@@ -37,9 +37,9 @@ export const manPopupFields = {
                         Правилами конкурса
                     </a>{' '}
                     и Требованиями <br className="_DESKTOP" />к участникам
-                    <i className={`popup__bannerFieldIcon ${isShowAlert ? '_hover' : ''}`}>
+                    <i className={`v2popup__bannerFieldIcon ${isShowAlert ? '_hover' : ''}`}>
                         <div
-                            className="popup__bannerFieldIconBtn"
+                            className="v2popup__bannerFieldIconBtn"
                             onClick={(e) => {
                                 e.stopPropagation();
 
@@ -48,19 +48,19 @@ export const manPopupFields = {
                         >
                             i
                         </div>
-                        <div className="popup__bannerFieldAlert">
-                            <p className="popup__bannerFieldAlertTitle">
+                        <div className="v2popup__bannerFieldAlert">
+                            <p className="v2popup__bannerFieldAlertTitle">
                                 Ты готов к пряткам, если все эти пункты про тебя:
                             </p>
-                            <ol className="popup__bannerFieldAlertList">
-                                <li className="popup__bannerFieldAlertListItem">
+                            <ol className="v2popup__bannerFieldAlertList">
+                                <li className="v2popup__bannerFieldAlertListItem">
                                     Тебе больше 18 лет;
                                 </li>
-                                <li className="popup__bannerFieldAlertListItem">
+                                <li className="v2popup__bannerFieldAlertListItem">
                                     У тебя хорошая спортивная подготовка и&nbsp;нет медицинских
                                     ограничений для участия в&nbsp;активных играх;
                                 </li>
-                                <li className="popup__bannerFieldAlertListItem">
+                                <li className="v2popup__bannerFieldAlertListItem">
                                     Живешь на территории России.
                                 </li>
                             </ol>

@@ -10,14 +10,14 @@ import { FieldT, manPopupFields } from '../static/fields.tsx';
 
 const renderFields: I['renderFields'] = function () {
     return (
-        <div className="popup__bannerFields _FULL_W">
+        <div className="v2popup__bannerFields _FULL_W">
             {(Object.keys(manPopupFields) as (keyof typeof manPopupFields)[]).map((name) => {
                 const field = manPopupFields[name] as FieldT;
                 const support =
                     typeof field.support === 'function' ? field.support.call(this) : field.support;
 
                 return (
-                    <div className={`popup__bannerField _${name} _type-${field.type}`} key={name}>
+                    <div className={`v2popup__bannerField _${name} _type-${field.type}`} key={name}>
                         {field.type === 'input' && (
                             <Field
                                 name={name}
@@ -48,6 +48,7 @@ const renderFields: I['renderFields'] = function () {
                         )}
                         {field.type === 'checkbox' && (
                             <Checkbox
+                                className="_white"
                                 value={!!this.getValue({ key: name })?.value}
                                 onChange={async ({ value }) => {
                                     await this.change({ [name]: value }, 'form');

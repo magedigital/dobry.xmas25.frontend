@@ -6,12 +6,12 @@ const renderPopup: I['renderPopup'] = function ({ children, onClick, className =
     return (
         <div
             ref={this.parent}
-            className={`popup _FULL _COL _${this.popupName} ${className}`}
+            className={`v2popup _FULL _COL _${this.popupName} ${className}`}
             onClick={onClick}
         >
-            <div className="popup__inner">
+            <div className="v2popup__inner">
                 {this.renderClose()}
-                <div className="popup__innerBox">{children}</div>
+                <div className="v2popup__innerBox">{children}</div>
             </div>
         </div>
     );

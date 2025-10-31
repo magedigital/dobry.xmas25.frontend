@@ -7,6 +7,8 @@ const menuHandler: I['menuHandler'] = async function (
     isShowMenu = !this.state.isShowMenu,
 ) {
     await setAsyncState.call(this, { isShowMenu });
+
+    this.props.cb(isShowMenu);
 };
 
 export default menuHandler;

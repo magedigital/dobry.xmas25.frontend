@@ -4,6 +4,23 @@
         top: 0;
         z-index: 2;
         width: 100%;
+        transition: $trans;
+    }
+
+    &._index &__topBar {
+        top: 48rem;
+
+        @include mob {
+            top: 60rem;
+        }
+    }
+
+    &._index &__inner {
+        padding-top: 48rem;
+
+        @include mob {
+            padding-top: 60rem;
+        }
     }
 
     &__inner {

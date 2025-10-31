@@ -4,6 +4,7 @@ type PropsT = {
     storePages: StoreT['pages'];
     isFix?: boolean;
     className?: string;
+    cb: (b: boolean) => void;
 };
 
 type StateT = {

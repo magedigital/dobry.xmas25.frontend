@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.6bc895e5.css",
-    "main.js": "/static/js/main.fc873065.js",
+    "main.css": "/static/css/main.10fa0d53.css",
+    "main.js": "/static/js/main.2130eb29.js",
     "static/js/977.11b184c9.chunk.js": "/static/js/977.11b184c9.chunk.js",
     "static/js/16.9d69e595.chunk.js": "/static/js/16.9d69e595.chunk.js",
     "static/js/402.1bf2f098.chunk.js": "/static/js/402.1bf2f098.chunk.js",
@@ -27,7 +27,7 @@
     "static/js/203.181f2847.chunk.js": "/static/js/203.181f2847.chunk.js",
     "static/js/419.62f2b442.chunk.js": "/static/js/419.62f2b442.chunk.js",
     "static/media/store-1-1.jpg": "/static/media/store-1-1.a272a11585909e25b6fb.jpg",
-    "static/media/main-img.jpg": "/static/media/main-img.b77de562adc979fd5b9b.jpg",
+    "static/media/main-img.jpg": "/static/media/main-img.2f39e19e9e0edcb3ac57.jpg",
     "static/media/back-5ka-01.jpg": "/static/media/back-5ka-01.aef616df826368b0448c.jpg",
     "static/media/back-game-all.jpg": "/static/media/back-game-all.2e517acb71b1fdb05abf.jpg",
     "static/media/main-image-zagl-01.jpg": "/static/media/main-image-zagl-01.83529f2c4eb107392a99.jpg",
@@ -270,7 +270,7 @@
     "static/media/arrow-down.svg": "/static/media/arrow-down.559aeb386a24d46ce43d.svg"
   },
   "entrypoints": [
-    "static/css/main.6bc895e5.css",
-    "static/js/main.fc873065.js"
+    "static/css/main.10fa0d53.css",
+    "static/js/main.2130eb29.js"
   ]
 }

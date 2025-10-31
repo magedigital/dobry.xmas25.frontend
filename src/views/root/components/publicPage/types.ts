@@ -2,6 +2,7 @@ type PropsT = {};
 
 type StateT = {
     isFixTopBar?: boolean;
+    isShowMenu?: boolean;
 };
 
 interface PublicPageI<P = {}, S = {}> extends React.Component<PropsT & P, StateT & S> {

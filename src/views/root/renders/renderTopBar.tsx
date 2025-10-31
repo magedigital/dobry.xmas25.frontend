@@ -12,7 +12,7 @@ const renderTopBar: I['renderTopBar'] = function () {
 
     return (
         <div className="body__topBar _FULL">
-            <TopBar />
+            <TopBar cb={() => undefined} />
         </div>
     );
 };

@@ -9,12 +9,12 @@ const scrollHandler: I['scrollHandler'] = async function () {
 
     const scrollTop = this.scrollNode.current.scrollTop;
 
-    if (!this.isFixTopBar && scrollTop > 20) {
+    if (!this.isFixTopBar && scrollTop > 0) {
         this.isFixTopBar = true;
         await setAsyncState.call(this, { isFixTopBar: true });
     }
 
-    if (this.isFixTopBar && scrollTop <= 20) {
+    if (this.isFixTopBar && scrollTop <= 0) {
         this.isFixTopBar = false;
         await setAsyncState.call(this, { isFixTopBar: false });
     }

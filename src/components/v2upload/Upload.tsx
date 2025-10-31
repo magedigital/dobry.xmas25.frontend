@@ -37,9 +37,9 @@ class Upload extends React.Component<UploadI['props'], UploadI['state']> impleme
         return (
             <div
                 ref={this.parent}
-                className={`upload ${fileName ? '_upload' : ''} ${isOver ? '_over' : ''} ${className}`}
+                className={`v2upload ${fileName ? '_upload' : ''} ${isOver ? '_over' : ''} ${className}`}
             >
-                <div className="upload__border">
+                <div className="v2upload__border">
                     <DashedBorder />
                 </div>
                 {this.renderMain()}

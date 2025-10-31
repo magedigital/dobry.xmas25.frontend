@@ -13,6 +13,7 @@ const renderPage: I['renderPage'] = function (children, withClose = true, isPopu
         <div ref={this.parent} className="innerPage _FULL">
             <div className="innerPage__topBar">
                 <TopBar
+                    cb={() => undefined}
                     className={['_inner', ...(!isPopup ? ['_back'] : [])].join(' ')}
                     isFix={!!isTopBarFix}
                 />

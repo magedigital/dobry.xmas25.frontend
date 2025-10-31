@@ -8,8 +8,8 @@ const renderOver: I['renderOver'] = function () {
     const { isOver } = this.state;
 
     return (
-        <Fade className="upload__over _FULL _COL _COL_CENTER" isShow={!!isOver}>
-            <p className="upload__overText">Отпусти кнопку мышки</p>
+        <Fade className="v2upload__over _FULL _COL _COL_CENTER" isShow={!!isOver}>
+            <p className="v2upload__overText">Отпусти кнопку мышки</p>
         </Fade>
     );
 };

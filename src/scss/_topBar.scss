@@ -213,6 +213,14 @@
         }
     }
 
+    .publicPage._index &__menu {
+        height: calc(var(--wheight) - 96rem - 48rem);
+
+        @include mob {
+            height: calc(var(--wheight) - 70rem - 60rem);
+        }
+    }
+
     &._fix &__menu {
         top: 80rem;
         height: calc(var(--wheight) - 80rem);
@@ -220,6 +228,14 @@
         @include mob {
             top: 64rem;
             height: calc(var(--wheight) - 64rem);
+        }
+    }
+
+    .publicPage._index &._fix &__menu {
+        height: calc(var(--wheight) - 80rem - 48rem);
+
+        @include mob {
+            height: calc(var(--wheight) - 64rem - 60rem);
         }
     }
 
