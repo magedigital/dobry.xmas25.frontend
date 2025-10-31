@@ -7,10 +7,9 @@ import I from '../types.ts';
 import getSavedRaffle from '../../../../rafflePrize/utils/getSavedRaffle.ts';
 
 const renderCarusel: I['renderCarusel'] = function () {
-    const { user } = this.props;
     const { prize } = getSavedRaffle();
 
-    if (user || prize) {
+    if (prize) {
         return;
     }
 

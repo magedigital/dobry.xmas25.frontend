@@ -31,6 +31,18 @@ type MainContentT = {
                 title: string;
             }[];
         };
+        partners: {
+            header: {
+                title: {
+                    title: string;
+                };
+            };
+            items: {
+                title: string;
+                url: string;
+                thumb: string;
+            }[];
+        };
         prizesCommon: {
             items: {
                 title: string;

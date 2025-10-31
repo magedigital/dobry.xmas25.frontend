@@ -28,6 +28,8 @@ declare global {
         advcake_data?: any[];
         fivepost?: any;
         daDataToken: string;
+        welcomePlayed?: boolean;
+        hasCode?: boolean;
     }
 
     namespace NodeJS {

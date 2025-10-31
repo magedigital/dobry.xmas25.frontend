@@ -1,8 +1,10 @@
+import { MainContentT } from '../../types';
 import { mapNav } from './static/nav';
 import { mapSections } from './static/sections';
 
 type PropsT = {
     getScrollNode: () => HTMLElement | null | undefined;
+    content?: MainContentT;
 };
 
 type StateT = {
