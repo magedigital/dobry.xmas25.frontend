@@ -6,6 +6,8 @@
     }
 
     &__head {
+        position: relative;
+        z-index: 1;
         margin-bottom: 32rem;
 
         @include mob {
@@ -55,7 +57,7 @@
                 font-size: 14rem;
 
                 @include mob {
-                    padding: 0 4rem;
+                    padding: 0 9rem;
                 }
 
                 &::before {
@@ -81,6 +83,7 @@
 
     &__slider {
         position: relative;
+        z-index: 3;
         margin-bottom: 34rem;
         padding: 0 88rem;
 
@@ -270,6 +273,71 @@
 
                 @include mob {
                     font-size: 18rem;
+                }
+
+                &Info {
+                    position: relative;
+                    z-index: 10;
+                    display: inline-block;
+                    transform: translate(0, -5rem);
+
+                    &Icon {
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 16rem;
+                        height: 16rem;
+                        color: #fff;
+                        font-weight: 500;
+                        font-size: 11rem;
+                        background: #ff49b8;
+                        border-radius: 50%;
+                        transition: $trans;
+
+                        &:hover {
+                            background: #ffd382;
+                        }
+                    }
+
+                    &Alert {
+                        position: absolute;
+                        bottom: 100%;
+                        left: 100%;
+                        z-index: 2;
+                        width: 302rem;
+                        margin: 0 0 10rem -18rem;
+                        padding: 20rem;
+                        color: #5d279e;
+                        font-weight: 400;
+                        font-size: 14rem;
+                        line-height: 1.3;
+                        text-align: left;
+                        text-transform: none;
+                        background: #fff;
+                        border-radius: 24rem;
+                        box-shadow: 0 16rem 16rem 0 rgba(#620000, 0.1);
+                        opacity: 0;
+                        transition: $trans;
+                        pointer-events: none;
+
+                        @include mob {
+                            left: 50%;
+                            width: 256rem;
+                            margin: 0 0 10rem;
+                            padding: 14rem;
+                            transform: translate(-50%, 0);
+                        }
+                    }
+
+                    &Icon:hover + &Alert {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            &[data-alertReverse] &DescriptionInfoAlert {
+                @include desk {
+                    margin-left: -300rem;
                 }
             }
         }

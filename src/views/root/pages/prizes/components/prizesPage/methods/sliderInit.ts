@@ -10,10 +10,11 @@ const sliderInit: I['sliderInit'] = function () {
     }
 
     const slider = this.parent.current!.querySelector('.prizesPage__slider') as HTMLElement;
+    const sliderArea = slider.querySelector('.prizesPage__sliderInner') as HTMLElement;
 
     this.slider = new Slider({
         slider,
-        area: slider.querySelector('.prizesPage__sliderInner')!,
+        area: sliderArea,
         moveArea: this.parent.current!.querySelector('.prizesPage__sliderItems')!,
         itemClass: 'prizesPage__sliderItem',
         showEach: false,
@@ -22,18 +23,23 @@ const sliderInit: I['sliderInit'] = function () {
             prev: slider.querySelector('.prizesPage__sliderButton._prev') as HTMLElement,
             next: slider.querySelector('.prizesPage__sliderButton._next') as HTMLElement,
         },
-        callback: () => {
-            // const fedukPrizeNodes = this.parent.current!.querySelectorAll<HTMLElement>(
-            //     '.prizesPage__sliderItem._feduk',
-            // );
-            // if (name === 'weekly') {
-            //     fedukPrizeNodes.forEach((n) => {
-            //         n.onclick = () => {
-            //             changePage({ pageName: 'fedukPrize' });
-            //         };
-            //     });
-            // }
+        callback: ({ type }) => {
+            if (type === 'move') {
+                const sliderLeft = sliderArea.getBoundingClientRect().x + sliderArea.offsetWidth;
+
+                slider.querySelectorAll('.prizesPage__sliderItem._withAlert').forEach((i) => {
+                    const item = i as HTMLElement;
+                    const itemLeft = item.getBoundingClientRect().x + item.offsetWidth;
+
+                    item.removeAttribute('data-alertReverse');
+
+                    if (itemLeft + 20 > sliderLeft) {
+                        item.setAttribute('data-alertReverse', 'true');
+                    }
+                });
+            }
         },
+        notDragItems: ['.prizesPage__sliderItemDescriptionInfo'],
     });
 };
 

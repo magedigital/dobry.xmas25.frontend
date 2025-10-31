@@ -87,12 +87,12 @@ function onAppReadyHandler(app) {
                 request2: { url: '/api/TentGame', method: 'POST' },
             },
             2: {
-                id: 'SNOWBALL',
+                id: 'SHOWBALLS',
                 request1: { url: '/api/TentGame', method: 'POST' },
                 request2: { url: '/api/TentGame', method: 'POST' },
             },
             3: {
-                id: 'LIGHTUP',
+                id: 'CHRISTMASTREE',
                 request1: { url: '/api/TentGame', method: 'POST' },
                 request2: { url: '/api/TentGame', method: 'POST' },
             },

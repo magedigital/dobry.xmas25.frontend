@@ -16,19 +16,17 @@ const pages = {
             const { content } = this.state;
 
             return (
-                <>
-                    <PrizesPage
-                        name="moment"
-                        title="Выиграй сразу"
-                        metaTitle="Призы - Моментальный розыгрыш"
-                        description="Участие в розыгрыше - <span>1</span> балл"
-                        buttonText="Участвовать"
-                        buttonOnClick={() => {
-                            changePage({ pageName: 'game-inner', ids: { 1: 'LOSYANTA' } });
-                        }}
-                        items={content!.components.prizes.instant.items}
-                    />
-                </>
+                <PrizesPage
+                    name="moment"
+                    title="Выиграй сразу"
+                    metaTitle="Призы - Моментальный розыгрыш"
+                    description="Участие в розыгрыше - <span>1</span> балл"
+                    buttonText="Участвовать"
+                    buttonOnClick={() => {
+                        changePage({ pageName: 'game-inner', ids: { 1: 'LOSYANTA' } });
+                    }}
+                    items={content!.components.prizes.instant.items}
+                />
             );
         },
     },
@@ -38,19 +36,17 @@ const pages = {
             const { content } = this.state;
 
             return (
-                <>
-                    <PrizesPage
-                        name="merch"
-                        title={`Копи баллы и обменивай на\xa0призы`}
-                        metaTitle="Призы - Копи баллы"
-                        description="Регистрируй коды и получай <br class='_MOBILE' />по <span>1</span> баллу за каждый код, приводи друзей - зарабатывай еще баллы"
-                        buttonText="Зарегистрировать код"
-                        buttonOnClick={() => {
-                            changePage({ pageName: 'regCode' });
-                        }}
-                        items={content!.components.prizes.merch.items}
-                    />
-                </>
+                <PrizesPage
+                    name="merch"
+                    title={`Копи баллы и обменивай на\xa0призы`}
+                    metaTitle="Призы - Копи баллы"
+                    description="Регистрируй коды и получай <br class='_MOBILE' />по <span>1</span> баллу за каждый код, приводи друзей - зарабатывай еще баллы"
+                    buttonText="Зарегистрировать код"
+                    buttonOnClick={() => {
+                        changePage({ pageName: 'regCode' });
+                    }}
+                    items={content!.components.prizes.merch.items}
+                />
             );
         },
     },

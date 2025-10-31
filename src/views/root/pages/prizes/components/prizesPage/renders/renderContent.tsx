@@ -2,12 +2,15 @@ import React from 'react';
 
 import Button from '@components/button/Button.tsx';
 import Icon from '@components/icon/Icon.tsx';
+import setSpacesInText from '@functions/setSpacesInText.ts';
 
 import I from '../types.ts';
 
 const renderContent: I['renderContent'] = function () {
     const { needSlider } = this.state;
     const { buttonText, buttonOnClick, items, name } = this.props;
+
+    // console.log(current);
 
     return (
         <div className="prizesPage__content _FULL_W _COL _COL_H_CENTER">
@@ -34,7 +37,7 @@ const renderContent: I['renderContent'] = function () {
                     <div className="prizesPage__sliderItems">
                         {items.map((item, key) => (
                             <div
-                                className={`prizesPage__sliderItem _COL _COL_H_CENTER ${item.price ? '_withInfo' : ''}`}
+                                className={`prizesPage__sliderItem _COL _COL_H_CENTER ${item.price ? '_withInfo' : ''} ${item.description ? '_withAlert' : ''}`}
                                 key={key}
                             >
                                 <div className="prizesPage__sliderItemHead">
@@ -52,7 +55,22 @@ const renderContent: I['renderContent'] = function () {
                                         </div>
                                     )}
                                 </div>
-                                <p className="prizesPage__sliderItemDescription">{item.title}</p>
+                                <p className="prizesPage__sliderItemDescription">
+                                    {item.title}{' '}
+                                    {name === 'merch' && item.description && (
+                                        <div className="prizesPage__sliderItemDescriptionInfo">
+                                            <div className="prizesPage__sliderItemDescriptionInfoIcon _CLICK">
+                                                i
+                                            </div>
+                                            <div
+                                                className="prizesPage__sliderItemDescriptionInfoAlert"
+                                                dangerouslySetInnerHTML={{
+                                                    __html: setSpacesInText(item.description),
+                                                }}
+                                            ></div>
+                                        </div>
+                                    )}
+                                </p>
                             </div>
                         ))}
                     </div>

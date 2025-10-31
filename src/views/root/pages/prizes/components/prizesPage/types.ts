@@ -14,6 +14,7 @@ type PropsT = {
 
 type StateT = {
     needSlider: boolean;
+    current?: number;
 };
 
 interface PrizesPageI extends React.Component<PropsT, StateT> {
