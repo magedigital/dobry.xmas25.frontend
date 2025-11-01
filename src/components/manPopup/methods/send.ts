@@ -19,7 +19,7 @@ const send: I['send'] = async function () {
     try {
         await AxiosInst.post('/UploadBloggerContestVideo', this.formData);
 
-        const innerNode = this.parent.current!.querySelector('.popup__inner') as HTMLElement;
+        const innerNode = this.parent.current!.querySelector('.v2popup__inner') as HTMLElement;
         const innerHeight = innerNode.offsetHeight;
 
         innerNode.style.height = `${innerHeight}px`;
