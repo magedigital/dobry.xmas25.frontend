@@ -78,7 +78,13 @@ class Map extends React.Component<MapI['props'], MapI['state']> implements MapI 
 
     render() {
         return (
-            <div ref={this.parent} className="indexMap _SECTION">
+            <div
+                ref={this.parent}
+                className="indexMap _SECTION"
+                onTouchStart={() => {
+                    this.setState({ currentHoverItem: undefined });
+                }}
+            >
                 <div className="indexMap__inner">
                     <div className="indexMap__content _COL _COL_H_CENTER">
                         {this.renderTop()}

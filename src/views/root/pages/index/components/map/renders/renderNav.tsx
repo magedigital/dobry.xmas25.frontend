@@ -8,6 +8,8 @@ import setSpacesInText from '@functions/setSpacesInText.ts';
 import I from '../types.ts';
 
 const renderNav: I['renderNav'] = function () {
+    const { currentHoverItem } = this.state;
+
     return (
         <div className="indexMap__nav">
             {this.nav.map((item, key) => {
@@ -41,22 +43,31 @@ const renderNav: I['renderNav'] = function () {
                             ))}
                         </Lazy>
 
-                        {titles.map((title, tKey) => (
-                            <div
-                                className={`indexMap__navItemTitle _${tKey + 1} ${item.support ? '_withSupport' : ''}`}
-                                key={tKey}
-                            >
-                                <span dangerouslySetInnerHTML={{ __html: title }}></span>
-                                {item.support && (
-                                    <div
-                                        className="indexMap__navItemSupport"
-                                        dangerouslySetInnerHTML={{
-                                            __html: setSpacesInText(item.support),
-                                        }}
-                                    ></div>
-                                )}
-                            </div>
-                        ))}
+                        {titles.map((title, tKey) => {
+                            const titleKey = [key, tKey].join('_');
+
+                            return (
+                                <div
+                                    className={`indexMap__navItemTitle _${tKey + 1} ${item.support ? '_withSupport' : ''} ${currentHoverItem === titleKey ? '_hover' : ''}`}
+                                    key={tKey}
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+
+                                        this.setState({ currentHoverItem: titleKey });
+                                    }}
+                                >
+                                    <span dangerouslySetInnerHTML={{ __html: title }}></span>
+                                    {item.support && (
+                                        <div
+                                            className="indexMap__navItemSupport"
+                                            dangerouslySetInnerHTML={{
+                                                __html: setSpacesInText(item.support),
+                                            }}
+                                        ></div>
+                                    )}
+                                </div>
+                            );
+                        })}
                     </div>
                 );
             })}

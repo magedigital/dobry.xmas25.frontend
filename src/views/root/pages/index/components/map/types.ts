@@ -9,6 +9,7 @@ type PropsT = {
 
 type StateT = {
     currentSection: keyof typeof mapSections;
+    currentHoverItem?: string;
 };
 
 interface MapI extends React.Component<PropsT, StateT> {

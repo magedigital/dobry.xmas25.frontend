@@ -15,10 +15,10 @@ const sendForm: I['sendForm'] = async function (again) {
     await setAsyncState.call(this, { loadingKey: again ? 'again' : 'send' });
 
     try {
-        const response = await AxiosInst.post<{}, ResponseT>('/Login', {
+        const response = await AxiosInst.post<{}, ResponseT>(again ? '/Registration' : '/Login', {
             login,
             ...(again === true ? {} : { password: code, isCode: true }),
-            ...(isConfirm ? { confirmEmail: true } : {}),
+            ...(isConfirm && !again ? { confirmEmail: true } : {}),
             mode,
         });
 
