@@ -19,8 +19,14 @@ const renderStartForm: I['renderStartForm'] = function () {
                         await setAsyncState.call(this, { isConfirm: value });
                     }}
                 >
-                    Я соглашаюсь с <a href="#">Правилами акции</a> и&nbsp;
-                    <a href="#">Политикой конфиденциальности</a>
+                    Я соглашаюсь с{' '}
+                    <a href="/docs/rules.pdf" target="_blank">
+                        Правилами акции
+                    </a>{' '}
+                    и&nbsp;
+                    <a href="/docs/politics.pdf" target="_blank">
+                        Политикой конфиденциальности
+                    </a>
                 </Checkbox>
             </div>
             <div className="rafflePrize__startFormButton">

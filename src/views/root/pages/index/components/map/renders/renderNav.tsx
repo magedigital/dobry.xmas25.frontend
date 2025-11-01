@@ -50,9 +50,7 @@ const renderNav: I['renderNav'] = function () {
                                 <div
                                     className={`indexMap__navItemTitle _${tKey + 1} ${item.support ? '_withSupport' : ''} ${currentHoverItem === titleKey ? '_hover' : ''}`}
                                     key={tKey}
-                                    onClick={(e) => {
-                                        e.stopPropagation();
-
+                                    onClick={() => {
                                         this.setState({ currentHoverItem: titleKey });
                                     }}
                                 >
