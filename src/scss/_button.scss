@@ -85,6 +85,10 @@
 
     &._banner2 {
         background: linear-gradient(to top, #c9dcff, #fff);
+
+        & .loader__itemInner {
+            background: #5d279e;
+        }
     }
 
     &._rules {

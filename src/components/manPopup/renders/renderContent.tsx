@@ -6,7 +6,7 @@ import Error from '@components/error/Error.tsx';
 import I from '../types.ts';
 
 const renderContent: I['renderContent'] = function (this: I) {
-    const { error } = this.state;
+    const { error, loadingKey } = this.state;
 
     return (
         <>
@@ -37,7 +37,11 @@ const renderContent: I['renderContent'] = function (this: I) {
                 {this.renderFields()}
                 <Error className="v2popup__bannerError" error={error} />
                 <div className="v2popup__bannerButton">
-                    <Button className="_banner2" onClick={this.send.bind(this)}>
+                    <Button
+                        className="_banner2"
+                        onClick={this.send.bind(this)}
+                        loading={loadingKey === 'send'}
+                    >
                         отправить
                     </Button>
                 </div>
