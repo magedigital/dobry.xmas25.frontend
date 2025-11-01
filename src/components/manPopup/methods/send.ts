@@ -25,7 +25,7 @@ const send: I['send'] = async function () {
         innerNode.style.height = `${innerHeight}px`;
 
         setTimeout(() => {
-            setAsyncState.call(this, { isSuccess: true });
+            this.setState({ isSuccess: true });
         }, 10);
     } catch (e) {
         const error = e as ResponseErrorT;
