@@ -7,10 +7,12 @@ import changePage from '@functions/changePage.ts';
 
 import I from '../types.ts';
 
+import getLink from '../utils/getLink.ts';
+
 const renderContent: I['renderContent'] = function () {
     const { isCopy } = this.state;
     const { user } = this.props;
-    const link = this.getLink();
+    const link = getLink();
 
     return (
         <div

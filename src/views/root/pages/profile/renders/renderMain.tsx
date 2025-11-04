@@ -62,6 +62,9 @@ const renderMain: I['renderMain'] = function () {
                             pageName={
                                 user?.status === 'EXTRA_ANKET_REQUIRED' ? 'full-anket' : 'anket'
                             }
+                            callback={() => {
+                                sendGoal('profileEditData');
+                            }}
                         >
                             Изменить данные
                         </Link>
@@ -82,7 +85,13 @@ const renderMain: I['renderMain'] = function () {
                         У тебя <span className="profile__mainScoreCount">{data?.balance || 0}</span>{' '}
                         {data?.balanceTitle}
                     </div>
-                    <Link className="profile__mainLink _blue" pageName="balls">
+                    <Link
+                        className="profile__mainLink _blue"
+                        pageName="balls"
+                        callback={() => {
+                            sendGoal('profileHistory');
+                        }}
+                    >
                         История
                     </Link>
                 </div>
@@ -95,7 +104,7 @@ const renderMain: I['renderMain'] = function () {
                             onClick={() => {
                                 changePage({ pageName: 'regCode' });
 
-                                sendGoal('regCodeBtn,profileRegCodeBtn');
+                                sendGoal('regCodeBtn, profileRegCodeBtn', true);
                             }}
                         >
                             ЗАРЕГИСТРИРОВАТЬ КОД
@@ -107,7 +116,7 @@ const renderMain: I['renderMain'] = function () {
                             onClick={() => {
                                 changePage({ pageName: 'cheque' });
 
-                                sendGoal('regCheckBtn,profileRegCheckBtn');
+                                sendGoal('regCheckBtn, profileRegCheckBtn', true);
                             }}
                         >
                             <img

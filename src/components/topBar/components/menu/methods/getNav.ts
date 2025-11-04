@@ -10,10 +10,37 @@ const getNav: I['getNav'] = function () {
     const { handler } = this.props;
 
     (['index', 'rules', 'prizes', 'winners', 'faq', 'products'] as const).forEach((name) => {
+        let goal: NavItemT['goal'];
+
+        if (name === 'index') {
+            goal = 'menuMain';
+        }
+
+        if (name === 'rules') {
+            goal = 'menuRules';
+        }
+
+        if (name === 'prizes') {
+            goal = 'menuPrizes';
+        }
+
+        if (name === 'winners') {
+            goal = 'menuWinners';
+        }
+
+        if (name === 'faq') {
+            goal = 'menuFaq';
+        }
+
+        if (name === 'products') {
+            goal = 'menuAbout';
+        }
+
         nav.push({
             name,
             pageName: name,
             content: getPage({ name }).content,
+            goal,
         });
     });
 
@@ -21,11 +48,13 @@ const getNav: I['getNav'] = function () {
         name: 'tg',
         content: 'Чат-бот',
         href: 'https://t.me/dobrycola_promo_bot',
+        goal: 'menuChatbot',
     });
 
     nav.push({
         name: 'actions',
         content: 'Акции партнеров',
+        goal: 'menuPartners',
         onClick: () => {
             const storePages = store.getState().pages;
 

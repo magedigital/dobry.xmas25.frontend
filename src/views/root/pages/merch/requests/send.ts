@@ -11,6 +11,8 @@ import I from '../types.ts';
 const send: I['send'] = async function () {
     const { loadingKey, content, currentMerchIndex, currentCustomValue, isConfirm } = this.state;
 
+    sendGoal('profileOrderPrizeFinalBtn');
+
     if (!content || loadingKey) {
         return;
     }

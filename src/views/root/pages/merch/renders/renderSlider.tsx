@@ -10,7 +10,7 @@ import Merch from '../components/merch/Merch.tsx';
 import I from '../types.ts';
 
 const renderSlider: I['renderSlider'] = function () {
-    const { content, currentMerchIndex, isConfirm } = this.state;
+    const { content, isConfirm, items = [] } = this.state;
 
     return (
         <div className="popup__merch _FULL_W _COL _COL_H_CENTER">
@@ -26,12 +26,23 @@ const renderSlider: I['renderSlider'] = function () {
             <div className="popup__merchInner _FULL_W">
                 <div className="popup__merchItems">
                     {content!.components.buy.merch.prizes.map((merch, key) => (
+                        <div
+                            className="popup__merchItemsItem popup__merchItem _COL _COL_H_CENTER"
+                            key={key}
+                        >
+                            <div className="popup__merchItemInner"></div>
+                        </div>
+                    ))}
+                </div>
+
+                <div className="popup__merchReactItems">
+                    {items.map((merch, key) => (
                         <div className="popup__merchItem _COL _COL_H_CENTER" key={key}>
                             <div className="popup__merchItemInner">
                                 <Merch
                                     merch={merch}
                                     festNaming={content!.components.buy.merch.festNaming}
-                                    disabled={currentMerchIndex !== key}
+                                    disabled={!merch.isCurrent}
                                     infoHandler={this.merchInfoHandler.bind(this)}
                                     customCallback={async (currentCustomValue) => {
                                         await setAsyncState.call(this, { currentCustomValue });

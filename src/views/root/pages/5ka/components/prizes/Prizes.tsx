@@ -4,10 +4,16 @@ import { connect } from 'react-redux';
 import Button from '@components/button/Button.tsx';
 import Icon from '@components/icon/Icon.tsx';
 import changePage from '@functions/changePage.ts';
+import copyInBuffer from '@functions/copyInBuffer.ts';
+import sendGoal from '@functions/sendGoal.ts';
 import setSpacesInText from '@functions/setSpacesInText.ts';
+import { store } from '@redux/redux.ts';
+
+import { setError } from '../../../../components/errors/utils/errorHandler.ts';
 
 import PrizesI from './types.ts';
 
+import getLink from '../../../invite/utils/getLink.ts';
 import Products from '../../../products/Products.tsx';
 import PrizesBlock from '../prizesBlock/PrizesBlock.tsx';
 
@@ -45,6 +51,8 @@ class Prizes extends React.Component<PrizesI['props'], PrizesI['state']> impleme
                                         <Button
                                             onClick={() => {
                                                 changePage({ pageName: 'cheque' });
+
+                                                sendGoal('5kaChangeBlockCheck', true);
                                             }}
                                             className="_wide _white"
                                         >
@@ -59,11 +67,12 @@ class Prizes extends React.Component<PrizesI['props'], PrizesI['state']> impleme
                                 name="month"
                                 title="ежемесячные призы"
                                 items={[
-                                    { thumb: 'prize-1-1-5ka.png', title: 'Премиальные<br/>часы' },
                                     {
                                         thumb: 'prize-1-2-5ka.png',
                                         title: 'Премиальный Смартфон последней модели',
                                     },
+                                    { thumb: 'prize-1-1-5ka.png', title: 'Премиальные<br/>часы' },
+
                                     {
                                         thumb: 'prize-1-3-5ka.png',
                                         title: 'Премиальный<br/>Ноутбук',
@@ -138,7 +147,23 @@ class Prizes extends React.Component<PrizesI['props'], PrizesI['state']> impleme
                                         }}
                                     ></p>
                                     <div className="p5kaPrizes__offerButton">
-                                        <Button className="_purple" onClick={() => undefined}>
+                                        <Button
+                                            className="_purple"
+                                            onClick={async () => {
+                                                sendGoal('5kaInviteFriends');
+
+                                                if (!store.getState().user) {
+                                                    changePage({ pageName: 'auth-login' });
+                                                } else {
+                                                    await copyInBuffer(getLink());
+
+                                                    setError({
+                                                        type: 'success',
+                                                        text: 'Ссылка успешно скопирована',
+                                                    });
+                                                }
+                                            }}
+                                        >
                                             <i className="_link">
                                                 <Icon name="link" />
                                             </i>

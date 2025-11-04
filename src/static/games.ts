@@ -6,7 +6,7 @@ const games = {
         image: 'game/Game1.svg',
         title: 'Снежки',
         description: 'Успей собрать как можно больше фестивальных предметов',
-        goal: 'vibeBtn',
+        goal: 'menuShowballl',
         metaTitle: 'Лови вайб',
     },
     VIBE: {
@@ -14,7 +14,7 @@ const games = {
         image: 'game/Game2.svg',
         title: 'Вайб Лосьвилля',
         description: 'Поймай звезду в луч прожектора',
-        goal: 'spotlightsBtn',
+        goal: 'menuVibe',
         metaTitle: 'В свете софитов',
     },
     LIGHTUP: {
@@ -22,7 +22,7 @@ const games = {
         image: 'game/Game4.svg',
         title: 'Новогодняя ёлка',
         description: 'Собери музыкально-фестивальные пары этого лета',
-        goal: 'matchBtn',
+        goal: 'menuTree',
         metaTitle: 'Найди мэтч',
     },
     LOSYANTA: {
@@ -30,7 +30,7 @@ const games = {
         image: 'game/Game3.svg',
         title: 'Тайный Лосянта',
         description: 'Доберись до Главной сцены Добрый Fest',
-        goal: 'stageBtn',
+        goal: 'menuElks',
         metaTitle: 'Вперёд к сцене',
     },
 } as const;

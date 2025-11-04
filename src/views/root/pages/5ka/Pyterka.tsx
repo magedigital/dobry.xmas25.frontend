@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+import CustomHead from '@components/customHead/CustomHead.tsx';
 import Footer from '@components/footer/Footer.tsx';
 import { getLocalContent } from '@functions/localContent.ts';
 
@@ -42,6 +43,7 @@ class Pyterka extends PublicPage<PyterkaI['props'], PyterkaI['state']> implement
             name: '5ka',
             render: () => (
                 <div className="index _FULL_W">
+                    <CustomHead title="Добрый - 5ка" />
                     <div className="index__section _FULL_W">
                         <Header />
                     </div>

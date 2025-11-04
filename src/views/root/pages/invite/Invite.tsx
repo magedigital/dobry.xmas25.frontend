@@ -5,7 +5,6 @@ import InnerPage from '@components/innerPage/InnerPage.tsx';
 import { StoreT } from '@global/types.ts';
 
 import copyHandler from './methods/copyHandler.ts';
-import getLink from './methods/getLink.ts';
 import getScrollPage from './methods/getScrollPage.ts';
 
 import InviteI from './types.ts';
@@ -28,7 +27,6 @@ class Invite extends InnerPage<InviteI['props'], InviteI['state']> implements In
 
     copyHandler = copyHandler;
     getScrollPage = getScrollPage;
-    getLink = getLink;
 
     renderContent = renderContent;
     renderHead = renderHead;

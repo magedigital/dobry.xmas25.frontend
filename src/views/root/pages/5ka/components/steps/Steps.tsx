@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import Button from '@components/button/Button.tsx';
 import Icon from '@components/icon/Icon.tsx';
 import changePage from '@functions/changePage.ts';
+import sendGoal from '@functions/sendGoal.ts';
 import setSpacesInText from '@functions/setSpacesInText.ts';
 
 import StepsI from './types.ts';
@@ -101,6 +102,7 @@ class Steps extends React.Component<StepsI['props'], StepsI['state']> implements
                                         className="_purple"
                                         onClick={() => {
                                             changePage({ pageName: 'cheque' });
+                                            sendGoal('5kaSuperPrizeCheck', true);
                                         }}
                                     >
                                         Загрузить чек

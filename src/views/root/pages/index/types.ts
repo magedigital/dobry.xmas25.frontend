@@ -41,6 +41,7 @@ type MainContentT = {
                 title: string;
                 url: string;
                 thumb: string;
+                goal?: string;
             }[];
         };
         prizesCommon: {
@@ -73,6 +74,7 @@ type PrizeT = {
     description: string;
     thumb: string;
     price?: string;
+    thumbsExtra?: [string, string][];
 };
 
 interface IndexI extends PublicPageI<PropsT, StateT> {

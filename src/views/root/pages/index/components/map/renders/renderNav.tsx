@@ -3,6 +3,7 @@ import React from 'react';
 import Lazy from '@components/lazy/Lazy.tsx';
 import changePage from '@functions/changePage.ts';
 import handlerPopup from '@functions/handlerPopup.ts';
+import sendGoal from '@functions/sendGoal.ts';
 import setSpacesInText from '@functions/setSpacesInText.ts';
 
 import I from '../types.ts';
@@ -13,8 +14,10 @@ const renderNav: I['renderNav'] = function () {
     return (
         <div className="indexMap__nav">
             {this.nav.map((item, key) => {
-                const { thumbs, pageName, game, popup } = item;
+                const { thumbs, pageName, game, popup, goal } = item;
                 const titles = typeof item.title === 'string' ? [item.title] : item.title;
+                const goalName = typeof goal === 'string' ? goal : goal?.name;
+                const isWin = goal && typeof goal === 'object' ? goal.isWin : false;
 
                 return (
                     <div
@@ -27,6 +30,10 @@ const renderNav: I['renderNav'] = function () {
                                 changePage({ pageName: 'game-inner', ids: { 1: game } });
                             } else if (popup) {
                                 handlerPopup(popup, { isShow: true });
+                            }
+
+                            if (goalName) {
+                                sendGoal(goalName, isWin);
                             }
                         }}
                     >

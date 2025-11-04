@@ -26,6 +26,7 @@ class PublicPage<P = {}, S = {}>
     }
 
     name = '';
+    scrollGoals = {};
 
     getLocalScrollName = getLocalScrollName;
     setStartScroll = setStartScroll;

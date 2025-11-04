@@ -534,8 +534,11 @@ export default class Slider {
         const inertMaxWidth = this.inertMax * this.inertStep;
         const resultWidth = inertMaxWidth + this.area.offsetWidth;
         let currentWidth = 0;
+        let c = 0;
 
-        while (currentWidth < resultWidth) {
+        while (currentWidth < resultWidth && c < 200) {
+            c += 1;
+
             if (dir === 'prev') {
                 if (currentIndex === 0) {
                     currentIndex = this.startItems.length;
@@ -626,7 +629,6 @@ export default class Slider {
         });
 
         const resultItems = this.getReactItems();
-
         const currentItemOffset = this.getOffsetItem(currentItem);
 
         this.endPos -= currentItemOffset;
@@ -639,6 +641,29 @@ export default class Slider {
                 items: resultItems,
                 reactSetCb: () => {
                     this.setMove(this.endPos);
+
+                    if (this.notDragItems) {
+                        this.notDragItems.forEach((className) => {
+                            const items = document.querySelectorAll(className);
+
+                            items.forEach((item) => {
+                                item.addEventListener(
+                                    'mousedown',
+                                    (e) => {
+                                        e.stopPropagation();
+                                    },
+                                    { passive: false },
+                                );
+                                item.addEventListener(
+                                    'touchstart',
+                                    (e) => {
+                                        e.stopPropagation();
+                                    },
+                                    { passive: false },
+                                );
+                            });
+                        });
+                    }
                 },
             });
         } else {

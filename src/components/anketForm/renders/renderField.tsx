@@ -11,7 +11,7 @@ import I from '../types.ts';
 const renderField: I['renderField'] = function ({ field }) {
     const { upload, pointAddress, pointId, setPoint, resetAct } = this.props;
     const fieldType = field.fieldType || 'input';
-    const support = (typeof field.support === 'function' ? field.support() : field.support) + ':';
+    const support = typeof field.support === 'function' ? field.support() : field.support;
     const addressList = this.state.addressList[field.name];
     const fieldValue = field.withAddress
         ? addressList?.value
@@ -26,7 +26,7 @@ const renderField: I['renderField'] = function ({ field }) {
                 <>
                     <p
                         className="anketForm__fieldSupport"
-                        dangerouslySetInnerHTML={{ __html: setSpacesInText(support) }}
+                        dangerouslySetInnerHTML={{ __html: setSpacesInText(support + ':') }}
                     ></p>
                     <div className="anketForm__fieldBox _FULL_W">
                         <Input

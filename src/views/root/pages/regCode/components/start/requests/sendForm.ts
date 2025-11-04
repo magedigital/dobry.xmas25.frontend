@@ -22,10 +22,10 @@ const sendForm: I['sendForm'] = async function () {
             await getAuth();
             await setStep('result');
 
-            sendGoal('regCodeSuccess');
+            sendGoal('regCodeSuccess', true);
 
             if (response.data?.isFirstCode) {
-                sendGoal('regFirstCode');
+                sendGoal('regFirstCode', true);
             }
 
             return;
@@ -35,7 +35,7 @@ const sendForm: I['sendForm'] = async function () {
 
         await setAsyncState.call(this, { error: error?.errorText });
 
-        sendGoal('regCodeError');
+        sendGoal('regCodeError', true);
     }
 
     await setAsyncState.call(this, { loadingKey: undefined });

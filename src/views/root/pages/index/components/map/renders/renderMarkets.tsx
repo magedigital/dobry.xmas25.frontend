@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Lazy from '@components/lazy/Lazy.tsx';
+import sendGoal from '@functions/sendGoal.ts';
 import setSpacesInText from '@functions/setSpacesInText.ts';
 
 import I from '../types.ts';
@@ -25,6 +26,11 @@ const renderMarkets: I['renderMarkets'] = function () {
                                 className="indexMap__marketsMarket"
                                 target="_blank"
                                 rel="noreferrer"
+                                onClick={() => {
+                                    if (item.goal) {
+                                        sendGoal(item.goal);
+                                    }
+                                }}
                             >
                                 <Lazy name="2">
                                     <img

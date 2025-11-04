@@ -14,6 +14,7 @@ type NavItemT = {
     content?: string;
     href?: string;
     onClick?: () => void;
+    goal?: string;
 };
 
 interface MenuI extends React.Component<PropsT, StateT> {

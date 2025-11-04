@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Link from '@components/link/Link.tsx';
+import sendGoal from '@functions/sendGoal.ts';
 
 import I from '../types.ts';
 
@@ -27,6 +28,7 @@ const renderPrizes: I['renderPrizes'] = function () {
                                 ids={{ 1: name }}
                                 callback={() => {
                                     handler(false);
+                                    sendGoal(game.goal);
                                 }}
                             >
                                 <div className="menu__prize _FULL_W _COL _COL_H_CENTER">

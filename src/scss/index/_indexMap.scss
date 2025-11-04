@@ -1130,6 +1130,12 @@
             overflow: hidden;
             background: #fff;
             border-radius: 16rem;
+            transition: $trans;
+            will-change: transform;
+
+            &:hover {
+                transform: scale(1.05);
+            }
 
             @include mob {
                 height: 108rem;

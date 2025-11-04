@@ -55,7 +55,7 @@ const renderContent: I['renderContent'] = function () {
                                         </div>
                                     )}
                                 </div>
-                                <p className="prizesPage__sliderItemDescription">
+                                <div className="prizesPage__sliderItemDescription">
                                     {item.title}{' '}
                                     {name === 'merch' && item.description && (
                                         <div className="prizesPage__sliderItemDescriptionInfo">
@@ -70,7 +70,31 @@ const renderContent: I['renderContent'] = function () {
                                             ></div>
                                         </div>
                                     )}
-                                </p>
+                                    {name === 'weekly' && item.thumbsExtra && (
+                                        <div className="prizesPage__sliderItemDescriptionInfo _weekly">
+                                            <div className="prizesPage__sliderItemDescriptionInfoIcon _CLICK">
+                                                i
+                                            </div>
+                                            <div className="prizesPage__sliderItemDescriptionInfoWindow">
+                                                <div className="prizesPage__sliderItemDescriptionInfoWindowHead">
+                                                    <img
+                                                        src={item.thumbsExtra[0][0]}
+                                                        alt=""
+                                                        className="prizesPage__sliderItemDescriptionInfoWindowImage"
+                                                    />
+                                                </div>
+                                                <p
+                                                    className="prizesPage__sliderItemDescriptionInfoWindowText"
+                                                    dangerouslySetInnerHTML={{
+                                                        __html: setSpacesInText(
+                                                            item.thumbsExtra[0][1],
+                                                        ),
+                                                    }}
+                                                ></p>
+                                            </div>
+                                        </div>
+                                    )}
+                                </div>
                             </div>
                         ))}
                     </div>

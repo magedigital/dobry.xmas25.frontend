@@ -44,7 +44,7 @@ const renderHead: I['renderHead'] = function () {
                                 className="_topBarReg _mediumSize"
                                 onClick={() => {
                                     changePage({ pageName: 'regCode' });
-                                    sendGoal('regCodeBtn,headerRegCodeBtn');
+                                    sendGoal('regCodeBtn,headerRegCodeBtn', true);
                                 }}
                             >
                                 Регистрация кода
@@ -66,6 +66,9 @@ const renderHead: I['renderHead'] = function () {
                             target="_blank"
                             rel="noreferrer"
                             className="topBar__button"
+                            onClick={() => {
+                                sendGoal('tgBtn');
+                            }}
                         >
                             <Button className="_topBarBot _mediumSize" onClick={() => undefined}>
                                 <i className="_tg">
@@ -79,6 +82,7 @@ const renderHead: I['renderHead'] = function () {
                                 className="_topBarCollection _mediumSize"
                                 onClick={() => {
                                     handlerPopup('collectionPopup', { isShow: true });
+                                    sendGoal('elksBtn');
                                 }}
                             >
                                 собери коллекцию лосей

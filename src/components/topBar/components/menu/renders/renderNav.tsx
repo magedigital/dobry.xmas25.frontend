@@ -13,12 +13,17 @@ const renderNav: I['renderNav'] = function () {
     return (
         <nav className="menu__nav _FULL">
             {nav.map((item) => {
+                const { goal } = item;
                 const ItemTag = item.pageName ? Link : 'a';
                 const itemProps = item.pageName
                     ? {
                           pageName: item.pageName,
                           callback: () => {
                               handler(false);
+
+                              if (goal) {
+                                  sendGoal(goal);
+                              }
                           },
                       }
                     : item.href
@@ -26,8 +31,8 @@ const renderNav: I['renderNav'] = function () {
                             href: item.href,
                             target: '_blank',
                             onClick: () => {
-                                if (item.name === 'tg') {
-                                    sendGoal('tgBtn');
+                                if (goal) {
+                                    sendGoal(goal);
                                 }
                             },
                         }

@@ -1,7 +1,7 @@
 import Slider from '@classes/slider/Slider';
 import InnerPageI from '@components/innerPage/types';
 
-import { ProfileContentT } from '../profile/types';
+import { ProfileContentT, ProfileMerchT } from '../profile/types';
 
 type PropsT = {};
 
@@ -13,7 +13,10 @@ type StateT = {
     loadingKey?: string;
     error?: string;
     isConfirm?: boolean;
+    items?: ThisMerchT[];
 };
+
+type ThisMerchT = ProfileMerchT & { id: string; isCurrent: boolean };
 
 interface MerchI extends InnerPageI<PropsT, StateT> {
     props: PropsT;
@@ -34,3 +37,4 @@ interface MerchI extends InnerPageI<PropsT, StateT> {
 }
 
 export default MerchI;
+export type { ThisMerchT };

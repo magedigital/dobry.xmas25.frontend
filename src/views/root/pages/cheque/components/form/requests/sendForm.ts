@@ -87,10 +87,10 @@ const sendForm: I['sendForm'] = async function () {
 
             document.dispatchEvent(new CustomEvent('getProfileContent'));
 
-            sendGoal('regCheckSuccess');
+            sendGoal('regCheckSuccess', true);
 
             if (response.data?.isFirstCheck) {
-                sendGoal('regFirstCheck');
+                sendGoal('regFirstCheck', true);
             }
 
             sendCRAGoal(response.data?.isFirstCheck ? 'new' : 'old');
@@ -102,7 +102,7 @@ const sendForm: I['sendForm'] = async function () {
 
         await setAsyncState.call(this, { error: error.errorText });
 
-        sendGoal('regCheckError');
+        sendGoal('regCheckError', true);
     }
 
     await setAsyncState.call(this, { loadingKey: undefined });

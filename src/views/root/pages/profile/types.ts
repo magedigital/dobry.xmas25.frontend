@@ -44,6 +44,8 @@ type ProfilePrizeT = {
     count: number;
     promoCode?: string;
     expired?: string;
+    detailPicture?: string;
+    detailText?: string;
 };
 
 type ProfileDataT = {

@@ -29,7 +29,7 @@ const render5kaHead: I['render5kaHead'] = function () {
                             className="topBar__5kaLink _back"
                             pageName="index"
                             callback={() => {
-                                sendGoal('5kaToHomeBtn');
+                                sendGoal('5kaHeaderMain');
                             }}
                         >
                             <div className="topBar__5kaLinkArrow">
@@ -38,7 +38,13 @@ const render5kaHead: I['render5kaHead'] = function () {
                             на главную
                         </Link>
                         <Media current="desktop">
-                            <Link className="topBar__5kaLink _faq" pageName="faq-5ka">
+                            <Link
+                                className="topBar__5kaLink _faq"
+                                pageName="faq-5ka"
+                                callback={() => {
+                                    sendGoal('5kaHeaderFaq');
+                                }}
+                            >
                                 Вопрос-ответ
                             </Link>
                         </Media>
@@ -50,6 +56,7 @@ const render5kaHead: I['render5kaHead'] = function () {
                                 className="_topBarReg _mediumSize"
                                 onClick={() => {
                                     changePage({ pageName: 'cheque' });
+                                    sendGoal('5kaHeaderCheck');
                                 }}
                             >
                                 Загрузить чек
@@ -61,6 +68,7 @@ const render5kaHead: I['render5kaHead'] = function () {
                                     className="_topBar5kaProfile _mediumSize"
                                     onClick={() => {
                                         changePage({ pageName: 'auth-login' });
+                                        sendGoal('5kaHeaderProfile');
                                     }}
                                 >
                                     Личный кабинет
@@ -72,6 +80,7 @@ const render5kaHead: I['render5kaHead'] = function () {
                                 className="topBar__auth"
                                 onClick={() => {
                                     changePage({ pageName: 'profile' });
+                                    sendGoal('5kaHeaderProfile');
                                 }}
                             >
                                 <div className="topBar__authInner"></div>

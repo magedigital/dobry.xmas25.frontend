@@ -1,4 +1,6 @@
 import scrollToBlock from '@functions/scrollToBlock.ts';
+import sendGoal from '@functions/sendGoal.ts';
+import { store } from '@redux/redux.ts';
 
 import I from '../types.ts';
 
@@ -24,7 +26,13 @@ const scrollToSection: I['scrollToSection'] = function (section, dur = 300) {
             blockNode: currentNode,
             scrollNode,
             duration: dur,
+            offset: store.getState().device === 'desktop' ? -250 : -200,
+            dir: 'top',
         });
+    }
+
+    if (section === 'games') {
+        sendGoal('mapGameTab');
     }
 };
 

@@ -17,7 +17,6 @@ interface InviteI extends InnerPageI<PropsT, StateT> {
     timerId?: ReturnType<typeof setTimeout>;
 
     copyHandler(this: InviteI): Promise<void>;
-    getLink(this: InviteI): string;
 
     renderContent(this: InviteI): React.ReactNode;
     renderHead(this: InviteI): React.ReactNode;

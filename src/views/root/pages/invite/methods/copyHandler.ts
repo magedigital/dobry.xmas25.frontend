@@ -3,13 +3,15 @@ import setAsyncState from '@functions/setAsyncState.ts';
 
 import I from '../types.ts';
 
+import getLink from '../utils/getLink.ts';
+
 const copyHandler: I['copyHandler'] = async function () {
     if (this.timerId) {
         clearTimeout(this.timerId);
     }
 
     try {
-        await copyInBuffer(this.getLink());
+        await copyInBuffer(getLink());
 
         await setAsyncState.call(this, { isCopy: true });
 

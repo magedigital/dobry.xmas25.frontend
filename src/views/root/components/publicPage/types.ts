@@ -11,6 +11,7 @@ interface PublicPageI<P = {}, S = {}> extends React.Component<PropsT & P, StateT
 
     isFixTopBar?: boolean;
     name: string;
+    scrollGoals: Partial<Record<1 | 2 | 3, true>>;
 
     parent: React.RefObject<HTMLDivElement | null>;
     scrollNode: React.RefObject<HTMLDivElement | null>;

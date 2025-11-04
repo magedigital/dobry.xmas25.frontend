@@ -523,6 +523,7 @@
         }
 
         &Prize {
+            position: relative;
             width: 170rem;
 
             @include mob {

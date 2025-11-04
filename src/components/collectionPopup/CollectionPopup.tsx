@@ -54,7 +54,7 @@ class CollectionPopup
         {
             thumb: 'toy-7.png',
             name: 'весельчак',
-            market: 'Красное и белое Бристоль',
+            market: 'Красное и белое',
         },
         {
             thumb: 'toy-8.png',

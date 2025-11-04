@@ -21,7 +21,7 @@ const renderContent: I['renderContent'] = function () {
                 />
             </div>
             <div className="indexApp__block _ROW">
-                <img src={require('@media/app-toy.png')} alt="" className="indexApp__blockThumb" />
+                <img src={require('@media/toy-2.png')} alt="" className="indexApp__blockThumb" />
 
                 <Media current="desktop">
                     <a
@@ -45,6 +45,9 @@ const renderContent: I['renderContent'] = function () {
                             target="_blank"
                             rel="noreferrer"
                             className="indexApp__blockContentLink"
+                            onClick={() => {
+                                sendGoal('mobileBtn');
+                            }}
                         >
                             Скачай
                             <br />

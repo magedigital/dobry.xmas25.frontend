@@ -5,7 +5,7 @@ import { store } from '@redux/redux.ts';
 import I from '../types.ts';
 
 const sliderInit: I['sliderInit'] = async function () {
-    const { currentMerchIndex } = this.state;
+    const { currentMerchIndex, content } = this.state;
     const slider = this.parent.current!.querySelector('.popup__merch') as HTMLElement;
 
     if (this.slider) {
@@ -16,14 +16,36 @@ const sliderInit: I['sliderInit'] = async function () {
         slider,
         area: slider.querySelector('.popup__merchInner')!,
         moveArea: this.parent.current!.querySelector('.popup__merchItems')!,
-        itemClass: 'popup__merchItem',
+        itemClass: 'popup__merchItemsItem',
         showEach: true,
-        infinity: false,
+        infinity: true,
+        reactMoveArea: this.parent.current!.querySelector(
+            '.popup__merchReactItems',
+        )! as HTMLElement,
         withDrag: store.getState().device === 'mobile',
         current: currentMerchIndex,
-        callback: async ({ current }) => {
+        callback: async ({ current, items, reactSetCb }) => {
             if (typeof current === 'number') {
+                console.log(current)
                 await setAsyncState.call(this, { currentMerchIndex: current });
+            }
+
+            if (items) {
+                const resultItems = items.map((item) => {
+                    const product = content!.components.buy.merch.prizes[item.key];
+
+                    return {
+                        ...product,
+                        isCurrent: item.isCurrent,
+                        id: item.id,
+                    };
+                });
+
+                await setAsyncState.call(this, { items: resultItems });
+
+                if (reactSetCb) {
+                    reactSetCb();
+                }
             }
         },
         buttons: {

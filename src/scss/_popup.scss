@@ -805,7 +805,7 @@
         &Button {
             position: absolute;
             top: 50%;
-            z-index: 3;
+            z-index: 10;
             width: 48rem;
             height: 48rem;
             margin-top: -26rem;
@@ -835,8 +835,27 @@
             // padding: 0 36rem;
         }
 
-        &Items {
+        &Items,
+        &ReactItems {
+            position: relative;
+            z-index: 2;
             display: inline-flex;
+        }
+
+        &Items {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        &ReactItems {
+            position: absolute;
+            top: 0;
+            left: 36rem;
+            z-index: 3;
+
+            @include mob {
+                left: 24rem;
+            }
         }
 
         &Item {
