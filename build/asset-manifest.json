@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.361dc6de.css",
-    "main.js": "/static/js/main.0c8db91f.js",
+    "main.css": "/static/css/main.4f9fa1eb.css",
+    "main.js": "/static/js/main.d928d540.js",
     "static/js/977.11b184c9.chunk.js": "/static/js/977.11b184c9.chunk.js",
     "static/js/16.9d69e595.chunk.js": "/static/js/16.9d69e595.chunk.js",
     "static/js/402.1bf2f098.chunk.js": "/static/js/402.1bf2f098.chunk.js",
@@ -78,7 +78,6 @@
     "static/media/Geologica-Light.ttf": "/static/media/Geologica-Light.1d07a80c29574f217c3c.ttf",
     "static/media/Geologica-Regular.ttf": "/static/media/Geologica-Regular.e13272ec36b0a96fc89c.ttf",
     "static/media/map-back-4.jpg": "/static/media/map-back-4.317d3184bfbbae9123b1.jpg",
-    "static/media/prize-big-2-5ka.png": "/static/media/prize-big-2-5ka.72557b1a9a66526df2b4.png",
     "static/media/back-5ka-03-mob.jpg": "/static/media/back-5ka-03-mob.78b393b24fcd1f0a50c7.jpg",
     "static/media/location-2.png": "/static/media/location-2.0e40daa46f9b3a3a8319.png",
     "static/media/location-8.png": "/static/media/location-8.28e194827996010cf532.png",
@@ -92,6 +91,7 @@
     "static/media/rastim-img.jpg": "/static/media/rastim-img.43cd1cdc281592936e07.jpg",
     "static/media/location-7.png": "/static/media/location-7.bfccad69b71791b82034.png",
     "static/media/element-5-5ka.png": "/static/media/element-5-5ka.c4d2490d48b74a40a5b3.png",
+    "static/media/prize-big-2-5ka.png": "/static/media/prize-big-2-5ka.36c909153557ad49ef62.png",
     "static/media/location-glow.png": "/static/media/location-glow.3ce63f00728b8ff325fd.png",
     "static/media/snow.png": "/static/media/snow.1ec86e2238baa4659190.png",
     "static/media/location-16-1.png": "/static/media/location-16-1.278312ab2341aff58f48.png",
@@ -271,7 +271,7 @@
     "static/media/arrow-down.svg": "/static/media/arrow-down.559aeb386a24d46ce43d.svg"
   },
   "entrypoints": [
-    "static/css/main.361dc6de.css",
-    "static/js/main.0c8db91f.js"
+    "static/css/main.4f9fa1eb.css",
+    "static/js/main.d928d540.js"
   ]
 }
