@@ -12,7 +12,7 @@ const sendCRAGoal = (type: 'old' | 'new') => {
     const user = store.getState().user;
     const utmSource = localStorage.getItem('utmSource');
 
-    if (utmSource !== 'advcake') {
+    if (utmSource !== 'winbox') {
         return;
     }
 
