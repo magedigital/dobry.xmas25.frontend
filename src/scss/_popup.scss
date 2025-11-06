@@ -845,6 +845,11 @@
         &Items {
             opacity: 0;
             pointer-events: none;
+
+            &._vis {
+                opacity: 1;
+                pointer-events: visible;
+            }
         }
 
         &ReactItems {

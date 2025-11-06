@@ -20,7 +20,7 @@ const renderSlider: I['renderSlider'] = function () {
     return (
         <div className="popup__merch _FULL_W _COL _COL_H_CENTER">
             <div className="popup__merchInner _FULL_W">
-                <div className="popup__merchItems">
+                <div className="popup__merchItems _vis">
                     <div className="popup__merchItem _COL _COL_H_CENTER">
                         <div className="popup__merchItemInner">
                             <Merch
