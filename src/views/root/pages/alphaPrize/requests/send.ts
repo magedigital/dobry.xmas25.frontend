@@ -24,7 +24,7 @@ const send: I['send'] = async function () {
     await setAsyncState.call(this, { loadingKey: 'send' });
 
     try {
-        const response = await AxiosInst.post<{}, ResponseT>('/AddUserPrize', {
+        const response = await AxiosInst.post<{}, ResponseT>('/OrderAlphaElk', {
             prize: 'ALPHA_ELK',
         });
 
