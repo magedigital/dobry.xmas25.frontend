@@ -26,7 +26,9 @@ const renderOffer: I['renderOffer'] = function () {
                     загружено
                     <br />
                     чеков:
-                    <span>{data?.checks?.length || 0}</span>
+                    <span>
+                        {data?.checks?.filter((c) => c.statusCode === 'ACCEPTED').length || 0}
+                    </span>
                 </div>
                 <div className="profile__5kaOfferButton">
                     {status === 'process' && (

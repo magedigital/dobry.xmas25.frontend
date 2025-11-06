@@ -11,8 +11,6 @@ import I from '../types.ts';
 const renderSlider: I['renderSlider'] = function () {
     const { content, isConfirm } = this.state;
 
-    console.log(content);
-
     const merch = content?.components.extra5ka.alpha as ProfileMerchT;
 
     if (!merch) {
