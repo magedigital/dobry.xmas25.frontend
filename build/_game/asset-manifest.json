@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/_game/static/css/main.cc6bdbbe.css",
-    "main.js": "/_game/static/js/main.8eaa5995.js",
+    "main.css": "/_game/static/css/main.47b01c6a.css",
+    "main.js": "/_game/static/js/main.f2677957.js",
     "static/js/453.5565870f.chunk.js": "/_game/static/js/453.5565870f.chunk.js",
     "static/media/bg-game.jpg": "/_game/static/media/bg-game.0698ef1d69b1362abb39.jpg",
     "static/media/finish-plate.png": "/_game/static/media/finish-plate.e82d4556c11ccd0b6bce.png",
@@ -89,13 +89,15 @@
     "static/media/finish-decor4.svg": "/_game/static/media/finish-decor4.42282cb94a569882b416b8d692ef7006.svg",
     "static/media/finish-decor2.svg": "/_game/static/media/finish-decor2.9e95d1fd07e6b412cc855084b890dad5.svg",
     "static/media/x.svg": "/_game/static/media/x.31e05e88b20de1b5cbda45e3fb30173b.svg",
+    "static/media/checkbox-on.svg": "/_game/static/media/checkbox-on.f8ff6e505240b056c3bffb86a41995c6.svg",
     "static/media/play.svg": "/_game/static/media/play.ad110f835af17bb6c5e0.svg",
-    "main.cc6bdbbe.css.map": "/_game/static/css/main.cc6bdbbe.css.map",
-    "main.8eaa5995.js.map": "/_game/static/js/main.8eaa5995.js.map",
+    "static/media/checkbox-off.svg": "/_game/static/media/checkbox-off.fe7ae35a1bf49617da273986d925f7d7.svg",
+    "main.47b01c6a.css.map": "/_game/static/css/main.47b01c6a.css.map",
+    "main.f2677957.js.map": "/_game/static/js/main.f2677957.js.map",
     "453.5565870f.chunk.js.map": "/_game/static/js/453.5565870f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cc6bdbbe.css",
-    "static/js/main.8eaa5995.js"
+    "static/css/main.47b01c6a.css",
+    "static/js/main.f2677957.js"
   ]
 }

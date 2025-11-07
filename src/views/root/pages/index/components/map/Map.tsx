@@ -66,6 +66,51 @@ class Map extends React.Component<MapI['props'], MapI['state']> implements MapI 
                 }
             }
         }, 100);
+
+        const navItems = document.querySelectorAll('.indexMap__navItem');
+
+        navItems.forEach((navItem) => {
+            const snowContainer = navItem.querySelector('.indexMap__snowContainer') as HTMLElement;
+
+            if (!snowContainer) return;
+
+            // Флаг, чтобы избежать множественного создания при быстром наведении
+            let isAnimatingOut = false;
+
+            navItem.addEventListener('mouseenter', () => {
+                if (isAnimatingOut) {
+                    // Если идёт анимация исчезновения, отменим её
+                    snowContainer.style.opacity = '1';
+                    isAnimatingOut = false;
+                }
+
+                // Удалим старые снежинки (на всякий случай)
+                snowContainer.innerHTML = '';
+
+                // Создаём 30 новых снежинок
+                for (let i = 0; i < 20; i++) {
+                    const snowflake = document.createElement('div');
+                    snowflake.classList.add('indexMap__snowflake');
+                    snowContainer.appendChild(snowflake);
+                }
+
+                // Плавное появление
+                snowContainer.style.opacity = '1';
+            });
+
+            navItem.addEventListener('mouseleave', () => {
+                isAnimatingOut = true;
+                snowContainer.style.opacity = '0';
+            });
+
+            // После завершения анимации исчезновения — удаляем снежинки
+            snowContainer.addEventListener('transitionend', () => {
+                if (snowContainer.style.opacity === '0') {
+                    snowContainer.innerHTML = ''; // удаляем все дочерние элементы
+                    isAnimatingOut = false;
+                }
+            });
+        });
     }
 
     componentWillUnmount(): void {

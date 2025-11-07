@@ -9,43 +9,6 @@
         @include bg("/media/main-img-mob.jpg", 100% auto, center top);
     }
 
-    &__light {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        width: 100%;
-        height: 100%;
-        animation: header_lights 3000ms ease-in infinite;
-
-        @include mob {
-            display: none;
-        }
-
-        @keyframes header_lights {
-            0%,
-            100% {
-                opacity: 0;
-            }
-
-            50% {
-                opacity: 1;
-            }
-        }
-
-        &._1 {
-            animation-delay: -0ms;
-        }
-
-        &._2 {
-            animation-delay: -1000ms;
-        }
-
-        &._3 {
-            animation-delay: -2000ms;
-        }
-    }
-
     &__inner {
         position: relative;
         align-items: center;
@@ -354,5 +317,73 @@
         width: 23rem;
         height: 15rem;
         transform: translate(-50%, 0);
+    }
+}
+
+.indexHeader__lights-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.indexHeader__lights {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100% auto;
+    animation: header_lights 2100ms ease-in infinite;
+}
+
+.indexHeader__lights:nth-child(1) {
+    background-image: url("/media/main/head-lights-1.png");
+    animation-delay: -0ms;
+
+    @include mob {
+        background-image: url("/media/main/head-lights-1-mob.png");
+    }
+}
+
+.indexHeader__lights:nth-child(2) {
+    background-image: url("/media/main/head-lights-2.png");
+    animation-delay: -700ms;
+
+    @include mob {
+        background-image: url("/media/main/head-lights-2-mob.png");
+    }
+}
+
+.indexHeader__lights:nth-child(3) {
+    background-image: url("/media/main/head-lights-3.png");
+    animation-delay: -1400ms;
+
+    @include mob {
+        background-image: url("/media/main/head-lights-3-mob.png");
+    }
+}
+
+@keyframes header_lights {
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.2;
+        filter: brightness(1);
+    }
+
+    20% {
+        transform: scale(1.002);
+        opacity: 1;
+        filter: brightness(1.5);
+    }
+
+    60% {
+        transform: scale(1.001);
+        opacity: 0.8;
+        filter: brightness(1);
     }
 }

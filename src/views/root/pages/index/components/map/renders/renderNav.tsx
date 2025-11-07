@@ -14,7 +14,7 @@ const renderNav: I['renderNav'] = function () {
     return (
         <div className="indexMap__nav">
             {this.nav.map((item, key) => {
-                const { thumbs, pageName, game, popup, goal } = item;
+                const { thumbs, pageName, game, popup, goal, animationThumbs } = item;
                 const titles = typeof item.title === 'string' ? [item.title] : item.title;
                 const goalName = typeof goal === 'string' ? goal : goal?.name;
                 const isWin = goal && typeof goal === 'object' ? goal.isWin : false;
@@ -37,12 +37,22 @@ const renderNav: I['renderNav'] = function () {
                             }
                         }}
                     >
+                        {key === 6 && <div className="snowball"></div>}
+                        {animationThumbs && (
+                            <div className="indexMap__navItemAnimation">
+                                {animationThumbs.map((th, thK) => (
+                                    <img alt="" src={require(`@media/road/${th}`)} key={thK} />
+                                ))}
+                            </div>
+                        )}
+                        <div className="indexMap__snowContainer"></div>
                         <Lazy name="1">
                             <div className="indexMap__navItem-shine" />
                             {thumbs.map((thumb, tKey) => (
                                 <div className={`indexMap__navItemThumb _${tKey + 1}`} key={thumb}>
+                                    {key === 7 && <div className="indexMap__navItem8Decor"></div>}
                                     <img
-                                        src={require(`@media/${thumb}`)}
+                                        src={require(`@media/road/${thumb}`)}
                                         alt=""
                                         className="indexMap__navItemThumbImage"
                                     />

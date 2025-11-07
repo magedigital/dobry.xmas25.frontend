@@ -107,6 +107,7 @@ function onAppReadyHandler(app) {
         closeHandler: window.closeGamePopup,
         registerHandler: window.registerBill,
         signUpHandler: window.signUp,
+        playWithoutConfirmation: window.playWithoutConfirmation,
         switchToMobileWidth: 480,
         userNotAuthorized: !window.userAuthorized,
         activityIsOver: window.activityIsOver,

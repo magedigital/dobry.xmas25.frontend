@@ -2,6 +2,8 @@ import changePage from '@functions/changePage.ts';
 import checkChatbot from '@functions/checkChatbot.ts';
 import removeTransition from '@functions/removeTransition.ts';
 
+import { setError } from '../../../../../components/errors/utils/errorHandler.ts';
+
 import I from '../types.ts';
 
 const gameInit: I['gameInit'] = async function () {
@@ -25,6 +27,10 @@ const gameInit: I['gameInit'] = async function () {
         changePage({ pageName: 'cheque' });
     };
 
+    window.playWithoutConfirmation = () => {
+        setError({ type: 'error', text: 'Подтвердите списание 1 балла' });
+    };
+
     const script2 = document.createElement('script');
 
     script2.setAttribute('data-game', '');
@@ -38,7 +44,7 @@ const gameInit: I['gameInit'] = async function () {
             removeTransition({ item: '.container' });
         };
 
-        script.src = '/_game/static/js/main.8eaa5995.js';
+        script.src = '/_game/static/js/main.f2677957.js';
 
         document.querySelector('head')!.appendChild(script);
     };
@@ -51,7 +57,7 @@ const gameInit: I['gameInit'] = async function () {
 
     link.setAttribute('data-game', '');
     link.setAttribute('rel', 'stylesheet');
-    link.setAttribute('href', '/_game/static/css/main.cc6bdbbe.css');
+    link.setAttribute('href', '/_game/static/css/main.47b01c6a.css');
 
     document.querySelector('head')!.appendChild(link);
 

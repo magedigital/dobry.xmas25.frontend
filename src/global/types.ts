@@ -12,6 +12,7 @@ declare global {
         socAuthUrls: Record<string, string>;
         closeGamePopup: () => void;
         registerBill: () => void;
+        playWithoutConfirmation: () => void;
         signUp: () => void;
         gameId: string | number;
         saveJWT: (JWT: string) => void;

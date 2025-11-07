@@ -71,15 +71,11 @@ class Header extends React.Component<HeaderI['props'], HeaderI['state']> impleme
     render() {
         return (
             <div ref={this.parent} className="indexHeader _SECTION">
-                {[1, 2, 3].map((k) => (
-                    <div className={`indexHeader__light _${k}`} key={k}>
-                        <img
-                            src={require(`@media/main/head-lights-${k}.png`)}
-                            alt=""
-                            className="indexHeader__lightImage"
-                        />
-                    </div>
-                ))}
+                <div className="indexHeader__lights-container">
+                    <div className="indexHeader__lights"></div>
+                    <div className="indexHeader__lights"></div>
+                    <div className="indexHeader__lights"></div>
+                </div>
                 <div className="indexHeader__inner _INNER">
                     {this.renderContent()}
                     {this.renderCarusel()}
