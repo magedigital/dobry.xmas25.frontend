@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.b3d36e29.css",
-    "main.js": "/static/js/main.bd9df422.js",
+    "main.css": "/static/css/main.ea49473b.css",
+    "main.js": "/static/js/main.588c29cf.js",
     "static/js/977.11b184c9.chunk.js": "/static/js/977.11b184c9.chunk.js",
     "static/js/16.9d69e595.chunk.js": "/static/js/16.9d69e595.chunk.js",
     "static/js/402.1bf2f098.chunk.js": "/static/js/402.1bf2f098.chunk.js",
@@ -40,7 +40,7 @@
     "static/media/map-back-3.jpg": "/static/media/map-back-3.5c7f3286c0105fc76597.jpg",
     "static/media/back-5ka-01-mob.jpg": "/static/media/back-5ka-01-mob.5c8dcd99b414043fa039.jpg",
     "static/media/karusel-1.png": "/static/media/karusel-1.940d660baf197c6937cf.png",
-    "static/media/prize-big.jpg": "/static/media/prize-big.f3a358fa09f338a1d938.jpg",
+    "static/media/prize-big.jpg": "/static/media/prize-big.bd3a1824c35a80fc6510.jpg",
     "static/media/prize-losi-5ka.png": "/static/media/prize-losi-5ka.dac24c382dea822ceec3.png",
     "static/media/app-back.jpg": "/static/media/app-back.4c5a5f0eacb0368edb29.jpg",
     "static/media/snow-2.png": "/static/media/snow-2.63ed07339c872af994ed.png",
@@ -55,8 +55,8 @@
     "static/media/snow-3.png": "/static/media/snow-3.8d9a0d9c12c609886461.png",
     "static/media/element-6-5ka.png": "/static/media/element-6-5ka.4cec9be650921fe2483b.png",
     "static/media/back-5ka-03.jpg": "/static/media/back-5ka-03.71f94b268b5fd29f4fda.jpg",
+    "static/media/prize-big-mob.jpg": "/static/media/prize-big-mob.7af394399ed54b99623f.jpg",
     "static/media/back-inner-0.jpg": "/static/media/back-inner-0.0aa952dc34ab09310b12.jpg",
-    "static/media/prize-big-mob.jpg": "/static/media/prize-big-mob.4e3279ede4b63c92b3ce.jpg",
     "static/media/popup-back-mob.jpg": "/static/media/popup-back-mob.2957ecbeb8aa7dbabb71.jpg",
     "static/media/back-inner-2.jpg": "/static/media/back-inner-2.0fc7827f25bfbd4b0ac5.jpg",
     "static/media/store-3-1-mob.jpg": "/static/media/store-3-1-mob.32b496768017fbcdb053.jpg",
@@ -274,7 +274,7 @@
     "static/media/arrow-down.svg": "/static/media/arrow-down.559aeb386a24d46ce43d.svg"
   },
   "entrypoints": [
-    "static/css/main.b3d36e29.css",
-    "static/js/main.bd9df422.js"
+    "static/css/main.ea49473b.css",
+    "static/js/main.588c29cf.js"
   ]
 }
