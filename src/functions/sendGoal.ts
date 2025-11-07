@@ -5,7 +5,9 @@ export default function sendGoal(name: string, isWin?: boolean): void {
         return;
     }
 
-    if (isWin && localStorage.getItem('utmSource') !== 'winbox') {
+    const source = localStorage.getItem('utmSource');
+
+    if (isWin && source !== 'winbox' && source !== 'advcake') {
         return;
     }
 
