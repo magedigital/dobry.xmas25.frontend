@@ -38,13 +38,7 @@ const renderNav: I['renderNav'] = function () {
                         }}
                     >
                         {key === 6 && <div className="snowball"></div>}
-                        {animationThumbs && (
-                            <div className="indexMap__navItemAnimation">
-                                {animationThumbs.map((th, thK) => (
-                                    <img alt="" src={require(`@media/road/${th}`)} key={thK} />
-                                ))}
-                            </div>
-                        )}
+
                         <div className="indexMap__snowContainer"></div>
                         <Lazy name="1">
                             <div className="indexMap__navItem-shine" />
@@ -59,6 +53,13 @@ const renderNav: I['renderNav'] = function () {
                                 </div>
                             ))}
                         </Lazy>
+                        {animationThumbs && (
+                            <div className="indexMap__navItemAnimation">
+                                {animationThumbs.map((th, thK) => (
+                                    <img alt="" src={require(`@media/road/${th}`)} key={thK} />
+                                ))}
+                            </div>
+                        )}
 
                         {titles.map((title, tKey) => {
                             const titleKey = [key, tKey].join('_');

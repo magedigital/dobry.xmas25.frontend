@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.d87a4b81.css",
-    "main.js": "/static/js/main.b5d13acd.js",
+    "main.css": "/static/css/main.b3d36e29.css",
+    "main.js": "/static/js/main.bd9df422.js",
     "static/js/977.11b184c9.chunk.js": "/static/js/977.11b184c9.chunk.js",
     "static/js/16.9d69e595.chunk.js": "/static/js/16.9d69e595.chunk.js",
     "static/js/402.1bf2f098.chunk.js": "/static/js/402.1bf2f098.chunk.js",
@@ -206,12 +206,12 @@
     "static/media/prize-2-3-5ka.png": "/static/media/prize-2-3-5ka.db1a79310ad91ef692fa.png",
     "static/media/games-back-menu-mob.svg": "/static/media/games-back-menu-mob.939c2e259e7def19e97f.svg",
     "static/media/prize-2-1-5ka.png": "/static/media/prize-2-1-5ka.def456894c55d5293624.png",
-    "static/media/location-12-2.png": "/static/media/location-12-2.8911d5c6b8040346b9c6.png",
     "static/media/karusel-prize--01.png": "/static/media/karusel-prize--01.a0b62f2bece9d260e5ec.png",
+    "static/media/location-12-2.png": "/static/media/location-12-2.6bda96fa94343ffb8ecf.png",
     "static/media/prize-1-1-5ka.png": "/static/media/prize-1-1-5ka.0ddb4cb3bac6877f371f.png",
     "static/media/banner-2-back.jpg": "/static/media/banner-2-back.23a0c008a373f5bfac02.jpg",
-    "static/media/location-11-2.png": "/static/media/location-11-2.973dc27ceb9278169794.png",
     "static/media/sign-lights-1.png": "/static/media/sign-lights-1.b955ab5427df5c12574c.png",
+    "static/media/location-11-2.png": "/static/media/location-11-2.72917d900d33b47e1fab.png",
     "static/media/slogan-5ka.svg": "/static/media/slogan-5ka.ad0661aad2600ba90ff62280f4db0cb9.svg",
     "static/media/Step3.jpg": "/static/media/Step3.41679a50a707bc94765d.jpg",
     "static/media/bottle-test.png": "/static/media/bottle-test.63dcd5b300f2e3b8f35e.png",
@@ -274,7 +274,7 @@
     "static/media/arrow-down.svg": "/static/media/arrow-down.559aeb386a24d46ce43d.svg"
   },
   "entrypoints": [
-    "static/css/main.d87a4b81.css",
-    "static/js/main.b5d13acd.js"
+    "static/css/main.b3d36e29.css",
+    "static/js/main.bd9df422.js"
   ]
 }

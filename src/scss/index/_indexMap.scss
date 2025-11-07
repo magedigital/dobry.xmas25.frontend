@@ -1518,6 +1518,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
+    z-index: 999;
     width: 0;
     height: 320rem;
     background-position: center;
@@ -1882,11 +1883,11 @@
     mix-blend-mode: overlay;
     animation: indexMap__navItem8Decor_glare 5s ease-in-out infinite;
 
-    @include mob{
-        width: 62rem;
-        height: 62rem;
+    @include mob {
         top: 40.5rem;
         left: 81.5rem;
+        width: 62rem;
+        height: 62rem;
     }
 }
 
@@ -1910,7 +1911,6 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 100;
     width: 100%;
     height: 100%;
 }
@@ -1921,6 +1921,7 @@
     left: 0;
     width: 100%;
     height: 100%;
+    object-fit: contain;
     mix-blend-mode: plus-lighter;
     animation: location_lights 1500ms infinite;
 }
