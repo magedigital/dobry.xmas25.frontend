@@ -22,8 +22,11 @@
     }
 
     &__support {
+        position: relative;
+        z-index: 1;
         margin-bottom: 27rem;
         padding: 8rem 12rem 7rem;
+        overflow: hidden;
         color: #fff;
         font-weight: 600;
         font-size: 18rem;
@@ -31,6 +34,34 @@
         background: #eb2316;
         border: 2rem solid #ffe09e;
         border-radius: 360rem;
+
+        &::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            width: 100rem;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(#ffe09e, 0.08), rgba(#ffe09e, 0.6) 95%, rgba(#ffe09e, 0.6));
+            transform: translate(-120rem, 0) skewX(-45deg);
+            animation: p5kaHeaderButton 3.5s infinite ease-in;
+            content: "";
+            pointer-events: none;
+
+            @keyframes p5kaHeaderButton {
+                0% {
+                    transform: translate(-120rem, 0) skewX(-45deg);
+                }
+
+                25% {
+                    transform: translate(350rem, 0) skewX(-45deg);
+                }
+
+                100% {
+                    transform: translate(350rem, 0) skewX(-45deg);
+                }
+            }
+        }
 
         @include mob {
             margin-bottom: 18rem;
@@ -72,6 +103,10 @@
     &__prize {
         align-items: center;
 
+        @include mob {
+            width: 100%;
+        }
+
         &Support {
             margin-bottom: -18rem;
             padding: 9rem 16rem 10rem;
@@ -88,11 +123,11 @@
             }
         }
 
-        &Image {
+        &Box {
+            position: relative;
             width: 620rem;
             height: 390rem;
             margin-left: -12rem;
-            object-fit: contain;
 
             @include mob {
                 width: 105%;
@@ -100,5 +135,140 @@
                 margin-left: 0;
             }
         }
+
+        &Image {
+            position: absolute;
+            object-fit: contain;
+            will-change: transform;
+
+            &._1 {
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+            @keyframes p5kaHeaderPrizePulsation {
+                0%,
+                100% {
+                    transform: scale(1);
+                }
+
+                50% {
+                    transform: scale(1.1);
+                }
+            }
+
+            &._2 {
+                top: -14rem;
+                left: 34rem;
+                width: 90%;
+                height: 90%;
+                animation: p5kaHeaderPrizePulsation 0.8s infinite ease-in-out;
+
+                @include mob {
+                    top: -6rem;
+                    left: 16rem;
+                }
+            }
+
+            &._3 {
+                right: 50rem;
+                bottom: 32rem;
+                width: 190rem;
+                height: 190rem;
+                animation: p5kaHeaderPrizePulsation 0.8s infinite ease-in-out;
+                animation-delay: 0.4s;
+
+                @include mob {
+                    right: 32rem;
+                    bottom: 24rem;
+                    width: 120rem;
+                    height: 120rem;
+                }
+            }
+        }
+    }
+}
+
+/* Чтобы блик не промигивал первый раз при загрузке нужна эта анимация */
+@keyframes fadeInOnce {
+    0%,
+    90% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.p5kaHeader__inner_glasses {
+    position: absolute;
+    top: 89rem;
+    left: 150rem;
+    z-index: 2;
+    width: 127rem;
+    height: auto;
+    opacity: 0;
+    mix-blend-mode: plus-lighter;
+    animation: fadeInOnce 1000ms forwards 1000ms;
+}
+
+/* ---- Надпись 1 000 000 -------------------------------------------- */
+
+.p5kaHeader__lights-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 800rem;
+}
+
+.p5kaHeader__lights {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100% auto;
+    animation: p5kaSteps__header_lights 2100ms ease-in infinite;
+}
+
+.p5kaHeader__lights:nth-child(1) {
+    background-image: url("/media/5ka/dop/back-5ka-lights-1.png");
+    animation-delay: -0ms;
+}
+
+.p5kaHeader__lights:nth-child(2) {
+    background-image: url("/media/5ka/dop/back-5ka-lights-2.png");
+    animation-delay: -700ms;
+}
+
+.p5kaHeader__lights:nth-child(3) {
+    background-image: url("/media/5ka/dop/back-5ka-lights-3.png");
+    animation-delay: -1400ms;
+}
+
+@keyframes p5kaSteps__header_lights {
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.2;
+        filter: brightness(1);
+    }
+
+    20% {
+        transform: scale(1.002);
+        opacity: 1;
+        filter: brightness(1.5);
+    }
+
+    60% {
+        transform: scale(1.001);
+        opacity: 0.8;
+        filter: brightness(1);
     }
 }

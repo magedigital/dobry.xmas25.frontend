@@ -31,6 +31,19 @@
             width: 160rem;
             height: 160rem;
         }
+
+        animation: p5kaStepsDecor1 1.2s infinite ease-in-out;
+
+        @keyframes p5kaStepsDecor1 {
+            0%,
+            100% {
+                transform: translate(0, 0);
+            }
+
+            50% {
+                transform: translate(0, 15rem);
+            }
+        }
     }
 
     &__decor._2 {
@@ -38,6 +51,7 @@
         bottom: 140rem;
         width: 370rem;
         height: 370rem;
+        animation: p5kaStepsDecor2 1.2s infinite ease-in-out;
 
         @include mob {
             top: 904rem;
@@ -45,6 +59,17 @@
             bottom: auto;
             width: 170rem;
             height: 170rem;
+        }
+
+        @keyframes p5kaStepsDecor2 {
+            0%,
+            100% {
+                transform: rotate(0deg);
+            }
+
+            50% {
+                transform: rotate(-6deg);
+            }
         }
     }
 
@@ -104,6 +129,8 @@
             z-index: 2;
             width: 116rem;
             height: 116rem;
+            animation: p5kaStepsButtonPulsation 1s infinite ease-in-out;
+            animation-delay: 0.5s;
             content: "";
 
             @include bg("/media/5ka/prize-50-5ka.png", cover, center);
@@ -282,23 +309,20 @@
                 top: 0;
                 left: 12rem;
                 z-index: 2;
-                width: 550rem;
+                width: 520rem;
                 height: 300rem;
+                background: url("/media/5ka/dop/one_mln_rub.png");
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: contain;
+                animation: p5kaSteps__pulsing1000000 3000ms ease-in infinite;
                 content: "";
-
-                @include bg("/media/5ka/prize-big-2-5ka.png", contain, left top);
-
-                @include mob {
-                    left: 50%;
-                    width: 100%;
-                    height: 170rem;
-                    background-position: center top;
-                    transform: translate(-50%, 0);
-                }
             }
         }
 
         &Content {
+            position: relative;
+            z-index: 3;
             width: 540rem;
             margin-left: auto;
             padding-top: 4rem;
@@ -340,9 +364,167 @@
         }
 
         &Button {
+            animation: p5kaStepsButtonPulsation 1s infinite ease-in-out;
+            will-change: transform;
+
             @include mob {
                 width: 220rem;
             }
+
+            @keyframes p5kaStepsButtonPulsation {
+                0%,
+                100% {
+                    transform: scale(1);
+                }
+
+                50% {
+                    transform: scale(1.05);
+                }
+            }
         }
+    }
+}
+
+@keyframes p5kaSteps__pulsing1000000 {
+    0%,
+    20% {
+        transform: scale(1) rotate(0deg);
+        filter: contrast(1) brightness(1);
+    }
+
+    25% {
+        transform: scale(1.2) rotate(0deg);
+        filter: contrast(0.6) brightness(1.8);
+    }
+
+    30% {
+        transform: scale(1) rotate(0deg);
+        filter: contrast(1) brightness(1);
+    }
+
+    35% {
+        transform: scale(1.1) rotate(0deg);
+    }
+
+    40% {
+        transform: scale(1) rotate(0deg);
+    }
+
+    45% {
+        transform: scale(1.1) rotate(0deg);
+    }
+
+    50% {
+        transform: scale(1) rotate(0deg);
+    }
+
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+.p5kaSteps__scatter-container {
+    position: absolute;
+    top: 120rem;
+    left: 290rem;
+    width: 0;
+    height: 0;
+
+    @include mob {
+        left: 50%;
+        transform: translate(-50%, 0) scale(0.8);
+    }
+}
+
+.p5kaSteps__scatter-item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20rem;
+    height: 20rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    animation: p5kaSteps__scatter 3s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+}
+
+.p5kaSteps__scatter-item:nth-child(1) {
+    width: 70rem;
+    height: 70rem;
+    background-image: url("/media/5ka/dop/one_mln_item1.png");
+    animation-delay: 0.7s;
+
+    --tx: 150rem;
+    --ty: 110rem;
+}
+
+.p5kaSteps__scatter-item:nth-child(2) {
+    width: 20rem;
+    height: 20rem;
+    background-image: url("/media/5ka/dop/one_mln_item2.png");
+    animation-delay: 0.5s;
+
+    --tx: -40rem;
+    --ty: -90rem;
+}
+
+.p5kaSteps__scatter-item:nth-child(3) {
+    width: 26rem;
+    height: 26rem;
+    background-image: url("/media/5ka/dop/one_mln_item3.png");
+    animation-delay: 0.5s;
+
+    --tx: 230rem;
+    --ty: 110rem;
+}
+
+.p5kaSteps__scatter-item:nth-child(4) {
+    width: 40rem;
+    height: 40rem;
+    background-image: url("/media/5ka/dop/one_mln_item4.png");
+    animation-delay: 0.6s;
+
+    --tx: -170rem;
+    --ty: 110rem;
+}
+
+.p5kaSteps__scatter-item:nth-child(5) {
+    width: 30rem;
+    height: 30rem;
+    background-image: url("/media/5ka/dop/one_mln_item5.png");
+    animation-delay: 0.5s;
+
+    --tx: 120rem;
+    --ty: -80rem;
+}
+
+.p5kaSteps__scatter-item:nth-child(6) {
+    width: 60rem;
+    height: 60rem;
+    background-image: url("/media/5ka/dop/one_mln_item6.png");
+    animation-delay: 0.6s;
+
+    --tx: -150rem;
+    --ty: -90rem;
+}
+
+@keyframes p5kaSteps__scatter {
+    0% {
+        transform: translate(-50%, -50%) translate(0, 0) rotate(0deg) scale(0.5);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) translate(var(--tx), var(--ty)) rotate(720deg) scale(1.5);
+        opacity: 0;
     }
 }

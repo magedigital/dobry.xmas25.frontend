@@ -55,3 +55,78 @@
 @import "5ka/p5kaPrizes";
 @import "5ka/p5kaPrizesBlock";
 @import "collectionPopup";
+
+@media screen and (width >= 0) and (width <= 700px) {
+    /* ---- Огоньки на хедере -------------------------------------------- */
+
+    .p5kaHeader__lights-container {
+        height: 600rem;
+    }
+
+    .p5kaHeader__lights:nth-child(1) {
+        background-image: url("/media/5ka/dop/back-5ka-lights-1-mob.png");
+    }
+
+    .p5kaHeader__lights:nth-child(2) {
+        background-image: url("/media/5ka/dop/back-5ka-lights-2-mob.png");
+    }
+
+    .p5kaHeader__lights:nth-child(3) {
+        background-image: url("/media/5ka/dop/back-5ka-lights-3-mob.png");
+    }
+
+    /* ---- Блики на очках Альфа-Лося -------------------------------------------- */
+
+    .p5kaHeader__inner_glasses {
+        top: 226rem;
+        left: 151rem;
+        width: 81rem;
+        height: auto;
+        transform: scaleY(0.9) skewY(-4.5deg);
+    }
+
+    /* ---- Надпись 1 000 000 -------------------------------------------- */
+
+    .p5kaSteps__bannerInner::before {
+        top: 40rem;
+        left: 12rem;
+        width: 90%;
+        height: 170rem;
+    }
+
+    .p5kaSteps__scatter-container {
+        position: absolute;
+        top: 100rem;
+        left: 180rem;
+        width: 0;
+        height: 0;
+        transform: scale(0.8);
+    }
+
+    /* ---- Три лося -------------------------------------------- */
+
+    .p5kaPrizes__bannerInner_image {
+        position: absolute;
+        top: 283rem;
+        left: -25rem;
+        width: 432rem;
+        height: 310rem;
+        transform: scale(0.7);
+    }
+
+    .p5kaPrizes__particle-container {
+        top: 80%;
+        right: 50%;
+    }
+
+    /* ---- Блики на очках Лося бросающего подарок -------------------------------------------- */
+
+    .p5kaPrizes__decor_glasses {
+        top: 49rem;
+        left: 20rem;
+        width: 127rem;
+        height: auto;
+        transform: scaleX(-0.45) scaleY(0.4) rotate(24deg);
+        mix-blend-mode: plus-lighter;
+    }
+}

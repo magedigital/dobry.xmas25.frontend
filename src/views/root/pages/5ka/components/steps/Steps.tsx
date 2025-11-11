@@ -91,6 +91,14 @@ class Steps extends React.Component<StepsI['props'], StepsI['state']> implements
                     </div>
                     <div className="p5kaSteps__banner">
                         <div className="p5kaSteps__bannerInner _COL">
+                            <div className="p5kaSteps__scatter-container">
+                                <div className="p5kaSteps__scatter-item"></div>
+                                <div className="p5kaSteps__scatter-item"></div>
+                                <div className="p5kaSteps__scatter-item"></div>
+                                <div className="p5kaSteps__scatter-item"></div>
+                                <div className="p5kaSteps__scatter-item"></div>
+                                <div className="p5kaSteps__scatter-item"></div>
+                            </div>
                             <div className="p5kaSteps__bannerContent _COL">
                                 <h3 className="p5kaSteps__bannerTitle">ВЫИГРАЙ СУПЕРПРИЗ!</h3>
                                 <p className="p5kaSteps__bannerText">

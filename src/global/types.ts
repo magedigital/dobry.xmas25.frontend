@@ -157,6 +157,14 @@ type PopupsT = {
     lentaPopup: PopupT;
 };
 
+const popups = {
+    losvillPopup: {},
+    manPopup: {},
+    collectionPopup: {},
+    dobroPopup: {},
+    lentaPopup: {},
+};
+
 type PopupsNamesT = keyof PopupsT;
 
 type StoreT = {
@@ -227,3 +235,4 @@ export type {
     PopupsT,
     PopupsNamesT,
 };
+export { popups };

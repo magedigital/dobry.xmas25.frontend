@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 
 import { getCookie, setCookie } from '@functions/cookies.ts';
 import getAuth from '@functions/getAuth.ts';
+import handlerPopup from '@functions/handlerPopup.ts';
 import sendGoal from '@functions/sendGoal.ts';
 import setLoadImages from '@functions/setLoadImages.ts';
 import { enums } from '@global/enums.ts';
@@ -12,7 +13,7 @@ import changePage from './functions/changePage.ts';
 import getStartUrl from './functions/getStartUrl.ts';
 import resize from './functions/handlerSize.ts';
 
-import { StoreT } from './global/types.ts';
+import { StoreT, popups } from './global/types.ts';
 
 import pages from './redux/pages.ts';
 import { dispatcher, store } from './redux/redux.ts';
@@ -51,6 +52,19 @@ pages.forEach((page) => {
     await dispatcher({ type: 'levels', data: levels });
     await dispatcher({ type: 'pagesIds', data: pagesIds });
     await dispatcher({ type: 'rootInit', data: true });
+
+    const queryPopup = window.location.search
+        .slice(1)
+        .split('&')
+        .find((item) => item.split('=')[0] === 'popup');
+
+    if (queryPopup) {
+        const popupName = queryPopup.split('=')[1] as keyof typeof popups;
+
+        if (popups[popupName]) {
+            handlerPopup(popupName, { isShow: true });
+        }
+    }
 
     const utmItem = window.location.search
         .slice(1)
