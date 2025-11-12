@@ -158,11 +158,4 @@ export const mapNav: MavNavItemT[] = [
         goal: 'mapPopupKaro',
         animationThumbs: ['location-25-1_1.png', 'location-25-1_2.png', 'location-25-1_3.png'],
     },
-    {
-        thumbs: ['location-23-1.png'],
-        title: 'Teboil',
-        goal: 'mapPopupTeboil',
-        // support: 'Старт акции с 01.12',
-        animationThumbs: ['location-23-1_1.png', 'location-23-1_2.png', 'location-23-1_3.png'],
-    },
 ];

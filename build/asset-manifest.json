@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.c91790b3.css",
-    "main.js": "/static/js/main.63f32368.js",
+    "main.css": "/static/css/main.44982322.css",
+    "main.js": "/static/js/main.2e736c12.js",
     "static/js/977.11b184c9.chunk.js": "/static/js/977.11b184c9.chunk.js",
     "static/js/16.9d69e595.chunk.js": "/static/js/16.9d69e595.chunk.js",
     "static/js/402.1bf2f098.chunk.js": "/static/js/402.1bf2f098.chunk.js",
@@ -74,6 +74,7 @@
     "static/media/element-3-5ka.png": "/static/media/element-3-5ka.d846f31700577220d290.png",
     "static/media/back-5ka-04.jpg": "/static/media/back-5ka-04.a9cdcbbba7189bceb315.jpg",
     "static/media/main-image-zagl-01-mob.jpg": "/static/media/main-image-zagl-01-mob.dac411624f3d39cf4ab1.jpg",
+    "static/media/map-back-4.jpg": "/static/media/map-back-4.933abf40412e45896962.jpg",
     "static/media/prize-big-1-5ka-1.png": "/static/media/prize-big-1-5ka-1.71f5c077cc58a4d3a04b.png",
     "static/media/Geologica-Bold.ttf": "/static/media/Geologica-Bold.c6ce4bebb6d16febc926.ttf",
     "static/media/Geologica-Black.ttf": "/static/media/Geologica-Black.cd9de972aaf76cae04b0.ttf",
@@ -81,7 +82,6 @@
     "static/media/prize-big-3-5ka.png": "/static/media/prize-big-3-5ka.d16a5e7379336f646395.png",
     "static/media/Geologica-Light.ttf": "/static/media/Geologica-Light.1d07a80c29574f217c3c.ttf",
     "static/media/Geologica-Regular.ttf": "/static/media/Geologica-Regular.e13272ec36b0a96fc89c.ttf",
-    "static/media/map-back-4.jpg": "/static/media/map-back-4.317d3184bfbbae9123b1.jpg",
     "static/media/back-5ka-03-mob.jpg": "/static/media/back-5ka-03-mob.78b393b24fcd1f0a50c7.jpg",
     "static/media/element-7-5ka.png": "/static/media/element-7-5ka.2e69a730a25052ce1bfc.png",
     "static/media/app-back-mob.jpg": "/static/media/app-back-mob.e97a8b5ec87261e78fb5.jpg",
@@ -158,6 +158,7 @@
     "static/media/toy-6.png": "/static/media/toy-6.29168201940803f37a2f.png",
     "static/media/back-5ka-04-mob.jpg": "/static/media/back-5ka-04-mob.51b29541775b4b703ad6.jpg",
     "static/media/toy-7.png": "/static/media/toy-7.5469985fe9b3f2d89c7a.png",
+    "static/media/map-back-4-mob.jpg": "/static/media/map-back-4-mob.0c2204fdbe0bf81e5ec4.jpg",
     "static/media/products-back.jpg": "/static/media/products-back.6685f8303f29bc1051fb.jpg",
     "static/media/location-shine-1.png": "/static/media/location-shine-1.6c33d422dced1889ffd7.png",
     "static/media/prize-1-3-5ka.png": "/static/media/prize-1-3-5ka.dad5be9a27a122d3b914.png",
@@ -176,7 +177,6 @@
     "static/media/toy-4.png": "/static/media/toy-4.319124cc0bba6f162627.png",
     "static/media/game-img-2.jpg": "/static/media/game-img-2.a75656800c3a69232b30.jpg",
     "static/media/losi-names.jpg": "/static/media/losi-names.a9a1e675b3280e89bc7d.jpg",
-    "static/media/map-back-4-mob.jpg": "/static/media/map-back-4-mob.cd2bc8b50ed88cd4b699.jpg",
     "static/media/toy-3.png": "/static/media/toy-3.ecbaf08d1c2c4ef52567.png",
     "static/media/game-img-1.jpg": "/static/media/game-img-1.91f478fe2e0a715ffbee.jpg",
     "static/media/road-lights-3.png": "/static/media/road-lights-3.fd75d444479186e29c04.png",
@@ -290,7 +290,7 @@
     "static/media/arrow-down.svg": "/static/media/arrow-down.559aeb386a24d46ce43d.svg"
   },
   "entrypoints": [
-    "static/css/main.c91790b3.css",
-    "static/js/main.63f32368.js"
+    "static/css/main.44982322.css",
+    "static/js/main.2e736c12.js"
   ]
 }
