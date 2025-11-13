@@ -49,7 +49,7 @@ class Index extends PublicPage<IndexI['props'], IndexI['state']> implements Inde
                         <Map content={content} getScrollNode={() => this.scrollNode.current} />
                     </div>
                     <div className="index__section _FULL_W">
-                        <App />
+                        <App content={content} />
                     </div>
                     <div className="index__section _FULL_W">
                         <Footer content={content?.components.footer} />

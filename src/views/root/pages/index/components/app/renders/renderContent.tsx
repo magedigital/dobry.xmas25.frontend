@@ -6,6 +6,8 @@ import sendGoal from '@functions/sendGoal.ts';
 import I from '../types.ts';
 
 const renderContent: I['renderContent'] = function () {
+    const { content } = this.props;
+
     return (
         <div
             className="indexApp__content _COL _FULL_W"
@@ -26,12 +28,12 @@ const renderContent: I['renderContent'] = function () {
                 <Media current="desktop">
                     <a
                         className="indexApp__blockCode"
-                        href="https://dobry-winbox.onelink.me/FAl8/summerteens"
+                        href={content?.components?.app?.qr?.url || '#'}
                         target="_blank"
                         rel="noreferrer"
                     >
                         <img
-                            src={require('@media/app-code.png')}
+                            src={content?.components?.app?.qr?.thumb}
                             alt=""
                             className="indexApp__blockCodeImage _FULL"
                         />
@@ -41,7 +43,7 @@ const renderContent: I['renderContent'] = function () {
                     <Media current="desktop">Отсканируй QR-код для загрузки приложения</Media>
                     <Media current="mobile">
                         <a
-                            href="https://dobry-winbox.onelink.me/FAl8/summerteens"
+                            href={content?.components?.app?.qr?.url || '#'}
                             target="_blank"
                             rel="noreferrer"
                             className="indexApp__blockContentLink"

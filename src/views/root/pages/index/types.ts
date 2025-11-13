@@ -10,6 +10,12 @@ type MainContentT = {
     components: {
         header: HeaderContentT;
         footer: FooterContentT;
+        app: {
+            qr: {
+                thumb: string;
+                url: string;
+            };
+        };
         anounce: {
             slogan: {
                 title: string;

@@ -1,4 +1,8 @@
-type PropsT = {};
+import { MainContentT } from '../../types';
+
+type PropsT = {
+    content: MainContentT | undefined;
+};
 
 type StateT = {};
 
