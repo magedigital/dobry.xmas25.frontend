@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.44982322.css",
-    "main.js": "/static/js/main.2e736c12.js",
+    "main.css": "/static/css/main.bbc2050b.css",
+    "main.js": "/static/js/main.cdf78458.js",
     "static/js/977.11b184c9.chunk.js": "/static/js/977.11b184c9.chunk.js",
     "static/js/16.9d69e595.chunk.js": "/static/js/16.9d69e595.chunk.js",
     "static/js/402.1bf2f098.chunk.js": "/static/js/402.1bf2f098.chunk.js",
@@ -290,7 +290,7 @@
     "static/media/arrow-down.svg": "/static/media/arrow-down.559aeb386a24d46ce43d.svg"
   },
   "entrypoints": [
-    "static/css/main.44982322.css",
-    "static/js/main.2e736c12.js"
+    "static/css/main.bbc2050b.css",
+    "static/js/main.cdf78458.js"
   ]
 }

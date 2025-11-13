@@ -18,7 +18,7 @@ const renderRow: I['renderRow'] = function ({ item, index, isShow }) {
                 zIndex: !isShow ? 1 : index + 2,
             }}
         >
-            {name === 'winners' ? (
+            {name === 'winners' || name === 'contestWinners' ? (
                 <>
                     {device === 'mobile' ? (
                         <>

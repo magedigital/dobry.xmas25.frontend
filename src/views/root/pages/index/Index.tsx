@@ -39,7 +39,7 @@ class Index extends PublicPage<IndexI['props'], IndexI['state']> implements Inde
         const { content } = this.state;
 
         return this.renderPage({
-            name: 'index1',
+            name: 'index',
             render: () => (
                 <div className="index _FULL_W">
                     <div className="index__section _FULL_W">

@@ -1,8 +1,8 @@
 import React from 'react';
 
 import TopBar from '@components/topBar/TopBar.tsx';
+import changePage from '@functions/changePage.ts';
 import checkChatbot from '@functions/checkChatbot.ts';
-import handlerPopup from '@functions/handlerPopup.ts';
 
 import I from '../types.ts';
 
@@ -14,14 +14,13 @@ const renderPage: I['renderPage'] = function ({ name, render }) {
             {name === 'index' && (
                 <div className="body__actionInfo">
                     <div className="body__actionInfoInner">
-                        Прием заявок на участие в специальном выпуске «Пряток» в Лосьвилле продлен
-                        до 07.11.2025.{' '}
+                        Итоги творческого конкурса Лосьвилля подведены. Список победителей по{' '}
                         <span
                             onClick={() => {
-                                handlerPopup('manPopup', { isShow: true });
+                                changePage({ pageName: 'contestWinners' });
                             }}
                         >
-                            Участвуй!
+                            ссылке
                         </span>
                     </div>
                 </div>

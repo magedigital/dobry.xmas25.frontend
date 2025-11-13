@@ -10,6 +10,16 @@ const tables = {
             prize: 'Приз',
         },
     },
+    contestWinners: {
+        mainCol: 'contest',
+        allCols: ['contest', 'title', 'description'],
+        cols: ['title', 'description'],
+        supports: {
+            contest: 'Название конкурса',
+            title: 'E-mail',
+            description: 'Приз',
+        },
+    },
     cheques: {
         mainCol: 'date',
         allCols: ['date', 'fd', 'status', 'result'],

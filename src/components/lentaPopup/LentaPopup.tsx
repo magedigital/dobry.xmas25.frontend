@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import Button from '@components/button/Button.tsx';
 import Icon from '@components/icon/Icon.tsx';
 import handlerPopup from '@functions/handlerPopup.ts';
+import sendGoal from '@functions/sendGoal.ts';
+import setSpacesInText from '@functions/setSpacesInText.ts';
 import { StoreT } from '@global/types.ts';
 
 import LentaPopupI from './types.ts';
@@ -24,7 +26,21 @@ class LentaPopup
     steps = [
         {
             title: 'регистрируйте',
-            text: 'карту Nº1 на сайте <a href="https://dobry.lenta.com/" target="_blank">dobry.lenta.com</a>',
+            text: (
+                <>
+                    карту Nº1 на сайте{' '}
+                    <a
+                        href="https://dobry.lenta.com/"
+                        target="_blank"
+                        rel="noreferrer"
+                        onClick={() => {
+                            sendGoal('mapPopupLentaBtn');
+                        }}
+                    >
+                        dobry.lenta.com
+                    </a>
+                </>
+            ),
         },
         {
             title: 'Покупайте',
@@ -97,12 +113,20 @@ class LentaPopup
                                                             <p className="collectionPopup__marketContentStepTitle">
                                                                 {step.title}
                                                             </p>
-                                                            <p
-                                                                className="collectionPopup__marketContentStepText"
-                                                                dangerouslySetInnerHTML={{
-                                                                    __html: step.text,
-                                                                }}
-                                                            ></p>
+                                                            {typeof step.text === 'string' ? (
+                                                                <p
+                                                                    className="collectionPopup__marketContentStepText"
+                                                                    dangerouslySetInnerHTML={{
+                                                                        __html: setSpacesInText(
+                                                                            step.text,
+                                                                        ),
+                                                                    }}
+                                                                ></p>
+                                                            ) : (
+                                                                <p className="collectionPopup__marketContentStepText">
+                                                                    {step.text}
+                                                                </p>
+                                                            )}
                                                         </div>
                                                     ))}
                                                 </div>
@@ -110,6 +134,8 @@ class LentaPopup
                                                     <Button
                                                         className="_topBarBot"
                                                         onClick={() => {
+                                                            sendGoal('mapPopupLentaToBtn');
+
                                                             window.open(
                                                                 'https://dobry.lenta.com/',
                                                                 '_blank',

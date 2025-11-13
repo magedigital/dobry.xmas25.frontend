@@ -10,6 +10,7 @@ import AnketMap from '../pages/anketMap/AnketMap.tsx';
 import Auth from '../pages/auth/Auth.tsx';
 import Balls from '../pages/balls/Balls.tsx';
 import Cheque from '../pages/cheque/Cheque.tsx';
+import ContestWinners from '../pages/contestWinners/ContestWinners.tsx';
 import Faq from '../pages/faq/Faq.tsx';
 // import FedukPrize from '../pages/fedukPrize/FedukPrize.tsx';
 import FullAnket from '../pages/fullAnket/FullAnket.tsx';
@@ -74,6 +75,11 @@ const pages = {
     winners: {
         render(this: RootI) {
             return <Winners />;
+        },
+    },
+    'contestWinners': {
+        render(this: RootI) {
+            return <ContestWinners />;
         },
     },
     rules: {

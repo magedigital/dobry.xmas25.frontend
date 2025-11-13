@@ -79,6 +79,10 @@ const pages = [
         content: 'Победители',
     },
     {
+        links: ['contest-winners'],
+        name: 'contestWinners',
+    },
+    {
         links: ['faq'],
         name: 'faq',
         content: 'Вопрос-ответ',

@@ -31,6 +31,11 @@ type MainContentT = {
                 title: string;
             }[];
         };
+        contestWinners?: {
+            contest: string;
+            description: string;
+            title: string;
+        }[];
         partners: {
             header: {
                 title: {

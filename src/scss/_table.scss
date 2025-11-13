@@ -139,7 +139,8 @@
         }
     }
 
-    &._winners &__row {
+    &._winners &__row,
+    &._contestWinners &__row {
         &:not(._head) {
             @include mob {
                 background: #fff;
@@ -151,7 +152,8 @@
         }
     }
 
-    &._winners &__row._head {
+    &._winners &__row._head,
+    &._contestWinners &__row._head {
         @include mob {
             display: none;
         }
@@ -301,16 +303,10 @@
         }
     }
 
-    ._parentCalc._winners &__col,
-    &._winners &__col {
+    ._parentCalc._contestWinners &__row,
+    &._contestWinners &__row {
         @include mob {
-            &._head {
-                width: 40% !important;
-            }
-
-            &:not(._head) {
-                width: 60% !important;
-            }
+            flex-direction: column;
         }
     }
 
@@ -320,6 +316,14 @@
 
         @include mob {
             align-items: flex-start;
+
+            &._head {
+                width: 40% !important;
+            }
+
+            &:not(._head) {
+                width: 60% !important;
+            }
         }
 
         &Wrapper {
@@ -358,6 +362,57 @@
 
         &._prize {
             width: 43%;
+
+            @include mob {
+                width: 100%;
+            }
+        }
+    }
+
+    ._parentCalc._contestWinners &__col,
+    &._contestWinners &__col {
+        align-items: center;
+
+        @include mob {
+            align-items: flex-start;
+
+            &._head {
+                width: 40% !important;
+            }
+
+            &:not(._head) {
+                width: 60% !important;
+            }
+        }
+
+        &Wrapper {
+            &._main {
+                width: 22%;
+
+                @include mob {
+                    width: 30%;
+                }
+            }
+
+            &._other {
+                width: 78%;
+
+                @include mob {
+                    width: 65%;
+                }
+            }
+        }
+
+        &._title {
+            width: 30%;
+
+            @include mob {
+                width: 100%;
+            }
+        }
+
+        &._description {
+            width: 70%;
 
             @include mob {
                 width: 100%;
