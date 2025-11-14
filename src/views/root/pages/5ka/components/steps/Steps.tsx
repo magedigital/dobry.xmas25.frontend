@@ -28,7 +28,22 @@ class Steps extends React.Component<StepsI['props'], StepsI['state']> implements
         {
             thumb: 'step2-5ka.jpg',
             title: 'Регистрируй',
-            text: 'чеки на сайте, в телеграм-боте или Добрый Винбокс',
+            text: (
+                <>
+                    чеки на сайте, в{' '}
+                    <a href="https://t.me/dobrycola_promo_bot" target="_blank" rel="noreferrer">
+                        телеграм-боте
+                    </a>{' '}
+                    или{' '}
+                    <a
+                        href="https://dobry-winbox.onelink.me/FAl8/summerteens"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        Добрый Винбокс
+                    </a>
+                </>
+            ),
         },
         {
             thumb: 'step3-5ka.jpg',
@@ -71,12 +86,16 @@ class Steps extends React.Component<StepsI['props'], StepsI['state']> implements
                                     </div>
                                     <div className="p5kaSteps__itemContent">
                                         <h3 className="p5kaSteps__itemTitle">{step.title}</h3>
-                                        <p
-                                            className="p5kaSteps__itemText"
-                                            dangerouslySetInnerHTML={{
-                                                __html: setSpacesInText(step.text),
-                                            }}
-                                        ></p>
+                                        {typeof step.text === 'string' ? (
+                                            <p
+                                                className="p5kaSteps__itemText"
+                                                dangerouslySetInnerHTML={{
+                                                    __html: setSpacesInText(step.text),
+                                                }}
+                                            ></p>
+                                        ) : (
+                                            <p className="p5kaSteps__itemText">{step.text}</p>
+                                        )}
                                     </div>
                                 </div>
                                 {i === this.steps.length - 1 && (
@@ -89,6 +108,13 @@ class Steps extends React.Component<StepsI['props'], StepsI['state']> implements
                             </div>
                         ))}
                     </div>
+                    <a
+                        href="/upload/docs/rules-5ka.pdf"
+                        target="_blank"
+                        className="p5kaSteps__button _CLICK"
+                    >
+                        Полные правила участия <br />в акции сети «Пятёрочка»
+                    </a>
                     <div className="p5kaSteps__banner">
                         <div className="p5kaSteps__bannerInner _COL">
                             <div className="p5kaSteps__scatter-container">
