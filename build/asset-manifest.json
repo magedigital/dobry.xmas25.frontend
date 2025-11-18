@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.9edd7bb4.css",
-    "main.js": "/static/js/main.77455630.js",
+    "main.css": "/static/css/main.a163af46.css",
+    "main.js": "/static/js/main.3b98c4b1.js",
     "static/js/977.11b184c9.chunk.js": "/static/js/977.11b184c9.chunk.js",
     "static/js/16.9d69e595.chunk.js": "/static/js/16.9d69e595.chunk.js",
     "static/js/402.1bf2f098.chunk.js": "/static/js/402.1bf2f098.chunk.js",
@@ -41,6 +41,8 @@
     "static/media/back-5ka-lights-3.png": "/static/media/back-5ka-lights-3.d760af3989ea55e50116.png",
     "static/media/map-back-1.jpg": "/static/media/map-back-1.bb33a1c4f8ff474ff10c.jpg",
     "static/media/map-back-3.jpg": "/static/media/map-back-3.5c7f3286c0105fc76597.jpg",
+    "static/media/store-2-1.jpg": "/static/media/store-2-1.b15a3a0c7a110ee0c1c9.jpg",
+    "static/media/store-5-1.jpg": "/static/media/store-5-1.3d9428a70f6021c63f1e.jpg",
     "static/media/back-5ka-lights-2.png": "/static/media/back-5ka-lights-2.924d430071aed8d951fa.png",
     "static/media/back-5ka-lights-1.png": "/static/media/back-5ka-lights-1.7502e85ed5247cc0e7ad.png",
     "static/media/back-5ka-01-mob.jpg": "/static/media/back-5ka-01-mob.5c8dcd99b414043fa039.jpg",
@@ -54,8 +56,6 @@
     "static/media/store-3-1.jpg": "/static/media/store-3-1.de486c45a38bdee56ffb.jpg",
     "static/media/store-4-1.jpg": "/static/media/store-4-1.252f3c7411ce29ce7a1d.jpg",
     "static/media/app-puff.png": "/static/media/app-puff.4ab3fc962191e0b8c852.png",
-    "static/media/store-2-1.jpg": "/static/media/store-2-1.7aa10740f34b489b1a92.jpg",
-    "static/media/store-5-1.jpg": "/static/media/store-5-1.10add6f51bd9759fe000.jpg",
     "static/media/prize-big-1-5ka.png": "/static/media/prize-big-1-5ka.a3687e563863435d3ee0.png",
     "static/media/snow-3.png": "/static/media/snow-3.8d9a0d9c12c609886461.png",
     "static/media/element-6-5ka.png": "/static/media/element-6-5ka.4cec9be650921fe2483b.png",
@@ -65,6 +65,7 @@
     "static/media/popup-back-mob.jpg": "/static/media/popup-back-mob.2957ecbeb8aa7dbabb71.jpg",
     "static/media/back-inner-2.jpg": "/static/media/back-inner-2.0fc7827f25bfbd4b0ac5.jpg",
     "static/media/store-3-1-mob.jpg": "/static/media/store-3-1-mob.32b496768017fbcdb053.jpg",
+    "static/media/store-2-1-2.png": "/static/media/store-2-1-2.237016d0a340a18cd856.png",
     "static/media/store-4-1-mob.jpg": "/static/media/store-4-1-mob.5137333fb38aa515f53c.jpg",
     "static/media/store-2-1-mob.jpg": "/static/media/store-2-1-mob.086a3ba648669cf7ae08.jpg",
     "static/media/element-8-5ka.png": "/static/media/element-8-5ka.f6cac356735d17f042bb.png",
@@ -76,6 +77,7 @@
     "static/media/main-image-zagl-01-mob.jpg": "/static/media/main-image-zagl-01-mob.dac411624f3d39cf4ab1.jpg",
     "static/media/map-back-4.jpg": "/static/media/map-back-4.933abf40412e45896962.jpg",
     "static/media/prize-big-1-5ka-1.png": "/static/media/prize-big-1-5ka-1.71f5c077cc58a4d3a04b.png",
+    "static/media/store-5-1-2.png": "/static/media/store-5-1-2.0823f0684dfa2d8043fb.png",
     "static/media/Geologica-Bold.ttf": "/static/media/Geologica-Bold.c6ce4bebb6d16febc926.ttf",
     "static/media/Geologica-Black.ttf": "/static/media/Geologica-Black.cd9de972aaf76cae04b0.ttf",
     "static/media/Geologica-Medium.ttf": "/static/media/Geologica-Medium.511acc58d4902dba7b58.ttf",
@@ -258,13 +260,13 @@
     "static/media/prize-back.jpg": "/static/media/prize-back.ae3df9021be8c74ba359.jpg",
     "static/media/prize-store-4-2.png": "/static/media/prize-store-4-2.fce8b0929cd6ef827176.png",
     "static/media/head-lights-1-mob.png": "/static/media/head-lights-1-mob.0565e03a5e3cef9952cd.png",
-    "static/media/prize-store-2-2.png": "/static/media/prize-store-2-2.041a8e3224ef7c060ecc.png",
     "static/media/location-glow.png": "/static/media/location-glow.ab66843928fa6697dd4b.png",
+    "static/media/prize-store-2-2.png": "/static/media/prize-store-2-2.97f036ac83b6e4768db1.png",
     "static/media/snow-2-mob.png": "/static/media/snow-2-mob.9490a3fd488494e79083.png",
-    "static/media/prize-store-5-2.png": "/static/media/prize-store-5-2.5d3b44b351606e4073bf.png",
     "static/media/prize-store-4-3.png": "/static/media/prize-store-4-3.98b7d5c840485c6f754d.png",
     "static/media/prize-back-5ka.jpg": "/static/media/prize-back-5ka.2d53f3ceca8d37db2999.jpg",
     "static/media/head-lights-2-mob.png": "/static/media/head-lights-2-mob.dc069539acde8cb3c56e.png",
+    "static/media/prize-store-5-2.png": "/static/media/prize-store-5-2.29d32266c8c31ed10098.png",
     "static/media/poster2-light-2.png": "/static/media/poster2-light-2.e998879f4077ade4fbfc.png",
     "static/media/poster2-light-1.png": "/static/media/poster2-light-1.719330fb8409fb3cda78.png",
     "static/media/banner-2-back-mob.jpg": "/static/media/banner-2-back-mob.890eadbf7d99f001734f.jpg",
@@ -290,7 +292,7 @@
     "static/media/arrow-down.svg": "/static/media/arrow-down.559aeb386a24d46ce43d.svg"
   },
   "entrypoints": [
-    "static/css/main.9edd7bb4.css",
-    "static/js/main.77455630.js"
+    "static/css/main.a163af46.css",
+    "static/js/main.3b98c4b1.js"
   ]
 }

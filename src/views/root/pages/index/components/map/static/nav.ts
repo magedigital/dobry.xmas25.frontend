@@ -111,7 +111,7 @@ export const mapNav: MavNavItemT[] = [
     {
         thumbs: ['location-13-1.png', 'location-13-2.png'],
         title: ['Магнит', 'дикси'],
-        support: 'Старт акции с 19.11.25',
+        // support: 'Старт акции с 19.11.25',
         goal: 'mapPopupMagnit/mapPopupDixy',
         animationThumbs: ['location-13-1_1.png', 'location-13-1_2.png', 'location-13-1_3.png'],
     },
@@ -133,21 +133,21 @@ export const mapNav: MavNavItemT[] = [
         thumbs: ['location-20-1.png'],
         title: 'Яндекс',
         support:
-            'Скоро<br/>Выполняйте задания с 17.11 в Яндекс Лавке и с 02.12 в Яндекс Еде и выигрывайте призы от лосика Гурмана для создания уютной атмосферы в ожидании праздника!',
+            'Скоро<br/>Выполняйте задания с 24.11 в Яндекс Лавке и с 02.12 в Яндекс Еде и выигрывайте призы от лосика Гурмана для создания уютной атмосферы в ожидании праздника!',
         goal: 'mapPopupYandex',
         animationThumbs: ['location-20-1_1.png', 'location-20-1_2.png', 'location-20-1_3.png'],
     },
     {
         thumbs: ['location-21-1.png'],
         title: 'Самокат',
-        support: 'Старт акции с 01.12',
+        support: 'Старт акции с 03.12',
         goal: 'mapPopupSamokat',
         animationThumbs: ['location-21-1_1.png', 'location-21-1_2.png', 'location-21-1_3.png'],
     },
     {
         thumbs: ['location-24-1.png'],
         title: 'Додо пицца',
-        support: 'Старт акции с 18.11.25',
+        support: 'Старт акции с 25.11.25',
         goal: 'mapPopupDodo',
         animationThumbs: ['location-24-1_1.png', 'location-24-1_2.png', 'location-24-1_3.png'],
     },

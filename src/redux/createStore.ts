@@ -70,6 +70,8 @@ export default function createStore(
             collectionPopup: { isShow: false },
             dobroPopup: { isShow: false },
             lentaPopup: { isShow: false },
+            magnitPopup: { isShow: false },
+            diksiPopup: { isShow: false },
             ...props,
         },
         settings: any,

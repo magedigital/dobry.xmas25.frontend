@@ -73,6 +73,16 @@ const renderNav: I['renderNav'] = function () {
 
                                         this.setState({ currentHoverItem: titleKey });
                                     }}
+                                    onClick={() => {
+                                        if (Array.isArray(item.title)) {
+                                            if (tKey === 0) {
+                                                handlerPopup('magnitPopup', { isShow: true });
+                                            }
+                                            if (tKey === 1) {
+                                                handlerPopup('diksiPopup', { isShow: true });
+                                            }
+                                        }
+                                    }}
                                 >
                                     <span dangerouslySetInnerHTML={{ __html: title }}></span>
                                     {item.support && (

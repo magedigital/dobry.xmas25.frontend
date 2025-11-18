@@ -44,7 +44,7 @@ class CollectionPopup
         {
             thumb: 'toy-5.png',
             name: 'супергерой',
-            market: 'Магнит',
+            market: 'Магнит<br/>Дикси',
         },
         {
             thumb: 'toy-6.png',

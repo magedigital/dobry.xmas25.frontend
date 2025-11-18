@@ -155,6 +155,8 @@ type PopupsT = {
     collectionPopup: PopupT;
     dobroPopup: PopupT;
     lentaPopup: PopupT;
+    magnitPopup: PopupT;
+    diksiPopup: PopupT;
 };
 
 const popups = {
@@ -163,6 +165,8 @@ const popups = {
     collectionPopup: {},
     dobroPopup: {},
     lentaPopup: {},
+    magnitPopup: {},
+    diksiPopup: {},
 };
 
 type PopupsNamesT = keyof PopupsT;
