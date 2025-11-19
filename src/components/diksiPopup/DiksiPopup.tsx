@@ -41,7 +41,7 @@ class DiksiPopup
     items = [
         {
             thumb: 'prize-store-5-1.png',
-            title: 'кастомная<br/>игрушка',
+            title: 'коллекционная<br/>игрушка',
         },
         {
             thumb: 'prize-store-5-2.png',

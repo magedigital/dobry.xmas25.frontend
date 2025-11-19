@@ -52,7 +52,7 @@ class LentaPopup
     items = [
         {
             thumb: 'prize-store-2-1.png',
-            title: 'кастомная<br/>игрушка',
+            title: 'коллекционная<br/>игрушка',
         },
         {
             thumb: 'prize-store-2-2.png',
