@@ -7,15 +7,12 @@ import handlerPopup from '@functions/handlerPopup.ts';
 import setSpacesInText from '@functions/setSpacesInText.ts';
 import { StoreT } from '@global/types.ts';
 
-import LentaPopupI from './types.ts';
+import KbPopupI from './types.ts';
 
-class LentaPopup
-    extends React.Component<LentaPopupI['props'], LentaPopupI['state']>
-    implements LentaPopupI
-{
-    parent: LentaPopupI['parent'];
+class KbPopup extends React.Component<KbPopupI['props'], KbPopupI['state']> implements KbPopupI {
+    parent: KbPopupI['parent'];
 
-    constructor(props: LentaPopupI['props']) {
+    constructor(props: KbPopupI['props']) {
         super(props);
         this.state = {};
 
@@ -24,58 +21,43 @@ class LentaPopup
 
     steps = [
         {
-            title: 'Подтвердите',
-            text: (
-                <>
-                    участие в{' '}
-                    <a
-                        href="https://2814495.redirect.appmetrica.yandex.com/raffles/raffle/multon_car?analytics_promo_id=multon_car&analytics_promo_type=raffle&appmetrica_tracking_id=966334652660903844&referrer=reattribution%3D1"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        Приложении «Магнит»
-                    </a>
-                </>
-            ),
+            title: 'Покупайте',
+            text: <>напитки или соки Добрый® в сети Красное и Белое</>,
         },
         {
-            title: 'Купите или закажите',
-            text: 'напитки или соки Добрый® с картой Магнит Плюс из Приложения',
+            title: 'Оплачивайте',
+            text: 'покупку картой Т-Банк',
         },
         {
-            title: 'Выигрывайте призы',
-            text: '',
+            title: 'Участвуйте',
+            text: 'в розыгрыше призов',
         },
     ];
 
     items = [
         {
-            thumb: 'prize-store-2-1.png',
+            thumb: 'prize-store-4-1.png',
             title: 'коллекционная<br/>игрушка',
         },
         {
-            thumb: 'prize-store-2-2.png',
-            title: 'Техника и<br/>электроника',
+            thumb: 'prize-store-4-2.png',
+            title: 'Камера',
         },
         {
-            thumb: 'prize-store-2-3.png',
-            title: 'Подарочные<br/>Сертификаты',
-        },
-        {
-            thumb: 'prize-store-2-4.png',
-            title: 'Гарантированно <br/>50 баллов на карту <br/>Магнит первым<br/>20 000 участникам',
+            thumb: 'prize-store-4-3.png',
+            title: 'Подарочные<br/>Сертификаты<br/>яндекс афиша',
         },
     ];
 
     render() {
         return (
-            <div ref={this.parent} className="collectionPopup _dobro _magnit">
+            <div ref={this.parent} className="collectionPopup _dobro _kb">
                 <div className="collectionPopup__wrapper">
                     <div className="collectionPopup__inner">
                         <div
                             className="collectionPopup__close _CLICK"
                             onClick={() => {
-                                handlerPopup('magnitPopup', { isShow: false });
+                                handlerPopup('kbPopup', { isShow: false });
                             }}
                         >
                             <Icon name="close" />
@@ -85,20 +67,24 @@ class LentaPopup
                                 <div className="collectionPopup__dobro">
                                     <div className="collectionPopup__dobroHead">
                                         <p className="collectionPopup__dobroSubTitle">
-                                            Акция Добрый в «Магнит»
+                                            Акция Добрый в «Красное и Белое»
                                         </p>
                                         <h3 className="collectionPopup__dobroTitle">
-                                            Выиграйте автомобиль за 6 000 000 рублей!
+                                            Выиграйте 500 000 <br className="_MOBILE" />
+                                            рублей <br className="_DESKTOP" />
+                                            на самые яркие впечатления!
                                         </h3>
                                     </div>
                                     <div className="collectionPopup__market">
                                         <div className="collectionPopup__marketAlert">
-                                            Пусть Новый год будет технологичный!
+                                            Пусть Новый год <br />
+                                            будет наполнен <br />
+                                            яркими впечатлениями!
                                         </div>
                                         <div className="collectionPopup__marketInner">
                                             <div className="collectionPopup__marketContent">
                                                 <p className="collectionPopup__marketContentSupport">
-                                                    С 19 ноября 2025 по 13 января 2026 года:
+                                                    С 20 ноября 2025 по 31 декабря 2025 года:
                                                 </p>
                                                 <div className="collectionPopup__marketContentSteps">
                                                     {this.steps.map((step, i) => (
@@ -184,4 +170,4 @@ function mapStateToProps(state: StoreT) {
     };
 }
 
-export default connect(mapStateToProps)(LentaPopup);
+export default connect(mapStateToProps)(KbPopup);

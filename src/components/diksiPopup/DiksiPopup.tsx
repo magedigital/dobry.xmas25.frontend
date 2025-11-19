@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import Button from '@components/button/Button.tsx';
 import Icon from '@components/icon/Icon.tsx';
 import handlerPopup from '@functions/handlerPopup.ts';
-import sendGoal from '@functions/sendGoal.ts';
 import setSpacesInText from '@functions/setSpacesInText.ts';
 import { StoreT } from '@global/types.ts';
 
@@ -123,15 +122,8 @@ class DiksiPopup
                                                 </div>
                                                 <div className="collectionPopup__marketContentButton">
                                                     <Button
+                                                        onClick={() => undefined}
                                                         className="_topBarBot"
-                                                        onClick={() => {
-                                                            sendGoal('mapPopupLentaToBtn');
-
-                                                            window.open(
-                                                                'https://dobry.lenta.com/',
-                                                                '_blank',
-                                                            );
-                                                        }}
                                                     >
                                                         участвовать
                                                     </Button>
