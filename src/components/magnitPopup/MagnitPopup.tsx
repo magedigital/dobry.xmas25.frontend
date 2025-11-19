@@ -131,14 +131,19 @@ class LentaPopup
                                                         </div>
                                                     ))}
                                                 </div>
-                                                <div className="collectionPopup__marketContentButton">
+                                                <a
+                                                    href="https://2814495.redirect.appmetrica.yandex.com/raffles/raffle/multon_car?analytics_promo_id=multon_car&analytics_promo_type=raffle&appmetrica_tracking_id=966334652660903844&referrer=reattribution%3D1"
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                    className="collectionPopup__marketContentButton"
+                                                >
                                                     <Button
                                                         onClick={() => undefined}
                                                         className="_topBarBot"
                                                     >
                                                         участвовать
                                                     </Button>
-                                                </div>
+                                                </a>
                                             </div>
                                             <div className="collectionPopup__marketItems">
                                                 {this.items.map((item, i) => (
