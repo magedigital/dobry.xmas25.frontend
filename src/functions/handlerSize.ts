@@ -85,3 +85,4 @@ function resize(isStart?: boolean): void {
 }
 
 export default resize;
+export { setWindowParams };
