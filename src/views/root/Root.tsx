@@ -5,7 +5,6 @@ import Fade from '@components/fade/Fade.tsx';
 import Pages from '@components/pages/Pages.tsx';
 import checkChatbot from '@functions/checkChatbot.ts';
 import checkRaffle from '@functions/checkRaffle.ts';
-import resize from '@functions/handlerSize.ts';
 import { StoreT } from '@global/types.ts';
 
 import Cookies from './components/cookies/Cookies.tsx';
@@ -37,12 +36,6 @@ class Root extends React.Component<RootI['props'], RootI['state']> implements Ro
 
     componentDidMount(): void {
         checkRaffle();
-
-        if (checkChatbot()) {
-            setInterval(() => {
-                resize(true);
-            }, 500);
-        }
     }
 
     render() {
