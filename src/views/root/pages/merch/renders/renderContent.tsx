@@ -1,9 +1,7 @@
 import React from 'react';
 
 import Button from '@components/button/Button.tsx';
-import Checkbox from '@components/checkbox/Checkbox.tsx';
 import Error from '@components/error/Error.tsx';
-import { store } from '@redux/redux.ts';
 
 import I from '../types.ts';
 
@@ -35,7 +33,7 @@ const renderContent: I['renderContent'] = function () {
                                             ЗАКАЗАТЬ ПРИЗ
                                         </Button>
                                     </div>
-                                    {store.getState().user?.personal?.email ===
+                                    {/* {store.getState().user?.personal?.email ===
                                     'm-f-a1999@yandex.ru' ? (
                                         <>
                                             <div className="popup__merchCheckbox">
@@ -50,7 +48,7 @@ const renderContent: I['renderContent'] = function () {
                                         </>
                                     ) : (
                                         <></>
-                                    )}
+                                    )} */}
                                 </>
                             )}
                         </div>
