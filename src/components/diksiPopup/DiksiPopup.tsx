@@ -120,14 +120,19 @@ class DiksiPopup
                                                         </div>
                                                     ))}
                                                 </div>
-                                                <div className="collectionPopup__marketContentButton">
+                                                <a
+                                                    href="https://3757420.redirect.appmetrica.yandex.com/app/main?appmetrica_tracking_id=389878357812116086&referrer=reattribution%3D1"
+                                                    target="_blank"
+                                                    className="collectionPopup__marketContentButton"
+                                                    rel="noreferrer"
+                                                >
                                                     <Button
                                                         onClick={() => undefined}
                                                         className="_topBarBot"
                                                     >
                                                         участвовать
                                                     </Button>
-                                                </div>
+                                                </a>
                                             </div>
                                             <div className="collectionPopup__marketItems">
                                                 {this.items.map((item, i) => (
