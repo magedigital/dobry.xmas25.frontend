@@ -117,14 +117,19 @@ class KbPopup extends React.Component<KbPopupI['props'], KbPopupI['state']> impl
                                                         </div>
                                                     ))}
                                                 </div>
-                                                <div className="collectionPopup__marketContentButton">
+                                                <a
+                                                    href="https://l.tbank.ru/dobriy_specialproj_11.2025"
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                    className="collectionPopup__marketContentButton"
+                                                >
                                                     <Button
                                                         onClick={() => undefined}
                                                         className="_topBarBot"
                                                     >
                                                         участвовать
                                                     </Button>
-                                                </div>
+                                                </a>
                                             </div>
                                             <div className="collectionPopup__marketItems">
                                                 {this.items.map((item, i) => (
