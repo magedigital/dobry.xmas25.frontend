@@ -124,7 +124,7 @@ export const mapNav: MavNavItemT[] = [
     {
         thumbs: ['location-15-1.png', 'location-15-2.png'],
         title: 'Красное и белое',
-        support: 'Старт акции с 20.11.25',
+        // support: 'Старт акции с 20.11.25',
         popup: 'kbPopup',
         goal: 'mapPopupKB',
         animationThumbs: ['location-15-1_1.png', 'location-15-1_2.png', 'location-15-1_3.png'],
