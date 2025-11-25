@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import Button from '@components/button/Button.tsx';
 import Icon from '@components/icon/Icon.tsx';
 import handlerPopup from '@functions/handlerPopup.ts';
+import sendGoal from '@functions/sendGoal.ts';
 import setSpacesInText from '@functions/setSpacesInText.ts';
 import { StoreT } from '@global/types.ts';
 
@@ -124,7 +125,9 @@ class KbPopup extends React.Component<KbPopupI['props'], KbPopupI['state']> impl
                                                     className="collectionPopup__marketContentButton"
                                                 >
                                                     <Button
-                                                        onClick={() => undefined}
+                                                        onClick={() => {
+                                                            sendGoal('mapPopupKBToBtn');
+                                                        }}
                                                         className="_topBarBot"
                                                     >
                                                         участвовать

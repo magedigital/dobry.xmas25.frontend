@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import Button from '@components/button/Button.tsx';
 import Icon from '@components/icon/Icon.tsx';
 import handlerPopup from '@functions/handlerPopup.ts';
+import sendGoal from '@functions/sendGoal.ts';
 import setSpacesInText from '@functions/setSpacesInText.ts';
 import { StoreT } from '@global/types.ts';
 
@@ -127,7 +128,9 @@ class DiksiPopup
                                                     rel="noreferrer"
                                                 >
                                                     <Button
-                                                        onClick={() => undefined}
+                                                        onClick={() => {
+                                                            sendGoal('mapPopupDixyToBtn');
+                                                        }}
                                                         className="_topBarBot"
                                                     >
                                                         участвовать

@@ -147,7 +147,7 @@ export const mapNav: MavNavItemT[] = [
     {
         thumbs: ['location-24-1.png'],
         title: 'Додо пицца',
-        support: 'Старт акции с 25.11.25',
+        support: 'Старт акции с 26.11.25',
         goal: 'mapPopupDodo',
         animationThumbs: ['location-24-1_1.png', 'location-24-1_2.png', 'location-24-1_3.png'],
     },

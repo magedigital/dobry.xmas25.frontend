@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import Button from '@components/button/Button.tsx';
 import Icon from '@components/icon/Icon.tsx';
 import handlerPopup from '@functions/handlerPopup.ts';
+import sendGoal from '@functions/sendGoal.ts';
 import setSpacesInText from '@functions/setSpacesInText.ts';
 import { StoreT } from '@global/types.ts';
 
@@ -32,6 +33,9 @@ class LentaPopup
                         href="https://2814495.redirect.appmetrica.yandex.com/raffles/raffle/multon_car?analytics_promo_id=multon_car&analytics_promo_type=raffle&appmetrica_tracking_id=966334652660903844&referrer=reattribution%3D1"
                         target="_blank"
                         rel="noreferrer"
+                        onClick={() => {
+                            sendGoal('mapPopupMagnitBtn');
+                        }}
                     >
                         Приложении «Магнит»
                     </a>
@@ -138,7 +142,9 @@ class LentaPopup
                                                     className="collectionPopup__marketContentButton"
                                                 >
                                                     <Button
-                                                        onClick={() => undefined}
+                                                        onClick={() => {
+                                                            sendGoal('mapPopupMagnitToBtn');
+                                                        }}
                                                         className="_topBarBot"
                                                     >
                                                         участвовать
