@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.d7b82ac6.css",
-    "main.js": "/static/js/main.a1a3d2d3.js",
+    "main.css": "/static/css/main.e18c2249.css",
+    "main.js": "/static/js/main.03ce75fa.js",
     "static/js/977.11b184c9.chunk.js": "/static/js/977.11b184c9.chunk.js",
     "static/js/16.9d69e595.chunk.js": "/static/js/16.9d69e595.chunk.js",
     "static/js/402.1bf2f098.chunk.js": "/static/js/402.1bf2f098.chunk.js",
@@ -26,6 +26,7 @@
     "static/js/916.57759a10.chunk.js": "/static/js/916.57759a10.chunk.js",
     "static/js/203.181f2847.chunk.js": "/static/js/203.181f2847.chunk.js",
     "static/js/419.62f2b442.chunk.js": "/static/js/419.62f2b442.chunk.js",
+    "static/media/store-3-1.jpg": "/static/media/store-3-1.4ac25972e43f2f829441.jpg",
     "static/media/store-1-1.jpg": "/static/media/store-1-1.a272a11585909e25b6fb.jpg",
     "static/media/back-5ka-01.jpg": "/static/media/back-5ka-01.aef616df826368b0448c.jpg",
     "static/media/back-game-all.jpg": "/static/media/back-game-all.2e517acb71b1fdb05abf.jpg",
@@ -54,7 +55,6 @@
     "static/media/snow-2.png": "/static/media/snow-2.63ed07339c872af994ed.png",
     "static/media/main-img-mob.jpg": "/static/media/main-img-mob.3fea911bab487091c459.jpg",
     "static/media/reel.png": "/static/media/reel.2a7d881ab81cb75feda4.png",
-    "static/media/store-3-1.jpg": "/static/media/store-3-1.de486c45a38bdee56ffb.jpg",
     "static/media/app-puff.png": "/static/media/app-puff.4ab3fc962191e0b8c852.png",
     "static/media/prize-big-1-5ka.png": "/static/media/prize-big-1-5ka.a3687e563863435d3ee0.png",
     "static/media/snow-3.png": "/static/media/snow-3.8d9a0d9c12c609886461.png",
@@ -292,7 +292,7 @@
     "static/media/arrow-down.svg": "/static/media/arrow-down.559aeb386a24d46ce43d.svg"
   },
   "entrypoints": [
-    "static/css/main.d7b82ac6.css",
-    "static/js/main.a1a3d2d3.js"
+    "static/css/main.e18c2249.css",
+    "static/js/main.03ce75fa.js"
   ]
 }

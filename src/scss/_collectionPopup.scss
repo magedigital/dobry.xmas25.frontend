@@ -216,6 +216,34 @@
         }
     }
 
+    &._perekrestok &__inner {
+        &Box {
+            padding-bottom: 26rem;
+        }
+
+        &Wrapper {
+            @include mob {
+                background: linear-gradient(to top, #be135a, #f22830);
+            }
+
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -2;
+                width: 100%;
+                height: 100%;
+                content: "";
+
+                @include bg("/media/stores/store-3-1.jpg", 100% auto, center top);
+
+                @include mob {
+                    @include bg("/media/stores/store-3-1-mob.jpg", 100% auto, center top);
+                }
+            }
+        }
+    }
+
     &__inner {
         position: relative;
         width: 820rem;
@@ -433,6 +461,14 @@
     }
 
     &._kb &__dobro {
+        &Head {
+            @include mob {
+                margin-bottom: 380rem;
+            }
+        }
+    }
+
+    &._perekrestok &__dobro {
         &Head {
             @include mob {
                 margin-bottom: 380rem;
@@ -780,6 +816,17 @@
         @include mob {
             width: 170rem;
             height: 100rem;
+        }
+    }
+
+    &._perekrestok &__marketAlert {
+        height: 92rem;
+
+        @include mob {
+            top: -362rem;
+            width: 170rem;
+            height: 100rem;
+            background: none;
         }
     }
 

@@ -9,6 +9,7 @@ import LentaPopup from '@components/lentaPopup/LentaPopup.tsx';
 import LosvillPopup from '@components/losvillPopup/LosvillPopup.tsx';
 import MagnitPopup from '@components/magnitPopup/MagnitPopup.tsx';
 import ManPopup from '@components/manPopup/ManPopup.tsx';
+import PerekrestokPopup from '@components/perekrestokPopup/PerekrestokPopup.tsx';
 
 import I from '../types.ts';
 
@@ -22,6 +23,7 @@ const renderPopups: I['renderPopups'] = function () {
         magnitPopup,
         diksiPopup,
         kbPopup,
+        perekrestokPopup,
     } = this.props;
 
     return (
@@ -49,6 +51,9 @@ const renderPopups: I['renderPopups'] = function () {
             </Fade>
             <Fade className="body__popup" isShow={kbPopup.isShow}>
                 <KbPopup />
+            </Fade>
+            <Fade className="body__popup" isShow={perekrestokPopup.isShow}>
+                <PerekrestokPopup />
             </Fade>
         </>
     );

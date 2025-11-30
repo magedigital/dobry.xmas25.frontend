@@ -14,7 +14,7 @@ const renderNav: I['renderNav'] = function () {
     return (
         <div className="indexMap__nav">
             {this.nav.map((item, key) => {
-                const { thumbs, pageName, game, popup, goal, animationThumbs } = item;
+                const { thumbs, pageName, game, popup, goal, animationThumbs, blankLink } = item;
                 const titles = typeof item.title === 'string' ? [item.title] : item.title;
                 const goalName = typeof goal === 'string' ? goal : goal?.name;
                 const isWin = goal && typeof goal === 'object' ? goal.isWin : false;
@@ -30,6 +30,8 @@ const renderNav: I['renderNav'] = function () {
                                 changePage({ pageName: 'game-inner', ids: { 1: game } });
                             } else if (popup) {
                                 handlerPopup(popup, { isShow: true });
+                            } else if (blankLink) {
+                                window.open(blankLink, '_blank');
                             }
 
                             if (goalName) {

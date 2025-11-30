@@ -9,6 +9,7 @@ type MavNavItemT = {
     pageName?: PageNamesT;
     game?: keyof typeof games;
     popup?: PopupsNamesT;
+    blankLink?: string;
     support?: string;
     section?: keyof typeof mapSections;
     goal?: string | { name: string; isWin?: boolean };
@@ -117,7 +118,8 @@ export const mapNav: MavNavItemT[] = [
     {
         thumbs: ['location-14-1.png', 'location-14-2.png'],
         title: 'Перекрёсток',
-        support: 'Старт акции с 01.12.25',
+        // support: 'Старт акции с 01.12.25',
+        popup: 'perekrestokPopup',
         goal: 'mapPopupPerek',
         animationThumbs: ['location-14-1_1.png', 'location-14-1_2.png', 'location-14-1_3.png'],
     },
@@ -133,8 +135,9 @@ export const mapNav: MavNavItemT[] = [
         thumbs: ['location-20-1.png'],
         title: 'Яндекс',
         support:
-            'Скоро<br/>Выполняйте задания с 24.11 в Яндекс Лавке и с 02.12 в Яндекс Еде и выигрывайте призы от лосика Гурмана для создания уютной атмосферы в ожидании праздника!',
+            'Скоро<br/>Выполняйте задания с 02.12 в Яндекс Еде и выигрывайте призы от лосика Гурмана для создания уютной атмосферы в ожидании праздника!',
         goal: 'mapPopupYandex',
+        blankLink: 'https://lavka.yandex.ru/catalog/promo/category/multon_drinks',
         animationThumbs: ['location-20-1_1.png', 'location-20-1_2.png', 'location-20-1_3.png'],
     },
     {

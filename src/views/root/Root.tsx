@@ -96,6 +96,7 @@ function mapStateToProps(state: StoreT) {
         magnitPopup: state.magnitPopup,
         diksiPopup: state.diksiPopup,
         kbPopup: state.kbPopup,
+        perekrestokPopup: state.perekrestokPopup,
     };
 }
 

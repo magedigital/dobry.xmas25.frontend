@@ -158,6 +158,7 @@ type PopupsT = {
     magnitPopup: PopupT;
     diksiPopup: PopupT;
     kbPopup: PopupT;
+    perekrestokPopup: PopupT;
 };
 
 const popups = {
@@ -169,6 +170,7 @@ const popups = {
     magnitPopup: {},
     diksiPopup: {},
     kbPopup: {},
+    perekrestokPopup: {},
 };
 
 type PopupsNamesT = keyof PopupsT;
