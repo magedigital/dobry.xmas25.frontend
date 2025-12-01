@@ -845,12 +845,23 @@
         }
     }
 
-    &__navItem._16 &__navItemTitle {
-        bottom: 9rem;
-        left: 70rem;
+    &__navItem._16 &__navItemTitle._1 {
+        right: 160rem;
+        bottom: 20rem;
 
         @include mob {
-            left: 60rem;
+            right: 68rem;
+            bottom: 12rem;
+        }
+    }
+
+    &__navItem._16 &__navItemTitle._2 {
+        right: 156rem;
+        bottom: -18rem;
+
+        @include mob {
+            right: 66rem;
+            bottom: -15rem;
         }
     }
 

@@ -14,7 +14,8 @@ const renderNav: I['renderNav'] = function () {
     return (
         <div className="indexMap__nav">
             {this.nav.map((item, key) => {
-                const { thumbs, pageName, game, popup, goal, animationThumbs, blankLink } = item;
+                const { name, thumbs, pageName, game, popup, goal, animationThumbs, blankLink } =
+                    item;
                 const titles = typeof item.title === 'string' ? [item.title] : item.title;
                 const goalName = typeof goal === 'string' ? goal : goal?.name;
                 const isWin = goal && typeof goal === 'object' ? goal.isWin : false;
@@ -77,11 +78,28 @@ const renderNav: I['renderNav'] = function () {
                                     }}
                                     onClick={() => {
                                         if (Array.isArray(item.title)) {
-                                            if (tKey === 0) {
-                                                handlerPopup('magnitPopup', { isShow: true });
+                                            if (name === 'mag') {
+                                                if (tKey === 0) {
+                                                    handlerPopup('magnitPopup', { isShow: true });
+                                                }
+                                                if (tKey === 1) {
+                                                    handlerPopup('diksiPopup', { isShow: true });
+                                                }
                                             }
-                                            if (tKey === 1) {
-                                                handlerPopup('diksiPopup', { isShow: true });
+
+                                            if (name === 'yandex') {
+                                                if (tKey === 0) {
+                                                    window.open(
+                                                        'https://lavka.yandex.ru/catalog/promo/category/multon_drinks',
+                                                        '_blank',
+                                                    );
+                                                }
+                                                if (tKey === 1) {
+                                                    window.open(
+                                                        'https://eda.yandex/promo/dobriy',
+                                                        '_blank',
+                                                    );
+                                                }
                                             }
                                         }
                                     }}

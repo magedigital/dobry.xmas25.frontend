@@ -4,6 +4,7 @@ import games from '../../../../../../../static/games';
 import { mapSections } from './sections';
 
 type MavNavItemT = {
+    name?: string;
     thumbs: string[];
     title: string | string[];
     pageName?: PageNamesT;
@@ -110,6 +111,7 @@ export const mapNav: MavNavItemT[] = [
         animationThumbs: ['location-12-1_1.png', 'location-12-1_2.png', 'location-12-1_3.png'],
     },
     {
+        name: 'mag',
         thumbs: ['location-13-1.png', 'location-13-2.png'],
         title: ['Магнит', 'дикси'],
         goal: 'mapPopupMagnit/mapPopupDixy',
@@ -132,10 +134,11 @@ export const mapNav: MavNavItemT[] = [
         animationThumbs: ['location-15-1_1.png', 'location-15-1_2.png', 'location-15-1_3.png'],
     },
     {
+        name: 'yandex',
         thumbs: ['location-20-1.png'],
-        title: 'Яндекс',
-        support:
-            'Скоро<br/>Выполняйте задания с 02.12 в Яндекс Еде и выигрывайте призы от лосика Гурмана для создания уютной атмосферы в ожидании праздника!',
+        title: ['Яндекс лавка', 'Яндекс еда'],
+        // support:
+        //     'Скоро<br/>Выполняйте задания с 02.12 в Яндекс Еде и выигрывайте призы от лосика Гурмана для создания уютной атмосферы в ожидании праздника!',
         goal: 'mapPopupYandex',
         blankLink: 'https://lavka.yandex.ru/catalog/promo/category/multon_drinks',
         animationThumbs: ['location-20-1_1.png', 'location-20-1_2.png', 'location-20-1_3.png'],
