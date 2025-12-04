@@ -32,7 +32,7 @@ const inputHandler: I['inputHandler'] = async function (index, { value }) {
 
     await setAsyncState.call(this, { inputs });
 
-    if (inputs.every((input) => input)) {
+    if (inputs.every((i) => i)) {
         callback(inputs.join(''));
 
         // await this.init();

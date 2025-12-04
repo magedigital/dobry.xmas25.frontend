@@ -43,6 +43,10 @@
         margin-left: 10rem;
         transform: translate(0, -50%);
 
+        & .loader__itemInner {
+            background: #fff !important;
+        }
+
         @include mob {
             top: 3rem;
             right: 3rem;
