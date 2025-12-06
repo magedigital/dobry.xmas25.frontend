@@ -1,7 +1,6 @@
 import React from 'react';
 
 import TopBar from '@components/topBar/TopBar.tsx';
-import changePage from '@functions/changePage.ts';
 import checkChatbot from '@functions/checkChatbot.ts';
 
 import I from '../types.ts';
@@ -14,13 +13,13 @@ const renderPage: I['renderPage'] = function ({ name, render }) {
             {name === 'index' && (
                 <div className="body__actionInfo">
                     <div className="body__actionInfoInner">
-                        Итоги творческого конкурса Лосьвилля подведены. Список победителей по{' '}
+                        Информируем об изменении п.6 Правил Акции, см.{' '}
                         <span
                             onClick={() => {
-                                changePage({ pageName: 'contestWinners' });
+                                window.open('/upload/docs/rules-5ka.pdf', '_blank');
                             }}
                         >
-                            ссылке
+                            подробнее
                         </span>
                     </div>
                 </div>

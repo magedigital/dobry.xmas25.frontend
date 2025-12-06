@@ -30,11 +30,7 @@ const sendForm: I['sendForm'] = async function (again) {
         if (response.result === 'OK') {
             await getAuth(true);
         }
-    } catch (e) {
-        const error = e as ResponseErrorT;
-
-        await setAsyncState.call(this, { error: error?.errorText });
-    }
+    } catch (e) {}
 
     await setAsyncState.call(this, { loadingKey: undefined });
 };
