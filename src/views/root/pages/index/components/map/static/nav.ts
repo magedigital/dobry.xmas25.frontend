@@ -146,8 +146,10 @@ export const mapNav: MavNavItemT[] = [
     {
         thumbs: ['location-21-1.png'],
         title: 'Самокат',
-        support: 'Старт акции с 03.12',
+        // support: 'Старт акции с 03.12',
         goal: 'mapPopupSamokat',
+        blankLink:
+            'https://samokat.go.link/promocategory/46666f82-b16c-4680-99ae-823c42327e72?showStories&showcaseType=MINIMARKET&adj_t=5n3ryif&adj_campaign=partner_multon&adj_adgroup=dec3&adj_redirect=https%3A%2F%2Fsamokat.ru%2Fpromo%2F46666f82-b16c-4680-99ae-823c42327e72%3Futm_source%3Dpromoaction_marketing%3Futm_medium%3Dpartner_multon%3Futm_campaign%3Ddec3&adj_redirect_macos=https%3A%2F%2Fsamokat.ru%2Fpromo%2F46666f82-b16c-4680-99ae-823c42327e72%3Futm_source%3Dpromoaction_marketing%3Futm_medium%3Dpartner_multon%3Futm_campaign%3Ddec3',
         animationThumbs: ['location-21-1_1.png', 'location-21-1_2.png', 'location-21-1_3.png'],
     },
     {
