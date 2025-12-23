@@ -21,9 +21,8 @@ const send: I['send'] = async function () {
 
     await setAsyncState.call(this, { loadingKey: 'send' });
 
-    console.log(currentMerchIndex);
-
-    const prize = this.prizes[Object.keys(this.prizes)[0] as keyof typeof this.prizes]?.code;
+    const prize =
+        this.prizes[Object.keys(this.prizes)[currentMerchIndex!] as keyof typeof this.prizes]?.code;
 
     try {
         const response = await AxiosInst.post<{}, ResponseT>('/GivePrizeExtra', {
