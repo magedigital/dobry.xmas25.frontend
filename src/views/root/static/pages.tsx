@@ -21,6 +21,7 @@ import Merch from '../pages/merch/Merch.tsx';
 import Prizes from '../pages/prizes/Prizes.tsx';
 import Products from '../pages/products/Products.tsx';
 import Profile from '../pages/profile/Profile.tsx';
+import PromoterPrize from '../pages/promoterPrize/PromoterPrize.tsx';
 import RafflePrize from '../pages/rafflePrize/RafflePrize.tsx';
 import RegCode from '../pages/regCode/RegCode.tsx';
 import Rules from '../pages/rules/Rules.tsx';
@@ -77,7 +78,7 @@ const pages = {
             return <Winners />;
         },
     },
-    'contestWinners': {
+    contestWinners: {
         render(this: RootI) {
             return <ContestWinners />;
         },
@@ -140,6 +141,11 @@ const pages = {
     game: {
         render(this: RootI) {
             return <Game />;
+        },
+    },
+    'promoter-prize': {
+        render(this: RootI) {
+            return <PromoterPrize />;
         },
     },
     // fedukPrize: {

@@ -38,6 +38,10 @@
         }
     }
 
+    &._isOverlay &__wrapper {
+        background: rgba(#000, 0.6);
+    }
+
     &__inner {
         position: relative;
         z-index: 2;
@@ -70,6 +74,7 @@
                 z-index: -1;
                 width: 100%;
                 height: 100%;
+                border-radius: inherit;
                 content: "";
 
                 @include bg("/media/inners/popup-back.svg", 100% auto, center top);
@@ -83,6 +88,10 @@
                 padding: 9rem 9rem 32rem;
             }
         }
+    }
+
+    &._isOverlay &__inner {
+        box-shadow: none;
     }
 
     &:not(._withBlocks) &__inner {
@@ -101,6 +110,11 @@
         left: 100%;
         z-index: 2;
         margin-left: 12rem;
+
+        @include mob {
+            inset: auto 5rem 100% auto;
+            margin-bottom: 17rem;
+        }
     }
 
     &__head {
@@ -718,7 +732,7 @@
         }
 
         @include mob {
-            padding: 20rem;
+            padding: 28rem 20rem;
         }
 
         &Title {
@@ -791,6 +805,24 @@
             opacity: 0;
             pointer-events: none;
         }
+    }
+
+    &._inOrder {
+        overflow: visible;
+    }
+
+    &._inOrder &__content {
+        width: calc(100% + 72rem);
+        margin-left: -36rem;
+
+        @include mob {
+            width: calc(100% + 18rem);
+            margin-left: -9rem;
+        }
+    }
+
+    &._inOrder &__merch {
+        // padding: 0;
     }
 
     &__merch {
@@ -1595,6 +1627,21 @@
                 text-align: center;
                 text-transform: uppercase;
             }
+        }
+    }
+
+    &__qr {
+        width: 220rem;
+        height: 220rem;
+        margin: 40rem auto 0;
+        padding: 20rem;
+        background: rgb(254 213 255 / 100%);
+        border-radius: 32rem;
+
+        &Image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
     }
 }

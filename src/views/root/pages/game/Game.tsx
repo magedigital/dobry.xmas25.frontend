@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import InnerPage from '@components/innerPage/InnerPage.tsx';
-import List from '@components/list/List.tsx';
 import { StoreT } from '@global/types.ts';
 
 import GamePage from './components/gamePage/GamePage.tsx';
@@ -33,19 +32,13 @@ class Game extends InnerPage<GameI['props'], GameI['state']> implements GameI {
 
     render() {
         const { id } = this.state;
-        const items = id ? [{ _id: id }] : [];
 
         return (
-            <List
-                renderKey={id}
-                items={items}
-                parentClass="body__pages"
-                itemClass={'body__page _NOSCROLL'}
-                itemStyleProps={[]}
-                parentStyleProps={[]}
-                parentRealStyleProps={[]}
-                renderItem={({ item }) => <GamePage id={item._id} />}
-            />
+            <div className="body__pages">
+                <div className="body__page" key={id} data-show>
+                    {id && <GamePage id={id as any} />}
+                </div>
+            </div>
         );
     }
 }

@@ -7,6 +7,7 @@ import Link from '@components/link/Link.tsx';
 import LoaderBlock from '@components/loaderBlock/LoaderBlock.tsx';
 import Media from '@components/media/Media.tsx';
 import changePage from '@functions/changePage.ts';
+import handlerPopup from '@functions/handlerPopup.ts';
 import sendGoal from '@functions/sendGoal.ts';
 
 import I from '../types.ts';
@@ -22,7 +23,12 @@ const renderMain: I['renderMain'] = function () {
                     <div className="profile__mainName">
                         {user?.personal.firstName} {user?.personal.lastName}
                         <Media current="mobile">
-                            <div className="profile__mainCopy">
+                            <div
+                                className="profile__mainCopy"
+                                onClick={() => {
+                                    handlerPopup('idPopup', { isShow: true });
+                                }}
+                            >
                                 <Fade
                                     className="profile__mainCopySuccess _FULL _ROW _ROW_CENTER"
                                     isShow={!!isCopy}
@@ -32,7 +38,11 @@ const renderMain: I['renderMain'] = function () {
                                 ID {user?.userId}
                                 <i
                                     className="profile__mainCopyIcon _CLICK"
-                                    onClick={this.copyHandler.bind(this)}
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+
+                                        this.copyHandler();
+                                    }}
                                 >
                                     <Icon name="copy" />
                                 </i>
@@ -41,7 +51,12 @@ const renderMain: I['renderMain'] = function () {
                     </div>
                     <div className="profile__mainLinks _ROW">
                         <Media current="desktop">
-                            <div className="profile__mainCopy">
+                            <div
+                                className="profile__mainCopy _CLICK"
+                                onClick={() => {
+                                    handlerPopup('idPopup', { isShow: true });
+                                }}
+                            >
                                 <Fade
                                     className="profile__mainCopySuccess _FULL _ROW _ROW_CENTER"
                                     isShow={!!isCopy}
@@ -51,7 +66,11 @@ const renderMain: I['renderMain'] = function () {
                                 ID {user?.userId}
                                 <i
                                     className="profile__mainCopyIcon _CLICK"
-                                    onClick={this.copyHandler.bind(this)}
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+
+                                        this.copyHandler();
+                                    }}
                                 >
                                     <Icon name="copy" />
                                 </i>

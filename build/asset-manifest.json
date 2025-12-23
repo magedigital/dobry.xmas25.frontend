@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.acba3654.css",
-    "main.js": "/static/js/main.df7eefd4.js",
+    "main.css": "/static/css/main.ad4ea4df.css",
+    "main.js": "/static/js/main.f05c53d5.js",
     "static/js/977.11b184c9.chunk.js": "/static/js/977.11b184c9.chunk.js",
     "static/js/16.9d69e595.chunk.js": "/static/js/16.9d69e595.chunk.js",
     "static/js/402.1bf2f098.chunk.js": "/static/js/402.1bf2f098.chunk.js",
@@ -85,6 +85,7 @@
     "static/media/Geologica-Light.ttf": "/static/media/Geologica-Light.1d07a80c29574f217c3c.ttf",
     "static/media/Geologica-Regular.ttf": "/static/media/Geologica-Regular.e13272ec36b0a96fc89c.ttf",
     "static/media/back-5ka-03-mob.jpg": "/static/media/back-5ka-03-mob.78b393b24fcd1f0a50c7.jpg",
+    "static/media/order-prize-1.png": "/static/media/order-prize-1.7590d92db4244501d94a.png",
     "static/media/element-7-5ka.png": "/static/media/element-7-5ka.2e69a730a25052ce1bfc.png",
     "static/media/app-back-mob.jpg": "/static/media/app-back-mob.e97a8b5ec87261e78fb5.jpg",
     "static/media/prize-store-1-0.png": "/static/media/prize-store-1-0.fc44d7007b85a001e500.png",
@@ -98,6 +99,7 @@
     "static/media/back-5ka-lights-1-mob.png": "/static/media/back-5ka-lights-1-mob.164e6744c2f657165d8a.png",
     "static/media/location-9.png": "/static/media/location-9.e9b99341085013d36250.png",
     "static/media/location-25-1.png": "/static/media/location-25-1.af32cee48605e64ebf46.png",
+    "static/media/order-prize-2.png": "/static/media/order-prize-2.6433c98a6fe693e6605f.png",
     "static/media/location-10.png": "/static/media/location-10.dfe6b4bb8636a35998a0.png",
     "static/media/map-back-5.jpg": "/static/media/map-back-5.cc50d20a98b01bd441d4.jpg",
     "static/media/prize-big-1-5ka-0.png": "/static/media/prize-big-1-5ka-0.70a029f95f22af70e97f.png",
@@ -292,7 +294,7 @@
     "static/media/arrow-down.svg": "/static/media/arrow-down.559aeb386a24d46ce43d.svg"
   },
   "entrypoints": [
-    "static/css/main.acba3654.css",
-    "static/js/main.df7eefd4.js"
+    "static/css/main.ad4ea4df.css",
+    "static/js/main.f05c53d5.js"
   ]
 }

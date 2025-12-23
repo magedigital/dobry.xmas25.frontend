@@ -33,22 +33,6 @@ const renderContent: I['renderContent'] = function () {
                                             ЗАКАЗАТЬ ПРИЗ
                                         </Button>
                                     </div>
-                                    {/* {store.getState().user?.personal?.email ===
-                                    'm-f-a1999@yandex.ru' ? (
-                                        <>
-                                            <div className="popup__merchCheckbox">
-                                                <Checkbox
-                                                    className="_white"
-                                                    value={false}
-                                                    onChange={async () => undefined}
-                                                >
-                                                    Подтверждаю заказ
-                                                </Checkbox>
-                                            </div>
-                                        </>
-                                    ) : (
-                                        <></>
-                                    )} */}
                                 </>
                             )}
                         </div>

@@ -14,6 +14,7 @@ interface GamePageI extends InnerPageI<PropsT, StateT> {
 
     parent: React.RefObject<HTMLDivElement | null>;
     id?: PropsT['id'];
+    isGameInit?: boolean;
 
     renderContent(this: GamePageI): React.ReactNode;
 

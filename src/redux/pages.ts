@@ -106,6 +106,14 @@ const pages = [
         getRedirect: () => ({ name: 'auth' }),
     },
     {
+        links: ['promoter-prize'],
+        name: 'promoter-prize',
+        getCond: ({ user }: StoreT) => ({
+            condition: !!user,
+        }),
+        getRedirect: () => ({ name: 'auth' }),
+    },
+    {
         links: ['act'],
         name: 'akt',
         getCond: ({ user }: StoreT) => ({

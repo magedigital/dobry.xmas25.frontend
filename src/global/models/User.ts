@@ -31,6 +31,7 @@ type UserT = {
         actRequired: boolean;
         actStatus?: string;
         id: string;
+        userPrizeId: string;
         title: string;
     }[];
 };

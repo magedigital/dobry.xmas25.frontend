@@ -21,7 +21,7 @@ const closeHandler: I['closeHandler'] = function () {
         return;
     }
 
-    if (pages.prizes.isShow) {
+    if (pages.prizes.isShow || pages['game-inner'].isShow) {
         changePage({ pageName: user ? 'profile' : 'index' });
 
         return;

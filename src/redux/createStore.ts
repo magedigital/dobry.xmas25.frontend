@@ -74,6 +74,7 @@ export default function createStore(
             diksiPopup: { isShow: false },
             kbPopup: { isShow: false },
             perekrestokPopup: { isShow: false },
+            idPopup: { isShow: false },
             ...props,
         },
         settings: any,

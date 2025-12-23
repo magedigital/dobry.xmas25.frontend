@@ -7,7 +7,7 @@ const games = {
         title: 'Снежки',
         description: 'Успей собрать как можно больше фестивальных предметов',
         goal: 'menuShowballl',
-        metaTitle: 'Лови вайб',
+        metaTitle: 'Снежки',
     },
     VIBE: {
         menuThumb: 'game-img-2.jpg',
@@ -15,7 +15,7 @@ const games = {
         title: 'Вайб Лосьвилля',
         description: 'Поймай звезду в луч прожектора',
         goal: 'menuVibe',
-        metaTitle: 'В свете софитов',
+        metaTitle: 'Вайб Лосьвилля',
     },
     LIGHTUP: {
         menuThumb: 'game-img-3.jpg',
@@ -23,7 +23,7 @@ const games = {
         title: 'Новогодняя ёлка',
         description: 'Собери музыкально-фестивальные пары этого лета',
         goal: 'menuTree',
-        metaTitle: 'Найди мэтч',
+        metaTitle: 'Новогодняя ёлка',
     },
     LOSYANTA: {
         menuThumb: 'game-img-4.jpg',
@@ -31,7 +31,7 @@ const games = {
         title: 'Тайный Лосянта',
         description: 'Доберись до Главной сцены Добрый Fest',
         goal: 'menuElks',
-        metaTitle: 'Вперёд к сцене',
+        metaTitle: 'Тайный Лосянта',
     },
 } as const;
 
