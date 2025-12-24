@@ -108,10 +108,6 @@ const pages = [
     {
         links: ['promoter-prize'],
         name: 'promoter-prize',
-        getCond: ({ user }: StoreT) => ({
-            condition: !!user,
-        }),
-        getRedirect: () => ({ name: 'auth' }),
     },
     {
         links: ['act'],
