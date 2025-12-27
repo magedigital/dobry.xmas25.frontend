@@ -13,11 +13,13 @@ class ChequeScan
     implements ChequeScanI
 {
     parent: ChequeScanI['parent'];
+    video: ChequeScanI['video'];
 
     constructor(props: ChequeScanI['props']) {
         super(props);
         this.state = {};
 
+        this.video = React.createRef();
         this.parent = React.createRef();
     }
 
@@ -37,10 +39,11 @@ class ChequeScan
         return (
             <div ref={this.parent} className="popup__block _COL _COL_H_CENTER">
                 <div className="popup__scan">
+                    <video ref={this.video} className="popup__scanVideo" playsInline muted />
                     <LoaderBlock
                         className="popup__scanLoader"
                         isShow={true}
-                        loaderClassName="_main"
+                        loaderClassName=""
                     />
                     <canvas hidden />
                 </div>

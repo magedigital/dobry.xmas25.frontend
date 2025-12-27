@@ -3,8 +3,8 @@ import setAsyncState from '@functions/setAsyncState.ts';
 import I from '../types.ts';
 
 const videoStop: I['videoStop'] = async function () {
-    if (this.video?.srcObject) {
-        (this.video.srcObject as MediaStream).getTracks().forEach((track) => track.stop());
+    if (this.video.current!.srcObject) {
+        (this.video.current!.srcObject as MediaStream).getTracks().forEach((track) => track.stop());
         this.flagTick = false;
 
         this.isComplete = false;

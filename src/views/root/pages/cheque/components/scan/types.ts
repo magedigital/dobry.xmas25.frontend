@@ -16,8 +16,8 @@ interface ChequeScanI extends React.Component<PropsT, StateT> {
     state: StateT;
 
     parent: React.RefObject<HTMLDivElement | null>;
+    video: React.RefObject<HTMLVideoElement | null>;
 
-    video?: HTMLVideoElement;
     flagTick?: boolean;
     isComplete?: boolean;
 
