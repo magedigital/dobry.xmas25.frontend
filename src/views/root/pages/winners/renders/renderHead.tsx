@@ -15,14 +15,14 @@ const renderHead: I['renderHead'] = function () {
                     Личном кабинете
                 </Link>
             </p>
-            <a
+            {/* <a
                 className="page__headLink"
                 href={`/upload/docs/cng_prizers.pdf?${new Date().getTime()}`}
                 target="_blank"
                 rel="noreferrer"
             >
                 <span>Обменные призы</span>
-            </a>
+            </a> */}
         </div>
     );
 };
