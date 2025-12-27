@@ -260,6 +260,21 @@
         &Button {
             margin-top: 28rem;
         }
+
+        &Link {
+            margin-top: 16rem;
+            padding: 8rem 16rem 7rem;
+            background: #5d279e;
+            border-radius: 360rem;
+
+            & span {
+                display: inline-block;
+                color: #fff;
+                font-weight: 500;
+                font-size: 18rem;
+                border-bottom: 1px solid rgba(#fff, 0.32);
+            }
+        }
     }
 
     &__title {
