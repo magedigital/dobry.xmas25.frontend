@@ -13,7 +13,7 @@ const renderPage: I['renderPage'] = function ({ name, render }) {
             {name === 'index' && (
                 <div className="body__actionInfo">
                     <div className="body__actionInfoInner">
-                        Информируем об изменении п.6 Правил Акции, см.{' '}
+                        Информируем об изменении п.5.9 и п.6 Правил Акции, см.{' '}
                         <span
                             onClick={() => {
                                 window.open('/upload/docs/rules-5ka.pdf', '_blank');
