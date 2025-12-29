@@ -20,9 +20,9 @@ const sliderInit: I['sliderInit'] = async function () {
         infinity: true,
         withDrag: true,
         current: currentMerchIndex,
-        callback: async ({ current }) => {
-            if (typeof current === 'number') {
-                await setAsyncState.call(this, { currentMerchIndex: current });
+        callback: async ({ currentKey }) => {
+            if (typeof currentKey === 'number') {
+                await setAsyncState.call(this, { currentMerchIndex: currentKey });
             }
         },
         buttons: {
