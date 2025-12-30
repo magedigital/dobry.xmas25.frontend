@@ -7,7 +7,8 @@
         transition: $trans;
     }
 
-    &._index &__topBar {
+    &._index &__topBar,
+    &._5ka &__topBar {
         top: 48rem;
 
         @include mob {
@@ -15,7 +16,8 @@
         }
     }
 
-    &._index &__inner {
+    &._index &__inner,
+    &._5ka &__inner {
         padding-top: 48rem;
 
         @include mob {

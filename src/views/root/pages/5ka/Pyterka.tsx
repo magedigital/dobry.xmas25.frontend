@@ -40,7 +40,7 @@ class Pyterka extends PublicPage<PyterkaI['props'], PyterkaI['state']> implement
         const { content } = this.state;
 
         return this.renderPage({
-            name: 'index',
+            name: '5ka',
             render: () => (
                 <div className="index _FULL_W">
                     <CustomHead title="Добрый - 5ка" />

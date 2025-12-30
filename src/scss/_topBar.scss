@@ -213,7 +213,8 @@
         }
     }
 
-    .publicPage._index &__menu {
+    .publicPage._index &__menu,
+    .publicPage._5ka &__menu {
         height: calc(var(--wheight) - 96rem - 48rem);
 
         @include mob {
@@ -231,7 +232,8 @@
         }
     }
 
-    .publicPage._index &._fix &__menu {
+    .publicPage._index &._fix &__menu,
+    .publicPage._5ka &._fix &__menu {
         height: calc(var(--wheight) - 80rem - 48rem);
 
         @include mob {
