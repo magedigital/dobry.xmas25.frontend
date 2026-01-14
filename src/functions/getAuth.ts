@@ -67,16 +67,9 @@ export default async function getAuth(redirect?: boolean): Promise<UserT | undef
     //     ids = { '1': user.nextActPrizeId };
     // }
 
-    if (user?.status === 'ACT_REQUIRED') {
-        const prize = user.prizes?.find(
-            (thisPrize) => thisPrize.userPrizeId === user.nextActPrizeId,
-        );
-        // const prize = user.prizes?.find((thisPrize) => thisPrize.actRequired);
-
-        if (prize) {
-            pageName = 'akt-inner';
-            ids = { '1': prize.id };
-        }
+    if (user?.status === 'ACT_REQUIRED' && user.nextActPrizeId) {
+        pageName = 'akt-inner';
+        ids = { '1': user.nextActPrizeId };
     }
 
     if (user?.status === 'EMAIL_CONFIRM_REQUIRED') {

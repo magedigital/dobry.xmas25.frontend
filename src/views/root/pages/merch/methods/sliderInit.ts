@@ -24,10 +24,10 @@ const sliderInit: I['sliderInit'] = async function () {
         )! as HTMLElement,
         withDrag: store.getState().device === 'mobile',
         current: currentMerchIndex,
-        callback: async ({ current, items, reactSetCb }) => {
-            if (typeof current === 'number') {
-                console.log(current)
-                await setAsyncState.call(this, { currentMerchIndex: current });
+        callback: async ({ currentKey, items, reactSetCb }) => {
+            if (typeof currentKey === 'number') {
+                // console.log(currentKey)
+                await setAsyncState.call(this, { currentMerchIndex: currentKey });
             }
 
             if (items) {

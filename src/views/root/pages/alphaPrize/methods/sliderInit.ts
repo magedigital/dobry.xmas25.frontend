@@ -21,9 +21,9 @@ const sliderInit: I['sliderInit'] = async function () {
         infinity: false,
         withDrag: store.getState().device === 'mobile',
         current: currentMerchIndex,
-        callback: async ({ current }) => {
-            if (typeof current === 'number') {
-                await setAsyncState.call(this, { currentMerchIndex: current });
+        callback: async ({ currentKey }) => {
+            if (typeof currentKey === 'number') {
+                await setAsyncState.call(this, { currentMerchIndex: currentKey });
             }
         },
         buttons: {
