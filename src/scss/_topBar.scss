@@ -218,7 +218,7 @@
         height: calc(var(--wheight) - 96rem - 48rem);
 
         @include mob {
-            height: calc(var(--wheight) - 70rem - 60rem);
+            height: calc(var(--wheight) - 70rem - 90rem);
         }
     }
 
@@ -237,7 +237,7 @@
         height: calc(var(--wheight) - 80rem - 48rem);
 
         @include mob {
-            height: calc(var(--wheight) - 64rem - 60rem);
+            height: calc(var(--wheight) - 64rem - 90rem);
         }
     }
 

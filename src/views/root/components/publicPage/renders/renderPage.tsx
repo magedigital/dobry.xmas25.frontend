@@ -13,13 +13,14 @@ const renderPage: I['renderPage'] = function ({ name, render }) {
             {name === 'index' && (
                 <div className="body__actionInfo">
                     <div className="body__actionInfoInner">
-                        Информируем об изменении п.5.8.1 Правил Акции, см.{' '}
+                        Срок регистрации кодов завершен! Для получения призов заполните данные в
+                        Личном кабинете. Вручение призов в срок до 31.03.2026 включительно, см.{' '}
                         <span
                             onClick={() => {
                                 window.open('/upload/docs/rules.pdf', '_blank');
                             }}
                         >
-                            подробнее
+                            Правила Акции
                         </span>
                     </div>
                 </div>
@@ -27,13 +28,14 @@ const renderPage: I['renderPage'] = function ({ name, render }) {
             {name === '5ka' && (
                 <div className="body__actionInfo">
                     <div className="body__actionInfoInner">
-                        Информируем об изменении п.5.9 и п.6 Правил Акции, см.{' '}
+                        Срок регистрации чеков завершен! Для получения призов заполните данные в
+                        Личном кабинете. Вручение призов в&nbsp;срок до 28.02.2026 включительно, см.{' '}
                         <span
                             onClick={() => {
                                 window.open('/upload/docs/rules-5ka.pdf', '_blank');
                             }}
                         >
-                            подробнее
+                            Правила Акции
                         </span>
                     </div>
                 </div>

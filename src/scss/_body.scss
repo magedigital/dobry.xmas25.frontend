@@ -126,7 +126,8 @@
         background: #5d279e;
 
         @include mob {
-            padding: 14rem 16rem;
+            height: 90rem;
+            padding: 14rem 20rem;
         }
 
         &Inner {
