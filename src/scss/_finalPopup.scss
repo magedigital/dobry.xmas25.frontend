@@ -1,0 +1,137 @@
+.finalPopup {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+    background: rgba(#000, 0.6);
+
+    &__wrapper {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: 100%;
+        padding: 64rem 0 32rem;
+
+        @include mob {
+            justify-content: flex-start;
+        }
+    }
+
+    &__inner {
+        position: relative;
+        width: 820rem;
+        border-radius: 48rem;
+
+        @include mob {
+            width: calc(100% - 32rem);
+            padding: 1rem;
+            border-radius: 32rem;
+        }
+
+        &Box {
+            width: 100%;
+            height: 100%;
+            border-radius: inherit;
+
+            @include bg("/media/rastim-img.jpg", 100% auto, center top);
+
+            @include mob {
+                @include bg("/media/rastim-img-mob.jpg", 100% auto, center top);
+            }
+        }
+    }
+
+    &__close {
+        position: absolute;
+        top: 0;
+        left: 100%;
+        z-index: 2;
+        width: 44rem;
+        height: 44rem;
+        margin-left: 14rem;
+        padding: 11rem;
+        background: #ffe09e;
+        border-radius: 16rem;
+
+        @include icon(#c50018);
+
+        @include mob {
+            width: 34rem;
+            height: 34rem;
+            margin-bottom: 12rem;
+            margin-left: 0;
+            padding: 9rem;
+            border-radius: 14rem;
+            inset: auto 4rem 100% auto;
+        }
+    }
+
+    &__title {
+        margin-bottom: 310rem;
+        padding: 24rem 0 0;
+        color: #760509;
+        font-weight: 600;
+        font-size: 24rem;
+        line-height: 1.45;
+        text-align: center;
+        text-transform: uppercase;
+
+        @include mob {
+            max-width: 90%;
+            margin: 0 auto 310rem;
+            font-size: 23rem;
+            line-height: 1.3;
+        }
+    }
+
+    &__footer {
+        position: relative;
+        width: 100%;
+        padding: 0 32rem 46rem;
+        background: linear-gradient(to bottom, #f22830, #be135a);
+        border-radius: 48rem;
+
+        @include mob {
+            padding: 0 0 36rem;
+            border-radius: 32rem;
+        }
+
+        &Content {
+            width: 100%;
+            margin-top: -37rem;
+            padding: 28rem 34rem;
+            background: linear-gradient(to bottom, #fffbf0, #ffecae 40%, #ff645e 125%);
+            border-radius: 36rem;
+            box-shadow: 0 12rem 0 0 rgba(#760509, 0.5);
+
+            @include mob {
+                padding: 20rem;
+                background: linear-gradient(to bottom, #fffbf0, #ffecae 55%, #ff645e 125%);
+                box-shadow: none;
+            }
+
+            & p {
+                color: #6c1100;
+                font-size: 14rem;
+                line-height: 1.3;
+
+                @include mob {
+                    font-size: 17rem;
+                }
+
+                & a {
+                    color: #5D279E;
+                    border-bottom: 1px solid rgba(#5D279E, 0.72);
+                }
+            }
+
+            & p + p {
+                margin-top: 12rem;
+            }
+        }
+    }
+}

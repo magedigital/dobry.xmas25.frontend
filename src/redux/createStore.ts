@@ -75,6 +75,7 @@ export default function createStore(
             kbPopup: { isShow: false },
             perekrestokPopup: { isShow: false },
             idPopup: { isShow: false },
+            finalPopup: { isShow: false },
             ...props,
         },
         settings: any,

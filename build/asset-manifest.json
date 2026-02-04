@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.eb82715d.css",
-    "main.js": "/static/js/main.0c094a07.js",
+    "main.css": "/static/css/main.24797799.css",
+    "main.js": "/static/js/main.a76adfc8.js",
     "static/js/977.11b184c9.chunk.js": "/static/js/977.11b184c9.chunk.js",
     "static/js/16.9d69e595.chunk.js": "/static/js/16.9d69e595.chunk.js",
     "static/js/402.1bf2f098.chunk.js": "/static/js/402.1bf2f098.chunk.js",
@@ -84,12 +84,12 @@
     "static/media/prize-big-3-5ka.png": "/static/media/prize-big-3-5ka.d16a5e7379336f646395.png",
     "static/media/Geologica-Light.ttf": "/static/media/Geologica-Light.1d07a80c29574f217c3c.ttf",
     "static/media/Geologica-Regular.ttf": "/static/media/Geologica-Regular.e13272ec36b0a96fc89c.ttf",
+    "static/media/rastim-img.jpg": "/static/media/rastim-img.43cd1cdc281592936e07.jpg",
     "static/media/back-5ka-03-mob.jpg": "/static/media/back-5ka-03-mob.78b393b24fcd1f0a50c7.jpg",
     "static/media/order-prize-1.png": "/static/media/order-prize-1.7590d92db4244501d94a.png",
     "static/media/element-7-5ka.png": "/static/media/element-7-5ka.2e69a730a25052ce1bfc.png",
     "static/media/app-back-mob.jpg": "/static/media/app-back-mob.e97a8b5ec87261e78fb5.jpg",
     "static/media/prize-store-1-0.png": "/static/media/prize-store-1-0.fc44d7007b85a001e500.png",
-    "static/media/rastim-img.jpg": "/static/media/rastim-img.43cd1cdc281592936e07.jpg",
     "static/media/location-2.png": "/static/media/location-2.8cffc586a1758f8ebbbe.png",
     "static/media/element-5-5ka.png": "/static/media/element-5-5ka.c4d2490d48b74a40a5b3.png",
     "static/media/prize-big-2-5ka.png": "/static/media/prize-big-2-5ka.36c909153557ad49ef62.png",
@@ -125,7 +125,7 @@
     "static/media/map-back-1-mob.jpg": "/static/media/map-back-1-mob.81509df574aae9fec68d.jpg",
     "static/media/location-22-1.png": "/static/media/location-22-1.5a393b2cd9b5baa4bf55.png",
     "static/media/location-20-1.png": "/static/media/location-20-1.f0b9431bf03f3cc71d6e.png",
-    "static/media/rastim-img-mob.jpg": "/static/media/rastim-img-mob.5c0378fd90d062810484.jpg",
+    "static/media/rastim-img-mob.jpg": "/static/media/rastim-img-mob.abcf6626c1ece01567f4.jpg",
     "static/media/light-track.svg": "/static/media/light-track.9fa218a9dab249c69eec.svg",
     "static/media/location-23-1.png": "/static/media/location-23-1.a69df848ba287f3e29e5.png",
     "static/media/location-24-1.png": "/static/media/location-24-1.1edc2b7407773d4d8cc4.png",
@@ -294,7 +294,7 @@
     "static/media/arrow-down.svg": "/static/media/arrow-down.559aeb386a24d46ce43d.svg"
   },
   "entrypoints": [
-    "static/css/main.eb82715d.css",
-    "static/js/main.0c094a07.js"
+    "static/css/main.24797799.css",
+    "static/js/main.a76adfc8.js"
   ]
 }

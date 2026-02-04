@@ -6,6 +6,7 @@ import CustomHead from '@components/customHead/CustomHead.tsx';
 import InnerPage from '@components/innerPage/InnerPage.tsx';
 import Media from '@components/media/Media.tsx';
 import changePage from '@functions/changePage.ts';
+import handlerPopup from '@functions/handlerPopup.ts';
 import { getLocalContent } from '@functions/localContent.ts';
 import { setPageScroll } from '@functions/savePageScroll.ts';
 import { StoreT } from '@global/types.ts';
@@ -70,6 +71,10 @@ class Profile extends InnerPage<ProfileI['props'], ProfileI['state']> implements
 
             return;
         }
+
+        setTimeout(() => {
+            handlerPopup('finalPopup', { isShow: true });
+        }, 300);
 
         this.initPage('profile');
 

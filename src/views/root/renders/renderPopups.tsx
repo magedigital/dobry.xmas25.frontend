@@ -4,6 +4,7 @@ import CollectionPopup from '@components/collectionPopup/CollectionPopup.tsx';
 import DiksiPopup from '@components/diksiPopup/DiksiPopup.tsx';
 import DobroPopup from '@components/dobroPopup/DobroPopup.tsx';
 import Fade from '@components/fade/Fade.tsx';
+import FinalPopup from '@components/finalPopup/FinalPopup.tsx';
 import IdPopup from '@components/idPopup/IdPopup.tsx';
 import KbPopup from '@components/kbPopup/KbPopup.tsx';
 import LentaPopup from '@components/lentaPopup/LentaPopup.tsx';
@@ -26,6 +27,7 @@ const renderPopups: I['renderPopups'] = function () {
         kbPopup,
         perekrestokPopup,
         idPopup,
+        finalPopup,
     } = this.props;
 
     return (
@@ -59,6 +61,9 @@ const renderPopups: I['renderPopups'] = function () {
             </Fade>
             <Fade className="body__popup" isShow={idPopup.isShow}>
                 <IdPopup />
+            </Fade>
+            <Fade className="body__popup" isShow={finalPopup.isShow}>
+                <FinalPopup />
             </Fade>
         </>
     );

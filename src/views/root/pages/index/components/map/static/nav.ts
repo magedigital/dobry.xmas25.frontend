@@ -114,7 +114,7 @@ export const mapNav: MavNavItemT[] = [
         name: 'mag',
         thumbs: ['location-13-1.png', 'location-13-2.png'],
         title: ['Магнит', 'дикси'],
-        goal: 'mapPopupMagnit/mapPopupDixy',
+        // goal: 'mapPopupMagnit/mapPopupDixy',
         animationThumbs: ['location-13-1_1.png', 'location-13-1_2.png', 'location-13-1_3.png'],
     },
     {

@@ -81,9 +81,11 @@ const renderNav: I['renderNav'] = function () {
                                             if (name === 'mag') {
                                                 if (tKey === 0) {
                                                     handlerPopup('magnitPopup', { isShow: true });
+                                                    sendGoal('mapPopupMagnit');
                                                 }
                                                 if (tKey === 1) {
                                                     handlerPopup('diksiPopup', { isShow: true });
+                                                    sendGoal('mapPopupDixy');
                                                 }
                                             }
 

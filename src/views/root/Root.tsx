@@ -98,6 +98,7 @@ function mapStateToProps(state: StoreT) {
         kbPopup: state.kbPopup,
         perekrestokPopup: state.perekrestokPopup,
         idPopup: state.idPopup,
+        finalPopup: state.finalPopup,
     };
 }
 
