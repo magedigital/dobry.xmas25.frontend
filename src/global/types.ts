@@ -161,6 +161,7 @@ type PopupsT = {
     perekrestokPopup: PopupT;
     idPopup: PopupT;
     finalPopup: PopupT;
+    summerPopup: PopupT;
 };
 
 const popups = {
@@ -175,6 +176,7 @@ const popups = {
     perekrestokPopup: {},
     idPopup: {},
     finalPopup: {},
+    summerPopup: {},
 };
 
 type PopupsNamesT = keyof PopupsT;

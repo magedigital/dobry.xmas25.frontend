@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.24797799.css",
-    "main.js": "/static/js/main.a76adfc8.js",
+    "main.css": "/static/css/main.d758a8cb.css",
+    "main.js": "/static/js/main.43d57e6d.js",
     "static/js/977.11b184c9.chunk.js": "/static/js/977.11b184c9.chunk.js",
     "static/js/16.9d69e595.chunk.js": "/static/js/16.9d69e595.chunk.js",
     "static/js/402.1bf2f098.chunk.js": "/static/js/402.1bf2f098.chunk.js",
@@ -26,6 +26,7 @@
     "static/js/916.57759a10.chunk.js": "/static/js/916.57759a10.chunk.js",
     "static/js/203.181f2847.chunk.js": "/static/js/203.181f2847.chunk.js",
     "static/js/419.62f2b442.chunk.js": "/static/js/419.62f2b442.chunk.js",
+    "static/media/Regular.ttf": "/static/media/Regular.3e6423cef8188d3106d3.ttf",
     "static/media/store-1-1.jpg": "/static/media/store-1-1.a272a11585909e25b6fb.jpg",
     "static/media/back-5ka-01.jpg": "/static/media/back-5ka-01.aef616df826368b0448c.jpg",
     "static/media/back-game-all.jpg": "/static/media/back-game-all.2e517acb71b1fdb05abf.jpg",
@@ -35,6 +36,7 @@
     "static/media/steps-banner-back.jpg": "/static/media/steps-banner-back.265fae8e65d44494553e.jpg",
     "static/media/popup-back.jpg": "/static/media/popup-back.96a130b2dcb14978fb31.jpg",
     "static/media/main-img.jpg": "/static/media/main-img.b4fe2d1708daabb8e981.jpg",
+    "static/media/zagl-image.jpg": "/static/media/zagl-image.b094bd7defc8e52f964d.jpg",
     "static/media/store-4-1.jpg": "/static/media/store-4-1.41d24d446a8d2ed2c83d.jpg",
     "static/media/back-inner-popup.jpg": "/static/media/back-inner-popup.4832a2716385f1174935.jpg",
     "static/media/map-back-2.jpg": "/static/media/map-back-2.0dd6a6c374e9a503cc6d.jpg",
@@ -65,6 +67,7 @@
     "static/media/popup-back-mob.jpg": "/static/media/popup-back-mob.2957ecbeb8aa7dbabb71.jpg",
     "static/media/back-inner-2.jpg": "/static/media/back-inner-2.0fc7827f25bfbd4b0ac5.jpg",
     "static/media/store-3-1-mob.jpg": "/static/media/store-3-1-mob.32b496768017fbcdb053.jpg",
+    "static/media/zagl-image-mob.jpg": "/static/media/zagl-image-mob.c71ab65352d6749c217c.jpg",
     "static/media/store-2-1-2.png": "/static/media/store-2-1-2.237016d0a340a18cd856.png",
     "static/media/store-4-1-mob.jpg": "/static/media/store-4-1-mob.5137333fb38aa515f53c.jpg",
     "static/media/store-2-1-mob.jpg": "/static/media/store-2-1-mob.086a3ba648669cf7ae08.jpg",
@@ -136,6 +139,8 @@
     "static/media/back-5ka-lights-2-mob.png": "/static/media/back-5ka-lights-2-mob.2fe2bb59e08a2d3fd995.png",
     "static/media/location-14-1.png": "/static/media/location-14-1.77c86dcd8e31fd6c2028.png",
     "static/media/store-1-1-back-mob.jpg": "/static/media/store-1-1-back-mob.427dd43d17b293a55028.jpg",
+    "static/media/Onest-Regular.ttf": "/static/media/Onest-Regular.2f8180f95c9c4f66c68c.ttf",
+    "static/media/Onest-Black.ttf": "/static/media/Onest-Black.37a8a9cb9a5e7120f07a.ttf",
     "static/media/location-11-1.png": "/static/media/location-11-1.27047b3b1c87973ceeee.png",
     "static/media/element-2-5ka.png": "/static/media/element-2-5ka.248f020085c114b1307a.png",
     "static/media/prize-special.jpg": "/static/media/prize-special.90d429d5f69a9e874518.jpg",
@@ -153,6 +158,7 @@
     "static/media/location-shine-2.png": "/static/media/location-shine-2.3e0d38610fe87a3c51eb.png",
     "static/media/banner-anons-01.jpg": "/static/media/banner-anons-01.c38efd963c5444ada323.jpg",
     "static/media/app-toy.png": "/static/media/app-toy.3ee74702b65df8552127.png",
+    "static/media/counter-back.svg": "/static/media/counter-back.1bea28b58125fd70bca5.svg",
     "static/media/banner-anons-02.jpg": "/static/media/banner-anons-02.9bff1a9460154fb804b6.jpg",
     "static/media/road-lights-2.png": "/static/media/road-lights-2.b4b96d9c33781ab6ba4c.png",
     "static/media/karusel-prize-sign-mob.jpg": "/static/media/karusel-prize-sign-mob.194ccf3a5572825eb643.jpg",
@@ -219,6 +225,7 @@
     "static/media/prize-2-2-5ka.png": "/static/media/prize-2-2-5ka.4b55cb905f509fdbd7a5.png",
     "static/media/step2-5ka.jpg": "/static/media/step2-5ka.90bc9a923c5ff5bdb52e.jpg",
     "static/media/prize-2-3-5ka.png": "/static/media/prize-2-3-5ka.db1a79310ad91ef692fa.png",
+    "static/media/slogan.svg": "/static/media/slogan.66c2cb046d74c6de720664c68d8c5c3e.svg",
     "static/media/games-back-menu-mob.svg": "/static/media/games-back-menu-mob.939c2e259e7def19e97f.svg",
     "static/media/prize-2-1-5ka.png": "/static/media/prize-2-1-5ka.def456894c55d5293624.png",
     "static/media/karusel-prize--01.png": "/static/media/karusel-prize--01.a0b62f2bece9d260e5ec.png",
@@ -294,7 +301,7 @@
     "static/media/arrow-down.svg": "/static/media/arrow-down.559aeb386a24d46ce43d.svg"
   },
   "entrypoints": [
-    "static/css/main.24797799.css",
-    "static/js/main.a76adfc8.js"
+    "static/css/main.d758a8cb.css",
+    "static/js/main.43d57e6d.js"
   ]
 }

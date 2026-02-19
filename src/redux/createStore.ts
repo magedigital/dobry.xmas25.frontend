@@ -76,6 +76,7 @@ export default function createStore(
             perekrestokPopup: { isShow: false },
             idPopup: { isShow: false },
             finalPopup: { isShow: false },
+            summerPopup: { isShow: false },
             ...props,
         },
         settings: any,

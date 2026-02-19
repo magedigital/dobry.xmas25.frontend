@@ -99,6 +99,7 @@ function mapStateToProps(state: StoreT) {
         perekrestokPopup: state.perekrestokPopup,
         idPopup: state.idPopup,
         finalPopup: state.finalPopup,
+        summerPopup: state.summerPopup,
     };
 }
 

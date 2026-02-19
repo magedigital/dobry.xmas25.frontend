@@ -17,6 +17,7 @@ type PropsT = {
     perekrestokPopup: StoreT['perekrestokPopup'];
     idPopup: StoreT['idPopup'];
     finalPopup: StoreT['finalPopup'];
+    summerPopup: StoreT['summerPopup'];
 };
 
 type StateT = {};

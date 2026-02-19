@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import Footer from '@components/footer/Footer.tsx';
+import handlerPopup from '@functions/handlerPopup.ts';
 import { getLocalContent } from '@functions/localContent.ts';
 
 import PublicPage from '../../components/publicPage/PublicaPage.tsx';
@@ -33,6 +34,10 @@ class Index extends PublicPage<IndexI['props'], IndexI['state']> implements Inde
         super.componentDidMount();
 
         this.getContent();
+
+        setTimeout(() => {
+            handlerPopup('summerPopup', { isShow: true });
+        }, 1_000);
     }
 
     render() {

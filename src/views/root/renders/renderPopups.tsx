@@ -12,6 +12,7 @@ import LosvillPopup from '@components/losvillPopup/LosvillPopup.tsx';
 import MagnitPopup from '@components/magnitPopup/MagnitPopup.tsx';
 import ManPopup from '@components/manPopup/ManPopup.tsx';
 import PerekrestokPopup from '@components/perekrestokPopup/PerekrestokPopup.tsx';
+import SummerPopup from '@components/summerPopup/SummerPopup.tsx';
 
 import I from '../types.ts';
 
@@ -28,6 +29,7 @@ const renderPopups: I['renderPopups'] = function () {
         perekrestokPopup,
         idPopup,
         finalPopup,
+        summerPopup,
     } = this.props;
 
     return (
@@ -64,6 +66,9 @@ const renderPopups: I['renderPopups'] = function () {
             </Fade>
             <Fade className="body__popup" isShow={finalPopup.isShow}>
                 <FinalPopup />
+            </Fade>
+            <Fade className="body__popup" isShow={summerPopup.isShow}>
+                <SummerPopup />
             </Fade>
         </>
     );
