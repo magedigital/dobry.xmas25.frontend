@@ -1,7 +1,5 @@
 import React from 'react';
 
-import changePage from '@functions/changePage.ts';
-
 import I from '../types.ts';
 
 import getSavedRaffle from '../../../../rafflePrize/utils/getSavedRaffle.ts';
@@ -18,9 +16,6 @@ const renderCarusel: I['renderCarusel'] = function () {
             className="indexHeader__carusel _CLICK"
             onMouseEnter={this.advanceRotate.bind(this, true)}
             onMouseLeave={this.advanceRotate.bind(this, false)}
-            onClick={() => {
-                changePage({ pageName: 'raffle-prize' });
-            }}
         >
             <div className="indexHeader__caruselBack">
                 {[1, 2, 3, 4].map((k) => (

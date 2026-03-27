@@ -7,8 +7,9 @@ import I from '../types.ts';
 const uploadHandler: I['uploadHandler'] = async function (name, e) {
     const target = e.target;
     const formData = new FormData();
+    const file = target.files![0]
 
-    formData.set('file', target.files![0]);
+    formData.set('file', file);
     formData.set('fileName', name);
 
     try {
